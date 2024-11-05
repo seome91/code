@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+/* 폰트를 선언한 css파일을 불러서 사용하는 방식 - cdn 방식 
+해당 css파일에서 서체의 이름을 이미 정의해서 놨기 때문에 
+반드시 쓰라고 하는 방식으로 서체의 이름을 써야함*/
+
+body {
+    /* 글스타일은 상속을 받음 - 
+    p에 들어가는 기본 스타일은 body에 선언하고 상속박게 함*/
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: #3d3d3d;
+    line-height: 1.4;/*글자크기의 1.4배라는 뜻*/
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+.fab {
+    background-color: #131313;
+    color: #ffffff;
+    /* 배경색 도는 이미지가 진한게
+    들어가서 글자색상이 변하면 동시에 선언하는게 좋음 */
+    height: 413px;
+}
+.fab h1 {
+    padding: 120px 0 10px 0;
+    font-size: 45px;
+    font-weight: 900;
+}
+.fab h1 strong {
+    font-weight: 900;  
+    /*strong 태그는 브라우저가 bold를 줌
+    스래서 h1에게 두께를 상속 받아도
+    브라우저가 준 값으로 변경됨 그래서 꼭 두께를 다시 선언 해야함*/
+    color: #24d1f7;
+}
+.fab .sub_tit {
+    color: #24d1f7;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+.ai {
+    
+
+}
+.ai h1 {
+    font-size: 45px;
+    font-weight: 900;
+    color: #131313;
+    line-height: 1.4;
+    margin: 165px 0 28px 0;
+}
+.ai h1 strong {
+    font-weight: 900px;
+    color: #24d1f7;
+
+}
