@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.4;
+}
+* { 
+    margin: 0;
+    padding: 0;
+}
+.wrapper { 
+    width: 1260px;
+    margin: 0 auto;
+}
+.envi {
+    background: url(../images/envi_bg2.png) no-repeat center center / cover ;
+    height: 660px;
+    /* 배경으로 삽입한 이미지는 그 영역의 넓이 만큼만 보임
+    아무리 이미지가 커도 영역이 작으면 이미지가 짤림
+    그렇다면 배경에 넣은 이미지를 다 보이게 하고싶으면
+    영역이 커져야함,제일간단한 방법은 높이를 주는것*/
+    color: #ffffff;
+    text-align: center;
+}
+.envi h1 {
+    font-size: 40px;
+    font-weight: 900;
+    padding: 207px 0 316px 0;
+}
+
+.heal h1 {
+    font-size: 40px;
+    font-weight: 900;
+    color : #1d1d1d;
+    margin: 84PX 0 19px 0;
+}
+.heal h1 strong {
+    font-weight: 700;
+    color: #ce1527;
+}
+.heal p strong {
+    color: #ce1527;
+    font-weight: 400;
+
+}
