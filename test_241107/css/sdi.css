@@ -1,0 +1,84 @@
+@font-face {
+	font-family: 'pret';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(../fonts/Pretendard-ExtraBold.woff2) format('woff2'), url(../fonts/Pretendard-ExtraBold.woff2) format('woff');
+}
+@font-face {
+	font-family: 'Pret';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff2) format('woff');
+}
+@font-face {
+	font-family: 'Pret';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../fonts/) format('woff2'), url(../fonts/Pretendard-Regular.woff2) format('woff');
+}
+body {
+    /* woff,woff2 파일을 불러서 서체를 정의한 경우
+    내가 정의한 이름으로 서체를 불러주면 되고, 
+    sans-serif 를 추가해서 고딕체를 쓰고있음을 정의*/
+    font-family: 'Pret',sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.4;
+}
+li {
+    /*li앞에 앞에 동그라미 없애주는*/
+    list-style: none;
+}
+h1, h2, h3, h4, h5 {
+    font-size: inherit;
+    font-weight: inherit;
+
+}
+strong {
+    font-weight: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    width: 1260px;
+    margin: auto;
+}
+.color h1{
+    font-size: 40px;
+    font-weight: 800px;
+    color: #1d1d1d;
+    margin: 124px 0 16px 0; 
+}
+.color .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.color .list ul li {
+    width: 404px;
+}
+.color .list ul li h2 {
+    font-size: 30px;
+    font-weight: 400;
+    color: #1d1d1d;
+    line-height: 1.4;
+    margin: 73px 0 5px 0; 
+}
+.color .list ul li strong {
+    color: #999999;
+}
+.color .list ul li .code {
+    background-color: #034ea2;
+    color: #fff;
+    font-size: 20px;
+    font-weight:800px;
+    margin: 26px 0 0 0;
+    /*margin (외부여백)-다른요소와 사이에 여백을 줌*/
+    padding: 27px 0 27px 27px;
+    /*paddin (내부여백)-배경색을 늘림*/
+    border-radius: 20px;
+    /* border-radius-사각형 귀퉁이 동그리값*/
+}
