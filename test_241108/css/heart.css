@@ -68,6 +68,10 @@ a {
     /*a에 스타일을 주면 display:black;은필수 
     단 내가 예상한거보다 사이즈가 커지면
     dislpay-block;*/
+    
+}
+.story .tit .more a {
+        background-color: #dc6a39;
 }
 .story .list {
     margin: 23px 0 0 0;
