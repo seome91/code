@@ -1,0 +1,8 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+body {
+font-family: "Pretendard", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+/*내가 제공할 웹폰트 이름을 먼저쓰고만약 그 기기에서 웹폰트가 적용이 안되면 대체로 사용할 폰트들의 이름을 나열해서 씀
+ -웹폰트파일은 첫번째 것만 제공하면 됨
+ -대체로 쓴 폰트의 췝폰트 파일까지 제공할필요는 없음 */
+ 
