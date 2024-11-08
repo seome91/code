@@ -1,9 +1,147 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
 body {
 font-family: "Pretendard", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-}
+
 /*내가 제공할 웹폰트 이름을 먼저쓰고만약 그 기기에서 웹폰트가 적용이 안되면 대체로 사용할 폰트들의 이름을 나열해서 씀
  -웹폰트파일은 첫번째 것만 제공하면 됨
  -대체로 쓴 폰트의 췝폰트 파일까지 제공할필요는 없음 */
- 
- 
+font-size: 17px;
+font-weight: 400;
+color: #3d3d3d;
+line-height: 1.4;
+letter-spacing:-0.05em;
+/*em은 글자크기를 1em으로 보는 상대크기 대략 포토샵에서
+-50을 줬다면 -0.05em 정도를 줌*/
+
+}
+h1, h2 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+strong {
+    font-weight: inherit;
+    font-weight: inherit;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+
+}
+ li, ul, a {
+    list-style: none;
+ }
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+.story {
+    margin: 165px 0 0 0;
+}
+.story .tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.story .tit .inner strong {
+    color: #f38b5e;
+    font-weight: 600;
+    margin: 161px 0 0 0;
+}
+.story .tit .inner h1 {
+    font-size: 40px;
+    font-weight: 800;
+    font-weight: bold;
+    color: #1d1d1d;
+    margin: 10px 0 19px 0;
+    line-height: 1.4;
+}   
+.story .tit .more a { 
+    background-color: #f38b5e;
+    color: #fff;
+    font-weight: 800;
+    padding: 15px 24px;
+    border-radius: 27px;
+    /*a에 스타일을 주면 display:black;은필수 
+    단 내가 예상한거보다 사이즈가 커지면
+    dislpay-block;*/
+}
+.story .list {
+    margin: 23px 0 0 0;
+}
+.story .list ul {
+    display: flex;
+    justify-content: space-around;
+}
+.story .list ul li {
+    width: 297px;
+}
+.story .list ul li a {
+    display: block;
+}
+.story .list ul li a .photo {
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    /*이미지는 영역 밖으로 삐져나감
+     그걸 가리는 명령*/
+}
+.story .list ul li a .inner {
+        background-color: #f8f8f8;
+        border-radius: 0 0 20px 20px;
+        height: 166px;
+        padding: 25px 37px 22px 41px;
+}
+.story .list ul li a .inner h2 {
+    color: #1d1d1d;
+    font-weight: 800;
+    margin: 0 0 9px 0;
+}
+.story .list ul li a .inner span {
+    color: #f38b5e;
+    font-weight: 800;
+    margin: 20px 0 0 0;
+    display: block;
+    /* span태그가 인라인 태그라서
+    margine을 적용이 안됨, block요소로 변경 */
+
+}
+
+.supp {
+    margin: 150px 0 500px 0;
+
+}
+.supp .tit h1 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #1d1d1d;
+}
+.supp .cont {
+    margin: 23px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.supp .cont .photo { 
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+.supp .cont .inner {
+    width: 570px;
+   
+}
+
+.supp .cont .inner h2 {
+    font-size: 35px;
+    font-weight: 800;
+    color: #1d1d1d;
+    margin: 37px 0 0 0;
+}
+.supp .cont .inner .point {
+    font-size: 20px;
+    color: #f38b5e;
+    font-weight: 800;
+    margin: 14px 0 14px 0;
+}
