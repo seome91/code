@@ -7,7 +7,7 @@
 @font-face {
 	font-family: 'Pret';
 	font-weight: 400;
-	font-display: swap;
+	font-display: swap;;
 	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff2) format('woff');
 }
 body {
