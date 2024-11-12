@@ -6,5 +6,44 @@ body {
     font-weight: 400;
     color: #3d3d3d;
     line-height: 1.4;
-    letter-spacing: -0.2m; /*글자크기 하나가 1em임*/
+    letter-spacing: -0.05em; /*글자크기 하나가 1em임*/
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 31px 0 34px 0; 
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li a {
+    font-size: 22px;
+    color: #3D3D3D;
+    padding: 33px 26px 34px 26px;
+    display: block;
+    /*a 태그는 무조건 blcok 또는 inline-block*/
+}
+.visual {
+    height: 660px;
+    background: url(../images/visual_bg.png) no-repeat center center;
+    color: #fff;
+    text-align: right;
+}
+.visual h2 {
+    font-size: 55px;
+    inline-size: 1.05;
+   padding: 229px 0 558px 0;
+}
+.visual h2 strong{
+    font-weight: 700;
 }

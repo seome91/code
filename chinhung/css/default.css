@@ -14,8 +14,10 @@ a {
     /*width/height를 늘리는 속성이 있는 데 이를 적용x
        -width 와 height를 준 경우 그 값을 유지 하는 값*/
 }
-.wrapper {
-    width: 1260px;
-    margin: 0 auto;
-
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;/* 브라우저가 주는 글자크기 적용X */
+    font-weight: inherit;
+}
+strong {
+    font-weight: inherit;
 }
