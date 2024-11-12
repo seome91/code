@@ -14,7 +14,7 @@ body {
 }
 .wrapper {
     width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     }
 
 .gml {
@@ -44,7 +44,7 @@ body {
 
 .stic {
     color: #ffffff;
-    margin: auto;
+    margin: 0 auto;
     
 }
 .stic h2 {
