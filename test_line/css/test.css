@@ -1,27 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
 body {
-    font-family: 'Pret',sans-serif;
     font-size: 17px;
     font-weight: 400;
-    color: #555555;
     line-height: 1.4;
+    width: 1200px;
+    margin: auto;
 
 }
 *{
     margin: 0;
-    padding: 0;}
-h1, h2 {
-    font-family: 'Pret',sans-serif;
+    padding: 0;
+}
+.wrapper {
+    width: 1200px;
+    margin: auto;
+    }
+
+.gml {
+    color: #2d2d2d;
+    }
+
+.gml h1 {
     font-size: 40px;
     font-weight: 600;
     color: #2d2d2d;
     line-height: 1.4;
+    margin: 55px 0 12px 0;
 }
-.strong {
-    font-family: 'Pret',sans-serif;
+.gml p strong {
     font-size: 17px;
     font-weight: 400;
     color: #00b900;
-    line-height: 1.4;
+    margin: 12px 0 12px 0;
+    padding: 12px 0 0 0;
+}
+.gml p {
+    margin: 12px 0 25px 0;
+}
+.gml .more {
+    border-radius: 27px;
+} 
+
+.stic {
+    color: #ffffff;
+    margin: auto;
+    
+}
+.stic h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 153px 0 33px 0;
+
+
+}
+.stic h2 p {
+    font-size: 17px;
+    font-weight: 400;
+
 }
