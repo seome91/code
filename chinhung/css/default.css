@@ -1,0 +1,21 @@
+/*태그별로 브라우저가 주는 기본 스타일을 삭제 하는 역할*/ 
+ul,li {
+    list-style: none; /*li 앞에 동그라미(list-style) 삭제(none)*/
+}
+a {
+    color: inherit; /*브라우저가 지정으로 해준 글자색 (퍼란색) 안해*/
+    text-decoration: none; /*밑에 줄(text-decoration)없애기(none)*/
+
+}/*와일드 카드라고 해서 모든 태그를 지칭*/
+* {
+    margin: 0;
+    padding: 0; /*여백삭제*/
+    box-sizing: border-box;
+    /*width/height를 늘리는 속성이 있는 데 이를 적용x
+       -width 와 height를 준 경우 그 값을 유지 하는 값*/
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+
+}
