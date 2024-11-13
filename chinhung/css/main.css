@@ -16,6 +16,14 @@ body {
     width: 1260px;
     margin: 0 auto;
 }
+#wrap {
+    min-width: 1300px;
+    margin: 0 auto;
+    /*브라우저의 최소 넓이를 지정
+     - 작은 브라우저에서 가로 스크롤이 생기면 배경이 짤려서
+     wrapper에서 지정한 width에 좌우 여백 20xp씩 준 값
+     1260 + 40 = 1300*/
+}
 header {
     height: 100px;
 }
