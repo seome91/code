@@ -1,0 +1,107 @@
+@import url(default.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.4;
+    letter-spacing: -0.05em; /*글자크기 하나가 1em임*/
+    word-break: keep-all; /*단어(여백을기준으로)별로 줄바꾸기*/
+    word-wrap: break-word;
+    /*단어가 너무 길어서 줄바꿈이 안될때 강제로 줄바꿈
+      word-break: keep-all로 생기는 오류 수정,생긴지 얼마 안된 기능이라 일부 적용안됨  */
+}
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+#wrap {
+    min-width: 1300px;
+    margin: 0 auto;
+    /*브라우저의 최소 넓이를 지정
+     - 작은 브라우저에서 가로 스크롤이 생기면 배경이 짤려서
+     wrapper에서 지정한 width에 좌우 여백 20xp씩 준 값
+     1260 + 40 = 1300*/
+}
+.sec01 {
+height: 300px;
+background-color: #f4f4f4;
+
+}
+.box {
+    width: 200px;
+    height: 100px;
+    border: 2px solid #3d3d3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sec02 {
+    position: relative; /*box03의 정렬의 기준*/
+    height: 300px;
+    background-color: #A8210D;
+}
+.sec02 .box02 {
+    position: absolute;
+    /**sec02안에 있기 때문에 다른 요소를 기준으로 정렬하고 싶어도 
+     sec02안에 position 속성이 있기때문에 */
+    left: 50%;
+    top: 0;
+}
+.sec02 .box03 {
+    position: absolute; /*box02의 정렬의 기준*/
+    right: 10px;
+    bottom: 10px;
+}
+.news {
+    margin: 100px 0 500px 0;
+
+}
+.news .wrapper {
+    position: relative;
+    /* more 정렬의 기준점 */
+}
+
+.news h2 {
+    font-size: 45px;
+    font-weight: 800px;
+    color: #3d3d3d;
+    margin: 0 0 20px 0;
+    position: relative;
+}
+.news h2::before {
+    position: absolute;
+    left: 0;
+    top: -5px;
+    width: 50px;
+    height: 2px;
+    background-color: #A8210D;
+    content: "";
+
+}
+.news h2::after{
+    content: "";
+
+}
+.news .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.news .list ul li {
+    width: 23%;
+    height: 100px;
+    background-color: #f4f4f4;
+}
+.news .more { 
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.news .more a {
+    background-color: #A8210D;
+    color: #f4f4f4;
+    padding: 10px 30px;
+    border-radius: 50px;
+    display: inline-block;
+}
