@@ -51,6 +51,7 @@ header .gnb ul li a {
     font-weight: 700;
 }
 .visual h2 p {
+    margin: 12px 0 0 0;
     font-size: 16px;
     font: 200;
     color: #fff;
@@ -93,6 +94,12 @@ header .gnb ul li a {
     padding: 13px 0 13px 0;
     margin: 18px 0 0 0;
 }
+/*a한테 마우스를 올렸을때 자세히 보기 스타일*/
+.biz .list ul li a:hover .more {
+    border-color: #483F6E;
+    background-color: #483F6E;
+    color: #fff;
+}
 .brand {
     margin: 157px 0 0 0;
     height: 660px;
@@ -115,10 +122,8 @@ header .gnb ul li a {
     padding: 12px 44px 12px 44px ;
 }
 .brand .more a:hover {
-    color: #fff;
     background-color: #483F6E;
     border-color:#483F6E;
-
     /*만약 border가 있던 버튼에 마우스를 
      오버해서 배경색을 줬다면 border 색상도 배경색으로 같이 줘야함,
      border빼면 넓이와 높이가 변경됨
@@ -128,5 +133,37 @@ header .gnb ul li a {
      */
 }
 footer {
-    margin: 500px 0 0 0;
+    background-color: #1d1d1d;
+    color: rgba(255,255,255,0.8);
+    padding: 50px 0 60PX 0;
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin: 0 40px 0 0;
+}
+footer .f_nav ul li:last-child {
+    margin-right: 0;
+}
+footer .f_nav ul li.privacy {
+    font-weight: 800;
+}
+    /*
+    li.privacy(띄워쓰기 없음)이라는 의미는
+    <li class="privact" 이렇게 코딩된 요소를 선택
+    -----li 중에서 ,privacy 클래스가 있는 요소
+
+    li .privacy(띄워쓰기 있음)
+    <li>
+    <div class="privacy">
+*/
+footer .f_info {
+    margin: 24px 0 24px 0;
+}
+footer .f_info span {
+    margin: 0 62px 0 0;
+}
+footer .copyright {
+    color: rgba(255,255,255,0.3)
 }
