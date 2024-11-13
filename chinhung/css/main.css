@@ -2,17 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 body {
     font-family: "Noto Sans KR", sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 400;
     color: #3d3d3d;
     line-height: 1.4;
     letter-spacing: -0.05em; /*글자크기 하나가 1em임*/
+    word-break: keep-all; /*단어(여백을기준으로)별로 줄바꾸기*/
+    word-wrap: break-word;
+    /*단어가 너무 길어서 줄바꿈이 안될때 강제로 줄바꿈
+      word-break: keep-all로 생기는 오류 수정,생긴지 얼마 안된 기능이라 일부 적용안됨  */
 }
 .wrapper {
     width: 1260px;
     margin: 0 auto;
 }
-
 header {
     height: 100px;
 }
@@ -42,8 +45,88 @@ header .gnb ul li a {
 .visual h2 {
     font-size: 55px;
     inline-size: 1.05;
-   padding: 229px 0 558px 0;
+   padding: 229px 0 6px 0;
 }
 .visual h2 strong{
     font-weight: 700;
+}
+.visual h2 p {
+    font-size: 16px;
+    font: 200;
+    color: #fff;
+}
+.biz .tit {
+    text-align: left;
+    margin: 91px 0 35px 0;
+}
+.biz .tit h2 {
+    font-weight: 900;
+    font-size: 45px;
+    letter-spacing: -0.02em;
+}
+.biz .tit h2 strong {
+    color: #483F6E;
+}
+.biz .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.biz .list ul li { 
+    width: 297px;
+}
+.biz .list ul li a {
+    display: block; /*a 태그는 block아님 inline-block 필수*/
+    text-align: center;
+}
+.biz .list ul li a .inner {
+    margin: 0 20px 0 20px;
+}
+.biz .list ul li a h3 {
+    font-size: 40px;
+    color: #1d1d1d;
+    font-weight: 600;
+    margin: 12px 0 12px 0;
+}
+.biz .list ul li a .more {
+    border: 1px solid #3D3D3D;
+    display: block;
+    padding: 13px 0 13px 0;
+    margin: 18px 0 0 0;
+}
+.brand {
+    margin: 157px 0 0 0;
+    height: 660px;
+    background: url(../images/vadim-babenko-4c8b8Ei6M3Q-unsplash.png) no-repeat center center / cover;
+    color: #fff;
+}
+.brand h2 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    padding: 85px 0 0 0;
+}
+.brand .more { 
+    margin: 30px 0 0 0;   
+}
+.brand .more a { 
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 12px 44px 12px 44px ;
+}
+.brand .more a:hover {
+    color: #fff;
+    background-color: #483F6E;
+    border-color:#483F6E;
+
+    /*만약 border가 있던 버튼에 마우스를 
+     오버해서 배경색을 줬다면 border 색상도 배경색으로 같이 줘야함,
+     border빼면 넓이와 높이가 변경됨
+     -----> border있던 스타일은 오버해도 border 유지
+     border의 두꺠,선스타일이 동일하고 색상만 변경하면
+     border-color로 색상만 변경
+     */
+}
+footer {
+    margin: 500px 0 0 0;
 }
