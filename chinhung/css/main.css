@@ -45,13 +45,13 @@ header .gnb ul li a {
 .visual h2 {
     font-size: 55px;
     inline-size: 1.05;
-   padding: 229px 0 6px 0;
+    padding: 229px 0 6px 0;
 }
 .visual h2 strong{
     font-weight: 700;
 }
 .visual h2 p {
-   padding: 12px 0 0 0;
+    padding: 12px 0 0 0;
     font-size: 16px;
     font: 200;
     color: #fff;
