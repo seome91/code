@@ -51,7 +51,7 @@ header .gnb ul li a {
     font-weight: 700;
 }
 .visual h2 p {
-    margin: 12px 0 0 0;
+   padding: 12px 0 0 0;
     font-size: 16px;
     font: 200;
     color: #fff;
