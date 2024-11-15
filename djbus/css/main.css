@@ -1,22 +1,12 @@
 @import url(default.css);
-<<<<<<< HEAD
 @import url(font.css);
 body {
     font-family: "Pretendard", sans-serif;
-=======
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-body {
-    font-family: "Noto Sans KR", sans-serif;
->>>>>>> 65598b1d9118f373c9e805a5cadfdc0a53f7577d
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 400;
     color: #3d3d3d;
-    line-height: 1.4;
-<<<<<<< HEAD
+    line-height: 1.2;
     letter-spacing: 0; /*글자크기 하나가 1em임*/
-=======
-    letter-spacing: -0.05em; /*글자크기 하나가 1em임*/
->>>>>>> 65598b1d9118f373c9e805a5cadfdc0a53f7577d
     word-break: keep-all; /*단어(여백을기준으로)별로 줄바꾸기*/
     word-wrap: break-word;
     /*단어가 너무 길어서 줄바꿈이 안될때 강제로 줄바꿈
@@ -33,4 +23,52 @@ body {
      - 작은 브라우저에서 가로 스크롤이 생기면 배경이 짤려서
      wrapper에서 지정한 width에 좌우 여백 20xp씩 준 값
      1260 + 40 = 1300*/
+}
+header{
+    height: auto;
+}
+.wrapper .logo {
+    margin: 16px 0 0 0;
+}
+header .gnb ul {
+    display: flex;
+    justify-content: space-between;  
+}
+header .gnb ul li a {
+    display: block;
+    padding: 28px 19px 25px 19px;
+    color: #1c1c1c;
+    position: relative;
+}
+header .gnb ul li a:hover {/*a에게 마우스를 올렸을때 상태*/
+    font-weight: 800;
+    color: #C9A887;
+}
+header .gnb ul li a:hover::after {/*a에게 마우스를 올렸을때 가상선택자*/
+    content: "";
+    position: absolute; /*a를 기준으로 정렬*/
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 20px);
+    height: 3px;
+    background-color: #C9A887;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.visual strong {
+    padding: 428px 0 0 0;
+    display: block;
+}
+.visual {
+    height: 1019px;
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
+    color: #1c1c1c;
+}
+
+.visual h2 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
 }
