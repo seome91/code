@@ -250,8 +250,10 @@ header .wrapper {
     font-size: 0;
 }
 .pr .video .list ul li a:hover .photo img {
-    transform: scale(1.2, 1.2, 1);
-
+    transition: 0.5s;/*0.5초동안 부드럽게 처리해*/
+}
+.pr .video .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);/*가로세로 1.2배*/
 }
 .pr .video .list ul li a h3 { 
     font-size: 17px;
