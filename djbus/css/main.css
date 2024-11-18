@@ -66,9 +66,257 @@ header .wrapper {
     background: url(../images/visual_bg.jpg) no-repeat center center / cover;
     color: #1c1c1c;
 }
-
 .visual h2 {
     font-size: 45px;
     font-weight: 800;
     line-height: 1.2;
+}
+.int {
+    margin: 230px 0 0 0; 
+}
+/*다중선택자.int .txt_left,
+    .int .txt_rigth int안에 있는 txt_left와 txt_right
+    .int .txt_lesft,
+    text_right ---- 이케하면 안됨!
+*/
+.int .txt_left,
+.int .txt_right {
+    display: flex;
+    justify-content: space-between;
+}
+/*
+     <div class="int">
+          <div class="txt_left">    
+           <div class="inner"></div>
+           right
+       </div>
+    </div>
+    --이런구조에서 inner 와 동일한스타일 
+*/
+.int .txt_left .inner,
+.int .txt_right .inner {
+    width: 547px;
+}
+.int strong {
+    color: #1D5057;
+    display: block;
+}
+.int .txt_left strong {
+    margin: 66px 0 6px 0;
+}
+.int .txt_right strong {
+    margin: 92px 0 6px 0;   
+}
+.int h2{
+    font-size:45px;
+    color: #3d3d3d;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+.int h2 em {
+    color: #1D5057;
+}
+.int h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 14px 0 18px 0;
+}
+.int .more {
+    margin: 64px 0 0 0;
+    display: flex;
+    /*a태그가 인라인 태그라서 좌우로 배치되만 중간에 space 한칸의 여백이 존재함 , 이를 없애고 없애고 내가 디자인한대로 정확하게 여백주려고....*/
+}
+.int .more a {
+    font-size: 20px;
+    color: #1D5057;
+    border: 1px solid #1D5057;
+    padding: 7px 31px 7px 31px;
+    border-radius: 23px;
+    display: block;
+    /*a태그에 dispaly:block-inline block 필수*/
+    margin: 9px;
+}
+/*a중에서 point 클래스를 가지고있는 태그*/
+.int .more a.point {
+    background-color: #1D5057;
+    color: #E8D9B2
+}
+.int .more a:hover {
+    border-color: #1D5057;
+    background-color: #1D5057;
+    color: #fff;
+}
+.int .photo {
+    overflow: hidden; /*photo가 지정한 영역 밖에 나가는 요소는 숨김*/
+    border-radius: 23px;
+    font-size: 0;
+    line-height: 0;
+}
+.pr {
+    margin: 197px 0 0 0;
+    background: url(../images/pr_bg.png) no-repeat center top;
+    color: #fff;
+}
+.pr .news {
+    display: flex;
+    justify-content: space-between;
+    padding: 153px 0 0 0;
+    position: relative;/*more의 정렬의 중심으로 삼으려고함*/
+}
+.pr .news .list {
+    width: 606px;
+}
+.pr .news .list ul li {
+    border-bottom: 1px solid rgba(255, 255 ,255,0.4)
+}
+.pr .news .list ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 0 22px 0;
+}
+.pr .news .list ul li a h3 {
+    font-size: 17px;   
+}
+.pr .news .list ul li a:hover h3 {
+    font-weight: 600;
+    text-decoration: underline; 
+}
+.pr .news .tit strong {
+    color: #E8D9B2;
+    display: block;
+}
+.pr .news .tit h2 {
+    font-size:45px;
+    color: #ffff;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 5px 0 5px 0;
+}
+.pr .news .tit h2 em {
+    color: #E8D9B2;
+}
+.pr .news .more {
+    position: absolute; /*news를 기준으로 정렬할거에요 위로 쫒아감 (엄마가 못알아봄)*/
+    left: 0;
+    top: 350px;
+}
+.pr .news .more a {
+    display: block;
+    font-size: 12px;
+    padding: 7px 20px 7px 20px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+}
+.pr .news .more a:hover { 
+    background-color: #E8D9B2;
+    font-weight: 600;
+    color: #1D5057;
+}
+.pr .video {    
+    margin: 350px 0 0 0;/*more정렬의 기준점*/
+    position: relative;
+}
+.pr .video .tit strong { 
+    color: #E8D9B2;
+}
+.pr .video .tit h2 {
+    font-size:45px;
+    color: #ffff;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 5px 0 30px 0;
+}
+.pr .video .tit h2 em {
+    color: #E8D9B2;
+}
+.pr .video .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.pr .video .list ul li {
+    width: 404px;
+}
+.pr .video .list ul li a {
+    display: block;
+}
+.pr .video .list ul li a .photo {
+    border-radius: 23px;
+    border: 2px solid #E8D9B2;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+}
+.pr .video .list ul li a h3 { 
+    font-size: 17px;
+    color:#3d3d3d;
+    margin: 22px 0 0 10px;
+}
+.pr .video .list ul li a:hover h3 {
+    font-weight: 600;
+}
+.pr .video .more {
+    position: absolute;/* vesio를 기준으로 정렬*/
+    right: 0;
+    top: 52px;
+}
+.pr .video .more a {
+    display: block;
+    font-size: 12px;
+    padding: 7px 20px 7px 20px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+}
+.pr .video .more a:hover { 
+    background-color: #E8D9B2;
+    font-weight: 600;
+    color: #1D5057;
+}
+footer {
+    margin: 115px 0 0px 0;
+    padding: 115px 0 70px 0;
+    background-color: #1d1d1d;
+    color: rgba(255, 255 ,255,0.4);
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin: 0 41px 0 0;
+    position: relative;/* after 정렬의 기준*/
+}
+footer .f_nav ul li::after {
+    content: "";/*필수값*/
+    position: absolute; /*li를 기준으로 정렬*/
+    right: -22px;
+    top: 4px;   
+    width: 2px;
+    height: 13px;
+    background-color: rgba(255, 255 ,255,0.4);
+}
+/*li중에서 마지막 li의 after가 숨김처리*/
+footer .f_nav ul li:last-child::after {
+    display: none;/*숨김*/
+}
+footer .f_nav ul li a {
+    display: block;
+}
+footer .f_nav ul li.privarcy a {
+    font-weight: 800;
+    color: #E8D9B2;
+}
+footer .f_nav ul li a:hover {
+    text-decoration: underline;/*밑줄*/
+}
+
+footer .f_info {
+    margin: 15px 0 12px 0;
+}
+footer .f_info span {
+    margin: 0 12px 0 0;
+}
+footer .copyright {
+    color: rgba(255, 255 ,255,0.2);
 }
