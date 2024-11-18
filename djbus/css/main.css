@@ -249,6 +249,10 @@ header .wrapper {
     line-height: 0;
     font-size: 0;
 }
+.pr .video .list ul li a:hover .photo img {
+    transform: scale(1.2, 1.2, 1);
+
+}
 .pr .video .list ul li a h3 { 
     font-size: 17px;
     color:#3d3d3d;
@@ -311,7 +315,7 @@ footer .f_nav ul li a:hover {
     text-decoration: underline;/*밑줄*/
 }
 
-footer .f_info {
+footer .f_info {    
     margin: 15px 0 12px 0;
 }
 footer .f_info span {
