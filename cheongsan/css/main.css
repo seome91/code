@@ -1,0 +1,14 @@
+@import url(default.css);/*<-여기서 그대로 불러오세요(소환)*/
+@import url(fonts.css);
+@import url(common.css);
+
+.visual {
+    background:url(../images/visual_bg.jpg)no-repeat center center / cover;
+    height: 100vh;
+}
+.visual h2 {
+    padding-top: 294px;
+}
+body {
+    margin-bottom: 500px;
+} 
