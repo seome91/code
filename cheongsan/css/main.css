@@ -171,7 +171,7 @@ header .gnb ul li a {
     font-weight: 400;
     line-height: 1.2;
 }
-.cultuer .list ul li a span::after {
+.cultuer .list ul li .more a::after {
     content: "";
     position: absolute;
     right: -29px;
@@ -182,7 +182,59 @@ header .gnb ul li a {
     background-repeat: no-repeat ;
     background-position: center center;
     background-size: contain;
+    transition: trasform 1s;  
 }   
+.cultuer .more a {
+
+
+}
+.cultuer .more a::after {
+    content: "";
+    position: absolute;
+    right: -29px;
+    top: 2px;
+    width: 16px;/*아이콘크기*/
+    height: 16px;/*아이콘크기*/
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.06663 14.6334L4.1333 13.6834L9.84997 7.96671L4.1333 2.25005L5.06663 1.30005L11.7333 7.96671L5.06663 14.6334Z' fill='%234D6780' fill-opacity='0.85'/%3E%3C/svg%3E ");
+    background-repeat: no-repeat ;
+    background-position: center center;
+    background-size: contain;
+    transition: trasform 1s;
+    
+}   
+.cultuer .more a:hover {
+    color: #3d3d3d;
+
+}
+.cultuer .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.133342 1.10008L1.08334 0.166748L6.80001 5.88341L12.5167 0.166748L13.4667 1.10008L6.80001 7.76675L0.133342 1.10008Z' fill='%234D6780' fill-opacity='0.85'/%3E%3C/svg%3E%0A");
+    transform: rotate(360deg);
+}
+
+
+.tour {
+    margin-top: 94px;
+}
+
+.tour .tit h2 {
+    margin-bottom: 12px;
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.tour .tit h2 strong{
+    color: #4D6780;
+}
+.tour .tit ul {
+    display: flex;
+}
+.tour .tit ul li {
+    width: 183px;
+}
+.tour .tit ul li .on {
+    width: 404px;
+}
 #wrap {
     padding-bottom: 500px;
 } 
