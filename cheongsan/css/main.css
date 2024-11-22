@@ -2,14 +2,187 @@
 @import url(fonts.css);
 @import url(common.css);
 
+    /************************ *header start* **********************/
+header {
+    position: absolute;/*body기준정렬*/
+    left: 0;
+    top: 0;
+    width: 100%;/*(header의 사이즈임)
+                block 에absolute를 주어도 넓이가 없다,내부요소만 늘어남*/
+    z-index: 100; /*header는 무조건 맨위에있어야해서,위로 올려주는 기능
+                하단 컨텐츠는 100밑으로 줄 예정*/
+    height: 100px;
+}
+header .wrapper { 
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin-top: 24px;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul li a {
+    display: block;
+    font-weight: 500;
+    font-size: 22px;
+    color: #fff;
+    padding: 38px 25px 38px 25px;
+}
+
 .visual {
     background:url(../images/visual_bg.jpg)no-repeat center center / cover;
+    border-bottom-right-radius: 190px;
+}
+.visual .wrapper {
     height: 100vh;
+    position: relative;
+    /*브라우저의 높이를 100vh으로 볼때,상대값*/
+    /*pic은 wrapper를 기준으로 오른쪽 하단에 정렬해 absolute로 배치,
+    단 visual에h height가 있는 상태에서는 wrapper는 콘텐츠가 존재한는 만큼만
+    높이가 잡힘,그래서 wrapper에 높이를 주고,visual은 높이만큼 들어가게 하면 
+    편함*/
 }
 .visual h2 {
-    padding-top: 294px;
-    
+    padding-top: calc(50vh - 220px);
+    /*50vh-95px 을 빼야함, 단위가 안맞음
+      단위가 다른 수치를 계산할떄 쓰는 식이 calc()임 단,반드시
+       -+앞뒤로는 여백을 줘야함,그리고 단위를 써줘야함*/
+    text-align: center;   
 }
-body {
-    margin-bottom: 500px;
+.visual .pic {
+    position: absolute;/*wrapper를 기준으로 정렬*/
+    right: -92px;
+    bottom: -92px;
+}
+.visual .pic a {
+    display: block;
+    width: 188px;
+    height: 188px;
+    border-radius: 50%;
+    background-color: #4D6780;
+    color: #FDF6EB;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 85px;
+    line-height: 1.2;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+.visual .pic a::before {
+    content: "";
+    position: absolute;/*pic을 기준으로 정렬*/
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);/*좌우의 가운데*/
+    width: 65px; /*아이콘 사이즈*/
+    height: 65px;
+    background-image: url("data:image/svg+xml,%3Csvg width='66' height='66' viewBox='0 0 66 66' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26.85 41.2L32.7 37.65L38.55 41.2L37 34.55L42.2 30.05L35.35 29.5L32.7 23.2L30.05 29.5L23.2 30.05L28.4 34.55L26.85 41.2ZM32.75 55.25L26 48.7H16.7V39.4L10 32.7L16.7 26V16.7H26L32.75 10L39.4 16.7H48.7V26L55.4 32.7L48.7 39.4V48.7H39.4L32.75 55.25ZM32.75 51.05L38.146 45.7H45.7V38.15L51.15 32.7L45.7 27.25V19.7H38.15L32.75 14.25L27.25 19.7H19.7V27.25L14.25 32.7L19.7 38.15V45.7H27.2L32.75 51.05Z' fill='%23FDF6EB'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.visual .pic a:hover {
+    background-color: #FDF6EB;
+    color: #4D6780;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.35);
+}
+.visual .pic a:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='66' height='66' viewBox='0 0 66 66' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26.85 41.2L32.7 37.65L38.55 41.2L37 34.55L42.2 30.05L35.35 29.5L32.7 23.2L30.05 29.5L23.2 30.05L28.4 34.55L26.85 41.2ZM32.75 55.25L26 48.7H16.7V39.4L10 32.7L16.7 26V16.7H26L32.75 10L39.4 16.7H48.7V26L55.4 32.7L48.7 39.4V48.7H39.4L32.75 55.25ZM32.75 51.05L38.146 45.7H45.7V38.15L51.15 32.7L45.7 27.25V19.7H38.15L32.75 14.25L27.25 19.7H19.7V27.25L14.25 32.7L19.7 38.15V45.7H27.2L32.75 51.05Z' fill='%234D6780'/%3E%3C/svg%3E%0A");
+}
+.cultuer {
+    margin-top: 135px;
+}
+.cultuer .wrapper {
+    position: relative;/*more 정렬의 기준이 될거임*/
+}
+.cultuer .more {
+    position: absolute;/*wrapper를 기준으로정렬,a::after의 기준*/
+    right: 0;
+    top: 0;
+}
+.cultuer .more a {
+    display: block;
+    padding: 2px 30px 2px 2px;
+    color: #4D6780;
+}
+.cultuer .more a::after {
+    content: "";
+    position: absolute;/*more의 정렬 기준*/
+    right: 4px;
+    top: 5px;
+    width: 16px;/*아이콘의사이즈*/
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.06663 14.6334L4.1333 13.6834L9.84997 7.96671L4.1333 2.25005L5.06663 1.30005L11.7333 7.96671L5.06663 14.6334Z' fill='%234D6780' fill-opacity='0.85'/%3E%3C/svg%3E ");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+}
+.cultuer .tit h2 {
+    margin-bottom: 10px;
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.cultuer .tit h2 strong {
+    color: #4D6780;
+}
+.cultuer .list {
+    margin: 43px 0 0 0;
+}
+.cultuer .list ul {
+    display: flex;
+    justify-content: space-between
+}
+.cultuer .list ul li {
+    width: 404px;
+}
+.cultuer .list ul li a {
+    display: block;
+}
+.cultuer .list ul li a .photo {
+    overflow: hidden; /*photo 영역 밖에 나가는 이미지를 숨김*/
+    font-size: 0; /*사진 하단의 영역을 잡아주기위해서*/
+    line-height: 0; /*사진 하단의 영역을 잡아주기위해서*/
+}
+.cultuer .list ul li a .photo img {
+    transition: 0.5s; /*속성이 변경된다면 1초동안 자연스럽게 변경*/
+}
+.cultuer .list ul li a:hover .photo img {
+    transform: scale3d(1.1, 1.1, 1);
+
+}
+.cultuer .list ul li a h3 {
+    margin: 20px 0 9px 0;
+    color: #3d3d3d;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.cultuer .list ul li a span {
+    position: relative;/**/
+    display: inline-block;
+    margin: 3px 0 7px 0;
+    color: #4D6780;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.cultuer .list ul li a span::after {
+    content: "";
+    position: absolute;
+    right: -29px;
+    top: 2px;
+    width: 16px;/*아이콘크기*/
+    height: 16px;/*아이콘크기*/
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.06663 14.6334L4.1333 13.6834L9.84997 7.96671L4.1333 2.25005L5.06663 1.30005L11.7333 7.96671L5.06663 14.6334Z' fill='%234D6780' fill-opacity='0.85'/%3E%3C/svg%3E ");
+    background-repeat: no-repeat ;
+    background-position: center center;
+    background-size: contain;
+}   
+#wrap {
+    padding-bottom: 500px;
 } 
