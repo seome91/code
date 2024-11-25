@@ -166,12 +166,12 @@ header .gnb ul li a {
     position: relative;/**/
     display: inline-block;
     margin: 3px 0 7px 0;
-    color: #4D6780;
+    color: #3d3d3d;
     font-size: 17px;
     font-weight: 400;
     line-height: 1.2;
 }
-.cultuer .list ul li .more a::after {
+.cultuer .list ul li a span::after {
     content: "";
     position: absolute;
     right: -29px;
@@ -183,9 +183,21 @@ header .gnb ul li a {
     background-position: center center;
     background-size: contain;
     transition: trasform 1s;  
-}   
+}  
+.cultuer .list ul li a:hover span {
+    color: #4D6780;
+}
+.cultuer .list ul li a:hover span::after {
+    font-weight: 500;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.06663 14.6334L4.1333 13.6834L9.84997 7.96671L4.1333 2.25005L5.06663 1.30005L11.7333 7.96671L5.06663 14.6334Z' fill='%234D6780' fill-opacity='0.85'/%3E%3C/svg%3E ");
+}
+.cultuer .more  {
+    position: absolute;
+    /**/
+    right:0 ;
+    top: 80px;
+}
 .cultuer .more a {
-
 
 }
 .cultuer .more a::after {
