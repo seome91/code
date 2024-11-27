@@ -1,0 +1,32 @@
+* { /*와이드카드 ,모든 태그의 여백삭제*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*사이즈 유지*/
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;/*브라우저의 기본속성을 무시하시오*/
+    font-size: inherit;
+    
+}
+strong {
+    font-weight: inherit;
+}
+ul, li, ol {
+    list-style: none;/*앞에 동그라미 사라짐*/
+}
+a {
+    color: inherit;/*파란색을 body에서 선언한 색상으로*/
+    text-decoration: none;/*밑줄삭제*/
+}
+em, address {
+    font-style: normal;
+}
+button {
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}

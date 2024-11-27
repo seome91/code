@@ -1,0 +1,20 @@
+body, html {
+    font-family: "Pretendard",sans-serif;/*없으면 이걸로대체(필수)....*/
+    font-size: 17px;
+    font-weight: 300;
+    color: #1d1d1d;
+    line-height: 1.2;/*배수,글자크기에몇배*/
+    letter-spacing: 0; /* 자간 */
+    word-break: keep-all;/*단어별로 (여백기준) 줄바꿈*/
+    word-wrap: break-word;/* 단어가 너무 길면 그걸 강제로 줄바꿈 하는 명령*/
+}
+.wrapper {
+    /*디자인 파일의 레이아웃 그리드처럼 홈페이지의 영역을 제한하고, 브라우저에 가운데 정렬 할수 있게해줌*/
+    width: 1260px;
+    margin: 0 auto;   
+}
+#wrap {
+    min-width: 1300px;
+    /*컨텐츠 영역이 1260px, 좌우여백 20px씩을 준 값 1260+20+20=1300*/
+    overflow: hidden;/*브라우저(wrap) 밖으로 나가는애들 잘라버리세요 주로 apsolute애들이 나감*/
+}
