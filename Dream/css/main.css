@@ -31,7 +31,7 @@ header .gnb ul li a {
     font-weight: 500;
     font-size: 17PX;
     font-family: 'Gmarket Sans';
-    padding: 00 30PX 0 30PX 0;
+    padding: 00 30px 0 30px 0;
 }
 header .tnb {
     display: flex;
