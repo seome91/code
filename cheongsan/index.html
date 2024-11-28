@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicaon.ico">
+    <!--
+    favicon(파비콘)
+    1.index.html과 종일한 경로에 저장
+    2.반드시 ico확장자로 저장하고 이름은 favicon.icon
+    svg로 일단 저장하고 인터넷이서 ico로 변경
+    파비콘은 정사각형으로 제작 (256*256 추천)
+    4.파비콘을 선언하는 값은 -->
     <title>청산도</title>
 </head>
 <body>
@@ -21,94 +29,174 @@
                 </nav>
             </div>
         </header>
-        <section class="visual">
-            <div class="wrapper">
-                <h2><img src="images/visual_txt.png" alt="가고싶은 섬 청산도,'섬'의글씨가 강조되어있다"></h2>            
-                <div class="pic">
-                    <a href="#n">은하수<br>사진공방</a>
-                </div><!--pic-->
-            </div><!--wrapper-->
-        </section><!--visual-->
-        <section class="cultuer">
-            <div class="wrapper">
-                <div class="tit">
-                    <h2><strong>청산도</strong>의 문화예술</h2>
-                    <p>일제 강점기 건축양식이 그대로 남아있어 시대사적 보존가치가 높은 건축물로 평가받고 있습니다.<br>
-                        역사문화전시관은 2012년 제7회 한국 농어촌건축대전에서 대상을 차지했습니다.</p>
-                </div><!--tit-->
-                <div class="list">
-                    <ul>
-                        <li>
-                            <a href="#n">
-                                <div class="photo"><img src="images/cultuer_img1.jpg" alt="카페의 빈테이블 창밖에는 거리가보인다"></div>
-                                    <h3>향토역사 문화 전시관 & 느림 카페</h3>
-                                    <p>LP음악을 감상하며 차를 마실 수 있는 공간</p>
-                                    <span>자세히보기</span>                                
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <div class="photo"><img src="images/cultuer_img2.jpg" alt="카페의 빈테이블 창밖에는 거리가보인다"></div>
-                                    <h3>청산 파시 문화거리</h3>
-                                    <p>치열한 삶의 잔상들이 발걸음을 오래도록 붙잡는다</p>
-                                    <span>자세히보기</span>                                
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <div class="photo"><img src="images/cultuer_img3.jpg" alt="카페의 빈테이블 창밖에는 거리가보인다"></div>
-                                    <h3>섬 갤러리</h3>
-                                    <p>멈추면 비로소 보이는 느림의 조각</p>
-                                    <span>자세히보기</span>                                
-                            </a>
-                        </li>
-                    </ul>
-                </div><!--list-->
-                <div class="more"><a href="#n">전체보기</a></div><!--more-->
-            </div><!--wrapper-->
-        </section><!--cultuer-->
-        <section class="tour">
-            <div class="wrapper">
-                <div class="tit">
-                    <h2><strong>청산팔경</strong>의 유례</h2>
-                    <p>청산팔경은 기정란 정지회란 연락계원청산유림들이 절에 모여서 청산도의 여덟군데 아름다운<br>경치좋은 곳을 골라 시를 읊으며 지은데서 유래한다.</p>
-                </div><!--tit-->
-                <div class="list">
-                    <ul>
-                        <!--여백을 두면 클래스명을 두개 선언할 수 있다-->
-                        <li class="list1 on">
-                            <a href="#n">
-                                <h3>1경 향도귀범</h3>
-                                <p>목성 낭 끝 수백 년 묵은 해송 하나</p>
-                                <span>자세히보기</span>
-                            </a>
-                        </li>
-                        <li class="list2">
-                            <a href="#n">
-                                <h3>제2경 오산낙조</h3>
-                                <p>목성 낭 끝 수백 년 묵은 해송 하나</p>
-                                <span>자세히보기</span>
-                            </a>
-                        </li>
-                        <li class="list3">
-                            <a href="#n">
-                                <h3>제3경 대봉연사</h3>
-                                <p>목성 낭 끝 수백 년 묵은 해송 하나</p>
-                                <span>자세히보기</span>
-                            </a>
-                        </li>
-                        <li class="list4">
-                            <a href="#n">
-                                <h3>제4경 대성야우</h3>
-                                <p>목성 낭 끝 수백 년 묵은 해송 하나</p>
-                                <span>자세히보기</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div><!--list-->
-                <div class="more"><a href="#n">전체보기</a></div><!--more-->
-            </div><!--cultuer-->
-        </section>
-    </div>
-</body>
-</html>
+        <main class="container">
+            <section class="visual">
+                <div class="wrapper">
+                    <h2><img src="images/visual_txt.png" alt="가고싶은 섬 청산도,'섬'의글씨가 강조되어있다"></h2>            
+                    <div class="pic">
+                        <a href="#n">은하수<br>사진공방</a></div><!--pic-->
+                </div><!--wrapper-->
+            </section><!--visual-->
+            <section class="cultuer">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2><strong>청산도</strong>의 문화예술</h2>
+                        <p>일제 강점기 건축양식이 그대로 남아있어 시대사적 보존가치가 높은 건축물로 평가받고 있습니다.<br>
+                            역사문화전시관은 2012년 제7회 한국 농어촌건축대전에서 대상을 차지했습니다.</p>
+                    </div><!--tit-->
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/cultuer_img1.jpg" alt="카페의 빈테이블 창밖에는 거리가보인다"></div>
+                                        <h3>향토역사 문화 전시관 & 느림 카페</h3>
+                                        <p>LP음악을 감상하며 차를 마실 수 있는 공간</p>
+                                        <span>자세히보기</span>                                
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/cultuer_img2.jpg" alt="카페의 빈테이블 창밖에는 거리가보인다"></div>
+                                        <h3>청산 파시 문화거리</h3>
+                                        <p>치열한 삶의 잔상들이 발걸음을 오래도록 붙잡는다</p>
+                                        <span>자세히보기</span>                                
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/cultuer_img3.jpg" alt="카페의 빈테이블 창밖에는 거리가보인다"></div>
+                                        <h3>섬 갤러리</h3>
+                                        <p>멈추면 비로소 보이는 느림의 조각</p>
+                                        <span>자세히보기</span>                                
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--list-->
+                    <div class="more"><a href="#n">전체보기</a>
+                    </div><!--more-->
+                </div><!--wrapper-->
+            </section><!--cultuer-->
+            <section class="tour">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2><strong>청산팔경</strong>의 유례</h2>
+                        <p>청산팔경은 기정란 정지회란 연락계원청산유림들이 절에 모여서 청산도의 여덟군데 아름다운 경치좋은<br>
+                            곳을 골라 시를 읊으며 지은데서 유래한다.</p>
+                    </div><!--tit-->
+                    <div class="list">
+                        <ul>
+                            <li class="bg1">
+                                <a href="#n">
+                                    <h3>제1경 항도귀범</h3>
+                                    <p>목성 낭 끝 수백 년 묵은 해송 하나</p>
+                                    <span>자세히보기</span>
+                                </a>
+                            </li>
+                            <li class="bg2">
+                                <a href="#n">
+                                    <h3>제2경 오산낙조</h3>
+                                    <p>빛은 물고기 비늘을 타고</p>
+                                    <span>자세히보기</span>
+                                </a>
+                            </li>
+                            <li class="bg3">
+                                <a href="#n">
+                                    <h3>제3경 대봉연사</h3>
+                                    <p>대봉산 아름드리 동백나무 숲에 서면</p>
+                                    <span>자세히보기</span>
+                                </a>
+                            </li>
+                            <li class="bg4 on">
+                                <a href="#n">
+                                    <h3>제4경 대성야우</h3>
+                                    <p>밤 깊고 이지러진 마음 창호지에 흔들리는데</p>
+                                    <span>자세히보기</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--list-->
+                        <div class="more"><a href="#n">전체보기</a></div>
+                </div><!--wrapper-->
+            </section><!--tour-->
+            <section class="community">
+                <div class="wrapper">
+                    <div class="tit">
+                        <strong>SLOW cheong san</strong>
+                        <h2>청산도는<br>쉼이다</h2>
+                        <p>"느리지만 멋진 삶"<br>을추구 합니다</p>
+                    </div><!--tit-->
+                    <div class="inner">
+                        <div class="notice">
+                            <h3>공지사항</h3>
+                            <div class="list">
+                                <ul>
+                                    <li>
+                                        <a href="#n">
+                                            <strong>청산도 7대 불가사의 진풍경</strong>
+                                            <span>2024-10-30</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <strong>청산도 슬로길 세계1호</strong>
+                                            <span>2024-19-27</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <strong>전국 생방송된 청산도</strong>
+                                            <span>2024-07-24</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <strong>제10회 청산도 팸투어</strong>
+                                            <span>2024-04-23</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#n">
+                                            <strong>청산도 은하수</strong>
+                                            <span>2023-12-07</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="more"><a href="#n">전체보기</a></div><!--아이콘만 존재해도 글씨를 써준다-->
+                        </div><!--notice-->
+                        <div class="link">
+                            <ul>
+                                <li class="ico1"><a href="#n">교통안내</a></li>
+                                <li class="ico2"><a href="#n">맛집지도</a></li>
+                                <li class="ico3"><a href="#n">숙박안내</a></li>
+                                <li class="ico4"><a href="#n">행사안내</a></li>
+                            </ul>
+                        </div><!--link-->
+                    </div><!--inner-->
+                </div><!--wrapper-->
+            </section><!--community-->
+        </main>
+    <footer>
+        <div class="wrapper">
+            <div class="f_nav">
+                <ul>
+                    <li><a href="#n">완도군청</a></li>
+                    <li><a href="#n">사이트맵</a></li>
+                    <li class="privercy"><a href="#n">개인정보처리방침</a></li>
+                    <li><a href="#n">관광정보</a></li>
+                    <li><a href="#n">오류신고</a></li>
+                    <li><a href="#n">관광사진다운로드</a></li>
+                </ul>
+            </div><!--f_nav-->
+            <div class="f_info">
+                <address>전남 완도군 청산면 도청리 11433번지</address>
+                <span>대표전화 : 061-552-0809</span>
+            </div><!--f_info-->
+            <div class="copyright">
+                <p>COPYRIGHT BY CHEONGSANDO.NET ALL RIGHTS RESERVED.</p>
+                <p>청산도 홈페이지에 게시된 이메일주소 자동 수집을 거부하며, 이를 위반시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.</p>
+            </div><!--copyright-->
+            <div class="licnese"><a>이 홈페이지는 포천 막걸리체를 사용하여 제작되었습니다</a></div>
+        </div><!--wrapper--> 
+    </footer>
+     </div><!--wrap--> 
