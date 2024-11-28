@@ -16,5 +16,5 @@ body, html {
 #wrap {
     min-width: 1300px;
     /*컨텐츠 영역이 1260px, 좌우여백 20px씩을 준 값 1260+20+20=1300*/
-    overflow: hidden;/*브라우저(wrap) 밖으로 나가는애들 잘라버리세요 주로 apsolute애들이 나감*/
+    /*overflow: hidden;/*브라우저(wrap) 밖으로 나가는애들 잘라버리세요 주로 apsolute애들이 나감*/
 }

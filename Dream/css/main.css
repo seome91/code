@@ -22,16 +22,21 @@ header .logo {
 }
 header .gnb ul {
     display: flex;
+    justify-content: space-between;
+    padding: 0; 
+    margin: 0; 
+    width: 100%;
+    
 }
 header .gnb ul li a {
-    display: block;
-    justify-content: space-between;
-    line-height: 100px;
-    /*메뉴가 정확한 높이를 갖고 위아래 가운데 정렬이 됨*/
+    display: flex;
+    justify-content: center;
+    line-height: 100px;/*메뉴가 정확한 높이를 갖고 위아래 가운데 정렬이 됨*/
     font-weight: 500;
     font-size: 17PX;
     font-family: 'Gmarket Sans';
-    padding: 00 30px 0 30px 0;
+    padding: 0 30px;
+    text-align: center;
 }
 header .tnb {
     display: flex;
@@ -91,4 +96,301 @@ header .tnb .global button::before {
     font-size: 45px;
     font-weight: 700;
     padding: 507px 0 0 0;
+}
+.biz {
+    margin: 285px 0 0 0;
+    padding-bottom: 61px;/*list가 trancform으로 이동한 만큼*/
+}
+.biz .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /*biz에 tit하고 list의 높이가 동일하게 설정됨
+        각자 콘텐츠의 높이대로만 높이가 잡히도록 설정하기위해서
+        tit에 stikcy 적용하기 위해서*/
+}
+.biz .tit {
+    position: sticky;
+    /*감싸고있는 wrapper안에 고정
+    주의사항! 감싸는 요소중에서 단 1개라도 overflow::hidden;이 적용되어 있으면 적용되지 않음*/
+    top: 20px;/*고정될때 위에서 떨어지는 값*/
+}
+.biz .tit strong {
+    color: #0F4C82;
+    font-weight: 400;
+}
+.biz .tit h2 {
+    font-family: 'Gmarket Sans';
+    font-size: 45px;
+    font-weight: 700;
+    padding: 6px 0 14px 0;
+}
+.biz .tit h2 em {
+    color: #0F4C82;
+}
+.biz .list {
+    width: 618px;
+}
+.biz .list ul {
+    display: flex;
+    flex-wrap: wrap;/*여러줄허용*/
+    flex-direction: row-reverse;
+    gap: 24px;
+}
+.biz .list ul li {
+    width: 297px;
+}
+.biz .list ul li:nth-child(odd) {
+    transform: translateY(-59px)/**/
+}
+.biz .list ul li:nth-child(even) {
+   transform: translateY(75px);/* */
+}
+.biz .list ul li a {
+    display: flex;
+    align-items: flex-end;
+    /*a안에서 photo,inner가 있는데 photo는 absoulte를 줘서 flex의 영향을 안받음*/    
+    position: relative;/*photo의기준으로*/
+    height: 428px;
+    color: #ffff;
+   /* color: rgba(15, 76, 130, 0.8);*/
+   border-radius: 20px;
+   overflow: hidden;
+}
+.biz .list ul li a .photo {
+    position: absolute;/*a를 기준으로*/
+    left: 0;
+    top: 0;
+    z-index: -1;
+    /*레이어아래*/
+    width: 100%;
+    height: 100%;
+}
+.biz .list ul li a .inner {
+    padding: 0 34px 40px 34px;
+}
+.biz .list ul li a h3 {
+    font-family: 'Gmarket Sans';
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.biz .list ul li a {
+    position: relative;
+}
+.biz .list ul li a p {
+    display: none;
+    font-size: 17px;
+    position: relative;
+    padding-right: 20px;
+    font-weight: 200;
+
+}
+.biz .list ul li a p span {
+    position: relative;
+}
+.biz .list ul li a p span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.39295 15.9403L4.38477 14.9321L10.3169 9.00001L4.38477 3.06788L5.39295 2.05969L12.3333 9.00001L5.39295 15.9403Z' fill='white' fill-opacity='0.5'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain; 
+}
+/*******오버후*******/
+.biz .list ul li a .photo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0F4C82;
+    opacity: 0.8;
+    display: none;
+}
+.biz .list ul li a:hover .photo::before {
+    display: block;
+}
+.biz .list ul li a:hover p  {
+   display: block;
+   /*dispaly:none으로 안보이게 한 요소는 display에 다른 속성 아무거나 줘도 나타나게됨*/
+}
+.biz .list ul li a:hover p span {
+    display: inline-block;
+}
+
+
+/****************************News****************************/
+
+.news {
+    background-color: #F5F8FC;
+    margin: 280px 0 0 0;
+    padding: 117px 0 0 0;
+}
+.news .wrapper {
+    position: relative;
+}
+
+.news .tit strong {
+    color: #0F4C82;
+}
+.news .tit h2 {
+    font-family: 'Gmarket Sans';
+    font-size: 45px;
+    font-weight: 700;
+    padding: 1px 0 10px -2px;
+    line-height: 1.2;
+}
+.news .tit h2 em {
+    color: #0F4C82;
+}
+.news .tit .list {
+    margin: 80px 0 0 0;
+}
+.news .list {
+    margin: 37px 0 0 0;
+}
+.news .list ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 28px 0 28px;
+    border: 2px solid #8888;
+    line-height: 65px;
+}
+
+.news .list ul li a {
+    margin: 25px 0;
+    color: #8888;
+
+}
+.news .list ul li a h3 {
+    font-size: 22px;
+}
+/*오버스타일*/
+.news .list ul li a:hover {
+    font-weight: 500;
+    border-color: #0F4C82;
+    color: #0F4C82;
+}
+.news .list ul li a:hover h3 {
+    color: #0F4C82;
+}
+.news.more {
+    position: absolute;/*wrapper를 기준으로*/
+    right: 0;
+    left: 0;
+}
+.news .more a {
+    display: block;
+    padding: 5px 45px 5px 45px;
+}
+.news .more a::after {
+    content: "";
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.4038 11.5959H5.95801V10.4042H10.4038V5.95837H11.5955V10.4042H16.0413V11.5959H11.5955V16.0417H10.4038V11.5959Z' fill='black' fill-opacity='0.8'/%3E%3C/svg%3E%0A");
+    right: 50px;
+    left: 0;
+    width: 22px;/*아이콘의크기*/
+    height: 22px;/*아이콘의크기*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.news .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.4038 11.5959H5.95801V10.4042H10.4038V5.95837H11.5955V10.4042H16.0413V11.5959H11.5955V16.0417H10.4038V11.5959Z' fill='%230F4C82'/%3E%3C/svg%3E%0A");
+    transform: rotate(360deg);
+}
+.webzine {
+    margin: 198px 0 0 0;
+}
+.webzine .wrapper {
+    text-align: center;
+}
+.webzine .tit strong {
+    color: #0F4C82;
+    font-weight: 500;
+}
+.webzine .tit h2 {
+    font-family: 'Gmarket Sans';
+    font-size: 45px;
+    font-weight: 700;
+    padding: 6px 0 14px 3px;
+}
+.webzine .line {
+    width: 100%; /* 선의 너비 */
+    height: 2px; /* 선의 두께 */
+    background-color: #CFDCEE; /* 선의 색상 */
+    margin-top: 20px; /* 위쪽 여백 */
+    margin-bottom: 20px; /* 아래쪽 여백 */
+  }
+.webzine .list {
+    margin: 35px 0 0 0;
+}
+.webzine .list ul {
+    display: flex;
+    gap :24px;
+    /*
+    li 의넓이 (404) *li의 갯수 (5) = 2020
+    li 사이의 여백(24) *li의 갯수-1 =96
+    2020 + 96=2116 
+    
+    *넓이가 wrapper보다 넓을때 flex로 정렬된 li들은 무조건 한줄로 들어가려고 li에 넓이를 줘도 찌그러짐(사이즈변경됨)
+    */
+    width: 2116px;
+}
+.webzine .list ul li {
+    width: 404px;
+}
+.webzine .list ul li a {
+    display: block;
+}
+.webzine .list ul li a .photo {
+    height: 296px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    
+}
+.webzine .list ul li a .photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;/*오버되거나 추가되거나 변경사항이 생겼을때 천천히 실행하시오*/
+}
+.webzine .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+/* */
+.webzine .list ul li a .category {
+    color: #0F4C82;
+    padding: 16px 0 6px 0;
+    display: block;
+    font-weight: 500;
+}
+.webzine .list ul li a h3 {
+    font-family: 'Gmarket Sans';
+    font-size: 22px;
+    font-weight: 500;
+    padding: 0 0 50px 0;
+    color: #1d1d1d;
+
+    line-height: 1.1;
+    height: 2.2em;
+    overflow: hidden;
+    /*1줄로 제한*/
+    white-space: nowrap;/*줄바꿈 금지*/
+    overflow: hidden;
+    text-overflow: ellipsis;/*잘린글자는 ... 추가 */
+}
+.webzine .list ul li a p {
+    /*2줄로 제한*/
+    line-height: 1.2;
+    height: 3.6em; /*행간 x 줄수*/
+    overflow: hidden;
 }
