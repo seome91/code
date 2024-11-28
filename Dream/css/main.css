@@ -306,3 +306,91 @@ header .tnb .global button::before {
     background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.4038 11.5959H5.95801V10.4042H10.4038V5.95837H11.5955V10.4042H16.0413V11.5959H11.5955V16.0417H10.4038V11.5959Z' fill='%230F4C82'/%3E%3C/svg%3E%0A");
     transform: rotate(360deg);
 }
+.webzine {
+    margin: 198px 0 0 0;
+}
+.webzine .wrapper {
+    text-align: center;
+}
+.webzine .tit strong {
+    color: #0F4C82;
+    font-weight: 500;
+}
+.webzine .tit h2 {
+    font-family: 'Gmarket Sans';
+    font-size: 45px;
+    font-weight: 700;
+    padding: 6px 0 14px 3px;
+}
+.webzine .line {
+    width: 100%; /* 선의 너비 */
+    height: 2px; /* 선의 두께 */
+    background-color: #CFDCEE; /* 선의 색상 */
+    margin-top: 20px; /* 위쪽 여백 */
+    margin-bottom: 20px; /* 아래쪽 여백 */
+  }
+.webzine .list {
+    margin: 35px 0 0 0;
+}
+.webzine .list ul {
+    display: flex;
+    gap :24px;
+    /*
+    li 의넓이 (404) *li의 갯수 (5) = 2020
+    li 사이의 여백(24) *li의 갯수-1 =96
+    2020 + 96=2116 
+    
+    *넓이가 wrapper보다 넓을때 flex로 정렬된 li들은 무조건 한줄로 들어가려고 li에 넓이를 줘도 찌그러짐(사이즈변경됨)
+    */
+    width: 2116px;
+}
+.webzine .list ul li {
+    width: 404px;
+}
+.webzine .list ul li a {
+    display: block;
+}
+.webzine .list ul li a .photo {
+    height: 296px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    
+}
+.webzine .list ul li a .photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;/*오버되거나 추가되거나 변경사항이 생겼을때 천천히 실행하시오*/
+}
+.webzine .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+/* */
+.webzine .list ul li a .category {
+    color: #0F4C82;
+    padding: 16px 0 6px 0;
+    display: block;
+    font-weight: 500;
+}
+.webzine .list ul li a h3 {
+    font-family: 'Gmarket Sans';
+    font-size: 22px;
+    font-weight: 500;
+    padding: 0 0 50px 0;
+    color: #1d1d1d;
+
+    line-height: 1.1;
+    height: 2.2em;
+    overflow: hidden;
+    /*1줄로 제한*/
+    white-space: nowrap;/*줄바꿈 금지*/
+    overflow: hidden;
+    text-overflow: ellipsis;/*잘린글자는 ... 추가 */
+}
+.webzine .list ul li a p {
+    /*2줄로 제한*/
+    line-height: 1.2;
+    height: 3.6em; /*행간 x 줄수*/
+    overflow: hidden;
+}
