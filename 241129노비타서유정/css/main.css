@@ -1,0 +1,102 @@
+@import url(default.css);/*<-여기서 그대로 불러오세요(소환)*/
+@import url(fonts.css);
+@import url(common.css);
+
+body {
+}
+.wrap {
+    /*display: flex;
+    justify-content: space-between;
+    align-items: center;*/
+
+}
+.tit .wrapper {
+    text-align: center;
+    padding: 157px 0 60px 0;
+}
+.tit .wrapper h2{
+    font-size: 50px;
+    font-weight: 800;
+    padding-bottom: 3px;
+}
+.serv .wrapper .list {
+    margin: 35px 0 0 150px;
+    width: 830px;
+    padding: 0; 
+    margin: 0; 
+    width: 100%;
+    
+}
+
+.serv .wrapper .list ul {
+    display: flex;
+    padding: 200px 0 200px 0;
+    width: 80%;
+    justify-content: flex-end;
+    gap :44px;
+    position: relative;
+}
+.serv .wrapper ul li:nth-child(odd) {
+    transform: translateY(-59px)/**/
+}
+.serv .wrapper ul li:nth-child(even) {
+ 
+    transform: translateY(75px);/* */
+}
+.serv .wrapper .list ul li strong {
+    padding: 37px 0 16px 0;
+    font-weight: 600;
+    font-size: 20px;
+    
+}
+.serv .wrapper .list ul li a {
+    display: block;
+}
+.serv .wrapper .list .photo1 img {
+    width: 548px;
+    border-radius: 300px 300px 150px 0 ;
+
+}
+.serv .wrapper .list .photo2 img {
+    width: 548px;
+    border-radius: 150px 0 300px 300px ;
+}
+.serv .wrapper .list a {
+   display: block;
+   font-size: 15px;
+}
+.serv .wrapper .list a::after {
+    height: 16px;
+    width: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.9999 3.33331L9.0599 4.27331L12.1132 7.33331L1.33323 7.33331L1.33323 8.66665L12.1132 8.66665L9.05323 11.7266L9.9999 12.6666L14.6666 7.99998L9.9999 3.33331Z' fill='%23666666'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+ }
+/************************/
+.think .wrapper {
+    padding: 450px 0 422px 0;
+    color: #ffff;
+    background-image: url(../images/Rectangle\ 3.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+
+}
+
+.think .wrapper h2 {
+    margin: 0 0 12px 0;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.think .wrapper .more {
+
+}
+.think .wrapper .more::after {
+    height: 16px;
+    width: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.9999 3.33331L9.0599 4.27331L12.1132 7.33331L1.33323 7.33331L1.33323 8.66665L12.1132 8.66665L9.05323 11.7266L9.9999 12.6666L14.6666 7.99998L9.9999 3.33331Z' fill='%23666666'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
