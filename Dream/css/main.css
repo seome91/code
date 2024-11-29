@@ -2,6 +2,9 @@
 @import url(fonts.css);
 @import url(common.css);
 
+body {
+    overflow-x: hidden;
+}
 header {
     position: absolute;/*body를 기준으로 원래 넓이값을 갖지 않음,inlineblock처럼*/
     left: 0;
@@ -16,6 +19,8 @@ header {
 header .wrapper {
     display: flex;
     justify-content: space-between;
+    
+
 }
 header .logo {
     margin: 10px 0 0 0;
@@ -113,7 +118,7 @@ header .tnb .global button::before {
     position: sticky;
     /*감싸고있는 wrapper안에 고정
     주의사항! 감싸는 요소중에서 단 1개라도 overflow::hidden;이 적용되어 있으면 적용되지 않음*/
-    top: 20px;/*고정될때 위에서 떨어지는 값*/
+    top: 20px; /*고정될때 위에서 떨어지는 값*/
 }
 .biz .tit strong {
     color: #0F4C82;
@@ -226,7 +231,7 @@ header .tnb .global button::before {
 }
 
 
-/****************************News****************************/
+/**************************** News ****************************/
 
 .news {
     background-color: #F5F8FC;
@@ -271,6 +276,20 @@ header .tnb .global button::before {
 }
 .news .list ul li a h3 {
     font-size: 22px;
+
+    width: calc(100% - 150px);
+    /*a안에는 h3와 제목과 날짜가 존재하는데, 날짜는 길이가 변하지 않음!
+       그래서 날짜가 들어갈 넓이와 제목 사이의 여백을 더해서
+       100%(a의 넓이기준)에서 뺴줌 
+       h3가 가질수있는 최대넓이 
+       제목은 길게 작성될수도 있기때문에 너무 길면 문자를 잘라버려야함
+       
+       제목을 1줄로 제한할때 조건
+       1.넓이가 명확해야함, (block요소이거나)
+    */
+    white-space: nowrap;/*줄바꿈금지*/
+    overflow: hidden;
+    text-overflow: ellipsis;/*잘린글자 ...표시로 바꿔주기*/
 }
 /*오버스타일*/
 .news .list ul li a:hover {
@@ -281,7 +300,7 @@ header .tnb .global button::before {
 .news .list ul li a:hover h3 {
     color: #0F4C82;
 }
-.news.more {
+.news .more {
     position: absolute;/*wrapper를 기준으로*/
     right: 0;
     left: 0;
@@ -308,6 +327,7 @@ header .tnb .global button::before {
 }
 .webzine {
     margin: 198px 0 0 0;
+    position: relative;/*more정렬기준*/
 }
 .webzine .wrapper {
     text-align: center;
@@ -343,6 +363,11 @@ header .tnb .global button::before {
     *넓이가 wrapper보다 넓을때 flex로 정렬된 li들은 무조건 한줄로 들어가려고 li에 넓이를 줘도 찌그러짐(사이즈변경됨)
     */
     width: 2116px;
+     /*absoulte는 공간을 차지않고 순서를 역행함, 
+      relative는 공간을 차지함 */
+    position: relative;
+    left: 50%;/* 전체 감싸는 영역의 가운데*/
+    transform: translateX(-50%);/* ul영역 자신의넓이의 50%라는 뜻, */
 }
 .webzine .list ul li {
     width: 404px;
@@ -393,4 +418,133 @@ header .tnb .global button::before {
     line-height: 1.2;
     height: 3.6em; /*행간 x 줄수*/
     overflow: hidden;
+}
+.webzine .more {
+    position: absolute;/*webzine기준*/
+    right: calc(50% - 630px);
+    top: 0;
+    /*wrapper를 기준으로 정렬해서 layout의ㅏ 오른쪽에 배치하면 좋지만,
+    코딩 구조상 불가능 할 경우 가운데를 기준으로해서 layout의 넓이를 
+    절반을 뺴거나 더해서 오른쪽/왼쪽에 배치한다 준다 */
+}
+.webzine .more a {
+    display: block;
+    padding: 5px 45px 5px 45px;
+}
+.webzine .more a::after {
+    content: "";
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.4038 11.5958H5.95801V10.4041H10.4038V5.95825H11.5955V10.4041H16.0413V11.5958H11.5955V16.0416H10.4038V11.5958Z' fill='black' fill-opacity='0.8'/%3E%3C/svg%3E%0A");
+    right: 50px;
+    left: 108px;
+    top: -1px;
+    width: 22px;/*아이콘의크기*/
+    height: 22px;/*아이콘의크기*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.webzine .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.4038 11.5958H5.95801V10.4041H10.4038V5.95825H11.5955V10.4041H16.0413V11.5958H11.5955V16.0416H10.4038V11.5958Z' fill='%230F4C82'/%3E%3C/svg%3E%0A");
+    transform: rotate(360deg);
+}
+.banner {
+    margin: 126px 0 0 0;
+    padding: 123px 0 123px 0;
+    background-color: #F5F8FC;
+}
+.banner .tit strong {
+    color: #0F4C82;
+    font-weight: 500;
+}
+.banner .tit em {
+    color: #0F4C82;
+
+}
+.banner .tit h2 {
+    font-family: 'Gmarket Sans';
+    font-size: 45px;
+    font-weight: 700;
+    padding: 6px 0 14px 3px;
+}
+
+.banner .list {
+    margin: 46px 0 0 0;
+}
+.banner .tit h3 {
+    font-size: 22px;
+    font-weight: 300;
+    padding: 0 22px 0 0  ;
+}
+.banner .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.banner .list ul li {
+    width: 404px;
+
+}
+.banner .list ul li a {
+    display: block;
+    height: 99px;
+    border: 2px solid #888888;
+    padding: 37px 0 0 0;
+
+    position: relative;
+}
+.banner .list ul li a::after {
+    content: "";
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.00819 10.3339L0 9.58336L5.93212 5.16697L0 0.750582L1.00819 0L7.9485 5.16697L1.00819 10.3339Z' fill='%23888888'/%3E%3C/svg%3E ");
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+/********************fix**************************/
+.banner .list ul li a:hover {
+    font-weight: 500;
+    border-color: #0F4C82;
+    color: #0F4C82;
+}
+.banner .list ul li a:hover::after {
+
+}
+.banner .tit h3 {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+footer {
+    padding: 61px 0 77px 0;
+    background-color: #262626;
+    color: rgba(255, 255, 255, 0.5);
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 35px;
+}
+footer .f_nav ul li { 
+    position: relative;
+}
+footer .f_nav ul li::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: -19px;
+    height: 15px;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+footer .f_nav ul li:last-child::after {
+    display: none;
+}
+
+footer .f_info {
+    margin: 29px 0 32px 0;
+    display: flex;
+    gap: 21px;
 }
