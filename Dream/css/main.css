@@ -471,10 +471,10 @@ header .tnb .global button::before {
 .banner .list {
     margin: 46px 0 0 0;
 }
-.banner .tit h3 {
+.banner .tit ul li a h3 {
     font-size: 22px;
-    font-weight: 300;
-    padding: 0 22px 0 0  ;
+    font-weight: 400;
+
 }
 .banner .list ul {
     display: flex;
@@ -486,7 +486,7 @@ header .tnb .global button::before {
 }
 .banner .list ul li a {
     display: block;
-    height: 99px;
+    height: 98px;
     border: 2px solid #888888;
     padding: 37px 0 0 0;
 
