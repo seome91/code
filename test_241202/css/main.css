@@ -1,0 +1,211 @@
+@import url(default.css);/*<-여기서 그대로 불러오세요(소환)*/
+@import url(font.css);
+@import url(common.css);
+
+.data {
+    margin: 210px 0 0 0;    
+}
+.data h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #1D1D1D;
+    margin: 0 0 14px 0;
+}
+.data .photo {
+    margin: 49px 0 0 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.data .photo.case1 {
+    font-size: 0;
+    line-height: 0;
+    /*img 태그로 삽입한 이미지 사이즈 그 대 로 사용 , 이미지 하단에 여백삭제
+    이미지의 사이즈(img)와 이미지가있는 공간(photo)의 사이즈가 맞게된다  */
+}
+.data .photo.case2 {
+    height: 483px;
+    /*이미 block요소에서 넓이가 잡혀있음*/
+}
+.data .photo.case2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width:640px){
+            .data {
+                margin: 100px 0 0 0;    
+            }
+            .data h2 {
+                font-size: 25px;
+                line-height: 1.2;
+                margin: 0 0 52px 0;
+            }
+            .data .photo {
+                margin: 15px 0 0 0;
+                border-radius: 10px;
+            }
+            .data .photo.case1 img {
+                width: 100%;
+                /*이미지를 감싸는 photo의 넓이에 딱맞게 사이즈 조절 
+                그리고 높이는 비율에 맞게 조절*/
+            }
+            .data .photo.case2 {
+                height: 200px;
+                /*이미 block요소에서 넓이가 잡혀있음*/
+            }
+}/*@media*/
+
+.esg {
+    margin: 128px 0 0 0;
+}
+.esg h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #1D1D1D;
+    margin: 0 0 14px 0;
+}
+.esg .list {
+    margin: 33px 0 0 0;
+
+}
+.esg .list ul {
+    display: flex;/*한줄로 강제로 떄려넣음*/
+    flex-wrap: wrap;/*강제정렬한걸 줄바꿈을 허용*/
+    gap :24px;
+}
+.esg .list ul li {
+    width: 618px;
+    height: 289px;
+}
+
+.esg .list ul li a {
+    color: #ffff;/*a는 block아니면 inline-block 필수*/
+    display: block;
+    height: 289px;
+    padding: 39px 43px 0 43px;/*높이를 줬기때문에 하단여백 x*/
+    border-radius: 35px;
+}
+.esg .list ul li.bg1 a {
+    background-color: #194E78;
+}
+.esg .list ul li.bg2 a {
+    background-color: #1A769F;
+}
+.esg .list ul li.bg3 a {
+    background-color: #158AAD;
+}
+.esg .list ul li.bg4 a {
+    background-color: #52B69A;
+}
+.esg .list ul li a h3 {
+    font-size: 30px; /*a가 받아서, 상속받게될거니까 다른부분은 걱정 ㄴㄴ */
+    font-weight: 600;
+}
+.esg .list ul li a span {
+    margin: 76px 0 0 0;/*상담의 p태그와의 여백*/
+    padding: 0 80px 0 0;/*해당 영역의 전체 크기를(오른쪽 아이콘까지의 범위)*/
+    display: block;
+    display: inline-block;/*margin과 ,padding을 정상적으로 적용 시키려고*/
+    position: relative; /*after를 움직이고, padding이나 margin을 위한 기준*/
+}
+.esg .list ul li a span::after {
+    content: "";
+    position: absolute; /*이제부터 span을 기준으로 움직일거임 */
+    right: 29px;
+    top: -1px;
+    height: 24px;
+    width: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6 12L8 7.4L9.4 6L15.4 12L9.4 18L8 16.6L12.6 12Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+@media screen and (max-width:640px){
+            .esg {
+                margin: 61px 0 0 0;
+            }
+            .esg h2 {
+                font-size: 25px;
+                font-weight: 700;
+                margin: 0 0 14px 0;
+            }
+            .esg .list {
+                margin: 22px 0 0 0;
+            }
+            .esg .list ul {
+                 gap:16px;
+            }
+            .esg .list ul li {
+                width: calc(50% - 8px);
+
+                /* 100/한줄에 나타날 li갯수 2 = 50% , 
+                li사이의여백 16 * (한줄에나타날 li갯수-1{여백은 하나가적음})16*1/2=8
+                *calc(50% - 8px)**/
+
+                /*한줄에 3개나오길 바라면 - 100/3 = 33.3%
+                16*(3-1)=10px 여백은 하나가 적음! 
+                *calc(33.33%$ - 10.66px)**/
+                /***결론 : 한줄 여백의 총합 나누기 한줄에 나타날 li의 갯수******/
+            }
+            .esg .list ul li a {
+                color: #ffff;  
+                height: 100%;/*높이고정해제, 알아서 가라*/
+                padding: 22px 31px 20px 22px;/*높이를 줬기때문에 하단여백 x*/
+                border-radius: 15px;
+            }
+            .esg .list ul li a h3 {
+                font-size: 17px; /*a가 받아서, 상속받게될거니까 다른부분은 걱정 ㄴㄴ */
+                font-weight: 600;
+                margin: 0 0 10px 0 ;
+            }
+            .esg .list ul li a span {
+                margin: 76px 0 0 0;/*상담의 p태그와의 여백*/
+                padding: 0 20px 0 0;/*해당 영역의 전체 크기를(오른쪽 아이콘까지의 범위)*/
+                display: block;
+            }
+            .esg .list ul li a span::after {
+                top: 2px;
+               /* right: 10px;*/
+                height: 12px;
+                width: 12px;
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6 12L8 7.4L9.4 6L15.4 12L9.4 18L8 16.6L12.6 12Z' fill='white'/%3E%3C/svg%3E%0A");
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+            }
+}/*@media*/
+
+@media screen and (max-width:460px){/*가로 크기 460이하일때*/
+            .esg .list ul li {
+                width: auto;/*li의 원래성격,block이라서,100%들어감, 100%랑은 다름*/
+            }
+}/*@media*/
+
+.work {
+    margin: 175px 0 0 0;   
+}
+.work h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #1D1D1D;
+    margin: 0 0 14px 0;
+}
+
+@media screen and (max-width:640px){
+    .work {
+        margin: 45px 0 0 0;   
+    }
+    .work h2 {
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0 0 14px 0;
+    }
+    .work p br {
+        display: none;/*p안에 줄바꿈 태그를 숨김처리*/
+    }
+}/*@media*/
+body {
+    margin-bottom: 500px;
+}
