@@ -1,0 +1,71 @@
+@import url(default.css);/*<-여기서 그대로 불러오세요(소환)*/
+@import url(font.css);
+@import url(common.css);
+
+.biz .tit h2 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #1d1d1d;
+    padding: 85px 0 18px 0;
+    text-align: center;
+}
+.biz .list ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+.biz .list ul li {
+    width: 297px;
+}
+.biz .list ul li a {
+    display: block; 
+}
+.biz .list ul li a .photo img {
+    width: 297px;
+    height: 346px;
+}
+.biz .list ul li a h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #1d1d1d;
+    padding: 11px 0 6px 0;
+}
+
+.tech {
+    margin: 87px 0 0 0;
+    height: 762px;
+    background-color: #F4F4F4;
+}
+.tech .tit h2 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #1d1d1d;
+    padding: 80px 0 8px 0;
+    text-align: center;
+}
+.tech .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tech .list ul li {
+    position: relative;
+    width: 618px;
+    height: 514px;
+}
+.tech .list ul li .photo img {
+    display: block;
+    
+}
+.tech .list ul li .inner {
+    position: absolute;
+    top: 169px;
+    left: 164px;
+    color: #ffff;
+    text-align: center;
+}
+
+.tech .list ul li .inner h3 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
