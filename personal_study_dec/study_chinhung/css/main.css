@@ -53,3 +53,35 @@ header .gnb ul a {
     padding: 229px 0 2px 0;
 }
 
+
+.diz .tit {
+    margin: 100px 0 20px 0;
+}
+
+.diz .tit h2 {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 700;
+}
+.diz .tit em {
+    color: #484F6E;
+}
+.diz .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.diz .list ul li {
+    text-align: center;
+}
+.diz .list ul li a {
+    display: block;
+}
+.diz .list ul li h3 {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 700;
+}
+.diz .list ul li span {
+    
+}
+
