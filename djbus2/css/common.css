@@ -1,0 +1,37 @@
+body, html {
+    font-family: "Pretendard", sans-serif; /* sans-serif 고딕서체 */
+    font-size: 17px;
+    font-weight: 400;
+    color: #1d1d1d;
+    line-height: 1.4; /* 배수 - 글자크기에 몇배 */
+    letter-spacing: 0; /* 자간 */
+    word-break: keep-all; /* 단어별로(여백기준) 줄바꿈 */
+    word-wrap: break-word; /* 단어가 너무 길면 그걸 강제로 줄바꿈 하는 명령 */
+}
+.wrapper {
+    /* 디자인파일에 레이아웃 그리드 처럼 홈페이지 영역 제한하고 
+       브라우저에 가운데 정렬 */
+    width: 1260px;
+    margin: 0 auto;
+}
+#wrap {
+    min-width: 1300px;
+    /* 콘텐츠영역이 1260px 좌우여백 20px씩 
+       1260 + 20 + 20 = 1300 */
+    overflow: hidden; 
+    /* wrap 영역 밖으로 나간 요소는 숨김처리
+       absolute가 대부분 나감. */
+}
+@media screen and (max-width:640px){/*640px이하에서 실행됨*/
+            .wrapper {
+                width: auto;/*브라우저의 넓이를 따라서, 원래 너 하던대로 하렴, 100%안됨*/
+                margin: 0 20px;
+            }
+            body, html {
+                font-size: 13px;
+            }
+            #wrap {
+                min-width: 0;
+                /*overflow: hidden;*/
+            }
+}/*media*/

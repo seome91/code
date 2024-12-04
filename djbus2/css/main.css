@@ -1,0 +1,235 @@
+@import url(default.css);/*<-여기서 그대로 불러오세요(소환)*/
+@import url(font.css);
+@import url(common.css);
+
+header {
+    height: 100px;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+header .logo {
+    margin: 16px 0 0 0;
+}
+header .gnb .gnb_open ,header .gnb .gnb_close {
+    display: none; /*모바일에서만 보일거라서 숨기자*/
+}
+header .gnb .gnb_wrap ul {
+    display: flex;
+}
+header .gnb .gnb_wrap ul li a {
+    display: block;
+    color: #1d1d1d;
+    font-size: 17px;
+    line-height: 56px;
+    padding: 0 15px;
+}
+header .gnb .gnb_wrap ul li a span {
+    position: relative;/* for after */    
+}
+header .gnb .gnb_wrap ul li a span::after {
+    content: "";
+    position: absolute; /* from span */
+    left: 0;
+    bottom: -19px;
+    width: 100%;
+    height: 2px;
+    background-color: #1d1d1d;
+    display: none; /* 숨김 */
+}
+header .gnb .gnb_wrap ul li a:hover {
+    font-weight: 600;
+}
+header .gnb .gnb_wrap ul li a:hover span::after {
+    display: block; /*none 해제*/
+}
+
+
+@media screen and (max-width:640px){/*640px이하에서 실행됨*/
+                header {
+                    height: 56px;
+                    position: relative; /* for gnb_open 정렬기준*/
+                }
+                header .logo {
+                    margin: 14px 0 0 0;
+                }
+                header .logo a img {
+                    width: 96px; /*모바일 환경에서 로고 사이즈 변경*/
+                }
+                header .gnb .gnb_open  {
+                    display: block;
+                    position: absolute; /*header기준으로 정렬*/
+                    right: 0;
+                    top: 0;
+                    width: 60px;
+                    height: 55px;
+                    font-size: 0;/* 기존 글자 삭제 */
+                    line-height: 0;
+                }
+                header .gnb .gnb_open::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;/*감싸는 애가 사이즈가 지정 되어있을때 */
+                    height: 100%;
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19.5' height='15.2' viewBox='0 0 19.5 15.2'%3E%3Cpath id='menu_24dp_1D1D1D_FILL0_wght400_GRAD0_opsz24' d='M120-704.8v-2.533h19.5v2.533Zm0-6.333v-2.533h19.5v2.533Zm0-6.333V-720h19.5v2.533Z' transform='translate(-120 720)' fill='%23555'/%3E%3C/svg%3E%0A");
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: 19px; /*영역의 크기에 이미지가
+                    꽉 차지 않고 특정한 사이즈로 들어갈때 backround-size : 19px 한개만 선언하면 그게 넓이 (높이는 비율에 자동)*/
+                }
+                header .gnb .gnb_wrap {
+                    display: none; /*모바일에서 안보임*/
+                }
+                header .gnb .gnb_wrap ul {
+                    display: flex;
+                }       
+                header .gnb .gnb_wrap ul li a {
+                    display: block;
+                    color: #1d1d1d;
+                    font-size: 17px;
+                    line-height: 56px;
+                    padding: 0 15px;
+                }
+                header .gnb .gnb_wrap ul li a span {
+                    position: relative;/* for after */    
+                }
+                header .gnb .gnb_wrap ul li a span::after {
+                    content: "";
+                    position: absolute; /* from span */
+                    left: 0;
+                    bottom: -19px;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #1d1d1d;
+                    display: none; /* 숨김 */
+                }
+                header .gnb .gnb_wrap ul li a:hover {
+                    font-weight: 600;
+                }
+                header .gnb .gnb_wrap ul li a:hover span::after {
+                    display: block; /*none 해제*/
+                }
+}/*media*/
+
+.visual {
+    height: 800px;
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
+    color: #fff;
+}
+.visual strong {
+    padding: 291px 0 0 0;
+}
+.visual .wrapper {
+    padding: 350px 0 0 0;
+} 
+.visual h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 5px 0 0 0;
+}
+@media screen and (max-width:640px){ /*640px이하에서 실행됨*/
+                .visual {
+                    height: auto;
+                    padding: 0 0 64px 0;
+                }
+                .visual strong {
+                    padding: 300px 0 0 0;
+                }
+                .visual h2 {
+                    font-size: 20px;
+                }
+}/* media */
+
+
+.int {
+    margin: 136px 0 0 0;
+
+}
+.int .txt_left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.int .txt_right {
+    display: flex;
+    flex-direction: row-reverse; /*좌우 순서반전*/
+    justify-content: space-between;
+    align-items: center;
+}
+.int .inner {
+    width: 547px;
+}
+.int .inner 
+
+.int strong {
+    color: #1D5057;
+}
+.int h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 5px 0 8px 0;
+}
+.int h2 em {
+    color: #1D5057;
+}
+.int .sub_tit {
+    margin:0 0 20px 0;
+    font-weight: 500;
+}
+.int .btn_wrap {
+    margin: 58px 0 0 0;
+    display: flex;
+    gap: 9px;
+}
+.int .btn_wrap a {
+    color: #1D5057;
+    border: 2px solid #1D5057;
+    border-radius: 25px;
+    display: block;
+    padding: 7px 31px;
+}
+.int .btn_wrap a.point {
+    color: #E8D9B2;
+    background-color: #1D5057;
+    border: 2px solid #1D5057;
+}
+.int .btn_wrap a:hover {
+    color: #E8D9B2;
+    border: 2px solid #1D5057;
+    background-color: #1D5057;
+}
+.int .btn_wrap a.point:hover {
+    color: #1D5057;
+
+    background-color: #E8D9B2;
+}
+
+.int .photo {
+    height: 568px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.int .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width:640px) {
+    
+}/*media*/
+
+
+
+
+
+
+
+footer {
+    margin-top: 500px;
+}

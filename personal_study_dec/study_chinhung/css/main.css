@@ -40,5 +40,16 @@ header .gnb ul {
 header .gnb ul a {
     display: block;
     font-size: 22px;
-    
+    padding: 30px 26px 30px 26px;
 }
+.visual {
+    background: url(../images/visual_bg.png) no-repeat center center;
+    height: 660px;
+    color: #ffff;
+    text-align: right;
+}
+.visual h2 {
+    font-size: 65px;
+    padding: 229px 0 2px 0;
+}
+
