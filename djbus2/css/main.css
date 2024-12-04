@@ -205,7 +205,7 @@ header .gnb .gnb_wrap ul li a:hover span::after {
 }
 .int .btn_wrap a.point:hover {
     color: #1D5057;
-
+    border : none ;
     background-color: #E8D9B2;
 }
 
@@ -221,7 +221,7 @@ header .gnb .gnb_wrap ul li a:hover span::after {
 }
 
 @media screen and (max-width:640px) {
-    
+
 }/*media*/
 
 
