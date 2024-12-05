@@ -626,3 +626,14 @@ footer .f_info span {
     margin: 0 12px 0 0 ;
     display: inline-block;/*모바일에서 '한단락'씩 줄바꿈 되도록*/
 }
+
+
+@media screen and (max-width:640px) {
+            footer {
+                margin: 82px 0 0 0;
+                padding: 68px 0 52px 0;
+            }
+            footer .f_info ul {
+                gap: 6px 30px;
+            }
+}/*media*/
