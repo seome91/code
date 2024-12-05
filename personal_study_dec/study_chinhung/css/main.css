@@ -42,6 +42,8 @@ header .gnb ul a {
     font-size: 22px;
     padding: 30px 26px 30px 26px;
 }
+/**************************visual*******************************/
+
 .visual {
     background: url(../images/visual_bg.png) no-repeat center center;
     height: 660px;
@@ -53,8 +55,7 @@ header .gnb ul a {
     padding: 229px 0 2px 0;
 }
 
-
-
+/*****************biz*******************/
 
 .biz .tit {
     text-align: left; 
@@ -96,6 +97,36 @@ header .gnb ul a {
     padding: 8px 30px;
     margin: 12px 0 0 0;
 }
+.biz .list ul li .more:hover {
+    color: #ffff;
+    display: block;
+    border: 2px solid #484F6E;
+    background: #484F6E;
+    padding: 8px 30px;
+
+}
+/*******************************brand*******************************/
+
+.brand {
+    background: url(../images/vadim-babenko-4c8b8Ei6M3Q-unsplash.png) no-repeat center center;
+    height: 660px;
+    color: #ffff;
+    text-align: left;
+}
+.brand .wrapper {
+    
+    margin: 157px 0 0 0;
+}
+.brand h2 {
+    font-weight: 800;
+    font-size: 40px;
+    padding: 62px 0 12px 0;
+}
+.brand p {
+    width: 490px;
+}
+
+
 
 
 body {

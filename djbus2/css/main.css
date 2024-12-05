@@ -220,6 +220,9 @@ header .gnb .gnb_wrap ul li a:hover span::after {
     object-fit: cover;
 }
 
+
+
+
 @media screen and (max-width:640px) {
                 .int {
                     margin: 136px 0 0 0;
@@ -274,6 +277,163 @@ header .gnb .gnb_wrap ul li a:hover span::after {
 }/*media*/
 
 
+.pr {
+    margin: 197px 0 0 0;
+    color: #fff;
+    position: relative; /*before정렬의 기준*/ 
+}
+.pr::before {
+    content: "";
+    position: absolute; /*pr을 기준으로 정렬*/
+    /*******"position"이 들어간 애들은 보통 다른 요소들보다 위로 올라가게되어있다****/
+    z-index: -2;/*레이어개념, 밑으로 내리기*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1077px;
+    background: url(../images/pr_bg.jpg) no-repeat center top / cover;
+}
+.pr .news {
+    padding: 153px 0 0 0;
+}
+.pr .news .wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative; /*more 기준*/ /**/
+}
+.pr .news .tit strong {
+    color: #E8D9B2; 
+}
+.pr .news .tit h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 2px 0 8px 0;
+}
+.pr .news .tit em {
+    color: #E8D9B2;
+}
+.pr .video {
+    margin: 293px 0 0 0;
+}
+.pr .news .list {
+    width: 606px;
+}
+.pr .news .list li {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+.pr .news .list li a{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+}
+.pr .news .list li strong {
+    width: calc(100% - 350px); /*줄제한은 아니고 일단은 제목의 넓이를 가변으로 바꿈*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.pr .news .list li a span {
+    color: rgba(255, 255, 255, 0.5);
+}
+.pr .news .list li strong:hover {
+    font-weight: 500;
+    color: #E8D9B2;
+}
+.pr .news .more {
+    position: absolute;/*위를 기준으로 움직일거야*/
+    left: 0;
+    top: 200px;
+}
+.pr .news .more a {
+    border: 2px solid #fff;
+    border-radius: 25px;
+
+    padding: 7px 31px;
+}
+.pr .news .more a span {
+    display: none;
+}
+.pr .news .more a:hover {
+    font-weight: 600;
+    color: #1D5057;
+    border: 2px solid #E8D9B2;
+    background-color: #E8D9B2;
+}
+
+
+@media screen and (max-width:640px) {
+                .pr {
+                    margin: 64px 0 0 0;
+                }
+                .pr::before {
+                    display: none;/*베경을 주는 대상이 변경됨 - 숨김*/
+                }
+                .pr .news {
+                    padding: 42px 0 66px 0;
+                    background: url(../images/pr_bg.jpg) no-repeat center top / cover;
+                }
+                .pr .news .wrapper {
+                    display: block; /*felx안할거라서*/
+                    justify-content: space-between;
+                    position: relative; /*more 기준*/ 
+                }
+                .pr .news .tit h2 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    margin: 5px 0 8px 0;
+                }
+                .pr .video {
+                    margin: 293px 0 0 0;
+                }
+                .pr .news .list {
+                    margin: 36px 0 0 0;
+                    width: auto; /*고정 넓이 해제*/ 
+                }
+                .pr .news .list li a{
+                    padding: 12px 0;
+                }
+                .pr .news .list li strong {
+                    font-size: 13px;
+                    width: calc(100% - 100px); /*줄제한은 아니고 일단은 제목의 넓이를 가변으로 바꿈*/
+                }
+                .pr .news .more {
+                    position: relative;
+                    /*absolute를 안주려면, position 속성중에 다른값을 줘야함,
+                        그나마 멀쩡한게 relative*/
+                    left: auto; /*left를 선언하지 않았던 시절로 돌아가는법*/
+                    top: auto;
+                    margin: 35px 0 0 0;
+                    text-align: center;
+                }
+                .pr .news .more a {
+                    position: relative;
+                    padding: 7px 25px;
+                    font-weight: 600;
+                    background-color: #fff;
+                    display: inline-block;
+                    color: #1D5057;
+                }
+                .pr .news .more a::after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                .pr .news .more a span {
+                    display: inline-block;/*inline을줘야 줄바꿈이 안들어감*/
+                }
+                .pr .news .more a:hover {
+                    font-weight: 600;
+                    color: #1D5057;
+                    border: 2px solid #E8D9B2;
+                    background-color: #E8D9B2;
+                }
+                .pr .video {
+
+                }
+}/*media*/
 
 
 footer {

@@ -8,6 +8,7 @@ a {
 
 }/*와일드 카드라고 해서 모든 태그를 지칭*/
 * {
+    line-height: 1.2;
     margin: 0;
     padding: 0; /*여백삭제*/
     box-sizing: border-box;
