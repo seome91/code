@@ -163,7 +163,6 @@ header .gnb .gnb_wrap ul li a:hover span::after {
 .int .inner {
     width: 547px;
 }
-.int .inner 
 
 .int strong {
     color: #1D5057;
@@ -184,6 +183,7 @@ header .gnb .gnb_wrap ul li a:hover span::after {
 .int .btn_wrap {
     margin: 58px 0 0 0;
     display: flex;
+    flex-wrap: wrap;/*버튼이 여러개라서 한줄에 못들어가면 줄바꿈 허용함*/
     gap: 9px;
 }
 .int .btn_wrap a {
@@ -205,7 +205,7 @@ header .gnb .gnb_wrap ul li a:hover span::after {
 }
 .int .btn_wrap a.point:hover {
     color: #1D5057;
-    border : none ;
+    border: 2px solid #E8D9B2;
     background-color: #E8D9B2;
 }
 
@@ -221,15 +221,59 @@ header .gnb .gnb_wrap ul li a:hover span::after {
 }
 
 @media screen and (max-width:640px) {
-
+                .int {
+                    margin: 136px 0 0 0;
+                }
+                .int .txt_left {
+                    display: block;/*위아래로 들어갈거임,felx해제*/
+                }
+                .int .txt_right {
+                    display: block;/*위아래로 들어갈거임,felx해제*/
+                    margin: 45px 0 0 0;
+                }
+                .int .inner {
+                    width: auto;/*넓이제한*/
+                    padding-bottom: 24px;
+                }
+                .int h2 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    margin: 5px 0 8px 0;
+                }
+                .int h2 em {
+                    color: #1D5057;
+                }
+                .int .sub_tit {
+                    margin:0 0 20px 0;
+                    font-weight: 600;
+                }
+                .int .btn_wrap {
+                    margin: 58px 0 0 0;
+                    display: flex;
+                    gap: 5px;
+                }
+                .int .btn_wrap a {
+                    padding: 7px 25px;
+                }
+                .int .btn_wrap a.point {
+                    color: #E8D9B2;
+                    background-color: #1D5057;
+                    border: 2px solid #1D5057;
+                }
+                .int .photo {
+                    height: 150px;
+                    border-radius: 30px;
+                    overflow: hidden;
+                }
+                .int .photo img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
 }/*media*/
 
 
-
-
-body {
-    background-color: yellow;
-}
 
 
 footer {
