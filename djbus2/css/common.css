@@ -29,6 +29,7 @@ body, html {
             }
             body, html {
                 font-size: 15px;
+                background-color: bisque;
             }
             #wrap {
                 min-width: 0;
