@@ -107,15 +107,12 @@ header .gnb ul a {
 }
 /*******************************brand*******************************/
 
+
 .brand {
-    background: url(../images/vadim-babenko-4c8b8Ei6M3Q-unsplash.png) no-repeat center center;
-    height: 660px;
-    color: #ffff;
-    text-align: left;
-}
-.brand .wrapper {
-    
     margin: 157px 0 0 0;
+    height: 660px;
+    background: url(../images/vadim-babenko-4c8b8Ei6M3Q-unsplash.png) no-repeat center center / cover;
+    color: #fff;
 }
 .brand h2 {
     font-weight: 800;

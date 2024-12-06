@@ -2,164 +2,56 @@
 @import url(font.css);
 @import url(common.css);
 
-.service {
-    margin: 157px 0 0 0;
+.service .wrapper{
+
 }
-.service .tit {
+.service .wrapper .tit {
+    padding: 157px 0 49px 0;
     text-align: center;
+
 }
-.service .tit h2 {
-    margin: 0 0 4px 0;
-    color: #1d1d1d;
-    line-height: 1.2;
+.service .wrapper .tit h2 {
     font-size: 50px;
     font-weight: 800;
 }
 .service .list {
-    margin: 49px 0 0 0;
+    right: 12px; /**************/
+
 }
-.service .list ul {
+.service .wrapper .list ul {
+    margin-top: 49px;
     display: flex;
     justify-content: center;
     gap: 44px;
 }
-.service .list ul li {
-    width: 404px;
-}
-.service .list ul li.list2 {
+.service .wrapper ul li.list2 {
     margin-top: 75px;
 }
-.service .list ul li a {
-    display: block;
-}
-.service .list ul li a .photo {
-    overflow: hidden;
-    font-size: 0;
-    line-height: 0;
-}
-.service .list ul li.list1 a .photo {
+.service .wrapper ul li.list1 img {
     border-radius: 200px 200px 120px 0;
 }
-.service .list ul li.list2 a .photo {
+.service .wrapper ul li.list2 img {
     border-radius: 120px 0 200px 200px;
 }
-.service .list ul li a .photo img {
-    transition: 0.5s;
-}
-.service .list ul li a .inner {
-    margin: 37px 24px 0 24px;
-}
-.service .list ul li a h3 {
-    margin: 0 0 16px 0;
-    color: #1d1d1d;
-    line-height: 1.2;
-    font-size: 20px;
+.service .list h2 {
+    margin: 37px 0 16px 0;
     font-weight: 800;
 }
-.service .list ul li a span {
-    display: inline-block;
-    position: relative; /* after 정렬의 기준 */
-    padding: 0 36px 4px 0;
-    margin: 22px 0 0 0;
-    border-bottom: 1px solid #666;
+.service .list .more {
+    margin:  22px 0 0 0;
     font-size: 15px;
 }
-.service .list ul li a span::after {
-    content: "";
+.service .list .more a {
+    position: relative;
+}
+.service .list .inner .more span:after {
     position: absolute;
-    right: 0;
-    top: 5px;
-    width: 16px;
-    height: 16px;
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 3.33331L9.06001 4.27331L12.1133 7.33331L1.33334 7.33331L1.33334 8.66665L12.1133 8.66665L9.05334 11.7266L10 12.6666L14.6667 7.99998L10 3.33331Z' fill='%23666666'/%3E%3C/svg%3E%0A");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.better {
-    height: 422px;;
-    margin: 124px 0 0 0;
-    background: url(../images/better_bg.jpg) no-repeat center center / cover;
-    color: #fff;
-    text-align: center;
-}
-.better h2 {
-    padding: 105px 0 0 0;
-    margin: 0 0 4px 0;
-    line-height: 1.2;
-    font-size: 50px;
-    font-weight: 800;
-}
-.better .more {
-    margin: 63px 0 0 0;
-}
-.better .more a {
-    position: relative; /* after 정렬의 기준 */
-    display: inline-block;
-    padding: 7px 55px 8px 19px;
-    border-radius: 20px;
-    background-color: #fff;
-    color: #3d3d3d;
-    font-size: 15px;
-}
-.better .more a::after {
-    content: "";
-    position: absolute;
-    right: 15px;
-    top: 10px;
+    
+    top: 0;
+    left: 0;
     width: 16px;
     height: 16px;
-    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 3.33337L9.06002 4.27337L12.1134 7.33337L1.33335 7.33337L1.33335 8.66671L12.1134 8.66671L9.05335 11.7267L10 12.6667L14.6667 8.00004L10 3.33337Z' fill='%23666666'/%3E%3C/svg%3E%0A");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.banner {
-    margin: 130px 0 206px 0;
-    text-align: center;
-}
-.banner .list ul {
-    display: flex;
-    justify-content: space-between;
-}
-.banner .list ul li {
-    width: 297px;
-}
-.banner .list ul li a {
-    display: block;
-    position: relative; /* before 정렬의 기준 */
-    padding: 79px 0 0 0;
-}
-.banner .list ul li a::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 60px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-.banner .list ul li.ico1 a::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M31.25 8.75C42.275 8.75 51.25 17.725 51.25 28.75C51.25 39.775 42.275 48.75 31.25 48.75C28.3 48.75 25.4 48.1 22.675 46.8C22 46.475 21.275 46.325 20.525 46.325C20.05 46.325 19.575 46.4 19.125 46.525L11.125 48.875L13.475 40.875C13.825 39.7 13.725 38.425 13.2 37.325C11.9 34.6 11.25 31.7 11.25 28.75C11.25 17.725 20.225 8.75 31.25 8.75ZM31.25 3.75C17.45 3.75 6.25 14.95 6.25 28.75C6.25 32.6 7.15 36.2 8.675 39.475L3.75 56.25L20.525 51.325C23.8 52.85 27.4 53.75 31.25 53.75C45.05 53.75 56.25 42.55 56.25 28.75C56.25 14.95 45.05 3.75 31.25 3.75Z' fill='%23666666'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M33.75 18.75H28.75V26.25H21.25V31.25H28.75V38.75H33.75V31.25H41.25V26.25H33.75V18.75Z' fill='%23666666'/%3E%3C/svg%3E%0A");
-}
-.banner .list ul li.ico2 a::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 5H10.025C7.275 5 5.025 7.25 5.025 10L5 55L15 45H50C52.75 45 55 42.75 55 40V10C55 7.25 52.75 5 50 5ZM50 40H12.925L10 42.925V10H50V40ZM30 25C32.75 25 35 22.75 35 20C35 17.25 32.75 15 30 15C27.25 15 25 17.25 25 20C25 22.75 27.25 25 30 25ZM40 33.575C40 31.55 38.8 29.75 36.95 28.95C34.825 28.025 32.475 27.5 30 27.5C27.525 27.5 25.175 28.025 23.05 28.95C21.2 29.75 20 31.55 20 33.575V35H40V33.575Z' fill='%23666666'/%3E%3C/svg%3E%0A");
-}
-.banner .list ul li.ico3 a::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M47.5 35V45H42.5V35H47.5ZM17.5 35V45H15C13.625 45 12.5 43.875 12.5 42.5V35H17.5ZM30 2.5C17.575 2.5 7.5 12.575 7.5 25V42.5C7.5 46.65 10.85 50 15 50H22.5V30H12.5V25C12.5 15.325 20.325 7.5 30 7.5C39.675 7.5 47.5 15.325 47.5 25V30H37.5V50H47.5V52.5H30V57.5H45C49.15 57.5 52.5 54.15 52.5 50V25C52.5 12.575 42.425 2.5 30 2.5Z' fill='%23666666'/%3E%3C/svg%3E%0A");
-}
-.banner .list ul li.ico4 a::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M55 20V12.5C55 9.75 52.75 7.5 50 7.5H10C7.25 7.5 5 9.75 5 12.5V42.5C5 45.25 7.25 47.5 10 47.5H20V52.5H40V47.5H50C52.75 47.5 54.975 45.25 54.975 42.5V30H55C55 27.25 52.75 25 50 25H32.075L36.65 20.425L33.125 16.9C24.225 25.775 27.2 22.8 22.5 27.5C27.65 32.65 24.75 29.75 33.1 38.1L36.625 34.575L32.075 30H50V42.5H10V12.5H50V20H55Z' fill='%23666666'/%3E%3C/svg%3E%0A");
-}
-.banner .list ul li a h2 {
-    margin: 0 0 16px 0;
-    line-height: 1.2;
-    color: #1d1d1d;
-    font-size: 20px;
-    font-weight: 800;
 }
