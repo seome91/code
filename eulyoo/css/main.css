@@ -185,6 +185,9 @@ header .tnb .search::before {
                 }
 
 }/*media*/
+.visual {
+    height: 100dvh;
+}
 .visual h2 span {
     font-size: 200px;
     font-weight: 400;
@@ -229,6 +232,9 @@ header .tnb .search::before {
     100% { bottom: -15px; }
 }
 @media screen and (max-width:640px){
+                .visual {
+                    height: 100dvh;
+                }
                 .visual .wrapper {
                     padding: 55vh 0 0 0;
                 }
