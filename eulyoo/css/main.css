@@ -269,6 +269,126 @@ header .tnb .search::before {
                 }
 }/* media */
 
+.book {
+    margin: 139px 0 0 0;
+}
+.book .inner {
+    display: flex;
+    justify-content: space-between;
+    width: 1717px;
+    /*플렉스의 저주: flsx는 내부요소가 크면 무조건 찌그러트림
+    넓이를 유지하려면 flex를 준 요소에 넓이를 고정값으로 줘야함*/
+    position: relative;
+    left: calc(50% - 630px);
+}
+.book .tit h2 {
+    margin: 10px 0 10px 0;
+    font-family: 'eulyoo';
+    font-size: 45px;
+    line-height: 1.2;
+}
+.book .list {
+    /* margin-left: 321px; */
+
+}
+.book .list ul {
+    display: flex; /* 잠시만 */
+    gap: 24px;
+}
+.book .list ul li {
+    width: 260px;
+    /*pc , 모바일 모두 브라우저의 넓이에따라서 책의 갯수만 바뀜, 넓이는 안바뀜 그러므로 고정*/
+}
+.book .list ul li a {
+    display: block;
+}
+.book .list ul li a .photo {
+    font-size: 0;
+    line-height: 0;/*이미지 하단에 여백 삭제 */
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.book .list ul li a .photo img {
+    width: 100%;
+}
+.book .list ul li a h3 {
+    padding: 24px 0 4px 0;
+    font-size: 22px;
+    font-family: 'eulyoo';
+    color: #1d1d1d;
+
+    /*1즐제한*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /*...*/
+}
+.book .list ul li a h3 span {
+    position: relative;
+}
+.book .list ul li a h3 span:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background-color: #1d1d1d;
+    transition: 0.5s;
+}
+.book .list ul li a:hover h3 span:after {
+    width: 100%;
+}
+.book .more {
+    position: absolute;/*inner를 기준으로 정렬*/
+    left: 0;
+    top: 225PX;
+}
+.book .more a {
+    display: block;
+    color: #796254;
+    padding: 13px 103px 11px 27px;
+    background-color: #F4EFE9;
+    border-radius: 60px;
+    position: relative; 
+}
+.book .more a::after {
+   position: absolute;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='8' viewBox='0 0 26 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7H25L18.5 1' stroke='%23796254' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    width: 24px;
+    height: 6px;
+    top: 17px;
+    right: 25px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.book .more a:hover {
+    color:#F4EFE9;
+    background-color: #796254;
+}
+.book .more a:hover::after {
+     background-image: url("data:image/svg+xml,%3Csvg width='26' height='8' viewBox='0 0 26 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7H25L18.5 1' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+     animation-name: more_ani;
+     animation-timing-function: linear;/*가속도없음*/
+     animation-duration: 2s;/*1회당 실행시간*/
+     animation-iteration-count: infinite;/*무한반복*/
+ }
+ /*화살표가 좌우로 움직이는 애니메이션*/
+ @keyframes more_ani {
+    0%{right: 25px;}
+    50%{right: 17px;}
+    100%{right: 25px;}
+   
+}
+/*화살표가 좌우로 움직이는 애니메이션*/
+@keyframes book_ani {
+     0%{right: 25px;}
+     50%{right: 17px;}
+     100%{right: 25px;}
+    
+}
 footer {
     margin-top: 500px;
 }
