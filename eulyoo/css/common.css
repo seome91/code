@@ -19,6 +19,7 @@ body, html {
        1260 + 20 + 20 = 1300 */
     overflow: hidden; 
     /* wrap 영역 밖으로 나간 요소는 숨김처리  absolute가 대부분 나감. */
+    position: relative;/* header 정렬의 기준값 */
 }
 @media screen and (max-width:640px){ 
                         /* 브라우저 넓이 640px에서만 실행 */
