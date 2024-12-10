@@ -540,11 +540,13 @@ header .tnb .search::before {
     height: 100%;
     object-fit: cover;
     filter: grayscale(100%);
+    transition: 1s;
 }
 .interview .list ul li:nth-child(2) a .photo {
     border-radius: 0 50px 0 50px;    
 }
 .interview .list ul li a .photo img:hover {
+    filter: grayscale(0%);
 
 }
 footer {
