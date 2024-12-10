@@ -500,6 +500,46 @@ header .tnb .search::before {
                         animation-iteration-count: infinite;/*무한반복*/
                     }
 }/*@MIDEA*/
+.interview {
+    padding: 119px 0 149px 0;
+    margin: 104px 0 0 0;
+    background-color: rgba(244, 239, 233, 0.7);
+}
+.interview .tit {
+    text-align: center;
+}
+.interview .tit h2 {
+    margin: 119px 0 9px 0;
+    font-family: 'eulyoo';
+    font-size: 45px;
+    line-height: 1.2;
+}
+.interview .list {
+    margin: 55px 0 0 0;
+}
+.interview .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.interview .list ul li {
+    width: 404px;
+
+}
+.interview .list ul li:nth-child(2) {
+    margin: 46px 0 0 0;
+}
+.interview .list ul li a {
+    display: block;
+}
+.interview .list ul li a .photo {
+    overflow: hidden;
+    height: 428px;
+}
+.interview .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 footer {
     margin-top: 500px;
 }
