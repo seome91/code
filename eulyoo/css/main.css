@@ -541,7 +541,7 @@ header .tnb .search::before {
     object-fit: cover;
 }
 .interview .list ul li:nth-child(2) a .photo {
-    border-radius: 0 50px 0 50px ;    
+    border-radius: 0 50px 0 50px;    
 }
 footer {
     margin-top: 500px;
