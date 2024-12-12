@@ -41,17 +41,110 @@
     margin:  22px 0 0 0;
     font-size: 15px;
 }
-.service .list .more a {
+.service ul li a span {
+    display: inline-block;
     position: relative;
+    width: 195px;
+    border-bottom: 1px solid #3d3d3d;  
+
 }
-.service .list .inner .more span:after {
+.service ul li a span:after {
+    content: "";
     position: absolute;
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 3.33331L9.06001 4.27331L12.1133 7.33331L1.33334 7.33331L1.33334 8.66665L12.1133 8.66665L9.05334 11.7266L10 12.6666L14.6667 7.99998L10 3.33331Z' fill='%23666666'/%3E%3C/svg%3E%0A");
     background-position: center center;
     background-repeat: no-repeat;
-    
-    top: 0;
-    left: 0;
+    background-size: contain;
+    top: 1px;
+    left: 184px;
     width: 16px;
     height: 16px;
+}
+.think {
+    margin: 130px 0 130px 0;
+    height: 422px;
+    font-weight: 200;
+    color: #fff;
+    text-align: center;
+    background-image: url(../images/better_bg.jpg);
+}
+.think .tit h2 {
+    padding: 150px 0 0 0;
+    font-weight: 800;
+    font-size: 50px;
+}
+.think .wrapper .tit p {
+    font-weight: 200;
+}
+
+.think .wrapper .more {
+    padding: 70px 0 0 0;
+    color: #3d3d3d;
+}
+
+.think .wrapper .more a {
+    display: block;
+    background-color: #fff;
+    width: 218px;
+    height: 20px;
+}
+.think .wrapper .more span {
+    background-color: #fff;
+    padding: 7px 55px 8px 19px;
+    border-radius: 50px;
+    position: relative;
+}
+.think .wrapper .more span:after {
+    content: "";
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 3.33331L9.06001 4.27331L12.1133 7.33331L1.33334 7.33331L1.33334 8.66665L12.1133 8.66665L9.05334 11.7266L10 12.6666L14.6667 7.99998L10 3.33331Z' fill='%23666666'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 9px;
+    left: 203px;
+    width: 16px;
+    height: 16px;
+}
+
+.ask .wrapper  {
+    margin: 0 0 150px 0;
+}
+.ask .wrapper ul {
+    display: flex;
+    gap: 60px;
+    text-align: center;
+    justify-content: center;
+}
+.ask .wrapper ul li a {
+    margin: 50px 0 0 0;
+    display: block;
+    position: relative;
+}
+
+.ask .wrapper ul li a h2 {
+    font-weight: 600;
+}
+
+.ask .list ul li a::before{
+    content: "";
+    position: absolute;
+    left: 94px;
+    top: -75px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.ask .list ul li.icon1 a::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.25 5.75C39.275 5.75 48.25 14.725 48.25 25.75C48.25 36.775 39.275 45.75 28.25 45.75C25.3 45.75 22.4 45.1 19.675 43.8C19 43.475 18.275 43.325 17.525 43.325C17.05 43.325 16.575 43.4 16.125 43.525L8.125 45.875L10.475 37.875C10.825 36.7 10.725 35.425 10.2 34.325C8.9 31.6 8.25 28.7 8.25 25.75C8.25 14.725 17.225 5.75 28.25 5.75ZM28.25 0.75C14.45 0.75 3.25 11.95 3.25 25.75C3.25 29.6 4.15 33.2 5.675 36.475L0.75 53.25L17.525 48.325C20.8 49.85 24.4 50.75 28.25 50.75C42.05 50.75 53.25 39.55 53.25 25.75C53.25 11.95 42.05 0.75 28.25 0.75Z' fill='%23666666'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M30.75 15.75H25.75V23.25H18.25V28.25H25.75V35.75H30.75V28.25H38.25V23.25H30.75V15.75Z' fill='%23666666'/%3E%3C/svg%3E%0A");
+}
+.ask .list ul li.icon2 a::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 5H10.025C7.275 5 5.025 7.25 5.025 10L5 55L15 45H50C52.75 45 55 42.75 55 40V10C55 7.25 52.75 5 50 5ZM50 40H12.925L10 42.925V10H50V40ZM30 25C32.75 25 35 22.75 35 20C35 17.25 32.75 15 30 15C27.25 15 25 17.25 25 20C25 22.75 27.25 25 30 25ZM40 33.575C40 31.55 38.8 29.75 36.95 28.95C34.825 28.025 32.475 27.5 30 27.5C27.525 27.5 25.175 28.025 23.05 28.95C21.2 29.75 20 31.55 20 33.575V35H40V33.575Z' fill='%23666666'/%3E%3C/svg%3E%0A");
+}.ask .list ul li.icon3 a::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M47.5 35V45H42.5V35H47.5ZM17.5 35V45H15C13.625 45 12.5 43.875 12.5 42.5V35H17.5ZM30 2.5C17.575 2.5 7.5 12.575 7.5 25V42.5C7.5 46.65 10.85 50 15 50H22.5V30H12.5V25C12.5 15.325 20.325 7.5 30 7.5C39.675 7.5 47.5 15.325 47.5 25V30H37.5V50H47.5V52.5H30V57.5H45C49.15 57.5 52.5 54.15 52.5 50V25C52.5 12.575 42.425 2.5 30 2.5Z' fill='%23666666'/%3E%3C/svg%3E%0A");
+}.ask .list ul li.icon4 a::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='46' viewBox='0 0 50 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 13V5.5C50 2.75 47.75 0.5 45 0.5H5C2.25 0.5 0 2.75 0 5.5V35.5C0 38.25 2.25 40.5 5 40.5H15V45.5H35V40.5H45C47.75 40.5 49.975 38.25 49.975 35.5V23H50C50 20.25 47.75 18 45 18H27.075L31.65 13.425L28.125 9.9C19.225 18.775 22.2 15.8 17.5 20.5C22.65 25.65 19.75 22.75 28.1 31.1L31.625 27.575L27.075 23H45V35.5H5V5.5H45V13H50Z' fill='%23666666'/%3E%3C/svg%3E%0A");
 }
