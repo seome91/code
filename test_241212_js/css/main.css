@@ -1,0 +1,30 @@
+@import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
+@import url(font.css);
+@import url(common.css);
+
+.box {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    font-size: 50px;
+}
+
+.box.red {
+    background-color: red;
+    color: #fff;
+
+}
+
+.box_btn {
+    display: inline;
+    padding: 10px 20px;
+    background-color: #f60;
+    color: #fff;
+}
+.box_btn2 {
+    display: inline;
+    padding: 10px 20px;
+    background-color: cadetblue;
+    color: #fff;
+}
