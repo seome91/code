@@ -49,4 +49,10 @@ $(document).ready(function(){
 
    })//$(window).scroll
 
+   $('aside .top').on('click', function(){
+    $('html, body').animate({
+      scrollTop : 0
+    }, 500);
+});
+
 })//document.ready

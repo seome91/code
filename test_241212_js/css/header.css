@@ -99,6 +99,7 @@ aside {
     text-align: right;
 }
 aside .top {
+    display: inline-block;
     width: 66px;
     height: 66px;
     color: #fff;
@@ -106,5 +107,4 @@ aside .top {
     background-color: #5C360A;
     border-radius: 50%;
     text-align: center;
-
 }
