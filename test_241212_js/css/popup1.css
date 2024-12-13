@@ -1,0 +1,36 @@
+@import url(default.css); 
+@import url(font.css);
+@import url(common.css);
+
+.popup {
+    margin: 100px 0;
+}
+
+.popup .inner {
+    width: 618px;
+    margin: 0 auto;
+}
+.popup .inner ul li a .photo {
+    overflow: hidden;
+    height: 400px;
+}
+.popup .inner ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup .btn_wrap {
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+.popup .btn_wrap button {
+    padding: block;
+    padding: 5px 10px;
+    border: 1px solid #1d1d1d;
+    border-left-width: 0;/*박스끼리 중첩막기*/
+}
+.popup .btn_wrap button:first-child {
+    border-left-width: 1px;
+}

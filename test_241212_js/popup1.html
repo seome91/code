@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--swiper-->
+    <link rel="stylesheet" href="css/popup1.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+    <script src="js/jquery-3.7.1.min.js"></script><!--1.무조건 javascript 라이브러리가 위에-->
+    <script src="js/popup1.js"></script><!--2.javascript 호출-->
+    <title>팝업</title>
+</head>
+<body>
+    <div id="wrap">
+        <main class="container">
+            <section class="popup">
+                <div class="inner">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list1.jpg" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list2.jpg" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list3.jpg" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list4.jpg" alt=""></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--swiper-->
+
+                    <div class="btn_wrap">
+                        <button class="prev">이전 팝업 보기</button>
+                        <button class="next">다음 팝업 보기</button>
+                        <button class="stop">팝업 일시정지</button>
+                        <button class="play">팝업 다시시작</button>
+                    </div>
+                </div><!--inner-->
+            </section>
+        </main>
+    </div>
+</body>
+</html>

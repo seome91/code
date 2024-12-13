@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/list.css">
+    <script src="js/jquery-3.7.1.min.js"></script><!--1.무조건 javascript 라이브러리가 위에-->
+    <script src="js/list.js"></script><!--2.javascript 호출-->
+    <title>오버하면 커지는 리스트 스타일</title>
+</head>
+<body>
+    <div id="wrap">
+        <main class="container">
+            <section class="tour">
+                <div class="wrapper">
+                    <div class="list">
+                        <ul>
+                            <!--1개가 열려있음 (html한개에 active 미리 코딩)-->
+                            <li class="bg1 active">
+                                <a href="#n">
+                                    <h3>제1경 항도귀범</h3>
+                                    <p>목성 낭 끝 수백 년 묵은 해송 하나</p>
+                                </a>
+                            </li>
+                            <li class="bg2">
+                                <a href="#n">
+                                    <h3>제2경 오산낙조</h3>
+                                    <p>빛은 물고기 비늘을 타고</p>
+                                </a>
+                            </li>
+                            <li class="bg3">
+                                <a href="#n">
+                                    <h3>제3경 대봉연사</h3>
+                                    <p>대봉산 아름드리 동백나무 숲에 서면</p>
+                                </a>
+                            </li>
+                            <li class="bg4">
+                                <a href="#n">
+                                    <h3>제4경 대성야우</h3>
+                                    <p>밤에 비가내리는 대성산의 봉우리를 적신 경치</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--wrapper-->
+            </section><!--tour-->
+
+            <section class="biz">
+                <div class="wrapper">
+                    <div class="list">
+                        <ul>
+                            <li class="active">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list1.jpg" alt="바다"></div>
+                                    <h3>제1경 항도귀범</h3>
+                                    <p>목성 낭 끝 수백 년 묵은 해송 하나</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list2.jpg" alt="바다"></div>
+                                    <h3>제2경 오산낙조</h3>
+                                    <p>빛은 물고기 비늘을 타고</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list3.jpg" alt="바다"></div>
+                                    <h3>제3경 대봉연사</h3>
+                                    <p>대봉산 아름드리 동백나무 숲에 서면</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list4.jpg" alt="바다"></div>
+                                    <h3>제4경 대성야우</h3>
+                                    <p>밤에 비가내리는 대성산의 봉우리를 적신 경치</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--wrapper-->
+            </section><!--biz-->
+
+            <section class="banner">
+                <div class="wrapper">
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <!--마우스를 오버한 li애는 on 클래스가 추가 오버하지 않은 li에는 off를 준다-->
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list1.jpg" alt="바다"></div>
+                                    <h3>제1경 항도귀범</h3>
+                                    <p>목성 낭 끝 수백 년 묵은 해송 하나</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list2.jpg" alt="바다"></div>
+                                    <h3>제2경 오산낙조</h3>
+                                    <p>빛은 물고기 비늘을 타고</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list3.jpg" alt="바다"></div>
+                                    <h3>제3경 대봉연사</h3>
+                                    <p>대봉산 아름드리 동백나무 숲에 서면</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list4.jpg" alt="바다"></div>
+                                    <h3>제4경 대성야우</h3>
+                                    <p>밤에 비가내리는 대성산의 봉우리를 적신 경치</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--wrapper-->
+            </section><!--banner-->
+
+            <section class="slide">
+                <div class="wrapper">
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <!--마우스를 오버한 li애는 on 클래스가 추가 오버하지 않은 li에는 off를 준다-->
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list1.jpg" alt="바다"></div>
+                                    <h3>제1경 항도귀범</h3>
+                                    <p>목성 낭 끝 수백 년 묵은 해송 하나</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list2.jpg" alt="바다"></div>
+                                    <h3>제2경 오산낙조</h3>
+                                    <p>빛은 물고기 비늘을 타고</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list3.jpg" alt="바다"></div>
+                                    <h3>제3경 대봉연사</h3>
+                                    <p>대봉산 아름드리 동백나무 숲에 서면</p>
+                                </a>
+                            </li>
+                            <li data-status="off">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/list4.jpg" alt="바다"></div>
+                                    <h3>제4경 대성야우</h3>
+                                    <p>밤에 비가내리는 대성산의 봉우리를 적신 경치</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--wrapper-->
+            </section><!--slide-->
+        </main>
+    </div> 
+</body>
+</html>
