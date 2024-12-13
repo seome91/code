@@ -29,8 +29,13 @@ $(document).ready(function(){
 
     $('.popup .btn_wrap .stop').on ('click', function(){
         swiper.autoplay.stop();  /* 일시정지 기능 */
+        $(this).hide()//숨김
+        $('.popup .btn_wrap .play').show()//보임
     })
     $('.popup .btn_wrap .play').on('click', function(){
         swiper.autoplay.start();  /* 재생 기능 */
+        $(this).hide()//숨김
+        $('.popup .btn_wrap .stop').show()//보임
+
     })
 })

@@ -34,3 +34,6 @@
 .popup .btn_wrap button:first-child {
     border-left-width: 1px;
 }
+.popup .btn_wrap .play {
+    display: none;/*일시정지버튼을 클릭하면 보일거에요*/
+}
