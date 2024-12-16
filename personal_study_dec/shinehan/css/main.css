@@ -1,0 +1,94 @@
+@import url(default.css);/*<-여기서 그대로 불러오세요(소환)*/
+@import url(font.css);
+@import url(common.css);
+
+/* ===========================
+   공통 스타일 (기본 설정)
+=========================== */
+
+
+/* ===========================
+   헤더 섹션
+=========================== */
+header {
+    background-color: #003478;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* ===========================
+   메인 콘텐츠 영역
+=========================== */
+.container {
+    width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.section-title {
+    border-bottom: 2px solid #003478;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #003478;
+}
+
+.sponsor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sponsor-item {
+    flex: 1 1 calc(25% - 20px);
+    background-color: #f0f4f9;
+    border: 1px solid #dce1e6;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sponsor-item:hover {
+    background-color: #003478;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sponsor-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.sponsor-item p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ===========================
+   하단 섹션 (푸터)
+=========================== */
+footer {
+    background-color: #003478;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
