@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.min.js"></script><!--1.무조건 javascript 라이브러리가 위에-->
+    <script src="js/menu.js"></script><!--2.javascript 호출-->
+    
+    <link rel="stylesheet" href="css/menu.css">
+    <title>반응형 메뉴</title>
+</head>
+<body>
+    <div id="wrap">
+        <!--
+            pc버전에서는 메뉴에 마우스를 오버하면 header와 오버 한 메뉴에 클래사 추가
+            >> pc버전 header : menu_pc
+                        오버한 메뉴: active
+            모바일에서 메뉴열기를 클릭해서 메뉴를 열면 header에 클래스를 추가
+            >> 모바일 버전 header : menu_mo 
+        -->                
+        <header>
+            <div class="wrapper">
+                <h1 class="logo"><a href="#n">을유문화사</a></h1>
+                <nav class="gnb">
+                    <button class="gnb_open">메뉴열기</button>
+                    <div class="gnb_wrap">
+                        <ul class="depth1">
+                            <li><!--오버한 메뉴-->
+                                <a href="#n"><span>기업소개 </span></a><!--1차메뉴-->
+                                <ul class="depth2"><!--2차메뉴-->
+                                    <li><a href="#n">CEO 소개</a></li>
+                                    <li><a href="#n">현역</a></li>
+                                    <li><a href="#n">오시는길</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>사업소개</span></a><!--1차메뉴-->
+                                <ul class="depth2"><!--2차메뉴-->
+                                    <li><a href="#n">토목사업</a></li>
+                                    <li><a href="#n">건축사업</a></li>
+                                    <li><a href="#n">주택사업</a></li>
+                                    <li><a href="#n">사업실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>소식</span></a><!--1차메뉴-->
+                                <ul class="depth2"><!--2차메뉴-->
+                                    <li><a href="#n">공지사항</a></li>
+                                    <li><a href="#n">활동 소식</a></li>
+                                    <li><a href="#n">사진갤러리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>고객센터</span></a><!--1차메뉴-->
+                                <ul class="depth2"><!--2차메뉴-->
+                                    <li><a href="#n">묻고답하기</a></li>
+                                    <li><a href="#n">FAQ</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="gnb_close">메뉴닫기</button>
+                </nav>
+            </div><!--wrapper-->
+        </header>
+        <main class="container">
+            <section class="visual"></section>
+        </main>
+    </div>
+</body>
+</html>

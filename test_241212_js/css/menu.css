@@ -1,0 +1,145 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+header .logo a {
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    width: 186px;
+    height: 30px;
+    position: relative;
+}
+header .logo a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(..//images/logo.svg) no-repeat;
+}
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none;  
+}
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex;
+}
+        /*
+        자식 선택자
+        <ul class = depth1>
+            <li>    ------이것만 성택 ul.depth1 > li
+                <ul class = depth2>
+                 <li></li>
+            <li>
+        <ul>
+        >> > 기호가 들어간 이후부터 하나의 html요소도 빠뜨리면 안됨
+        */
+
+header .gnb .gnb_wrap ul.depth1 > li {
+    width: 130px;
+    text-align: center;
+    position: relative; /*2차메뉴 정렬기준*/
+}
+
+header .gnb .gnb_wrap ul.depth1 > li > a  {
+    display: block;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 100px; /* header 높이 */
+}
+/* 2차메뉴 */
+header .gnb .gnb_wrap ul.depth2 {
+    position: absolute; /*1차메뉴를 li를 기준으로 정렬*/
+    left : 0;
+    top :100px;/* 1차메뉴의 a의 높이만큼 */
+    width: 100%;
+    padding-top: 20px;
+    /*1차메뉴 a와 2차메뉴 사이의 여백은 반드시 padding-top으로 줌*/
+    display: none;
+}
+
+header .gnb .gnb_wrap ul.depth2 > li > a {
+    display: block;
+    line-height: 50px;
+}
+header .gnb .gnb_wrap ul.depth2 > li > a span {
+    position: relative;
+}
+
+/**************** 메뉴가 오버 됐을때 *******************/
+
+header.menu_pc {
+   background-color: #fff;
+   color: #1d1d1d;
+    
+}
+header.menu_pc::before {
+    content: "";
+    position: absolute;/*header기준으로 정렬*/
+    left: 0;
+    top: 0;
+    z-index: 0;/*밑으로내리기****************************/
+    width: 100%;
+    height: 403px;
+    background-color: #fff;
+}
+header.menu_pc::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100px;/* header 높이만큼 */
+    width: 100%;
+    height: 1px;
+    background-color: #999999;
+} 
+header.menu_pc .logo a::before {
+    background-image: url(../images/logo.svg);
+}
+header.menu_pc .gnb .gnb_wrap ul.depth1 > li.active > a {
+    color: #DE8218;
+}
+header .gnb .gnb_wrap ul.depth1 > li.active > a span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    z-index: 10;
+    width: calc(100% + 10px);
+    height: 3px;
+    background-color: #DE8218;
+
+}
+header.menu_pc .gnb .gnb_wrap ul.depth2  {
+    display: block;
+
+}
+header.menu_pc .gnb .gnb_wrap ul.depth2 > li > a:hover {
+    font-weight: 600;   
+    color: #DE8218;
+}
+.visual {
+    height: 800px;
+    background: url(../images/visual_bg.jpg);
+
+}
+
+@media screen and (max-width:640px){ 
+
+}/*media*/
