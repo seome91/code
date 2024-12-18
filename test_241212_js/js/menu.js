@@ -1,7 +1,10 @@
 $(document).ready(function(){
 
+    ///변수들////
+
     let device_status // pc일때pc mobile일때 mobile 저장
     let window_w
+    let menu_status
 
     function device_chk(){ //함수를 정의한다 
         window_w = $(window).width()
@@ -41,7 +44,6 @@ $(document).ready(function(){
         }
            
 
-        
     
     })
     $('header').on('mouseleave',function(){
@@ -75,7 +77,30 @@ $(document).ready(function(){
         $('header .gnb .gnb_wrap ul.depth1 > li > a').on('click', function(e){
             if(device_status == 'mobile'){
                 e.preventDefault(); // a의 이벤트 (href작동중지)
-                console.log('클릭했어요')
+
+                menu_status = $(this).parent().hasClass('open') // menu_status = 변수, 일종의 단축키
+                console.log(menu_status)
+
+                if(menu_status == true){ //열린 메뉴가 맞으면
+                    $(this).parent().removeClass('open')
+                }else{
+                    $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('open')
+                    $(this).parent().addClass('open')
+                }
             }
         })
+
+        /* 
+            header .gnb .gnb_open 을 클릭하면 heeader의 meun_mo 추가
+             header .gnb .gnb_close 를 클릭하면 heeader의 meun_mo 삭제
+        */
+       
+       $('header .gnb .gnb_open').on('click', function(){
+        $('header').addClass('menu_mo')
+       })
+       $('header .gnb .gnb_close').on('click', function(){
+        $('header').removeClass('menu_mo')
+       })
+
+
 })//$(document).ready
