@@ -62,6 +62,8 @@ $(document).ready(function(){
         2.하나의 메뉴를 한번 누르면 열리고 다시누르면 닫힌다 (닫힌메뉴를 누르면 열리고,열려있는 메뉴를 누르면 닫힘)
 
         >>현재 클릭한 메뉴가 열린메뉴나,아니냐
+        1.클릭한 메뉴가 맞다 - > 클릭 한 자신의 open 클래스 삭제 
+        2.클릭한 메뉴가 아니다 - > 모든 메뉴의 open 클래스를 삭제하고, 클릭한 자신만 open 클래스 추가
        
         header .gnb .gnb_wrap ul.depth1 > li 에 open클래스를 추가
         >>이벤트 대상 (누구를 눌렀을때) : header .gnb .gnb_wrap ul.depth1 > li >a
