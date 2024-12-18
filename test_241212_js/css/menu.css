@@ -32,114 +32,258 @@ header .logo a::before {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url(..//images/logo.svg) no-repeat;
-}
-header .gnb .gnb_open,
-header .gnb .gnb_close {
-    display: none;  
-}
-header .gnb .gnb_wrap ul.depth1 {
-    display: flex;
-}
-        /*
-        자식 선택자
-        <ul class = depth1>
-            <li>    ------이것만 성택 ul.depth1 > li
-                <ul class = depth2>
-                 <li></li>
-            <li>
-        <ul>
-        >> > 기호가 들어간 이후부터 하나의 html요소도 빠뜨리면 안됨
-        */
-
-header .gnb .gnb_wrap ul.depth1 > li {
-    width: 130px;
-    text-align: center;
-    position: relative; /*2차메뉴 정렬기준*/
+    background: url(..//images/logo.svg) no-repeat center center / cover;
 }
 
-header .gnb .gnb_wrap ul.depth1 > li > a  {
-    display: block;
-    font-size: 22px;
-    font-weight: 800;
-    line-height: 100px; /* header 높이 */
-}
-/* 2차메뉴 */
-header .gnb .gnb_wrap ul.depth2 {
-    position: absolute; /*1차메뉴를 li를 기준으로 정렬*/
-    left : 0;
-    top :100px;/* 1차메뉴의 a의 높이만큼 */
-    width: 100%;
-    padding-top: 20px;
-    /*1차메뉴 a와 2차메뉴 사이의 여백은 반드시 padding-top으로 줌*/
-    display: none;
-}
 
-header .gnb .gnb_wrap ul.depth2 > li > a {
-    display: block;
-    line-height: 50px;
-}
-header .gnb .gnb_wrap ul.depth2 > li > a span {
-    position: relative;
-}
 
-/**************** 메뉴가 오버 됐을때 *******************/
+@media screen and (min-width:641px){ 
+                        /*461이상적용*/
+                                header .gnb .gnb_open,
+                                header .gnb .gnb_close {
+                                    display: none;  
+                                }
+                                header .gnb .gnb_wrap ul.depth1 {
+                                    display: flex;
+                                }
+                                /*
+                                자식 선택자
+                                <ul class = depth1>
+                                <li>    ------이것만 성택 ul.depth1 > li
+                                <ul class = depth2>
+                                <li></li>
+                                    <li>
+                                <ul>
+                                >> > 기호가 들어간 이후부터 하나의 html요소도 빠뜨리면 안됨
+                                */
+                                
+                                header .gnb .gnb_wrap ul.depth1 > li {
+                                    width: 130px;
+                                    text-align: center;
+                                    position: relative; /*2차메뉴 정렬기준*/
+                                }
+                                
+                                header .gnb .gnb_wrap ul.depth1 > li > a  {
+                                    display: block;
+                                    font-size: 22px;
+                                    font-weight: 800;
+                                    line-height: 100px; /* header 높이 */
+                                }
+                                /* 2차메뉴 */
+                                header .gnb .gnb_wrap ul.depth2 {
+                                    position: absolute; /*1차메뉴를 li를 기준으로 정렬*/
+                            left : 0;
+                            top :100px;/* 1차메뉴의 a의 높이만큼 */
+                            width: 100%;
+                            padding-top: 20px;
+                            /*1차메뉴 a와 2차메뉴 사이의 여백은 반드시 padding-top으로 줌*/
+                            display: none;
+                        }
+                        
+                        header .gnb .gnb_wrap ul.depth2 > li > a {
+                            display: block;
+                            line-height: 50px;
+                        }
+                        header .gnb .gnb_wrap ul.depth2 > li > a span {
+                            position: relative;
+                        }
+                        
+                        /**************** 메뉴가 오버 됐을때 *******************/
+                        
+                        header.menu_pc {
+                            background-color: #fff;
+                            color: #1d1d1d;
+                            
+                        }
+                        header.menu_pc::before {
+                            content: "";
+                            position: absolute;/*header기준으로 정렬*/
+                            left: 0;
+                            top: 0;
+                            z-index: 0;/*밑으로내리기****************************/
+                            width: 100%;
+                            height: 403px;
+                            background-color: #fff;
+                        }
+                        header.menu_pc::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 100px;/* header 높이만큼 */
+                            width: 100%;
+                            height: 1px;
+                            background-color: #999999;
+                        } 
+                        header.menu_pc .logo a::before {
+                            background-image: url(../images/logo.svg);
+                        }
+                        header.menu_pc .gnb .gnb_wrap ul.depth1 > li.active > a {
+                            color: #DE8218;
+                        }
+                        header .gnb .gnb_wrap ul.depth1 > li.active > a span::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: -1px;
+                            z-index: 10;
+                            width: calc(100% + 10px);
+                            height: 3px;
+                            background-color: #DE8218;
+                            
+                        }
+                        header.menu_pc .gnb .gnb_wrap ul.depth2  {
+                            display: block;
+                            
+                        }
+                        header.menu_pc .gnb .gnb_wrap ul.depth2 > li > a:hover {
+                            font-weight: 600;   
+                            color: #DE8218;
+                        }
+                      
+}/*media*/
 
-header.menu_pc {
-   background-color: #fff;
-   color: #1d1d1d;
-    
-}
-header.menu_pc::before {
-    content: "";
-    position: absolute;/*header기준으로 정렬*/
-    left: 0;
-    top: 0;
-    z-index: 0;/*밑으로내리기****************************/
-    width: 100%;
-    height: 403px;
-    background-color: #fff;
-}
-header.menu_pc::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 100px;/* header 높이만큼 */
-    width: 100%;
-    height: 1px;
-    background-color: #999999;
-} 
-header.menu_pc .logo a::before {
-    background-image: url(../images/logo.svg);
-}
-header.menu_pc .gnb .gnb_wrap ul.depth1 > li.active > a {
-    color: #DE8218;
-}
-header .gnb .gnb_wrap ul.depth1 > li.active > a span::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    z-index: 10;
-    width: calc(100% + 10px);
-    height: 3px;
-    background-color: #DE8218;
+@media screen and (max-width:640px){ 
+            header {
+                height: 54px;
+            }
+            header .wrapper {
+                margin-right: 0;
+            
+            }
+            header .logo a {
+                width: 96px;
+                height: 15px;
+                position: relative;
+            }
+            header .gnb .gnb_open { 
+                display: block;
+                font-size: 0;
+                line-height: 0;
+                width: 54px;
+                height: 54px;
+                position: relative;/*before정렬기준*/           
+            }
+            header .gnb .gnb_open::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.25 13.5V12H15.75V13.5H2.25ZM2.25 9.75V8.25H15.75V9.75H2.25ZM2.25 6V4.5H15.75V6H2.25Z' fill='%23060606'/%3E%3C/svg%3E%0A");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 30px;
+            }
+            /*모바일에서 메뉴가 많이 나와서 위아래로 스크롤 되어야 한다면
+                상단의 닫기버튼 위에 고정으로 높은 상태에서 메뉴만 위아래로 스크롤 되어야함
+                콘텐츠 스크롤을 줄떄 반드시 좌우 위아래 방향을 명확하게*/
 
-}
-header.menu_pc .gnb .gnb_wrap ul.depth2  {
-    display: block;
+            header .gnb .gnb_wrap ul.depth1 {
+                margin: 54px 20px 0 20px;/*padding NO NO NO*/
+                overflow-y: auto;/*overflow 줄때는 높이가 정확하게 지정되어있어야함
+                브라우저의 높이에서 상담 여백을 뺸값을 높이로 지정*/
+                height: calc(100dvh - 54px);
+            }
+            header .gnb .gnb_wrap ul.depth1 > li {
+                border-bottom: 1px solid #ccc;
+            }
+            header .gnb .gnb_wrap ul.depth1 > li:first-child {
+                border-top: 1px solid #ccc; ;
+            }
+            header .gnb .gnb_wrap {
+                display: none;
+                position: absolute; /*header기준으로 정렬*/
+                left: 0;
+                top: 0;
+                z-index: 100;
+                width: 100%;
+                height: 100dvh;/*모바일 주소줄 때문에 dvh*/
+                background-color: #fff;
+                color: #555;
+            }
+            header .gnb .gnb_wrap ul.depth1 > li > a {
+                position: relative;
+                display: block;
+                font-size: 17px;
+                font-weight: 800;
+                color: #1d1d1d;
+                line-height: 55px;
+            }
+            header .gnb .gnb_wrap ul.depth1 > li > a::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 14px;
+                width: 24px;
+                height: 24px;
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 15.375L6 9.37501L7.4 7.97501L12 12.55L16.6 7.97501L18 9.37501L12 15.375Z' fill='%231D1D1D'/%3E%3C/svg%3E ");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                transition: 0.5s;
+            }
+            header .gnb .gnb_wrap ul.depth2 {
+                display: none;/*숨김*/
+                background-color: #F4F4F4;
+                padding: 26px 0 40px 27px;
+            }
+            header .gnb .gnb_wrap ul.depth2 > li >a {
+                display: block;
+                font-size: 17px;
+                line-height: 40px;
+            }
+            /*********************메뉴가열렸을때**********************/
+            header .gnb .gnb_wrap ul.depth1 > li.open > a {
+                color: #DE8218;
+            }
+            header .gnb .gnb_wrap ul.depth1 > li.open > a::after{
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 15.375L6 9.37501L7.4 7.97501L12 12.55L16.6 7.97501L18 9.37501L12 15.375Z' fill='%23DE8218'/%3E%3C/svg%3E ");
+                transform: rotate(180deg);
+            }
+            header .gnb .gnb_wrap ul.depth1 > li.open ul.depth2 {
+                display: block;/*나타남*/
+            }
+            header .gnb .gnb_close {
+                display: none;/*숨김*/
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 101;/*gnb_wrap보다 위*/
+                font-size: 0;
+                line-height: 0;
+                width: 54px;
+                height: 54px;
+            }
+            header .gnb .gnb_close::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 30px;
 
-}
-header.menu_pc .gnb .gnb_wrap ul.depth2 > li > a:hover {
-    font-weight: 600;   
-    color: #DE8218;
-}
+            }
+            /**********메뉴가열렸을때**************/
+            header.menu_mo .gnb .gnb_wrap {
+                display: block; /*나타남*/ 
+            }
+            header.menu_mo .gnb .gnb_close {
+                display: block;
+            }
+
+
+
+}/*media*/
+
+
+
 .visual {
     height: 800px;
     background: url(../images/visual_bg.jpg);
 
 }
-
-@media screen and (max-width:640px){ 
-
-}/*media*/
