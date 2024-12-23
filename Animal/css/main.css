@@ -170,7 +170,6 @@ header.fixed .logo a::before {
                         background-position: center center;
                         background-repeat: no-repeat;
                         background-size: contain;
-
                     }
                     header .tnb .search .search_open {
                         display: block;
@@ -198,7 +197,19 @@ header.fixed .logo a::before {
                     header .tnb .search .search_wrap{
                         display: none;  
                     }
-                    header.SCH_OPEN .tnb .search .search_wrap {
+                    header.sch_open .tnb .paper::after {
+                        content: "";
+                        position: absolute;
+                        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.33268 14.9998L4.16602 13.8332L12.166 5.83317H4.99935V4.1665H14.9993V14.1665H13.3327V6.99984L5.33268 14.9998Z' fill='white'/%3E%3C/svg%3E ");
+                        height: 20px;
+                        width: 20px;
+                        top: 4px;
+                        right: 6px;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+                    header.sch_open .tnb .search .search_wrap {
                         display: block;
                     }
                     /*메뉴오버,고정스타일*/
