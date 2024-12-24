@@ -120,22 +120,24 @@ $(document).ready(function(){
     // 오버한 li에 over 클래스가 추가...
     // header에 menu_pc 클래스 추가...
     $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter fousin', function(){
-        //이전에 오버했던 메뉴의 over를 삭제하기위해서 모든 li의 over를 지웠다가 오버한 후에만 추가
-        $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
-        $(this).addClass('over')
-        $('header').addClass('menu_pc')
-        $('header').addClass('fixed')
-        console.log('오버')
+        if(device_status = 'pc'){ //pc 모드일때
+            //이전에 오버했던 메뉴의 over를 삭제하기위해서 모든 li의 over를 지웠다가 오버한 후에만 추가
+            $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
+            $(this).addClass('over')
+            $('header').addClass('menu_pc')
+            $('header').addClass('fixed')
+            // console.log('오버')
+        }
     })
     $('header .gnb .gnb_wrap ul.depth1').on('mouseleave', function(){
         $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
         $('header').removeClass('menu_pc')
-        console.log('아웃')
+        //console.log('아웃')
     })
     $('header .gnb .gnb_wrap ul.depth1 > li:last-child ul.depth2 > li:last-child').on('fousout', function(){
         $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
         $('header').removeClass('menu_pc')
-        console.log('포커스날라감')
+       // console.log('포커스날라감')
 
     })
 
