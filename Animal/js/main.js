@@ -67,7 +67,10 @@ $(document).ready(function(){
             스크롤된 값이 0이거나 0보다작으면 삭제.*/
         if(scrolling <= 0){
             $(this).removeClass('fixed') //사라질때: 맨 위로 스크롤 되었을때, header에서 마우스를 아웃했을때
+            console.log('마우스를 헤더에서내렸을떄')
         }
+        
+        
        
    })
 
@@ -80,7 +83,12 @@ $(document).ready(function(){
         }else{ //맨꼭대기
             //검색이 열려있는 상태에서는 class삭제 안함-- header에 sch_open이있으면 열린상태...
             if($('header').hasClass('sch_open') == false){
-                $('header').removeClass('fixed')
+                if($('header').hasClass('menu_pc') == false){ //메뉴가 열린 상태가 아니라면
+                    $('header').removeClass('fixed')
+                    console.log('위로스크롤했을때')
+                }
+                    
+               
             }
             
         }
@@ -111,20 +119,25 @@ $(document).ready(function(){
     // header .gnb .gnb_wrap ul.depth1 > li 
     // 오버한 li에 over 클래스가 추가...
     // header에 menu_pc 클래스 추가...
-    $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter', function(){
+    $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter fousin', function(){
         //이전에 오버했던 메뉴의 over를 삭제하기위해서 모든 li의 over를 지웠다가 오버한 후에만 추가
         $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
         $(this).addClass('over')
         $('header').addClass('menu_pc')
+        $('header').addClass('fixed')
         console.log('오버')
     })
-    $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseleave', function(){
+    $('header .gnb .gnb_wrap ul.depth1').on('mouseleave', function(){
         $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
         $('header').removeClass('menu_pc')
         console.log('아웃')
+    })
+    $('header .gnb .gnb_wrap ul.depth1 > li:last-child ul.depth2 > li:last-child').on('fousout', function(){
+        $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
+        $('header').removeClass('menu_pc')
+        console.log('포커스날라감')
 
     })
-    
 
     /******************************** pc버전 메뉴열기 (종료) ***********************************/
 

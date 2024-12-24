@@ -68,6 +68,7 @@ header.fixed .logo a::before {
                         font-size: 17px;
                         padding: 0 24px;
                     }
+                    header .gnb .gnb_wrap ul.depth1 > li:last-child ul.depth2 > li:last-child
                     /*
                         <li>
                             <a></a>   ------ 하위에 depth2가 존재하는 li - has(ul.depth2)
