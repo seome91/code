@@ -21,10 +21,11 @@
         <!--
             header에 마우스를 올렸을때 & 스크롤을 내렸을때(pc/mobile 공통) : meun_fixed 
             pc에서 메뉴에 마우스를 오버했을때: menu_pc 
-            모바일에서 메뉴를 열었을때 : menu _mo
+            모바일에서 메뉴를 열었을때 : menu_mo
             검색을 클릭했을때 (pc/mobil공통): sch_open
+            "fixed sch_open menu_mo"
                 -->
-        <header class="fixed sch_open">
+        <header class="">
             <h1 class="logo"><a href="index.html">동물보호센터</a></h1>
             <nav class="gnb">
                 <button class="gnb_open">메뉴 열기</button>
@@ -34,7 +35,7 @@
                         (모바일일때)1차메뉴를 클릭하면 -> open class추가 
                         꼭 jquery에서 클래스를 추가하는것으로 구현 
                         li:hover 로 구현하면 접근성 X -->
-                        <li class="over">
+                        <li class="open">
                             <a href="#n"><span>찾습니다</span></a><!--메뉴마다 span 태그로 감싸주기-->
                             <ul class="depth2">
                                 <li><a href="#n"><span>실종신고</span></a></li>
@@ -47,7 +48,7 @@
                             <a href="#n"><span>네트워크</span></a>
                             <ul class="depth2">
                                 <li><a href="#n"><span>동물찾기 네트워크</span></a></li>
-                                <li><a href="https://www.animal.go.kr/" target="_blank" title="새창연결"><span>국가 동물 보호 정보 시스템</span></a></li><!--새창으로연결, 접근성 설명-->
+                                <li><a href="https://www.animal.go.kr/" target="_blank" title="새창연결"><span>국가 동물보호 정보시스템</span></a></li><!--새창으로연결, 접근성 설명-->
                             </ul>
                         </li>
                         <li>
@@ -70,14 +71,16 @@
                 <div class="search">
                     <button class="search_open" title="검색 열기">검색</button>
                     <div class="search_wrap">
-                        <h2>검색어를 입력해주세요.</h2>
+                        <h2>검색어를 입력해주세요</h2>
                         <div class="search_area">
                             <form>
                                 <fieldset>
-                                    <legend>검색</legend>
-                                    <label for="keyword">검색어입력</label>
-                                    <input type="text" id="keyword"><!--검색어입력창-->
-                                    <input type="submit"><!--검색버튼-->
+                                    <div class="inner">
+                                        <legend>검색</legend>
+                                        <label for="keyword">검색어입력</label>
+                                        <input type="text" id="keyword" class="keyword"><!--검색어입력창-->
+                                        <input type="submit" class="btn"><!--검색버튼-->
+                                    </div><!--inner-->
                                 </fieldset>
                             </form>
                         </div><!--search_area-->
