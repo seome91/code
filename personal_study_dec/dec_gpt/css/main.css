@@ -1,0 +1,39 @@
+@import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
+@import url(font.css);
+@import url(common.css);
+
+header {
+    height: 70px;
+    background-color: #333;
+}
+header h1 {
+    color: #fff;
+}
+nav {
+    background-color: #555;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+nav:hover {
+    background-color: #777;
+}
+
+main {
+    display: flex;
+
+}
+main .info {
+    width: 70%;
+    background-color: aqua;
+
+}
+main .sidebar {
+    width: 30%;
+    background-color: red;
+}
+footer {
+    background-color: #222;
+    color: #fff;
+}

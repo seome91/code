@@ -20,7 +20,7 @@ $(document).ready(function(){
         navigation: {  /* 이전, 다음 버튼 */
             nextEl: '.visual .btn_wrap .next',  /* 다음 버튼의 클래스명 */
             prevEl: '.visual .btn_wrap .prev',  
-        },
+        }
     });
 
     $('.visual .btn_wrap .stop').on('click',function(){
@@ -144,4 +144,4 @@ $(document).ready(function(){
 
     /******************************** pc버전 메뉴열기 (종료) ***********************************/
 
-})//(document).ready
+}
