@@ -1053,25 +1053,38 @@ header.fixed .logo a::before {
     height: 1em;
     position: relative;
 }
+.slogan .title span::before{
+    content: "";
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 90%;
+    background-position: bottom top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 .slogan .title .slog01 {
     width: 3.5em;/*1em글자 한개당 크기,공간*/
 }
 .slogan .title .slog02 {
-    width: 2.5em;/*1em글자 한개당 크기,공간*/
+    width: 2.5em;
 }
 .slogan .title .slog03 {
-    width: 2em;/*1em글자 한개당 크기,공간*/
+    width: 2em;
 }
 .slogan .title .slog04 {
-    width: 3em;/*1em글자 한개당 크기,공간*/
+    width: 3em;
 }
-
+.slogan .title span.slog01::before{
+    background-image: url(..//images/slogan.png);
+}
 .slogan .sub_txt {
     margin: 55px 0 0 0;
     text-align: center;
     color: #5d5d5d;
     font-size: 15px;
 }
+
 
 footer {
     margin-bottom: 1000px;
