@@ -4,6 +4,7 @@ $(document).ready(function(){
     let device_status //브라우저가 pc인지 mobile상태인지
     let window_w //브라우저의 넓이
     let scrolling //브라우저가 스크롤 된 값
+    let tab_name //find의 클릭한 tab의 이름
 
     /**************************** visual 팝업 (시작) ************************************/
     const visual_swiper = new Swiper('.visual .swiper', { /* 팝업을 감싼는 요소의 class명 */
@@ -142,5 +143,107 @@ $(document).ready(function(){
 
     /**************************** pc버전 메뉴열기 (종료)  ************************************/
     
+    /**************************** mobile 버전 메뉴열기 (시작)  ********************************/
+    /*
+        1. header .gnb .gnb_open 를 클릭하면 header에 menu_mo 클래스추가 
+        2. header .gnb .gnb_close 를 클릭하면 header에 menu_mo 클래스 삭제 
+    */
+    //console.log('메뉴 누르기 전')
+    $('header .gnb .gnb_open').on('click', function(){
+        //console.log('메뉴 누르고 난 후')
+        $('header').addClass('menu_mo')
+        $('html, body').css({overflow : 'hidden', height : $(window).height()}).bind('scroll touchmove mousewheel', function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+    })
+     //console.log('메뉴 누르고 난 후')
+     $('header .gnb .gnb_close').on('click', function(){
+        //console.log('누르고 난 후')
+        $('header').removeClass('menu_mo')
+        $('html, body').css({overflow : 'visible', height : 'auto'}).unbind('scroll touchmove mousewheel');
+     })
+    /**************************** mobile 버전 메뉴열기 (종료)  ********************************/
+    /**************************** mobile 버전 2차 메뉴열기 (시작)  ********************************/
+    /*
+        1.li를 클릭할것이냐, a를 클릭할것이냐 판단 = a를 클릭해야함 , 
+        2.2차메뉴가 있는 a는 하위메뉴를 여는 기능을 가지고있음 (자신의링크 작동XX)
+        3.2차메뉴를 가진 1차인지 아닌지 구분해둠 
+        header .gnb .gnb_wrap ul.depth1 > li:has(ul.depth2) > a ===> 2차메뉴 가진애
+        4.1차메뉴 li에 class = "open"추가
+
+        1.클릭한 메뉴만 열리고 다른메뉴는 모두닫기
+        2.이미 열려있는 메뉴를 다시 클릭하면 닫기
+        3.나안해=if 조건에따라 해,안해=ifeles
+    */
+   $('header .gnb .gnb_wrap ul.depth1 > li:has(ul.depth2) > a').on('click', function(e){
+        if(device_status == 'mobile'){
+            e.preventDefault(); //href안되게 하는 코드
+            if($(this).parent().hasClass('open') == false){
+                //열린메뉴가 아닐경우
+                console.log('열린메뉴아님')
+                $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('open')
+                $(this).parent().addClass('open')         
+            }else{
+                //열린메뉴일경우 , 빼고튀면됨
+                console.log('열린메뉴맞음')
+                $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('open') 
+            }//if
+        }//if
+   })
+    /**************************** mobile 버전 2차 메뉴열기 (종료)  ********************************/
+
+    /********************************** 찾습니다. 가족을 (시작) ***********************************/
+    const find_panel01_swiper = new Swiper('.find .panel01 .swiper', { 
+        // li의 넓이 비율로 안함 - CSS에서 준 넓이대로 사용
+        slidesPerView: 'auto',
+        spaceBetween: 16, // li와 li 사이의 최소 여백
+        breakpoints: {
+            641: {  // 화면 너비가 641px 이상일 때 적용
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+        },
+        loop: true, // 마지막 슬라이드에서 첫 번째 슬라이드로 자연스럽게 넘김
+        navigation: {
+            nextEl: '.find .tab_content .panel01 .btn_wrap .next',
+            prevEl: '.find .tab_content .panel01 .btn_wrap .prev',
+        },
+    });
+
+    const find_panel02_swiper = new Swiper('.find .panel02 .swiper', { /* swiper에 이름 붙여주기 */
+        slidesPerView: 'auto', /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+        spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
+        breakpoints: {
+            641: {  /* 1300px 이상이 되면 적용 */
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+        },
+        //centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        navigation: {
+            nextEl: '.find .tab_content .panel02 .btn_wrap .next',
+            prevEl: '.find .tab_content .panel02 .btn_wrap .prev',
+        },
+    });
+        /*********************************찾습니다 가족을 팝업 (끝) ***************************************/
+        /********************************찾습니다 주인을 팝업 (시작) ***************************************/
+        /*
+            .find .tab_list ul li 버튼을 누른 후 하는 일 ----------------
+            0.li에 active클래스 추가
+            1.li에 active클래스 추가, li button에 title = "선택됨" 입력
+            2.li에 data-tab의 값을 가져와서 .tab_content .tab_panel중에 data-tab이 같은 값인 요소 찾아서 
+        
+        
+        */
+         /*******************************찾습니다 주인을 팝업 (시작) ***************************************/
+        $('.find .tab_list ul li').on('click', function(){
+            $('.find .tab_list ul li').removeClass('active')
+            $(this).addClass('active')
+            $('.find .tab_list ul li button').attr('title', '')
+            $(this).find('button').attr('title', '선택됨')
+            tab_name = $(this).attr('data-tab')
+            console.log(tab_name)
+            $('.find .tab_content .tab_panel').removeClass('active')
+            $('.find .tab_content').find('[data-tab="'+ tab_name +'"]').addClass('active')//++중간에 변수넣기
+        })
 
 })//document.ready

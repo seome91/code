@@ -7,6 +7,7 @@
     
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <script src="js/swiper-bundle.min.js"></script>
+    
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
     
@@ -25,7 +26,7 @@
             검색을 클릭했을때 (pc/mobil공통): sch_open
             "fixed sch_open menu_mo"
                 -->
-        <header>
+        <header class="">
             <h1 class="logo"><a href="index.html">동물보호센터</a></h1>
             <nav class="gnb">
                 <button class="gnb_open">메뉴 열기</button>
@@ -36,26 +37,26 @@
                         꼭 jquery에서 클래스를 추가하는것으로 구현 
                         li:hover 로 구현하면 접근성 X -->
                         <li class="">
-                            <a href="#n"><span>찾습니다</span></a><!--메뉴마다 span 태그로 감싸주기-->
+                            <a href="https://www.naver.com/"><span>찾습니다</span></a><!--메뉴마다 span 태그로 감싸주기-->
                             <ul class="depth2">
                                 <li><a href="#n"><span>실종신고</span></a></li>
                                 <li><a href="#n"><span>구조정보/목격담</span></a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#n"><span>구조분양</span></a>
+                            <a href="https://www.naver.com/"><span>구조분양</span></a>
                         <li>
-                            <a href="#n"><span>네트워크</span></a>
+                            <a href="https://www.naver.com/"><span>네트워크</span></a>
                             <ul class="depth2">
                                 <li><a href="#n"><span>동물찾기 네트워크</span></a></li>
                                 <li><a href="https://www.animal.go.kr/" target="_blank" title="새창연결"><span>국가 동물보호 정보시스템</span></a></li><!--새창으로연결, 접근성 설명-->
                             </ul>
                         </li>
                         <li>
-                            <a href="#n"><span>재회성공담</span></a>
+                            <a href="https://www.naver.com/"><span>재회성공담</span></a>
                         </li>
                         <li>
-                            <a href="#n"><span>대처방법</span></a>
+                            <a href="https://www.naver.com/"><span>대처방법</span></a>
                             <ul class="depth2">
                                 <li><a href="#n"><span>실종시 대처방법</span></a></li>
                                 <li><a href="#n"><span>구조시 대처방법</span></a></li>
@@ -130,6 +131,297 @@
                     <button class="play">팝업 다시 시작</button>
                 </div><!--btn_wrap-->
             </section><!--visual-->
+            <section class="find">
+                <div class="wrapper">
+                    <h2>찾습니다</h2>
+                    <div class="tab_list">
+                        <ul>
+                            <!--tab하고 panel하고 연결고리가 있어야함 data-tab이 같으면 같은내용 
+                            선택된 tab에는 acive클래스 추가,  button에 title="선택됨" 추가
+                            tab_panel에도 acive클래스 추가-->
+                            <li data-tab="tab01" role ="tab" class="tab01 active"><button title="선택됨">가족을</button></li>
+                            <li data-tab="tab02" role ="tab" class="tab02"><button>주인을</button></li>
+                        </ul>
+                    </div><!--tab_list-->
+                    <div class="tab_content">
+                        <div data-tab="tab01" role ="tabpanel" class="tab_panel panel01 active" >
+                            <h3>실종된 동물(가족) 찾기</h3>
+                            <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                                <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_01_01.jpg" alt=""></div>
+                                            <h4><strong class="cate01">실종</strong><span>리트리버 3살 수컷</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>분실날짜</strong>
+                                                    <span>2024.04.12</span>
+                                                </li>
+                                                <li>
+                                                    <strong>분실장소</strong>
+                                                    <span>솔밭공원 근처 남자화장실 앞</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>입에 상처가 있고 입술이 보라색</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> <!--swiper-slide-->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_01_02.jpg" alt=""></div>
+                                            <h4><strong class="cate01">실종</strong><span>말티푸 5살 암컷</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>분실날짜</strong>
+                                                    <span>2024.04.12</span>
+                                                </li>
+                                                <li>
+                                                    <strong>분실장소</strong>
+                                                    <span>비하동 예미원 아파트</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>곱슬 모질에 사람을 잘 따름</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> <!--swiper-slide-->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_01_03.jpg" alt=""></div>
+                                            <h4><strong class="cate02">보호</strong><span>포인터 믹스 3살 추정</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>분실날짜</strong>
+                                                    <span>2024.05.03</span>
+                                                </li>
+                                                <li>
+                                                    <strong>분실장소</strong>
+                                                    <span>복대동 현대1차 아파트 경비실 앞</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>하얀 발가락, 두번째발가락에 점이있음</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> <!--swiper-slide-->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_01_04.jpg" alt=""></div>
+                                            <h4><strong class="cate01">실종</strong><span>노르웨이숲 4개월</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>분실날짜</strong>
+                                                    <span>2024.06.03</span>
+                                                </li>
+                                                <li>
+                                                    <strong>분실장소</strong>
+                                                    <span>가경동 삼일 아파트앞 보라유치원 놀이터</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>꼬리가 짧고 뭉툭하며, 양쪽눈 색이다름</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> <!--swiper-slide-->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_01_05.jpg" alt=""></div>
+                                            <h4><strong class="cate01">실종</strong><span>아메리카 숏헤어 5살,중성화 완료</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>분실날짜</strong>
+                                                    <span>2024.03.29</span>
+                                                </li>
+                                                <li>
+                                                    <strong>분실장소</strong>
+                                                    <span>금천동초등학교 체육관 물품보관소 옆</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>과체중에 무늬가 다른동종보다 선명함</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> <!--swiper-slide-->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_01_06.jpg" alt=""></div>
+                                            <h4><strong class="cate03">구조</strong><span>말라뮤트 6개월 ,중성화 미완</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>분실날짜</strong>
+                                                    <span>2024.06.29</span>
+                                                </li>
+                                                <li>
+                                                    <strong>분실장소</strong>
+                                                    <span>상당공원 근처 남자화장실 앞</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>파란눈,등에 상처가있고 사람을 경계함</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> <!--swiper-slide-->
+                                </ul>
+                            </div><!--swiper-->
+                            <div class="btn_wrap">
+                                <div class="more"><a href="#n">전체보기</a></div>
+                                <button class="prev">이전 팝업보기</button>
+                                <button class="next">다음 팝업보기</button>
+                            </div>
+                        </div><!--tab01-->
+                        <div data-tab="tab02" role ="tabpanel" class="tab_panel panel02"><!--*********************panel02***************************-->
+                            <h3>주인을 찾습니다</h3>
+                            <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                                <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_02_01.jpg" alt=""></div>
+                                            <h4><strong class="cate03">구조</strong><span>시추 10살 수컷,중성화 완료</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>습득날짜</strong>
+                                                    <span>2024.01.02</span>
+                                                </li>
+                                                <li>
+                                                    <strong>습득장소</strong>
+                                                    <span>미생공원 근처 여자화장실 앞</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>성격이 온순하고 한쪽눈에 백내장</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> <!--swiper-slide-->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_02_02.jpg" alt=""></div>
+                                            <h4><strong class="cate02">보호</strong><span>레브라도리트리버 3살 추정,중성화완</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>습득날짜</strong>
+                                                    <span>2024.04.12</span>
+                                                </li>
+                                                <li>
+                                                    <strong>습득장소</strong>
+                                                    <span>비하동 예미원 아파트</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>곱슬 모질에 사람을 잘 따름</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> <!--swiper-slide-->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_02_03.jpg" alt=""></div>
+                                            <h4><strong class="cate02">보호</strong><span>웰시코기 3살 추정,중성화완</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>습득날짜</strong>
+                                                    <span>2024.05.07</span>
+                                                </li>
+                                                <li>
+                                                    <strong>습득장소</strong>
+                                                    <span>비하동 우미린6차 아파트 관리사무소 앞</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>하얀 발가락, 두번째발가락에 점이있음</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> <!--swiper-slide-->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_02_04.jpg" alt=""></div>
+                                            <h4><strong class="cate03">구조</strong><span>노르웨이숲 4개월, 중성화 미완</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>습득날짜</strong>
+                                                    <span>2024.11.26</span>
+                                                </li>
+                                                <li>
+                                                    <strong>습득장소</strong>
+                                                    <span>비하동 비하초등학교 편의점 앞</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>꼬리가 짧고 뭉툭하며, 양쪽눈 색이다름</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> <!--swiper-slide-->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_02_05.jpg" alt=""></div>
+                                            <h4><strong class="cate01">실종</strong><span>아메리카 숏헤어 5살,중성화 완료</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>습득날짜</strong>
+                                                    <span>2023.12.07</span>
+                                                </li>
+                                                <li>
+                                                    <strong>습득장소</strong>
+                                                    <span>금천동초등학교 체육관 물품보관소 옆</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>과체중에 무늬가 다른동종보다 선명함</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> <!--swiper-slide-->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab_02_06.jpg" alt=""></div>
+                                            <h4><strong class="cate01">실종</strong><span>말라뮤트 6개월 ,중성화 미완</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>습득날짜</strong>
+                                                    <span>20240.06.29</span>
+                                                </li>
+                                                <li>
+                                                    <strong>습득장소</strong>
+                                                    <span>상당공원 근처 남자화장실 앞</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>파란눈,등에 상처가있고 사람을 경계함</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li> <!--swiper-slide-->
+                                </ul>
+                            </div><!--swiper-->
+                            <div class="btn_wrap">
+                                <div class="more"><a href="#n">전체보기</a></div>
+                                <button class="prev">이전 팝업보기</button>
+                                <button class="next">다음 팝업보기</button>
+                            </div>
+                        </div><!--tab02-->
+                    </div><!--tab_content-->
+                </div><!--wrapper-->
+            </section><!--find-->
+            <section class="slogan">
+                <div class="wrapper">
+                    <h2>구조가 필요한 동물 발견 시 대처요령</h2>
+                    <p class="title">공공장소에서 <span class="slog01"></span>주인 없이 떠도는<br>
+                        동물<span class="slog02"></span>을 발견한 경우<br>
+                        관할 시군구청 또는 동물보호센터<span class="slog03"></span>에<Br>
+                        신고<span class="slog04"></span>하시기 바랍니다.</p>
+                        <p class="sub_txt">※소유자를 알 수 없는 동물을 신고하지 않고 포획하여 죽이는 경우 동물보호법 제10조제3항제2호를 위반하여<br>
+                            3년 이하 징역이나 3천만원 이하 벌금이 부과됩니다.</p>
+                </div><!--wrapper-->
+            </section><!--slogan-->
         </main>
         <footer></footer>   
     </div>

@@ -121,6 +121,22 @@ header.fixed .logo a::before {
                     }
                     header .gnb .gnb_wrap ul.depth2 > li > a span {
                         position: relative;
+                        display: inline-block;
+                    }
+                    header .gnb .gnb_wrap ul.depth2 > li > a[target="_blank"] span {
+                        padding-right: 21px;
+                    }
+                    header .gnb .gnb_wrap ul.depth2 > li > a[target="_blank"] span::before{
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: 8px;
+                        width: 21px;
+                        height: 21px;
+                        background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.98047 18.2768C3.64549 18.2768 3.35215 18.1508 3.10044 17.899C2.84858 17.6473 2.72266 17.3539 2.72266 17.0189V3.98145C2.72266 3.64647 2.84858 3.35312 3.10044 3.10141C3.35215 2.84956 3.64549 2.72363 3.98047 2.72363H10.007V3.98145H3.98047V17.0189H17.018V10.9924H18.2758V17.0189C18.2758 17.3539 18.1499 17.6473 17.898 17.899C17.6463 18.1508 17.3529 18.2768 17.018 18.2768H3.98047ZM8.37734 13.5299L7.49141 12.6221L16.143 3.98145H11.2648V2.72363H18.2758V9.73457H17.018V4.87832L8.37734 13.5299Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+                        background-position: center center;
+                        background-repeat: no-repeat;
+
                     }
                     header .gnb .gnb_wrap ul.depth2 > li > a span:hover {
                         color: #696F5F;
@@ -365,9 +381,7 @@ header.fixed .logo a::before {
                 header .logo a {
                     width: 140px;
                     height: 28px;
-
                 }
-                
                 header .gnb .gnb_open {
                     width: 56px;
                     height: 56px;
@@ -386,7 +400,7 @@ header.fixed .logo a::before {
                     background-position: center center;
                     background-repeat: no-repeat;
                 }
-                header .gnb .gnb_wrap {
+                header .gnb .gnb_wrap { /*******/
                     display: none; /*숨김*/
                     position: absolute; /* hader 기준 */
                     left: 0;
@@ -437,6 +451,24 @@ header.fixed .logo a::before {
                     font-family: "Pretendard";
                     font-size: 15px;
                     padding: 12px 0;
+                }
+                header .gnb .gnb_wrap ul.depth2 > li a span {
+                    display: inline-block;
+                    position: relative;
+                }
+                header .gnb .gnb_wrap ul.depth2 > li > a[target="_blank"] span {
+                    padding-right: 21px;
+                }
+                header .gnb .gnb_wrap ul.depth2 > li > a[target="_blank"] span::before{
+                    content: "";
+                    position: absolute;
+                    right: -1px;
+                    top: 0;
+                    width: 20px;
+                    height: 20px;
+                    background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.98047 16.2768C1.64549 16.2768 1.35215 16.1508 1.10044 15.899C0.848583 15.6473 0.722656 15.3539 0.722656 15.0189V1.98145C0.722656 1.64647 0.848583 1.35312 1.10044 1.10141C1.35215 0.84956 1.64549 0.723633 1.98047 0.723633H8.00703V1.98145H1.98047V15.0189H15.018V8.99238H16.2758V15.0189C16.2758 15.3539 16.1499 15.6473 15.898 15.899C15.6463 16.1508 15.3529 16.2768 15.018 16.2768H1.98047ZM6.37734 11.5299L5.49141 10.6221L14.143 1.98145H9.26484V0.723633H16.2758V7.73457H15.018V2.87832L6.37734 11.5299Z' fill='%23808080'/%3E%3C/svg%3E%0A");
+                    background-position: center center;
+                    background-repeat: no-repeat;
                 }
                 header .gnb .gnb_wrap ul.depth1 > li.open ul.depth2 {
                     display: block; /*나타남*/
@@ -756,6 +788,290 @@ header.fixed .logo a::before {
                         }
 }/* media */
 
+.find {
+    padding:  125px 0 187px 0;
+    background-color: #F5EFE1;
+    font-family: 'TTLaundryGo';
+}
+.find h2 {
+    font-size: 50px;
+    text-align: center;
+    margin: 0 0 18px 0;
+}
+.find .tab_list ul {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+.find .tab_list ul li button{
+    padding:  7px 24px 6px 24px;
+    background-color:#808080 ;
+    border-radius: 50px;
+    font-size: 22px;
+}
+.find .tab_list ul li.active button {
+    background-color: #9D4C20;
+}
+.find .tab_list ul li.tab02.active button {
+    background-color: #CEAC65;
+}
+.find .tab_content {
+    margin: 70px 0 0 0;
+}
+.find .tab_content .tab_panel {
+    display: none;
+}
+.find .tab_content .tab_panel.active {
+    display: block;
+}
+.find .tab_content .tab_panel h3 {
+    display: none;
+}
+.find .tab_content .tab_panel .swiper ul li a {
+    display: block;
+}
+.find .tab_content .tab_panel .swiper ul li a .photo {
+    height: 413px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.find .tab_content .tab_panel .swiper ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: 1.0s;
+}
+.find .tab_content .tab_panel .swiper ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.find .tab_content .tab_panel .swiper ul li a h4 {
+    margin: 12px 0 16px 0 ;
+    display: flex;
+    font-size: 22px;
+    justify-content: space-between;
+    align-items: center;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 strong {
+    padding: 3px 15px 2px 15px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #9D4C20;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 strong.cate02 {
+    background-color: #CEAC65;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 span {
+    display: block;
+    width: calc(100% - 83px);
+    /*한줄제한*/
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.find .tab_content .tab_panel .swiper ul li a ul li {
+     display: flex;
+    justify-content: space-between;
+    margin: 8px 0 0 0;
+}
+.find .tab_content .tab_panel .swiper ul li a ul li span {
+    display: block;
+    width: calc(100% - 88px);
+    font-family: "Pretendard";
+    font-weight: 400;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.find .tab_content .tab_panel .btn_wrap {
+    margin: 75px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.find .tab_content .tab_panel .btn_wrap button {
+    font-size: 0;
+    line-height: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #3d3d3d;
+    position: relative;
+}
+.find .tab_content .tab_panel .btn_wrap button::before {
+    content: "";
+    position: absolute;
+    left:1px;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='14' viewBox='0 0 9 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.95568 7.24633L8.91412 12.2048L7.40503 13.7139L0.9375 7.24633L7.40503 0.778802L8.91412 2.28789L3.95568 7.24633Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.find .tab_content .tab_panel .btn_wrap button.next::before {
+    transform: rotate(180deg);
+}
+.find .tab_content .tab_panel .btn_wrap .more a {
+    display: block;
+    line-height: 13px;/*그 높이에 글자가 위아래로 정렬*/
+    height: 30px;
+    padding: 7px 23px;
+    border-radius: 15px;
+    border: 2px solid #3d3d3d;
+}
+.find .tab_content .tab_panel .swiper ul li a h4 strong.cate03 {
+    background-color: #696F5F;
+}
+/*******************오버**********************/
+
+.find .tab_content .tab_panel .btn_wrap button:hover {
+    border: 2px solid #9D4C20;
+    background-color: #9D4C20;
+}
+.find .tab_content .tab_panel .btn_wrap button.prev:hover::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='14' viewBox='0 0 9 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.95568 7.24633L8.91412 12.2048L7.40503 13.7139L0.9375 7.24633L7.40503 0.778802L8.91412 2.28789L3.95568 7.24633Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.find .tab_content .tab_panel .btn_wrap button.next:hover::before {
+    transform: rotate(180deg);
+}
+.find .tab_content .tab_panel .btn_wrap .more a:hover {
+    border: 2px solid #9D4C20;
+    background-color: #9D4C20;
+    color: #fff;
+
+}
+
+@media screen and (max-width:640px){
+                .find {
+                    padding: 57px 0 90px 0;
+                }
+                .find .wrapper {
+                    margin-right: 0;/*swpier 잘렸을때 자연스럽게 보이기위해서*/
+                }
+                .find h2 {
+                    font-size: 20px;
+                    margin: 0 0 14px 0;
+                }
+                .find .tab_list ul {
+                    gap: 30px;
+                }
+                .find .tab_list ul li button {
+                    padding:  5px 15px 4px 15px;
+                    font-size: 14px;
+                }
+                .find .tab_list ul li.active button {
+                    background-color: #9D4C20;
+                }
+                .find .tab_list ul li.tab02.active button {
+                    background-color: #CEAC65;
+                }
+                .find .tab_content {
+                    margin: 43px 0 0 0;
+                }
+                .find .tab_content .tab_panel .swiper > ul > li {
+                    width: 200px;
+                }
+                .find .tab_content .tab_panel .swiper ul li a .photo {
+                    height: 300px;
+                    border-radius: 20px;
+                }
+                .find .tab_content .tab_panel .swiper ul li a h4 {
+                    margin: 10px 0 12px 0 ;
+                    display: flex;
+                    font-size: 18px;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .find .tab_content .tab_panel .swiper ul li a h4 strong {
+                    padding: 3px 15px 2px 15px;
+                    font-size: 14px;
+                    border-radius: 15px;
+                    color: #fff;
+                    background-color: #9D4C20;
+                }
+                .find .tab_content .tab_panel .swiper ul li a h4 span {
+                    width: calc(100% - 60px);
+                }
+                .find .tab_content .tab_panel .swiper ul li a ul li {
+                    margin: 4px 0 0 0;
+                }
+                .find .tab_content .tab_panel .swiper ul li a ul li span {
+                    width: calc(100% - 60px);
+                }
+                .find .tab_content .tab_panel .btn_wrap {
+                    margin: 75px 0 0 0;
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                }
+                .find .tab_content .tab_panel .btn_wrap button {
+                    font-size: 0;
+                    line-height: 0;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 2px solid #3d3d3d;
+                    position: relative;
+                }
+                .find .tab_content .tab_panel .btn_wrap button::before {
+                    background-size: 9px;
+                }
+                .find .tab_content .tab_panel .btn_wrap button.next::before {
+                    transform: rotate(180deg);
+                }
+                .find .tab_content .tab_panel .btn_wrap .more a {
+                    display: block;
+                    line-height: 13px;/*그 높이에 글자가 위아래로 정렬*/
+                    height: 30px;
+                    padding: 7px 23px;
+                    border-radius: 15px;
+                    border: 2px solid #3d3d3d;
+                }
+                .find .tab_content .tab_panel .swiper ul li a h4 strong.cate03 {
+                    background-color: #696F5F;
+                }
+                /*******************오버**********************/
+
+}/*midea*/
+.slogan {
+    padding: 160px 0 134px 0;
+    background-color: #F5EFE1;
+}
+.slogan h2 {
+    display: none;
+}
+.slogan .title {
+    font-size: 65px;
+    font-family: 'TTLaundryGo';
+    color: #1d1d1d;
+    line-height: 1.6;
+    text-align: center;
+}
+.slogan .title span {
+    display: inline-block;
+    height: 1em;
+    position: relative;
+}
+.slogan .title .slog01 {
+    width: 3.5em;/*1em글자 한개당 크기,공간*/
+}
+.slogan .title .slog02 {
+    width: 2.5em;/*1em글자 한개당 크기,공간*/
+}
+.slogan .title .slog03 {
+    width: 2em;/*1em글자 한개당 크기,공간*/
+}
+.slogan .title .slog04 {
+    width: 3em;/*1em글자 한개당 크기,공간*/
+}
+
+.slogan .sub_txt {
+    margin: 55px 0 0 0;
+    text-align: center;
+    color: #5d5d5d;
+    font-size: 15px;
+}
 
 footer {
     margin-bottom: 1000px;
