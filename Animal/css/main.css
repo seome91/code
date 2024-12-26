@@ -1035,7 +1035,7 @@ header.fixed .logo a::before {
 
 }/*midea*/
 .slogan {
-    padding: 160px 0 134px 0;
+    padding: 150px 0 134px 0;
     background-color: #F5EFE1;
 }
 .slogan h2 {
@@ -1057,34 +1057,46 @@ header.fixed .logo a::before {
     content: "";
     position: absolute;
     left: 5%;
-    bottom: 0;
+    bottom: -50px;
     width: 90%;
     background-position: bottom top;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .slogan .title .slog01 {
-    width: 3.5em;/*1em글자 한개당 크기,공간*/
+    width: 3.1em;/*1em글자 한개당 크기,공간*/
 }
 .slogan .title .slog02 {
     width: 2.5em;
 }
 .slogan .title .slog03 {
-    width: 2em;
+    width: 2.5em;
 }
 .slogan .title .slog04 {
     width: 3em;
 }
 .slogan .title span.slog01::before{
     background-image: url(..//images/slogan.png);
+    height: 2.6em;
+}
+.slogan .title span.slog02::before{
+    background-image: url(..//images/slogan2.png);
+    height: 2.1em;
+}
+.slogan .title span.slog03::before{
+    background-image: url(..//images/slogan3.png);
+    height: 2.3em;
+}
+.slogan .title span.slog04::before{
+    background-image: url(..//images/slogan4.png);
+    height: 2.4em;
 }
 .slogan .sub_txt {
-    margin: 55px 0 0 0;
+    margin: 65px 0 0 0;
     text-align: center;
     color: #5d5d5d;
     font-size: 15px;
 }
-
 
 footer {
     margin-bottom: 1000px;
