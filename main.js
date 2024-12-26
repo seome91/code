@@ -67,10 +67,8 @@ $(document).ready(function(){
         /* 스크롤을 내린상태에서 마우스를 오버했다가 아웃하면 header에 클래스가 사라짐
            스크롤된 값이 0이거나 0보다 작을때만 삭제..  */
         if(scrolling <= 0){
-            if($('header').hasClass('sch_open') == false){//header에 sch_open이 없을때
-                $(this).removeClass('fixed')
-                //console.log('경우의수1')
-            }
+            $(this).removeClass('fixed')
+            console.log('마우스를 header에서 내렸을때')
         }
     })
 
@@ -80,10 +78,14 @@ $(document).ready(function(){
         //console.log(scrolling)
         if(scrolling > 0){//스크롤을 내렸을때
             $('header').addClass('fixed')
-        }else if(($('header').hasClass('sch_open') == false) && ($('header').hasClass('menu_pc') == false)){//맨꼭대기
+        }else{//맨꼭대기
             /* 검색이 열려있는 상태에서는 class삭제 안함 -- header에 sch_open클래스가 있으면 열린상태 */
+            if($('header').hasClass('sch_open') == false){
+                if($('header').hasClass('menu_pc') == false){ //메뉴가 열린 상태가 아니라면
                     $('header').removeClass('fixed')
-                   // console.log('경우의수2')
+                    console.log('위로 스크롤 했을때')
+                }
+            }
         }
     }
     scroll_chk() //함수의 실행 - 로딩된 후 1번
