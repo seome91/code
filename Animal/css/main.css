@@ -50,7 +50,7 @@ header.fixed .logo a::before {
 
 
 /* 메뉴 오버 & 고정 */
-@media screen and (min-width:641px){
+@media screen and (min-width:1101px){ /*1101*/
                     header .gnb .gnb_open, header .gnb .gnb_close {
                         display: none;/*모바일에서만 나옴*/
                     }
@@ -373,7 +373,7 @@ header.fixed .logo a::before {
 
 }/*media*/
 
-@media screen and (max-width:640px){   /*header모바일 시작*/
+@media screen and (max-width:1100px){   /*header모바일 시작*/
                 header {
                     height: 56px;
                     padding: 0 0 0 20px;
@@ -751,13 +751,22 @@ header.fixed .logo a::before {
 }
 
 
+@media screen and (max-width:1000px){
+                        .visual .swiper ul li {
+                            height: 636px;
+                        }
+                        .visual .swiper ul li .visual_txt h3 {
+                            margin: 389px 0 0 0; 
+                            font-size: 30px;
+                        }
+ }/*@media*/
 
 @media screen and (max-width:640px){     
                         .visual .swiper ul li {
                             height: 636px;
                         }
                         .visual .swiper ul li .visual_txt h3 {
-                            margin: 450px 0 0 0; 
+                            margin: 300px 0 0 0; 
                             font-size: 22px;
                         }
                         .visual .btn_wrap {
@@ -941,6 +950,36 @@ header.fixed .logo a::before {
     color: #fff;
 
 }
+@media screen and (max-width:1300px){
+                .find {
+                    padding: 57px 0 90px 0;
+                }
+                .find .wrapper {
+                    margin-right: 0;/*swpier 잘렸을때 자연스럽게 보이기위해서*/
+                }
+                .find h2 {
+                    font-size: 15px;
+                    margin: 0 0 14px 0;
+                }
+                .find .tab_list ul {
+                    gap: 30px;
+                }
+                .find .tab_list ul li button {
+                    padding:  7px 17px 6px 17px;
+                    font-size: 12px;
+                }
+                .find .tab_content .tab_panel .swiper ul li a .photo {
+                    height: 350px;
+                    border-radius: 20px;
+                }
+                
+}/*midea*/
+@media screen and (max-width:1100px){
+                body, html {
+                    font-size: 15px;
+                }
+
+}
 
 @media screen and (max-width:640px){
                 .find {
@@ -1075,6 +1114,7 @@ header.fixed .logo a::before {
 .slogan .title .slog04 {
     width: 3em;
 }
+
 .slogan .title span.slog01::before{
     background-image: url(..//images/slogan.png);
     height: 2.6em;
@@ -1096,6 +1136,24 @@ header.fixed .logo a::before {
     text-align: center;
     color: #5d5d5d;
     font-size: 18px;
+}
+@media screen and (max-width:1100px){
+                .slogan .title {
+                    font-size: 45px;
+                }
+                .slogan .sub_txt {
+                    margin: 75px 0 0 0;
+                    text-align: center;
+                    color: #5d5d5d;
+                    font-size: 15px;
+                }
+
+}
+@media screen and (max-width:768px){ 
+                .slogan .title {
+                    font-size: 35px;
+                }
+
 }
 @media screen and (max-width:640px){ 
                 .slogan {
@@ -1388,8 +1446,11 @@ header.fixed .logo a::before {
     font-family: 'TTLaundryGo';
     font-size: 50px;
     color: #1d1d1d;
+    margin-bottom: 15px;
 }
 .review .list {
+    max-width: 80px 0 0 0;
+
 }
 .review .list .swiper ul {
 }
@@ -1398,28 +1459,57 @@ header.fixed .logo a::before {
 }
 .review .list .swiper ul {
 
+
+}
+.review .list .swiper ul li a {
+    display: block;
+}
+.review .list .swiper ul li a .photo {
+    overflow: hidden;
+    height: 298px;
+
+}
+.review .list .swiper ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.5s;
+
+}
+.review .list .swiper ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
 }
 .review .list .swiper ul li a h3 {
-    margin: 43px 0 0 0;
-    font-size: 50px;
-    color: #1d1d1d;
+    font-family: 'TTLaundryGo';
+    margin: 43px 0 15px 0;
+    font-size: 22px;
+    color: #3d3d3d;
     /*행간 * 줄수 = 단위 em*/
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.review .list .swiper ul li a p{
+.review .list .swiper ul li a p {
+    margin: 0 0 15px 0;
     line-height: 1.4;
     height: 2.8em;
     overflow: hidden;
 }
 .review .list .swiper ul li a .date {
     display: flex;
-    gap: 19px;
+    gap: 1em;
 }
 .review .list .swiper ul li a .date strong {
     font-family: 'TTLaundryGo';
     color: #1d1d1d;
+    max-width: calc(100% - 9em);
+    /*max-width : 글자가 존재하는 공간만큼만 존재, 글자가많으면 이만큼만 늘어남*/
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.review .list .swiper ul li a .date span {
+
 }
 .review .more { 
     position: absolute;
@@ -1427,21 +1517,375 @@ header.fixed .logo a::before {
     top: 0;
 }
 .review .more a {
-    display: block;
-    padding: 0 78px 0  0;
+   padding: 0 71px 0  0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.review .more a::after {
+    content: "";
+    position: absolute;/*more*/
+    right: 0;
+    top: -6px;
+    width: 76px;
+    height: 76px;
+    background-image: url("data:image/svg+xml,%3Csvg width='76' height='76' viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36.3253 39.635H17.6602V36.2862H36.3253V17.6211H39.674V36.2862H58.3392V39.635H39.674V58.3001H36.3253V39.635Z' fill='%239D4C20'/%3E%3C/svg%3E%0A");
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;   
 }
 .review .more a strong {
     font-family: 'TTLaundryGo';
     font-size: 50px;
     color: #9D4C20;
-
 }
+@media screen and (max-width:1100px){
+                    .review {
+                        margin: 100px 0 0 0;
+                    }
+                    .review h2 {
+                        font-size: 30px;
+                    }
+                    .review .more a strong {
+                        font-size: 35px;
+                    }
+                    .review .more a::after {
+                        width: 60px;
+                        height: 60px;
+                    }
+                    .review .list .swiper ul li a .date strong {
+                        max-width: calc(100% - 7em);
+                        /*max-width : 글자가 존재하는 공간만큼만 존재, 글자가많으면 이만큼만 늘어남*/
+                    }
+}
+@media screen and (max-width:768px){
+                    .review {
+                        margin: 100px 0 0 0;
+                    }
+                    .review h2 {
+                        font-size: 20px;
+                    }
+                    .review .more a strong {    
+                        font-size: 30px;
+                    }
+                    .review .more a::after {
+                        width: 55px;
+                        height: 55px;
+                    }
+                    .review .list .swiper ul li a .date strong {
+                        max-width: calc(100% - 5em);
+                        /*max-width : 글자가 존재하는 공간만큼만 존재, 글자가많으면 이만큼만 늘어남*/
+                    }
+}
+@media screen and (max-width:640px){
+                .review {
+                    margin: 80px 0 0 0;
+                }
+                .review h2 {
 
+                    font-size: 20px;
 
+                }
+                .review h2::before {
+                    content: "";
+
+                }
+                .review .list {
+                    max-width: 35px 0 0 0;
+                }
+                .review .list .swiper ul li {
+                    width: 220px;/*모바일 사이즈 고정으로 묶어주기*/
+                }
+                .review .list .swiper ul li a {
+                    display: block;
+                }
+                .review .list .swiper ul li a .photo {
+                    height: 150px;
+                
+                }
+                .review .list .swiper ul li a h3 {
+                    font-family: 'TTLaundryGo';
+                    margin: 25px 0 12px 0;
+                    font-size: 17px;
+                }
+                .review .list .swiper ul li a p {
+                    margin: 0 0 12px 0;
+                    line-height: 1.4;
+                    height: 2.8em;
+                    overflow: hidden;
+                }
+                .review .list .swiper ul li a .date {
+                    gap: 10px;
+                }
+                .review .list .swiper ul li a .date strong {
+                    font-family: 'TTLaundryGo';
+                    color: #1d1d1d;
+                }
+                .review .more { 
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                .review .more a {
+                    padding: 0;
+                    font-size: 0;
+                    line-height: 0;
+                    gap: 0;
+                    width: 32px;
+                    height: 32px;
+                }
+                .review .more a::after {
+                    right: 0;
+                    top: -4px;
+                    width: 100%;
+                    height: 100%;
+                }
+                .review .more a strong {
+                    font-size: 0;
+                    line-height: 0;
+                }
+}/*media*/
 
 
 
 
 footer {
-    margin-bottom: 1000px;
+    margin: 136px 0 0 0 ;
+    padding: 107px 0 107px 0;
+    color: #1d1d1d;
 }
+footer .wrapper {
+    position: relative;/*sns*/
+}
+footer .sns {
+    position: absolute; /*.wrapper*/
+    right: 0;
+    bottom: 0;  
+}
+footer .sns ul {
+    display: flex;
+    gap:26px;
+}
+footer .sns ul li a {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    background-color: #1d1d1d;
+    position: relative;
+}
+footer .sns ul li a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 45px;
+    height: 45px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+footer .sns ul li.daum a::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='43' height='44' viewBox='0 0 43 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_144_34)'%3E%3Cpath d='M22.81 0H0V43.36H23.83C23.83 43.36 42.22 40.64 42.22 19.75C42.22 2.5 22.81 0 22.81 0ZM22.16 30H13.01V13.35H21.77C21.77 13.35 29.22 14.31 29.22 20.93C29.22 28.95 22.16 30 22.16 30Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_144_34'%3E%3Crect width='42.22' height='43.36' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+footer .sns ul li.naver a::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='43' height='43' viewBox='0 0 43 43' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_144_42)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M29 0V22.72L13.53 0H0V42.44H13.44V19.73L28.92 42.44H42.44V34.36V0H29Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_144_42'%3E%3Crect width='42.44' height='42.44' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E ");
+}
+footer .sns ul li.xx a::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='55' height='45' viewBox='0 0 55 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_144_38)'%3E%3Cpath d='M53.1017 0.82C50.9317 2.1 48.5417 3.04 45.9917 3.54C43.9517 1.36 41.0317 0 37.8117 0C30.5817 0 25.2617 6.75 26.9017 13.76C17.5917 13.29 9.33172 8.83 3.81172 2.05C0.871719 7.09 2.29172 13.68 7.28172 17.01C5.44172 16.95 3.71172 16.45 2.20172 15.61C2.08172 20.8 5.80172 25.66 11.1917 26.74C9.61172 27.17 7.89172 27.27 6.13172 26.93C7.55172 31.38 11.6917 34.62 16.6017 34.71C11.8917 38.4 5.96172 40.05 0.0117188 39.35C4.97172 42.53 10.8617 44.38 17.1917 44.38C37.9917 44.38 49.7517 26.81 49.0417 11.05C51.2317 9.47 53.1317 7.5 54.6317 5.25C52.6217 6.14 50.4617 6.74 48.2017 7.01C50.5117 5.63 52.2917 3.43 53.1317 0.81L53.1017 0.82Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_144_38'%3E%3Crect width='54.61' height='44.38' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E ");
+}
+footer .sns ul li.facebook a::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='44' viewBox='0 0 21 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_144_30)'%3E%3Cpath d='M4.54 8.34V14.18H0V21.59H4.54V43.36H13.27V21.5H19.36L20.01 14.18H13.27V10.01C13.27 8.28 13.62 7.6 15.29 7.6H20.01V0H13.96C7.47 0 4.54 2.86 4.54 8.34Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_144_30'%3E%3Crect width='20.01' height='43.36' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E ");
+}
+    
+footer .sns ul li.daum a:hover {
+    background-color: #4D94C6;
+}
+footer .sns ul li.naver a:hover {
+    background-color: #19A82F;
+}
+footer .sns ul li.xx a:hover {
+    background-color: #1BC1DE;
+}
+footer .sns ul li.facebook a:hover {
+    background-color: #4D65C6;
+} 
+footer .link {/*wrapper*/
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+footer .link ul li a {
+    display: block;
+    line-height: 1.4;
+    text-align: right;
+    padding: 1px 23px 2px 0 ;
+    position: relative;/*after*/
+}
+footer .link ul li a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.73958 21.7578C4.3408 21.7578 3.99158 21.6079 3.69193 21.3081C3.3921 21.0084 3.24219 20.6592 3.24219 20.2604V4.73958C3.24219 4.3408 3.3921 3.99158 3.69193 3.69193C3.99158 3.3921 4.3408 3.24219 4.73958 3.24219H11.9141V4.73958H4.73958V20.2604H20.2604V13.0859H21.7578V20.2604C21.7578 20.6592 21.6079 21.0084 21.3081 21.3081C21.0084 21.6079 20.6592 21.7578 20.2604 21.7578H4.73958ZM9.97396 16.1068L8.91927 15.026L19.2188 4.73958H13.4115V3.24219H21.7578V11.5885H20.2604V5.80729L9.97396 16.1068Z' fill='%231D1D1D'/%3E%3C/svg%3E ");
+    background-position: center center;
+    background-repeat: no-repeat;
+} 
+footer .f_nav ul{
+    display: flex;
+    gap: 14px;
+}
+footer .f_nav ul + ul { /*인접 형제 선택자, 두번째 ul부터 적용*/
+    margin: 15px 0 0 0;
+}
+footer .f_nav ul li + li { /*첫번째 li는 해당사항없음*/
+    position: relative;
+}
+footer .f_nav ul li + li::before {
+    content: "";
+    position: absolute;/*li*/
+    left: -7px;
+    top: 5px;
+    width: 1px;
+    height: 11px;
+    background-color: rgba(29, 29, 29, 0.8);   
+}
+footer .copyright {
+    color: rgba(29, 29, 29, 0.6); 
+    margin: 108px 0 0 0;
+}
+footer .notice span {
+    font-family: 'TTLaundryGo';
+
+}
+
+@media screen and (max-width:1000px){
+                    footer {
+                        margin: 100px 0 0 0 ;
+                        padding: 60px 0 60px 0;
+                    }
+                    footer .sns {
+                        position: relative; 
+                        bottom: auto;  
+                    }
+                    footer .sns ul {
+                        justify-content: center;
+                        gap:3px;
+                    }
+                    footer .sns ul li {
+                        font-size: 0;
+                        line-height: 0;
+                    }
+                    footer .sns ul li a {
+                        width: 30px;
+                        height: 30px;
+                    }
+                    footer .sns ul li.daum a::before{
+                        background-size: 20px;
+                        background-image: url("data:image/svg+xml,%3Csvg width='43' height='44' viewBox='0 0 43 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_144_34)'%3E%3Cpath d='M22.81 0H0V43.36H23.83C23.83 43.36 42.22 40.64 42.22 19.75C42.22 2.5 22.81 0 22.81 0ZM22.16 30H13.01V13.35H21.77C21.77 13.35 29.22 14.31 29.22 20.93C29.22 28.95 22.16 30 22.16 30Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_144_34'%3E%3Crect width='42.22' height='43.36' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+                    }
+                    footer .sns ul li.naver a::before{
+                        background-size: 20px;
+                        background-image: url("data:image/svg+xml,%3Csvg width='43' height='43' viewBox='0 0 43 43' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_144_42)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M29 0V22.72L13.53 0H0V42.44H13.44V19.73L28.92 42.44H42.44V34.36V0H29Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_144_42'%3E%3Crect width='42.44' height='42.44' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E ");
+                    }
+                    footer .sns ul li.xx a::before{
+                        background-size: 20px;
+                        background-image: url("data:image/svg+xml,%3Csvg width='55' height='45' viewBox='0 0 55 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_144_38)'%3E%3Cpath d='M53.1017 0.82C50.9317 2.1 48.5417 3.04 45.9917 3.54C43.9517 1.36 41.0317 0 37.8117 0C30.5817 0 25.2617 6.75 26.9017 13.76C17.5917 13.29 9.33172 8.83 3.81172 2.05C0.871719 7.09 2.29172 13.68 7.28172 17.01C5.44172 16.95 3.71172 16.45 2.20172 15.61C2.08172 20.8 5.80172 25.66 11.1917 26.74C9.61172 27.17 7.89172 27.27 6.13172 26.93C7.55172 31.38 11.6917 34.62 16.6017 34.71C11.8917 38.4 5.96172 40.05 0.0117188 39.35C4.97172 42.53 10.8617 44.38 17.1917 44.38C37.9917 44.38 49.7517 26.81 49.0417 11.05C51.2317 9.47 53.1317 7.5 54.6317 5.25C52.6217 6.14 50.4617 6.74 48.2017 7.01C50.5117 5.63 52.2917 3.43 53.1317 0.81L53.1017 0.82Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_144_38'%3E%3Crect width='54.61' height='44.38' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E ");
+                    }
+                    footer .sns ul li.facebook a::before{
+                        background-size: 10px;
+                        background-image: url("data:image/svg+xml,%3Csvg width='21' height='44' viewBox='0 0 21 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_144_30)'%3E%3Cpath d='M4.54 8.34V14.18H0V21.59H4.54V43.36H13.27V21.5H19.36L20.01 14.18H13.27V10.01C13.27 8.28 13.62 7.6 15.29 7.6H20.01V0H13.96C7.47 0 4.54 2.86 4.54 8.34Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_144_30'%3E%3Crect width='20.01' height='43.36' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E ");
+                    }
+                        
+                    footer .sns ul li.daum a:hover {
+                        background-color: #4D94C6;
+                    }
+                    footer .sns ul li.naver a:hover {
+                        background-color: #19A82F;
+                    }
+                    footer .sns ul li.xx a:hover {
+                        background-color: #1BC1DE;
+                    }
+                    footer .sns ul li.facebook a:hover {
+                        background-color: #4D65C6;
+                    } 
+                    footer .link {/*wrapper*/
+                        display: none;
+                    }
+                    footer .link ul li a {
+                        display: block;
+                        line-height: 1.4;
+                        text-align: right;
+                        padding: 1px 23px 2px 0 ;
+                        position: relative;/*after*/
+                    }
+                    footer .link ul li a::after {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: 1px;
+                        width: 22px;
+                        height: 22px;
+                        background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.73958 21.7578C4.3408 21.7578 3.99158 21.6079 3.69193 21.3081C3.3921 21.0084 3.24219 20.6592 3.24219 20.2604V4.73958C3.24219 4.3408 3.3921 3.99158 3.69193 3.69193C3.99158 3.3921 4.3408 3.24219 4.73958 3.24219H11.9141V4.73958H4.73958V20.2604H20.2604V13.0859H21.7578V20.2604C21.7578 20.6592 21.6079 21.0084 21.3081 21.3081C21.0084 21.6079 20.6592 21.7578 20.2604 21.7578H4.73958ZM9.97396 16.1068L8.91927 15.026L19.2188 4.73958H13.4115V3.24219H21.7578V11.5885H20.2604V5.80729L9.97396 16.1068Z' fill='%231D1D1D'/%3E%3C/svg%3E ");
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                    } 
+                    footer .f_nav {
+                        margin: 18px 0 2px 0;
+                        border-width: 1px 0 0 1px ;
+                        border-style: solid;
+                        border-color:  #1d1d1d;
+                        border-radius: 15px;
+                        
+                    }
+                    footer .f_nav ul{
+                        flex-wrap: wrap;
+                        gap: 0;
+                    }
+                    footer .f_nav ul + ul { /*인접 형제 선택자, 두번째 ul부터 적용*/
+                        margin: 0;
+                    }
+                    footer .f_nav ul li + li { /*첫번째 li는 해당사항없음*/
+                        position: relative;
+                    }
+                    footer .f_nav ul li + li::before {
+                        display: none; 
+                    }
+                    footer .f_nav ul li {
+                        width: 50%;
+                        border-width: 0 1px 1px 0 ;
+                        border-style: solid;
+                        border-color:  #1d1d1d;
+                    }
+                    footer .f_nav ul:first-child li:nth-child(2){
+                        border-radius: 0 15px 0 0;
+                    }
+                    footer .f_nav ul:last-child li:nth-child(3){
+                        border-radius: 0 0 0 15px;
+                    }
+                    footer .f_nav ul:last-child li:nth-child(4){
+                        border-radius: 0 0 15px 0 ;
+                    }
+
+                    footer .f_nav ul li a {
+                        display: block;
+                        text-align: center;
+                        line-height: 37px;
+                    }
+                    footer .copyright {
+                        text-align: center;
+                        color: rgba(29, 29, 29, 0.6); 
+                        margin: 108px 0 0 0;
+                    }
+                    footer .notice span {
+                        text-align: center;
+                        font-family: 'TTLaundryGo';
+                    
+                    }
+
+}/*media*/

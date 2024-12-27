@@ -40,7 +40,7 @@ $(document).ready(function(){
     /**************************** pc인지 mobile 구분 (시작)  ***********************************/
     function device_chk(){
         window_w = $(window).width()
-        if(window_w > 640){
+        if(window_w > 1100){
             device_status = 'pc'
         }else{
             device_status = 'mobile'
@@ -74,7 +74,7 @@ $(document).ready(function(){
             }
         }
     })
-
+    
     //함수의 정의
     function scroll_chk(){
         scrolling = $(window).scrollTop()
@@ -193,13 +193,22 @@ $(document).ready(function(){
     /********************************** 찾습니다. 가족을 (시작) ***********************************/
     const find_panel01_swiper = new Swiper('.find .panel01 .swiper', { 
         // li의 넓이 비율로 안함 - CSS에서 준 넓이대로 사용
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         spaceBetween: 16, // li와 li 사이의 최소 여백
         breakpoints: {
-            641: {  // 화면 너비가 641px 이상일 때 적용
+            321: {  // 화면 너비가 641-321 px 사이 이상일 때 적용
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            641: {  // 화면 너비가 1000-641px사이 이상일 때 적용
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1001: {  // 화면 너비가 641px 이상일 때 적용
                 slidesPerView: 4,
                 spaceBetween: 24,
             },
+            
         },
         loop: true, // 마지막 슬라이드에서 첫 번째 슬라이드로 자연스럽게 넘김
         navigation: {
@@ -209,10 +218,18 @@ $(document).ready(function(){
     });
 
     const find_panel02_swiper = new Swiper('.find .panel02 .swiper', { /* swiper에 이름 붙여주기 */
-        slidesPerView: 'auto', /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+        slidesPerView: 1, /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
         spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
         breakpoints: {
-            641: {  /* 1300px 이상이 되면 적용 */
+            321: {  // 화면 너비가 641-321 px 사이 이상일 때 적용
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            641: {  // 화면 너비가 1000-641px사이 이상일 때 적용
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1001: {  // 화면 너비가 641px 이상일 때 적용
                 slidesPerView: 4,
                 spaceBetween: 24,
             },
@@ -246,20 +263,28 @@ $(document).ready(function(){
 
     /********************************입양 swiper 팝업 (시작)**************************************/
     const adopt_swiper = new Swiper('.adopt .list .swiper', { /* 팝업을 감싼는 요소의 class명 */
-        slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
         spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
         breakpoints: {
-            640: {    /* 640px 이상일때 적용 */
-                slidesPerView: 'auto',
+            350: {    /* 640px 이상일때 적용 */
+                slidesPerView: 2,
                 spaceBetween: 24,
             },
             641: {    /* 640px 이상일때 적용 */
-                slidesPerView: 'auto',
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            1101: {    /* 640px 이상일때 적용 */
+            slidesPerView: 4,
+            spaceBetween: 24,
+        },
+            1301: {    /* 640px 이상일때 적용 */
+                slidesPerView: 5,
                 spaceBetween: 24,
             },
 
         },
-        centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
         loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
         
         navigation: {
@@ -268,26 +293,22 @@ $(document).ready(function(){
         },
     });
 
-        /********************************입양 swiper 팝업 (끝)****************************************/
-        
-        /********************************review swiper 팝업 (시작)****************************************/
+    /********************************입양 swiper 팝업 (끝)****************************************/
+    
+    /********************************review swiper 팝업 (시작)****************************************/
 
-        const review_swiper = new Swiper('.review .list .swiper' , { /* 팝업을 감싼는 요소의 class명 */
-            slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
-            spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
-            breakpoints: {
-                641: {    /* 641px 이상일때 적용 */
-                    slidesPerView: 4,
-                    spaceBetween: 24,
-            },
+    const review_swiper = new Swiper('.review .list .swiper' , { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            641: {    /* 641px 이상일때 적용 */
+                slidesPerView: 4,
+                spaceBetween: 24,
         },
-            loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
-        
-        });
-
-
-
-
-
+    },
+        loop: false,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+    
+    });
+    /********************************review swiper 팝업 (끝)****************************************/
 
 })//document.ready

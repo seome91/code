@@ -21,19 +21,23 @@ body, html {
     /* wrap 영역 밖으로 나간 요소는 숨김처리  absolute가 대부분 나감. */
     position: relative; /* header 정렬의 기준값 */
 }
+@media screen and (max-width:1300px){
+                    .wrapper {
+                        width: auto; 
+                        /* 원래 너 하던대로해 - block요소 
+                        - 감싸는 요소의 넓이의 100% 
+                        - 100%로 주면 margin과 충돌 그래서 auto */
+                        margin: 0 20px;
+                    }
+                    #wrap {
+                        min-width: 0;
+                    }
+}/*media*/
+
 @media screen and (max-width:640px){ 
-                        /* 브라우저 넓이 640px에서만 실행 */
-                        body, html {
-                            font-size: 14px;
-                        }
-                        .wrapper {
-                            width: auto; 
-                            /* 원래 너 하던대로해 - block요소 
-                               - 감싸는 요소의 넓이의 100% 
-                               - 100%로 주면 margin과 충돌 그래서 auto */
-                            margin: 0 20px;
-                        }
-                        #wrap {
-                            min-width: 0;
-                        }
+                    /* 브라우저 넓이 640px에서만 실행 */
+                    body, html {
+                        font-size: 14px;
+                    }
+        
 }/*media*/
