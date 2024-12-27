@@ -231,19 +231,63 @@ $(document).ready(function(){
             0.li에 active클래스 추가
             1.li에 active클래스 추가, li button에 title = "선택됨" 입력
             2.li에 data-tab의 값을 가져와서 .tab_content .tab_panel중에 data-tab이 같은 값인 요소 찾아서 
-        
-        
         */
          /*******************************찾습니다 주인을 팝업 (시작) ***************************************/
-        $('.find .tab_list ul li').on('click', function(){
-            $('.find .tab_list ul li').removeClass('active')
-            $(this).addClass('active')
-            $('.find .tab_list ul li button').attr('title', '')
-            $(this).find('button').attr('title', '선택됨')
-            tab_name = $(this).attr('data-tab')
-            console.log(tab_name)
-            $('.find .tab_content .tab_panel').removeClass('active')
-            $('.find .tab_content').find('[data-tab="'+ tab_name +'"]').addClass('active')//++중간에 변수넣기
-        })
+    $('.find .tab_list ul li').on('click', function(){
+        $('.find .tab_list ul li').removeClass('active')
+        $(this).addClass('active')
+        $('.find .tab_list ul li button').attr('title', '')
+        $(this).find('button').attr('title', '선택됨')
+        tab_name = $(this).attr('data-tab')
+        console.log(tab_name)
+        $('.find .tab_content .tab_panel').removeClass('active')
+        $('.find .tab_content').find('[data-tab="'+ tab_name +'"]').addClass('active')//++중간에 변수넣기
+    })
+
+    /********************************입양 swiper 팝업 (시작)**************************************/
+    const adopt_swiper = new Swiper('.adopt .list .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            640: {    /* 640px 이상일때 적용 */
+                slidesPerView: 'auto',
+                spaceBetween: 24,
+            },
+            641: {    /* 640px 이상일때 적용 */
+                slidesPerView: 'auto',
+                spaceBetween: 24,
+            },
+
+        },
+        centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        
+        navigation: {
+            nextEl: '.adopt .btn_wrap .next',
+            prevEl: '.adopt .btn_wrap .prev',
+        },
+    });
+
+        /********************************입양 swiper 팝업 (끝)****************************************/
+        
+        /********************************review swiper 팝업 (시작)****************************************/
+
+        const review_swiper = new Swiper('.review .list .swiper' , { /* 팝업을 감싼는 요소의 class명 */
+            slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+            spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+            breakpoints: {
+                641: {    /* 641px 이상일때 적용 */
+                    slidesPerView: 4,
+                    spaceBetween: 24,
+            },
+        },
+            loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        
+        });
+
+
+
+
+
 
 })//document.ready

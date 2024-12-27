@@ -1092,17 +1092,26 @@ header.fixed .logo a::before {
     height: 2.4em;
 }
 .slogan .sub_txt {
-    margin: 65px 0 0 0;
+    margin: 100px 0 0 0;
     text-align: center;
     color: #5d5d5d;
-    font-size: 15px;
+    font-size: 18px;
 }
 @media screen and (max-width:640px){ 
                 .slogan {
-                    padding: 130px 0 70px 0;
+                    padding: 100px 0 70px 0;
                 }
                 .slogan .title {
                     font-size: 22px;
+                }
+                .slogan .wrapper h2 {
+                    display: block;
+                    background: url(..//images/slogan_moblie0.png) center center no-repeat;
+                    height: 10em;
+                }
+                .slogan .wrapper h2 span {
+                    font-size: 0;
+                    line-height: 0;
                 }
 
                 .slogan .title span::before{
@@ -1130,28 +1139,308 @@ header.fixed .logo a::before {
                 }
                 .slogan .title span.slog01::before{
                     background-image: url(..//images/slogan.png);
-                    height: 2.6em;
+                    height: 4em;
                 }
                 .slogan .title span.slog02::before{
                     background-image: url(..//images/slogan2.png);
-                    height: 2.1em;
+                    height: 3.5em;
                 }
                 .slogan .title span.slog03::before{
                     background-image: url(..//images/slogan3.png);
-                    height: 2.3em;
+                    height: 3.7em;
                 }
                 .slogan .title span.slog04::before{
                     background-image: url(..//images/slogan4.png);
-                    height: 2.4em;
+                    height: 3.8em;
+                }
+                .slogan .wrapper title p.tt {
+                    font-size: 0;
+                    line-height: 0;
+                }
+                .slogan .wrapper span.slog05 {
+                    margin-top: 50px;
+                    display: block;
+                    background: url(..//images/slogan_moblie5.png)center center no-repeat;
+                    height: 15em;
                 }
                 .slogan .sub_txt {
                     margin: 65px 0 0 0;
                     text-align: center;
                     color: #5d5d5d;
-                    font-size: 15px;
+                    font-size: 12px;
                 }
 
 }/*midea꽁다리*/
+.adopt {
+    background-color: #F5EFE1;
+    padding: 260px 0 484px 0;
+    position: relative; /*.flow_txt 정렬기준*/
+}
+.adopt h2 {
+    font-size: 50px;
+    color: #3d3d3d;
+    font-family: 'TTLaundryGo';
+    text-align: center;
+}
+.adopt .list {
+    margin: 71px 0 0 0;
+}
+.adopt .list .swiper ul li {
+   width: 370px;
+}
+.adopt .list .swiper ul li a {
+    display: block;
+    text-align: center;
+}
+.adopt .list .swiper ul li a .photo {
+    overflow: hidden;
+    border-radius: 50%;
+    height: 370px;
+   /* padding: 50%;*/
+    /*position: relative;*/
+
+}
+.adopt .list .swiper ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.8s;
+   /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;*/
+}
+.adopt .list .swiper ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.adopt .list .swiper ul li a strong {
+    margin-top: -17px;
+    font-family: 'TTLaundryGo';
+    display: inline-block;
+    padding: 6px 15px 5px 15px;
+    border-radius: 30px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+.adopt .list .swiper ul li a strong.cate01 {
+    background-color: #696F5F;
+}
+.adopt .list .swiper ul li a strong.cate02 {
+    background-color: #9D4C20;
+}
+.adopt .list .swiper ul li a strong.cate03 {
+    background-color: #CEAC65;
+}
+.adopt .list .swiper ul li a h3 {
+    margin: 20px 0 0 0 ;
+    font-family: 'TTLaundryGo';
+}
+.adopt .list .swiper ul li a span {
+    display: block;
+    margin: 15px 0 0 0 ;
+    line-height: 1.4;
+    height: 2.8em;
+    overflow: hidden;
+}
+.adopt .btn_wrap {
+    margin: 169px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.adopt .btn_wrap button {
+    font-size: 0;
+    line-height: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #3d3d3d;
+    position: relative;
+}
+.adopt .btn_wrap button::before {
+    content: "";
+    position: absolute;
+    left:1px;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='14' viewBox='0 0 9 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.95568 7.24633L8.91412 12.2048L7.40503 13.7139L0.9375 7.24633L7.40503 0.778802L8.91412 2.28789L3.95568 7.24633Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.adopt .btn_wrap button.next::before {
+    transform: rotate(180deg);
+}
+.adopt .btn_wrap .more a {
+    display: block;
+    line-height: 13px;/*그 높이에 글자가 위아래로 정렬*/
+    height: 30px;
+    padding: 7px 23px;
+    border-radius: 15px;
+    border: 2px solid #3d3d3d;
+}
+.adopt .flow_txt {
+    font-family: 'TTLaundryGo';
+    position: absolute;/*adopt를 기준으로*/
+    left: 0;
+    top: 330px;
+    font-size: 100px;
+    color: rgba(255,255,255,0.6);
+    white-space: nowrap;
+}
+.adopt .flow_txt span {
+    display: block;
+    animation: flow_ani 12s linear 0s infinite;
+    /*transform: translateX(-50.345%)/*span태그 총 길이의 50% */
+}
+@keyframes flow_ani{
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50.345%); }
+}
+@media screen and (max-width:640px){ 
+                .adopt {
+                    padding: 100px 0 484px 0;
+                }
+                .adopt h2 {
+                    font-size: 18px;
+                }
+                .adopt .list {
+                    margin: 35px 0 0 20px;
+                }
+                .adopt .list .swiper ul li {
+                width: 220px;
+                }
+                .adopt .list .swiper ul li a {
+                    display: block;
+                    text-align: center;
+                }
+                .adopt .list .swiper ul li a .photo {
+                    height: 220px;
+                }
+                .adopt .list .swiper ul li a:hover .photo img {
+                    transform: scale3d(1.2, 1.2, 1);
+                }
+                .adopt .list .swiper ul li a strong {
+                    padding: 4px 7px 3px 7px;
+                    border-radius: 30px;
+                }
+                .adopt .list .swiper ul li a h3 {
+                    margin: 10px 0 0 0 ;
+                }
+                .adopt .list .swiper ul li a span {
+                    display: block;
+                    margin: 15px 0 0 0 ;
+                    line-height: 1.4;
+                    height: 2.8em;
+                    overflow: hidden;
+                }
+                .adopt .btn_wrap {
+                    margin: 75px 0 0 0;
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                }
+                .adopt .btn_wrap button {
+                    font-size: 0;
+                    line-height: 0;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 2px solid #3d3d3d;
+                    position: relative;
+                }
+                .adopt .btn_wrap button::before {
+                    background-size: 9px;
+                }
+                .adopt .btn_wrap button.next::before {
+                    transform: rotate(180deg);
+                }
+                .adopt .btn_wrap .more a {
+                    display: block;
+                    line-height: 13px;/*그 높이에 글자가 위아래로 정렬*/
+                    height: 30px;
+                    padding: 7px 23px;
+                    border-radius: 15px;
+                    border: 2px solid #3d3d3d;
+                }
+                .adopt .flow_txt {
+                    font-family: 'TTLaundryGo';
+                    position: absolute;/*adopt를 기준으로*/
+                    left: 0;
+                    top: 125px;
+                    font-size: 80px;
+                    color: rgba(255,255,255,0.6);
+                    white-space: nowrap;
+                }
+}/*midea*/
+ 
+.review {
+    margin: 166px 0 0 0;
+}
+.review .wrapper {
+    position: relative;/*.review .more*/
+}
+.review h2 {
+    font-family: 'TTLaundryGo';
+    font-size: 50px;
+    color: #1d1d1d;
+}
+.review .list {
+}
+.review .list .swiper ul {
+}
+.review .list .swiper ul li {
+    
+}
+.review .list .swiper ul {
+
+}
+.review .list .swiper ul li a h3 {
+    margin: 43px 0 0 0;
+    font-size: 50px;
+    color: #1d1d1d;
+    /*행간 * 줄수 = 단위 em*/
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.review .list .swiper ul li a p{
+    line-height: 1.4;
+    height: 2.8em;
+    overflow: hidden;
+}
+.review .list .swiper ul li a .date {
+    display: flex;
+    gap: 19px;
+}
+.review .list .swiper ul li a .date strong {
+    font-family: 'TTLaundryGo';
+    color: #1d1d1d;
+}
+.review .more { 
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.review .more a {
+    display: block;
+    padding: 0 78px 0  0;
+}
+.review .more a strong {
+    font-family: 'TTLaundryGo';
+    font-size: 50px;
+    color: #9D4C20;
+
+}
+
+
+
+
+
 
 footer {
     margin-bottom: 1000px;
