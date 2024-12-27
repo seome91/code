@@ -1,0 +1,31 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+
+
+
+.trip {
+    margin: 300px 0 0 0;
+}
+.trip .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.trip .list ul li {
+    display: block;
+    padding: 100px 100px 100px 100px;
+    
+}
+.trip .list ul li.bg1 {
+    background: url(..//images/1.jpg) no-repeat center center / cover ;
+}
+.trip .list ul li.bg2 {
+    background: url(..//images/2.jpg) no-repeat center center / cover ;
+}
+.trip .list ul li.bg3 {
+    background: url(..//images/3.jpg) no-repeat center center / cover ;
+}
+.trip .list ul li.bg4 {
+    background: url(..//images/4.jpg) no-repeat center center / cover ;
+}

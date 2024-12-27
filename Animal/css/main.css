@@ -1243,18 +1243,28 @@ header.fixed .logo a::before {
 .adopt .list {
     margin: 71px 0 0 0;
 }
+.adopt .list .swiper ul  {
+    display: flex;
+    gap: 55px;
+
+}
 .adopt .list .swiper ul li {
-   width: 370px;
+    width: 300px;  
+    
 }
 .adopt .list .swiper ul li a {
     display: block;
     text-align: center;
+    gap: 24px;
 }
 .adopt .list .swiper ul li a .photo {
+    
     overflow: hidden;
     border-radius: 50%;
-    height: 370px;
-   /* padding: 50%;*/
+    height: 300px;
+    width: 300px;
+    gap: 10px;
+    /*padding: 50%;*/
     /*position: relative;*/
 
 }
