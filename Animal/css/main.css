@@ -1231,7 +1231,7 @@ header.fixed .logo a::before {
 }/*midea꽁다리*/
 .adopt {
     background-color: #F5EFE1;
-    padding: 260px 0 484px 0;
+    padding: 260px 0 200px 0;
     position: relative; /*.flow_txt 정렬기준*/
 }
 .adopt h2 {
@@ -1457,18 +1457,29 @@ header.fixed .logo a::before {
     font-size: 50px;
     color: #1d1d1d;
     margin-bottom: 15px;
+    position: relative;/* before,after 정렬기준*/
+}
+.review h2::before {
+    content: "";
+    position: absolute;/* h2 기준*/
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 1.5px;
+    background-color: #808080;
+
+}
+.review h2::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    bottom: 0;
+    width: 2.7em; /*1em = 글자 1개의 크기, h2의 글자크기를 상속 받음, */
+    height: 4px;
+    background-color: #9D4C20;
 }
 .review .list {
-    max-width: 80px 0 0 0;
-
-}
-.review .list .swiper ul {
-}
-.review .list .swiper ul li {
-    
-}
-.review .list .swiper ul {
-
+   margin: 54px 0 0 0;
 
 }
 .review .list .swiper ul li a {
@@ -1517,9 +1528,6 @@ header.fixed .logo a::before {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-}
-.review .list .swiper ul li a .date span {
-
 }
 .review .more { 
     position: absolute;
