@@ -3,7 +3,7 @@ body, html {
     font-family: "Pretendard", sans-serif; /* sans-serif 고딕서체 */
     font-size: 17px;
     font-weight: 400;
-    color: #555;
+    color: #3d3d3d;
     line-height: 1.4; /* 배수 - 글자크기에 몇배 */
     word-break: keep-all; /* 단어별로(여백기준) 줄바꿈 */
     word-wrap: break-word; /* 단어가 너무 길면 그걸 강제로 줄바꿈 하는 명령 */
@@ -15,7 +15,7 @@ body, html {
     margin: 0 auto;
 }
 #wrap {
-    min-width: 1300px;
+    width: 100%;
     /* 콘텐츠영역이 1260px 좌우여백 20px씩 
        1260 + 20 + 20 = 1300 */
     overflow: hidden; 
