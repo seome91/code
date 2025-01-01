@@ -1,0 +1,6 @@
+/*main.css -메인페이지에만 적용되는 스타일
+다른 css import */
+@import url(default.css); 
+@import url(font.css);
+@import url(common.css);
+@import url(layout.css);
