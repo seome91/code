@@ -13,7 +13,7 @@ header {/*아래로 스크롤하면 안나올거xxxxx,위로스크롤하면 나�
     justify-content: space-between;
     padding: 0 20px;/*좌우여백*/
     border-bottom: 3px solid rgba(154, 154, 154 0.42);
-    transition: 0.5s;
+    transition: 0.4s;
 }
 header .logo a {
     display: block;
