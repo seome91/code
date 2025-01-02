@@ -1,1 +1,193 @@
 /*layout.css -header,footer, 등 모든 페이지 공통 스타일 */
+
+header {/*아래로 스크롤하면 안나올거xxxxx,위로스크롤하면 나타날거ooooo*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: var(--header-h);/**/
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;/*좌우여백*/
+    border-bottom: 3px solid rgba(154, 154, 154 0.42);
+}
+header .logo a {
+    display: block;
+    color: transparent;/*글자투명*/
+    width: 13.2353em;
+    height: 3em;
+    position: relative; 
+}
+header .logo a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -10px;
+    width: 100%;
+    height: 100%;
+    background: url(../images/common/logo_w.svg) no-repeat center center / contain;
+}
+/****************header가 고정됐을때***********************/
+header.fixed {
+    background-color: rgba(154, 154, 154 0.42);
+    background: linear-gradient, rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 
+                0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header.fixed .logo a::before {
+    background-image: url(..//images/common/logo.svg);/*순수하게 이미지만 바굴때 쓴다,주의*/
+}
+
+@media screen and (min-width:1001px){ /*1001이상일때*/
+                header .gnb .gnb_open,
+                header .gnb .gnb_close {
+                    display: none;/*숨김*/
+                }
+                header .gnb_wrap ul.depth1 {
+                    display: flex;
+                    
+                }
+                header .gnb_wrap ul.depth1 > li {
+                    text-align: center;
+                    width: 8.2941em;
+                    position: relative;
+                }
+                header .gnb_wrap ul.depth1 > li > a {
+                    display: block;
+                    font-size: 1.2em;
+                    font-weight: 600;
+                    line-height: var(--header-h);/*header높이*/
+                }
+                header .gnb_wrap ul.depth1 > li > ul.depth2 {
+                    position: absolute;
+                    left: 0;
+                    height: var(--header-h);/*header의 높이*/
+                    width: 100%;
+                    padding-top: 1.02em;
+                    display: none;
+                }
+                header .gnb_wrap ul.depth1 > li > ul.depth2 > li > a {
+                    display: block;
+                    line-height: 2em;
+                }
+                header .global {
+                    position: relative;
+                    right : 1.3em;
+                }
+                header .global button {
+                    font-size: 0.888rem;
+                    line-height: 0.6em;
+                    
+                    width: 7.0588em;
+                    padding: 1.1176em 2.1765em;
+                    border-radius: 25px;
+                    background-color: #BC0120; /*rgb(154, 154, 154 0.42);*/
+                    position: relative;
+                }
+                header .global button::before { 
+                    content: "";
+                    position: absolute;
+                    left: 0.8em;
+                    top: 0.85em;
+                    height: 1.375em;
+                    width: 1.375em;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6865 18.7C9.58315 18.7 8.54397 18.4912 7.56898 18.0737C6.59399 17.6563 5.74064 17.0818 5.00892 16.3504C4.27721 15.6189 3.70245 14.7663 3.28467 13.7923C2.86702 12.8185 2.6582 11.7779 2.6582 10.6706C2.6582 9.56322 2.86695 8.52573 3.28445 7.55808C3.70194 6.59044 4.2764 5.74076 5.00782 5.00905C5.73925 4.27733 6.59194 3.70258 7.5659 3.28479C8.53971 2.86715 9.58029 2.65833 10.6876 2.65833C11.795 2.65833 12.8325 2.86707 13.8001 3.28457C14.7678 3.70206 15.6174 4.27652 16.3491 5.00794C17.0809 5.73937 17.6556 6.5903 18.0734 7.56073C18.491 8.53131 18.6999 9.56829 18.6999 10.6717C18.6999 11.775 18.4911 12.8142 18.0736 13.7892C17.6561 14.7642 17.0817 15.6176 16.3503 16.3493C15.6188 17.081 14.7679 17.6557 13.7975 18.0735C12.8269 18.4912 11.7899 18.7 10.6865 18.7ZM9.62134 17.466V15.9676C9.32754 15.9676 9.07781 15.8641 8.87215 15.6569C8.66648 15.4498 8.56365 15.2008 8.56365 14.9099V13.8522L3.95828 9.24687C3.89952 9.52598 3.85912 9.78306 3.83709 10.0181C3.81505 10.2531 3.80404 10.4735 3.80404 10.6792C3.80404 12.3685 4.35125 13.8596 5.44566 15.1523C6.54008 16.4451 7.93197 17.2163 9.62134 17.466ZM15.9675 15.0642C16.2319 14.7557 16.4633 14.4325 16.6616 14.0946C16.8599 13.7567 17.0242 13.4001 17.1543 13.0248C17.2845 12.6493 17.3836 12.2637 17.4518 11.868C17.52 11.4721 17.554 11.0758 17.554 10.6792C17.554 9.28506 17.1735 8.01194 16.4124 6.85979C15.6513 5.70749 14.6216 4.85957 13.3233 4.31604V4.86185C13.3233 5.29815 13.1679 5.67165 12.8572 5.98234C12.5465 6.29304 12.173 6.44839 11.7367 6.44839H9.62134V7.50608C9.62134 7.80576 9.51998 8.05696 9.31726 8.25969C9.11453 8.46241 8.86333 8.56377 8.56365 8.56377H7.50596V10.6792H12.7944C13.0941 10.6792 13.3453 10.7805 13.548 10.9832C13.7508 11.186 13.8521 11.4372 13.8521 11.7369V13.8522H14.7556C15.0934 13.8522 15.3799 13.9698 15.6149 14.2048C15.85 14.4398 15.9675 14.7263 15.9675 15.0642Z' fill='white'/%3E%3C/svg%3E%0A");
+                }
+                header .global button::after {
+                    content: "";
+                    position: absolute;
+                    left: 5em;
+                    top: 0.85em;
+                    height: 1.375em;
+                    width: 1.375em;
+                    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 11.55L15.2167 7.33337L16.5 8.61671L11 14.1167L5.5 8.61671L6.78333 7.33337L11 11.55Z' fill='white' fill-opacity='0.4'/%3E%3C/svg%3E%0A");
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                header .global .list {
+                    position: absolute;
+                    left: 0;
+                    z-index: -2;
+                    top: 1.5em;
+                    width: 100%;
+                    background-color: #BC0120;
+                    border-radius:  0 0 25px 25px;
+                    text-align: center;
+                    padding: 2em 0 1em 0;  
+                    display: none;
+                }
+                header .global .list ul li a {
+                    display: block;
+                    line-height: 1.6667;
+                }
+                header .global .list ul li.active a {
+                    font-weight: 700;
+                }
+                /****************header가 고정됐을때***********************/
+                header.fixed {
+                    background-color: rgba(154, 154, 154 0.42);
+                    background: linear-gradient, rgba(255, 255, 255, 0.2);
+                    backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px);
+                    box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 
+                                0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+                header.fixed .global {
+
+                }
+                
+
+}/*@media**/
+@media screen and (max-width:1000px) {
+                header {
+                    padding-right: 0;
+                }
+                header .gnb .gnb_open {
+                    width: var (--header-h);
+                    height: var (--header-h);
+                    color: transparent;
+                    position: relative;/**/
+                }
+                header .gnb .gnb_open::before {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 218%;/*********나중에수정***********/
+                    transform: translate(-50%, -50px);
+                    width: 80%;
+                    height: 80%;
+                    background-image: url("data:image/svg+xml,%3Csvg width='20' height='14' viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.11111 13.3333C0.796296 13.3333 0.532407 13.2269 0.319444 13.0139C0.106481 12.8009 0 12.537 0 12.2222C0 11.9074 0.106481 11.6435 0.319444 11.4306C0.532407 11.2176 0.796296 11.1111 1.11111 11.1111H18.8889C19.2037 11.1111 19.4676 11.2176 19.6806 11.4306C19.8935 11.6435 20 11.9074 20 12.2222C20 12.537 19.8935 12.8009 19.6806 13.0139C19.4676 13.2269 19.2037 13.3333 18.8889 13.3333H1.11111ZM1.11111 7.77778C0.796296 7.77778 0.532407 7.6713 0.319444 7.45833C0.106481 7.24537 0 6.98148 0 6.66667C0 6.35185 0.106481 6.08796 0.319444 5.875C0.532407 5.66204 0.796296 5.55556 1.11111 5.55556H18.8889C19.2037 5.55556 19.4676 5.66204 19.6806 5.875C19.8935 6.08796 20 6.35185 20 6.66667C20 6.98148 19.8935 7.24537 19.6806 7.45833C19.4676 7.6713 19.2037 7.77778 18.8889 7.77778H1.11111ZM1.11111 2.22222C0.796296 2.22222 0.532407 2.11574 0.319444 1.90278C0.106481 1.68981 0 1.42593 0 1.11111C0 0.796296 0.106481 0.532407 0.319444 0.319444C0.532407 0.106481 0.796296 0 1.11111 0H18.8889C19.2037 0 19.4676 0.106481 19.6806 0.319444C19.8935 0.532407 20 0.796296 20 1.11111C20 1.42593 19.8935 1.68981 19.6806 1.90278C19.4676 2.11574 19.2037 2.22222 18.8889 2.22222H1.11111Z' fill='white'/%3E%3C/svg%3E%0A");
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+                header .gnb_wrap {
+                    display: none;
+                }
+                header .gnb .gnb_close {
+                    display: none;
+                }
+                header .global {
+                    display: none;
+                }
+}/*@media**/
+@media screen and (max-width:768px) {
+                header .logo a {
+
+                    width: 8.5714em;
+                    height: 2.1186em;
+                }
+
+}
+footer {
+    margin-top: 3000px;
+}

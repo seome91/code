@@ -1,78 +1,121 @@
 /* 웹폰트 파일을 이용해서 웹폰트의 이름과 두께 등을 선언 */
-@font-face {
-	font-family: 'NanumSquareEB';
-	font-weight: 900;
-	font-display: swap;
-	src: local('NanumSquare ExtraBold'), url(../fonts/NanumSquareEB.otf) format('otf'), url(../fonts/Pretendard-Black.woff) format('woff');
-}
 /* local 만약 당신의 컴퓨터에 서체가 깔려있다면 그걸 먼저 사용해라 뜻 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @font-face {
-	font-family: 'NanumSquareB';
-	font-weight: 800;
-	font-display: swap;
-	src: local('Pretendard Bold'), url(../fonts/NanumSquareOTF_acB.otf) format('otf'), url(../fonts/Pretendard-ExtraBold.woff) format('woff');
-}
-
-@font-face {
-	font-family: 'Pretendard';
-	font-weight: 700;
-	font-display: swap;
-	src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');
-}
-
-@font-face {
-	font-family: 'Pretendard';
+	font-family: 'NanumSquareNeo';
 	font-weight: 600;
 	font-display: swap;
-	src: local('Pretendard SemiBold'), url(../fonts/Pretendard-SemiBold.woff2) format('woff2'), url(../fonts/Pretendard-SemiBold.woff) format('woff');
+	src: local('NanumSquareNeoVariable'), url(../fonts/NanumSquareNeo-Variable.woff2) format('otf'), url(../fonts/NanumSquareNeo-Variable.woff) format('woff');
 }
 
 @font-face {
-	font-family: 'Pretendard';
+	font-family: 'NanumSquareNeo';
+	font-weight: 900;
+	font-display: swap;
+	src: local('NanumSquareNeoHeavy'), url(../fonts/NanumSquareNeoTTF-eHv.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-eHv.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	font-weight: 700;
+	font-display: swap;
+	src: local('NanumSquareNeoExtraBold'), url(../fonts/NanumSquareNeoTTF-dEb.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-dEb.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
 	font-weight: 500;
 	font-display: swap;
-	src: local('Pretendard Medium'), url(../fonts/Pretendard-Medium.woff2) format('woff2'), url(../fonts/Pretendard-Medium.woff) format('woff');
+	src: local('NanumSquareNeoBold'), url(../fonts/NanumSquareNeoTTF-cBd.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-cBd.woff) format('woff');
 }
 
 @font-face {
-	font-family: 'Pretendard';
-	font-weight: 400;
-	font-display: swap;
-	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
-}
-
-@font-face {
-	font-family: 'Pretendard';
+	font-family: 'NanumSquareNeo';
 	font-weight: 300;
 	font-display: swap;
-	src: local('Pretendard Light'), url(../fonts/Pretendard-Light.woff2) format('woff2'), url(../fonts/Pretendard-Light.woff) format('woff');
+	src: local('NanumSquareNeo'), url(../fonts/NanumSquareNeoTTF-bRg.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-bRg.woff) format('woff');
 }
 
 @font-face {
-	font-family: 'Pretendard';
-	font-weight: 200;
-	font-display: swap;
-	src: local('Pretendard ExtraLight'), url(../fonts/Pretendard-ExtraLight.woff2) format('woff2'), url(../fonts/Pretendard-ExtraLight.woff) format('woff');
-}
-
-@font-face {
-	font-family: 'Pretendard';
+	font-family: 'NanumSquareNeo';
 	font-weight: 100;
 	font-display: swap;
-	src: local('Pretendard Thin'), url(../fonts/Pretendard-Thin.woff2) format('woff2'), url(../fonts/Pretendard-Thin.woff) format('woff');
+	src: local('NanumSquareNeoLight'), url(../fonts/NanumSquareNeoTTF-aLt.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-aLt.woff) format('woff');
+}
+
+
+
+
+/*영문폰트*/
+
+/*
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Montserrat-Black'), url(../fonts/Montserrat-Black.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-aLt.woff) format('woff');
 }
 
 
 @font-face {
-    font-family: 'TTLaundryGo';
-    src: url(../fonts/TTLaundryGothicB.woff2) format('woff2');
-    font-weight: 700;
-    font-style: normal;
+	font-family: 'Montserrat';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Montserra-ExtraBold '), url(../fonts/Montserrat-ExtraBold.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-aLt.woff) format('woff');
 }
 
+
 @font-face {
-    font-family: 'TTLaundryGo';
-    src: url(..//fonts/TTLaundryGothicR.woff2) format('woff2');
-    font-weight: 400;
-	font-style: normal;
+	font-family: 'Montserrat';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Montserra-Bold '), url(../fonts/Montserrat-Bold.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-aLt.woff) format('woff');
 }
+
+
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Montserrat-SemiBold'), url(../fonts/Montserrat-SemiBold.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-aLt.woff) format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Montserrat-Medium'), url(../fonts/Montserrat-Medium.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-aLt.woff) format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Montserrat-Regular'), url(../fonts/Montserrat-Regular.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-aLt.woff) format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Montserrat-Light'), url(../fonts/Montserrat-Light.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-aLt.woff) format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Montserrat-ExtraLight'), url(../fonts/Montserrat-ExtraLight.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-aLt.woff) format('woff');
+}
+
+
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Montserrat-Thin'), url(../fonts/Montserrat-Thin.woff2) format('woff2')
+}*/
