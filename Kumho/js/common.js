@@ -21,10 +21,12 @@ $(document).ready(function(){
     function scroll_chk(){
         prev_scroll = scrolling // 현재스크롤값
         scrolling = $(window).scrollTop()
-        
+        $('header').addClass('fixed')
         if((prev_scroll - scrolling) < 0){ //
+            $('header').addClass('scroll_down')
             console.log('내려가는중')
         }else{
+            $('header').removeClass('scroll_down')
             console.log('올라가는중')
         }
         //console.log(prev_scroll, scrolling)
