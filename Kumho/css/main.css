@@ -9,7 +9,11 @@
  @import url(layout.css); 
  
  .visual {
-    position: relative;/**/
+    display: flex; /* Flexbox 활성화 */
+    justify-content: center; /* 가로 중앙 */
+    align-items: center; /* 세로 중앙 */
+    height: 100vh; /* 부모 높*/
+    position: relative;
  }
  .visual h2 {
      display: none; /* 숨김 */
@@ -63,16 +67,14 @@
  .visual .ctrl_wrap {
      position: absolute;/**/
      /* left: calc(50% - 630px);*/
-     right: calc(100% - 890px); 
-     bottom: 5.333em;/*80*/
+     /*right: calc(100% - 890px);*/
+     bottom: -4.333em;
      font-size: 0.8824rem;/**/
      color: #fff;
      z-index: 10;
      display: flex;
      gap: 21px;
-     text-align: center;
-     align-items: center;
-    
+
  }
  .visual .ctrl_wrap .paging {
     font-size: 0;
@@ -94,7 +96,7 @@
     content: "";
     position: absolute;/*span*/
     left: calc(100% + 40px);
-    top:6px;
+    top: 4px;
     width: 220px;
     height: 3px;
     background-color: rgba(255, 255, 255, 0.4);
@@ -103,7 +105,7 @@
     content: "";
     position: absolute;/*span*/
     left: calc(100% + 40px);
-    top:6px;
+    top:4px;
     width: 0;
     height: 3px;
     background-color: #BC0120;
