@@ -13,6 +13,7 @@ header {/*아래로 스크롤하면 안나올거xxxxx,위로스크롤하면 나�
     justify-content: space-between;
     padding: 0 20px;/*좌우여백*/
     border-bottom: 3px solid rgba(154, 154, 154 0.42);
+    transition: 0.5s;
 }
 header .logo a {
     display: block;
@@ -41,6 +42,10 @@ header.fixed {
 }
 header.fixed .logo a::before {
     background-image: url(..//images/common/logo.svg);/*순수하게 이미지만 바굴때 쓴다,주의*/
+}
+/**********************scroll_down*************************/
+header.fixed.scroll_down {
+   transform: translateY(-100%);
 }
 
 @media screen and (min-width:1001px){ /*1001이상일때*/
@@ -179,15 +184,30 @@ header.fixed .logo a::before {
                 header .global {
                     display: none;
                 }
+                
+                /****************header가 고정됐을때***********************/
+                header.fixed {
+                    background-color: rgba(154, 154, 154 0.42);
+                    background: linear-gradient, rgba(255, 255, 255, 0.2);
+                    backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px);
+                    box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 
+                                0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+                
+
 }/*@media**/
 @media screen and (max-width:768px) {
                 header .logo a {
-
                     width: 8.5714em;
                     height: 2.1186em;
-                }
+                }                
+}/*@media**/
 
-}
+
+
+
+
 footer {
     margin-top: 3000px;
 }
