@@ -373,7 +373,9 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                     transform: rotate(180deg);
                 }
                 header .gnb .gnb_wrap ul.depth1 > li ul.depth2 {
-                    display: none;
+                    /* display: none; */
+                    overflow: hidden;
+                    height: 0;
                     background-color: var(--main-color);
                     color: #fff;
                     line-height: 2.05em;    
