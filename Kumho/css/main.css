@@ -105,7 +105,7 @@
     content: "";
     position: absolute;/*span*/
     left: calc(100% + 40px);
-    top:4px;
+    top: 4px;px;
     width: 0;
     height: 3px;
     background-color: #BC0120;
@@ -152,7 +152,7 @@
 
  @media screen and (max-width:1300px){
             .visual .ctrl_wrap {
-                right:20px;
+                
             }
  }/* @media*/
  @media screen and (min-width:769px){
@@ -175,6 +175,7 @@
         }
  }
  @media screen and (max-width:768px){
+           
             .visual .swiper ul li .photo {
                 height: 600px;
             }
@@ -183,6 +184,8 @@
                 font-size: 2.1478rem;
            }
            .visual .ctrl_wrap {
+            transform: scale(0.8); /* 크기를 80%로 축소 */
+            transform-origin: center bottom; /* 축소 기준점 설정 */
             bottom: 5.333em;/*80*/
         }
 }/* @media*/
