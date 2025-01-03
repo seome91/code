@@ -341,12 +341,13 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                 header .gnb .gnb_close {
                     display: none;/*숨김처리*/
                     position: absolute;/*headrer*/
-                    right: 0;
+                    right: -100%;
                     top: 0;
                     width: var(--header-h);
                     height: var(--header-h);
                     z-index: 101;
                     color: transparent;
+                    transition: right 0.6s;
                 }
                 header .gnb .gnb_close::before {
                     content: "";
@@ -423,12 +424,13 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                 
                 }
                  /****************메뉴가 열렸을때***********************/
-                 header.menu_mo .gnb_wrap {
+                 header.menu_mo .gnb .gnb_wrap {
                     display: block;
                     left: 0;
                 }
                 header.menu_mo .gnb .gnb_close {
                     display: block;
+                    right: 0;
                 }
                 header.menu_mo .global {
                     display: block; /*나타남*/

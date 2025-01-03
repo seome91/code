@@ -122,10 +122,10 @@ $(document).ready(function(){
      //1. header .gnb .gnb_open >> 클릭하면 열리고 header에 meun_mo를 줌
      //2. header .gnbgnb_close >> 클릭하면 닫힘 header에 meun_mo 삭제
      $('header .gnb .gnb_open').on('click', function(){
-        $('header').addClass('meun_mo')
+        $('header').addClass('menu_mo')
      })
-     $('header .gnb .gnb_open').on('click', function(){
-        $('header').removeClass('meun_mo')
+     $('header .gnb .gnb_close').on('click', function(){
+        $('header').removeClass('menu_mo')
      })
 
      /******************* 모바일 메뉴 열고닫기 (종료) ********************/
