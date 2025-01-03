@@ -378,12 +378,13 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                     height: 0;
                     background-color: var(--main-color);
                     color: #fff;
-                    line-height: 2.05em;    
+                    transition: height 0.5s;
                     font-size: 1.12em;
-                    padding: 1.4em;
+                    /* padding: 1.4em; */
                 }
                 header .gnb .gnb_wrap ul.depth1 > li.open ul.depth2 {
                     /* display: block; */
+                    height: 200%;
                 }
                 header .global {
                     /* display: none; */
