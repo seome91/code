@@ -281,8 +281,8 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                     
                 }
                 header .gnb .gnb_open {
-                    width: var (--header-h);
-                    height: var (--header-h);
+                    width: var(--header-h);
+                    height: var(--header-h);
                     color: transparent;
                     position: relative;/**/
                 }
@@ -290,25 +290,26 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                     content: "";
                     position: absolute;
                     left: 50%;
-                    top: 218%;/*********나중에수정***********/
+                    top: 59px;/*********나중에수정***********/
                     transform: translate(-50%, -50px);
-                    width: 80%;
-                    height: 80%;
+                    width: 50%;
+                    height: 50%;
                     background-image: url("data:image/svg+xml,%3Csvg width='20' height='14' viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.11111 13.3333C0.796296 13.3333 0.532407 13.2269 0.319444 13.0139C0.106481 12.8009 0 12.537 0 12.2222C0 11.9074 0.106481 11.6435 0.319444 11.4306C0.532407 11.2176 0.796296 11.1111 1.11111 11.1111H18.8889C19.2037 11.1111 19.4676 11.2176 19.6806 11.4306C19.8935 11.6435 20 11.9074 20 12.2222C20 12.537 19.8935 12.8009 19.6806 13.0139C19.4676 13.2269 19.2037 13.3333 18.8889 13.3333H1.11111ZM1.11111 7.77778C0.796296 7.77778 0.532407 7.6713 0.319444 7.45833C0.106481 7.24537 0 6.98148 0 6.66667C0 6.35185 0.106481 6.08796 0.319444 5.875C0.532407 5.66204 0.796296 5.55556 1.11111 5.55556H18.8889C19.2037 5.55556 19.4676 5.66204 19.6806 5.875C19.8935 6.08796 20 6.35185 20 6.66667C20 6.98148 19.8935 7.24537 19.6806 7.45833C19.4676 7.6713 19.2037 7.77778 18.8889 7.77778H1.11111ZM1.11111 2.22222C0.796296 2.22222 0.532407 2.11574 0.319444 1.90278C0.106481 1.68981 0 1.42593 0 1.11111C0 0.796296 0.106481 0.532407 0.319444 0.319444C0.532407 0.106481 0.796296 0 1.11111 0H18.8889C19.2037 0 19.4676 0.106481 19.6806 0.319444C19.8935 0.532407 20 0.796296 20 1.11111C20 1.42593 19.8935 1.68981 19.6806 1.90278C19.4676 2.11574 19.2037 2.22222 18.8889 2.22222H1.11111Z' fill='white'/%3E%3C/svg%3E%0A");
                     background-position: center center;
                     background-repeat: no-repeat;
                     background-size: contain;
                 }
                 header .gnb .gnb_wrap {
-                    display: none;
+                    /* display: none; */
                     position: absolute;/*header기준*/
-                    right: 0;
+                    left: 100%;
                     top: 0;
                     z-index: 100;
                     width: 100%;
                     height: 100dvh;/*header를기즌으로해서 100px로보임*/
                     background-color: #fff;
                     color: #1d1d1d;
+                    transition: left 0.5s; /* left속성 변경되는것만 부드럽게 */
                 }
                 header .gnb .gnb_wrap ul.depth1 {
                     padding: 0 20px;
@@ -424,6 +425,7 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                  /****************메뉴가 열렸을때***********************/
                  header.menu_mo .gnb_wrap {
                     display: block;
+                    left: 0;
                 }
                 header.menu_mo .gnb .gnb_close {
                     display: block;

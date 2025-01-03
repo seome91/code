@@ -103,10 +103,32 @@ $(document).ready(function(){
     /******************* 모바일 2차메뉴 열고닫기 (시작) ********************/
     //1.header .gnb .gnb_wrap ul.depth1 > li > a 를 클릭했을때
     //2.클릭이벤트를 삭제 li에 open클래스를 추가하거나 삭제
-    $('.header .gnb .gnb_wrap ul.depth1 > li > a').on('click', function(e){
-        
+    //>>다른걸 열면 열려있는것은 닫힘
+    $('header .gnb .gnb_wrap ul.depth1 > li > a').on('click', function(e){
+        if(device_status == 'mobile'){
+            e.preventDefault(); /* e 전달 받음 ,a 태그의 href를 작동 시키지 않음 */
+            if($(this).parent('li').hasClass('open') == true){ //open 클래스를 가지고있으면
+                $(this).parent().removeClass('open')
+                //console.log('열린애')
+            }else{
+                $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('open')
+                $(this).parent().addClass('open')
+                //console.log('닫힌애')
+            }
+        }
     })
      /******************* 모바일 2차메뉴 열고닫기 (시작) ********************/
+     /******************* 모바일 메뉴 열고닫기 (시작) ********************/
+     //1. header .gnb .gnb_open >> 클릭하면 열리고 header에 meun_mo를 줌
+     //2. header .gnbgnb_close >> 클릭하면 닫힘 header에 meun_mo 삭제
+     $('header .gnb .gnb_open').on('click', function(){
+        $('header').addClass('meun_mo')
+     })
+     $('header .gnb .gnb_open').on('click', function(){
+        $('header').removeClass('meun_mo')
+     })
+
+     /******************* 모바일 메뉴 열고닫기 (종료) ********************/
 
     
     
