@@ -381,7 +381,7 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                     padding: 1.4em;
                 }
                 header .gnb .gnb_wrap ul.depth1 > li.open ul.depth2 {
-                    display: block;
+                    /* display: block; */
                 }
                 header .global {
                     /* display: none; */
