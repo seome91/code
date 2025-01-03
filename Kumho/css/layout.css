@@ -48,7 +48,7 @@ header .logo a {
     height: 3em;
     position: relative; 
 }
-header .logo a::after{
+header .logo a::before{
     content: "";
     position: absolute;
     left: 0;
@@ -384,13 +384,15 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                     display: block;
                 }
                 header .global {
-                    display: none;
+                    /* display: none; */
                     position: absolute;/*header를기준으로 정렬*/
-                    left: 20px;
+                    left: 0;
                     top: calc(100dvh - 3.354em);
                     font-size: 1.1rem;
                     z-index: 101;
+                    padding-left: 20px;
                     color: #BC0120;
+                    transition: left 0.5s;
                 } 
                 header .global button {
                     display: none;
@@ -434,6 +436,7 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                 }
                 header.menu_mo .global {
                     display: block; /*나타남*/
+                    left: 0;
                 }
 
 }/*@media**/
