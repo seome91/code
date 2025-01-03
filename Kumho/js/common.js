@@ -6,6 +6,8 @@
 $(document).ready(function(){
     let scrolling //현재 스크롤된값
     let prev_scroll // 이전에 스크롤된 값
+    let window_w //브라우저넓이
+    let device_status // pc or mobile 상태표시
        
     //console.log(prev_scroll)
 
@@ -29,10 +31,10 @@ $(document).ready(function(){
         }
         if((prev_scroll - scrolling) < 0){ //
             $('header').addClass('scroll_down')
-            console.log('내려가는중')
+
         }else{
             $('header').removeClass('scroll_down')
-            console.log('올라가는중')
+
         }
         //console.log(prev_scroll, scrolling)
     }
@@ -41,11 +43,67 @@ $(document).ready(function(){
     $(window).scroll(function(){//스크롤 한번 할때마다 1번실행
         scroll_chk()//함수 실행
     })
+    /*************** header.fixed.scroll_down 추가 종료 ******************/
+    /******************* pc버전 마우스 오버 (시작) ********************/
+    /**/ 
 
+    function resize_chk(){
+        window_w = $(window).width()
+        if(window_w > 1000){
+            device_status = 'pc'
+        }else{
+            device_status = 'mobile'
+        }
+        // console.log(device_status)
+    }
+    resize_chk()// 실행 -- 문서가 로딩된 이후 1번 실행
+    $(window).resize(function(){
+        resize_chk()
+    })
+    $(' header .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
+        if(device_status == 'pc'){
+           $('header').addClass('menu_pc')
+           $(' header .gnb_wrap ul.depth1 > li').removeClass('over')
+           $(this).addClass('over')
+        }
+    })
+    $(' header .gnb').on('mouseleave', function(){
+        $('header').removeClass('menu_pc')
+        $(' header .gnb_wrap ul.depth1 > li').removeClass('over')
+    })
+    //메뉴다음에 존재하는 링크에 포커스가 되었을때 메뉴를 아웃시킴
+    $('header .global').on('focusin', function(){
+        $('header').removeClass('menu_pc')
+        $(' header .gnb_wrap ul.depth1 > li').removeClass('over')
+
+    })
+
+    /******************* pc버전 마우스 오버 (종료) ********************/
+    /******************* 언어선택(pc에서만) (시작) ********************/
+    //1.pc에서만 구현되어야함
+    //2.header .global에 open클래스 춧가
+    //3.header .global button에서 title명을 바꿔줘야함
+    //4.한번클릭하면 열리고 다시클릭하면 닫힘
+    //>>header .global 을 클릭했을떄...
+    //>>header .global open class가있는지 chk 
+
+    $('header .global').on('click', function(){
+        if(device_status == 'pc'){
+            if($(this).hasClass('open') == true){ //열려있는 상태
+               // console.log('열림')
+                $(this).removeClass('open')
+                $(this).find('button').attr('title', '언어선택 열기 버튼') //attr:속성값 전체 설정,수정
+            }else{
+                //console.log('닫힘')
+                $(this).addClass('open').attr('title', '언어선택 닫기 버튼')
+            }
+        }
+    })
+    /******************* 언어선택(pc에서만) (종료) ********************/
 
     
-    /*************** header.fixed.scroll_down 추가 종료 ******************/
-
+    
+    
 })//$(document).ready(function(){
 
 

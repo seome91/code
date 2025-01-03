@@ -1,5 +1,30 @@
 /*layout.css -header,footer, 등 모든 페이지 공통 스타일 */
 
+.skipnav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000000000;
+}
+.skipnav a {
+    position: absolute;
+    left: 0;
+    top: -100px;/*날려*/
+    width: 100%;
+    display: block;/*의미없음*/
+    background-color: #0B3952;
+    color: #ffff;
+    padding: 10px 0;
+    text-align: center;
+}
+.skipnav a.menu {
+    background-color: #659ABA;
+
+}
+.skipnav a:focus {
+    top: 0;
+}
 header {/*아래로 스크롤하면 안나올거xxxxx,위로스크롤하면 나타날거ooooo*/
     position: fixed;
     left: 0;
@@ -12,7 +37,8 @@ header {/*아래로 스크롤하면 안나올거xxxxx,위로스크롤하면 나�
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;/*좌우여백*/
-    border-bottom: 3px solid rgba(154, 154, 154 0.42);
+    /* border-bottom: 3px solid rgba(154, 154, 154 0.42); */
+
     
 }
 header .logo a {
@@ -32,20 +58,20 @@ header .logo a::after{
     background: url(../images/common/logo_w.svg) no-repeat center center / contain;
 }
 /****************header가 고정됐을때***********************/
-header.fixed {
+header.fixed, header.menu_pc {
     transition: 0.4s;
     background-color: rgba(154, 154, 154 0.42);
     background: linear-gradient, rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 
-                0 4px 6px rgba(0, 0, 0, 0.1);
+                0 4px 6px rgba(0, 0, 0, 0.1); /*****************/
 }
-header.fixed .logo a::before {
+header.fixed .logo a::before,header.menu_pc.logo a::before {
     background-image: url(..//images/common/logo.svg);/*순수하게 이미지만 바굴때 쓴다,주의*/
 }
 /**********************scroll_down*************************/
-header.fixed.scroll_down {
+header.fixed.scroll_down, header.menu_pc.scroll_down {
    transform: translateY(-100%);
 }
 
@@ -72,8 +98,9 @@ header.fixed.scroll_down {
                 header .gnb_wrap ul.depth1 > li > ul.depth2 {
                     position: absolute;
                     left: 0;
-                    height: var(--header-h);/*header의 높이*/
+                    top: var(--header-h);/*header의 높이*/
                     width: 100%;
+                    height: 274px;
                     padding-top: 1.02em;
                     display: none;
                 }
@@ -88,7 +115,7 @@ header.fixed.scroll_down {
                 header .global button {
                     font-size: 0.888rem;
                     line-height: 0.6em;
-                    
+                    z-index: 2;
                     width: 7.0588em;
                     padding: 1.1176em 2.1765em;
                     border-radius: 25px;
@@ -118,6 +145,7 @@ header.fixed.scroll_down {
                     background-position: center center;
                     background-repeat: no-repeat;
                     background-size: contain;
+                    transition: 0.3s;
                 }
                 header .global .list {
                     position: absolute;
@@ -128,18 +156,35 @@ header.fixed.scroll_down {
                     background-color: #BC0120;
                     border-radius:  0 0 25px 25px;
                     text-align: center;
-                    padding: 2em 0 1em 0;  
+                    z-index: 1;
+                    padding: 1.5em 0 1em 0;  
                     display: none;
                 }
                 header .global .list ul li a {
                     display: block;
                     line-height: 1.6667;
                 }
+                header .global .list ul li a:hover {
+                    text-decoration: underline;
+                    font-weight: 600;
+
+                }
                 header .global .list ul li.active a {
-                    font-weight: 700;
+                   
+                }
+                /***************언어선택열렸을때******************/
+                /*header .global.open button::after,*/ 
+
+                header .global.open button::after {
+                    transform: rotate(180deg);
+                }
+                header .global.open .list, header .global.open button:hover {
+                    border-color: var(--main-color) !important;
+                    background-color: var(--main-color);
+                    display: block !important;/*css에 우선권을 주는, 남용금지*/
                 }
                 /****************header가 고정됐을때***********************/
-                header.fixed {
+                header.fixed, header.menu_pc {
                     background-color: rgba(154, 154, 154 0.42);
                     background: linear-gradient, rgba(255, 255, 255, 0.2);
                     backdrop-filter: blur(20px);
@@ -147,15 +192,93 @@ header.fixed.scroll_down {
                     box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 
                                 0 4px 6px rgba(0, 0, 0, 0.1);
                 }
-                header.fixed .global {
+
+                header.menu_pc:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 100px;
+                    width: 100%;
+                    height:var(--header-depth2-h);/*header의 높이*/;
+                    z-index: -1;
+                    
+                    background-color: rgba(154, 154, 154 0.42);
+                    background: linear-gradient, rgba(255, 255, 255, 0.2);
+                    backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px);
+                    box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 
+                                0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+                header.menu_pc .gnb_wrap ul.depth1 > li > ul.depth2 {
+                    display: block;/*show*/ /****************수정요망******************/
+                    position: absolute;
+                    width: 100%;
+                    height: var(--header-depth2-h);
+                    padding-top: 1em;
+                    top: var(--header-h);
+                }
+                header.menu_pc .gnb_wrap ul.depth1 > li.over > a {
+                    font-weight: 800;
+                }
+                header.menu_pc .gnb_wrap ul.depth1 > li.over > a >span::after {
+                    content: "";
+                    position: absolute;
+                    right: 0.36em;
+                    top: 1.7em;
+                    height:0.4em;
+                    width: 0.4em;
+                    background-color: #ffff;
+                    border-radius: 50%;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
 
                 }
+                header.menu_pc .gnb_wrap ul.depth1 > li.over > ul.depth2 {
+                    background-color: var(--main-color);
+                }
+                header.menu_pc .gnb_wrap ul.depth1 > li.over > ul.depth2 > li a span {
+                    /*color: var(--main-color);*/
+                }
+                header.menu_pc .gnb_wrap ul.depth1 > li.over > ul.depth2 > li a[target="_blank"] > span {
+                    display: inline-block;
+                    padding-right: 1.0588em;
+                    position: relative;
+                }
+                header.menu_pc .gnb_wrap ul.depth1 > li.over > ul.depth2 > li a[target="_blank"] > span::after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 0.6em;
+                    width: 0.8em;
+                    height: 0.8em;
+                    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 18C1.45 18 0.979167 17.8042 0.5875 17.4125C0.195833 17.0208 0 16.55 0 16V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0H9V2H2V16H16V9H18V16C18 16.55 17.8042 17.0208 17.4125 17.4125C17.0208 17.8042 16.55 18 16 18H2ZM6.7 12.7L5.3 11.3L14.6 2H11V0H18V7H16V3.4L6.7 12.7Z' fill='white'/%3E%3C/svg%3E%0A");
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    z-index: 5;
+                }
+                
+                header.menu_pc .gnb_wrap ul.depth1 > li.over > ul.depth2 > li a:hover {
+                    font-weight: 700;/*폰트를 맞는 굵기로 안마추면 HOVER시 이상하게보임*/
+                    font-size: 1.03em;  
+                }
+                /* header.menu_pc .gnb_wrap ul.depth1 > li:first-child > ul.depth2 {
+                    border-left: 1px solid rgba(255, 255, 255, 0.4);
+                }
+                header.menu_pc .gnb_wrap ul.depth1 > li > ul.depth2 {
+                    border-right: 1px solid rgba(255, 255, 255, 0.4);
+                    display: block;
+                    line-height: 2.2;
+                    letter-spacing: 1px;
+                } */
                 
 
 }/*@media**/
 @media screen and (max-width:1000px) {
                 header {
                     padding-right: 0;
+                    
                 }
                 header .gnb .gnb_open {
                     width: var (--header-h);
@@ -176,7 +299,38 @@ header.fixed.scroll_down {
                     background-repeat: no-repeat;
                     background-size: contain;
                 }
-                header .gnb_wrap {
+                header .gnb .gnb_wrap {
+                    margin: 1px 0 0 0;/**나중에 em수정**/
+                    display: none;
+                    position: absolute;/*header기준*/
+                    right: 0;
+                    top: 0;
+                    z-index: -5;
+                    width: 100%;
+                    height: 100dvh;/*header를기즌으로해서 100px로보임*/
+                    background-color: rgba(154, 154, 154 0.42);
+                    background: linear-gradient, rgba(255, 255, 255, 0.2);
+                    backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px);
+                    box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 
+                                0 4px 6px rgba(0, 0, 0, 0.1);
+                    font-weight: 300;
+                }
+                header .gnb .gnb_wrap ul.depth1 {
+                    padding: 20px;
+                    margin: var(--header-h) 0 6em 0;
+                    overflow-y: auto;/**/
+                    height: calc(100dvh - var(--header-h) - 6em);
+                }
+                header .gnb .gnb_wrap ul.depth1 > li {
+                    border-bottom: 1px solid  rgba(255, 255, 255, 0.5),;
+                }
+                header .gnb .gnb_wrap ul.depth1 > li > a {  
+                    display: block;
+                    font-size: 1.5rem;
+                    padding: 0.75em 0;
+                }
+                header .gnb .gnb_wrap ul.depth1 > li ul.depth2 {
                     display: none;
                 }
                 header .gnb .gnb_close {
@@ -187,7 +341,7 @@ header.fixed.scroll_down {
                 }
                 
                 /****************header가 고정됐을때***********************/
-                header.fixed {
+                header.fixed, header.menu_pc {
                     background-color: rgba(154, 154, 154 0.42);
                     background: linear-gradient, rgba(255, 255, 255, 0.2);
                     backdrop-filter: blur(20px);
@@ -195,7 +349,16 @@ header.fixed.scroll_down {
                     box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 
                                 0 4px 6px rgba(0, 0, 0, 0.1);
                 }
-                
+                 /****************메뉴가 열렸을때***********************/
+                 header.menu_mo .gnb_wrap {
+                    display: block;
+                }
+                header.menu_mo .gnb .gnb_close {
+                    display: block;
+                }
+                header.menu_mo .global {
+                    display: block;
+                }
 
 }/*@media**/
 @media screen and (max-width:768px) {
