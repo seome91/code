@@ -291,6 +291,8 @@
 .biz .list ul li a .txt span {
    display: block;
    font-size: 17px;
+   white-space: nowrap;
+   overflow: hidden;
    transition: 0.6s;/*글자크기 바뀔예정*/
    /*display: none;/*부드럽게 나타나고싶으면 이거주면 안됨*/
    opacity: 0;/*대신투명도*/
