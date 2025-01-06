@@ -633,9 +633,11 @@
 
 .service .list ul {
    display: flex;
+   align-items: center;
    justify-content: space-evenly;
 }
 .service .list ul li {
+
    width: calc(33.33% - 18px);
    line-height: 1.2;
    /* height: 2.4em; */
@@ -656,6 +658,12 @@
    transform: translate(-10px, -10px);
    box-shadow: 5px 5px 10px rgba(188, 1, 32, 0.6);
  }
+ service .list ul li a h3 {
+   font-size: 0.3em;
+   white-space: nowrap;/*1줄제한*/
+   overflow: hidden;
+
+}
 .service .list ul li a::before {
    content: "";
    position:absolute;
@@ -726,6 +734,8 @@
       background-size: contain;/*아이콘*/
    }
    .service .list ul li a h3 {
+      white-space: nowrap;/*1줄제한*/
+      overflow: hidden;
       font-size: 1.0714em;
       font-weight: 500;
    }
