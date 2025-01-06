@@ -37,4 +37,18 @@ $(document).ready(function(){
         $(this).hide()
         $('.visual .ctrl_wrap button.stop').show()
     })
+    /************************ biz에 마우스를 오버했을때 (시작)**************************/
+    //.biz .list ul li 에 마우스를 올렸을때
+    //마우스를 올린 li에만 active 클래스 추가
+    //.biz .list에 over 클래스추가
+    $('.biz .list ul li').on('mouseenter', function(){
+        $('.biz .list ul li').removeClass('active')
+        $(this).addClass('active')
+        $('.biz .list').addClass('over')
+    })
+    $('.biz .list').on('mouseleave', function(){
+        $('.biz .list ul li').removeClass('active')
+        $('.biz .list').addClass('over')
+    })
+    /************************ biz에 마우스를 오버했을때 (종료)**************************/
 })//$(document).ready

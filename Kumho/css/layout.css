@@ -210,7 +210,7 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                                 0 4px 6px rgba(0, 0, 0, 0.1);
                 }
                 header.menu_pc .gnb_wrap ul.depth1 > li > ul.depth2 {
-                    display: block;/*show*/ /****************수정요망******************/
+                    display: block !important;/*show*/ /****************수정요망******************/
                     position: absolute;
                     width: 100%;
                     height: var(--header-depth2-h);
@@ -373,14 +373,15 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                     transform: rotate(180deg);
                 }
                 header .gnb .gnb_wrap ul.depth1 > li ul.depth2 {
-                    /* display: none; */
-                    overflow: hidden;
-                    height: 0;
-                    background-color: var(--main-color);
-                    color: #fff;
-                    transition: height 0.5s;
-                    font-size: 1.12em;
-                    /* padding: 1.4em; */
+                   display: none;
+                   background-color: var(--main-color);
+                   color: #fff;
+                   overflow: hidden;
+                   transition: height 0.5s;
+                   font-size: 1.12em;
+                   line-height:2em;
+                   padding: 1.4em 1em;
+                   height: 0;
                 }
                 header .gnb .gnb_wrap ul.depth1 > li.open ul.depth2 {
                     /* display: block; */

@@ -109,11 +109,18 @@ $(document).ready(function(){
             e.preventDefault(); /* e 전달 받음 ,a 태그의 href를 작동 시키지 않음 */
             if($(this).parent('li').hasClass('open') == true){ //open 클래스를 가지고있으면
                 $(this).parent().removeClass('open')
+                $(this).next().slideUp()
+                /*
+                <a></a> ------------------------------------------------- $(this)
+                <ul class = "depth2"></ul>------------------------------- $(this).next() 로 선택가능
+                */ 
                 //$(this).next().slideUp()
                 //console.log('열린애')
-            }else{
+            }else{//
                 $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('open')
+                $('header .gnb .gnb_wrap ul.depth1 > li ul.depth2').slideUp()
                 $(this).parent().addClass('open')
+                $(this).next().slideDown()
                 //$(this).next().slideDown()
                 //console.log('닫힌애')
             }

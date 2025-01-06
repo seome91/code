@@ -197,3 +197,216 @@
 
             
 }/* @media*/
+
+.biz {
+   margin: 20.5882em 0 0 0;
+}
+.biz .tit h2 {
+   margin: 0 0 0 2px;
+   font-weight: 700;
+   color: var(--main-color);
+}
+.biz .tit span {
+   position: relative;
+}
+.biz .tit span::after {
+   content: "";
+   position:absolute;
+   right: -1.2176em;
+   top: -0.7647em;
+   width: 1.3529em;
+   height: 1.3529em;
+   background-image: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 9.13857C0 9.45649 0.0462473 9.78596 0.173447 10.0981C0.734282 11.4854 2.16239 12.3408 3.97787 11.6183C4.41151 11.4449 16.4203 6.60682 16.4203 6.60682C16.4203 6.60682 11.6908 18.5951 11.5116 19.0401C10.8235 20.7569 11.6503 22.3118 13.0553 22.832C13.3675 22.9476 13.6913 23.0054 14.0093 22.9996C15.1599 22.9938 16.1717 22.3175 16.6689 20.965C16.7441 20.7626 22.6589 4.52593 22.7861 4.13866C22.8612 3.90745 23 3.3641 23 2.98839C23 2.18493 22.7051 1.42772 22.1327 0.855477C21.5719 0.289012 20.8203 0 20.0282 0C19.6408 0 19.3286 0.069363 18.8545 0.219649C18.5711 0.312133 3.32454 5.98256 2.02363 6.4681C0.722725 6.95364 -3.17581e-06 7.99408 0.00577862 9.13857' fill='%23BC0120'/%3E%3C/svg%3E%0A");
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: contain;/*아이콘*/
+}
+.biz .tit p {
+   margin: 0.3118em 0 0.6118em 0;
+   font-size: 45px;
+   color: #1d1d1d;
+}
+.biz .list ul {
+   display: flex;
+}
+.biz .list ul li {
+   width: 25%;
+   transition: 0.4s;
+   overflow: hidden;
+}
+.biz .list ul li a {
+   display: block;
+   height: 40.8182em;
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;/*이미지*/
+
+   position: relative;
+}
+.biz .list ul li.bg1 a {
+   background-image: url(..//images/main/biz001.jpg);
+}
+.biz .list ul li.bg2 a {
+   background-image: url(..//images/main/biz002.jpg);
+}
+.biz .list ul li.bg3 a {
+   background-image: url(..//images/main/biz003.jpg);
+}
+.biz .list ul li.bg4 a {
+   background-image: url(..//images/main/biz004.jpg);
+}
+.biz .list ul li a::before {
+   content: "";
+   position: absolute;/*a를 기준으로 정렬*/
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   font-weight: 100;
+   background-color: rgba(0, 0, 0, 0.1);
+}
+.biz .list ul li a::after {
+   content: "";
+   position: absolute;/*a를 기준으로 정렬*/
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 30%;
+   font-weight: 100;
+   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.0));
+   opacity: 1;
+   transition: 0.4s;
+}
+.biz .list ul li a .txt {
+   color: #fff;
+   padding: 0 1.3727em;
+   left: 0;
+   bottom: -1em; /*부드럽게하기위해 span이없다고 생각하고 바텀주기*/
+   width: 100%;
+   position: absolute;
+   font-weight: 100;
+   z-index: 10;
+   transition: 0.4s;/*바텀올라갈 바뀔예정*/
+}
+.biz .list ul li a .txt span {
+   display: block;
+   font-size: 17px;
+   transition: 0.6s;/*글자크기 바뀔예정*/
+   /*display: none;/*부드럽게 나타나고싶으면 이거주면 안됨*/
+   opacity: 0;/*대신투명도*/
+
+}
+.biz .list ul li a .txt p {
+   font-size: 22px;
+   font-weight: 700;
+   opacity: 50; /* display: block; */
+   transition: 0.5s;/*투명도 바뀔예정*/
+}
+
+@media screen and (min-width:761px){ /*브레이크포인트 + 1*/
+   /*li하나에 오버했을때*/
+/* 
+   .biz .list ul.over li {
+      width: 18%;
+      transition: 0.4s;
+   } */
+   .biz .list.over ul li.active {
+      width: 48%;
+   }     
+   .biz .list.over ul li a::before {
+      opacity: 0.8;
+   }
+   .biz .list.over ul li.active a::before {
+      opacity: 1.0;
+   }
+   .biz .list.over li.active a::after {
+      opacity: 100;
+   }
+   .biz .list.over ul li.active a .txt p {
+      font-size: 2.4706rem;
+      font-weight: 700;  
+   }
+   .biz .list.over ul li.active a .txt span {
+      opacity: 100;
+   }
+   .biz .list.over ul li.active a .txt {
+      bottom: 1.5em; /*부드럽게하기위해 span이없다고 생각하고 바텀주기*/
+   }
+   .biz .list.over ul li.active a .txt p {
+   }
+
+}/*@media*/
+
+
+@media screen and (max-width:1000px){
+   .biz {
+      margin: 11.4286em 0 0 0;
+   }
+   .biz .tit h2 {
+    font-size: 0.8rem;
+   }
+   .biz .tit span {
+      position: relative;
+   }
+   .biz .tit span::after {
+      right: -1.2176em;
+      top: -0.7647em;
+      width: 1.3529em;
+      height: 1.3529em;
+   }
+   .biz .tit p {
+      margin: 0.3118em 0 0.6118em 0;
+      font-size: 1.7rem;
+   }
+   .biz .list ul li {
+     width: ;
+   }
+   .biz .list ul li a {
+      height: 40.8182em;
+   }
+
+
+   .biz .list ul li a::before {
+      content: "";
+      position: absolute;/*a를 기준으로 정렬*/
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      font-weight: 100;
+      background-color: rgba(0, 0, 0, 0.1);
+   }
+   .biz .list ul li a::after {
+      content: "";
+      position: absolute;/*a를 기준으로 정렬*/
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 30%;
+      font-weight: 100;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.0));
+      opacity: 1;
+      transition: 0.4s;
+   }
+
+   .biz .list ul li a .txt {
+      padding: 1.3727em;
+      bottom: 2em;
+      overflow: visible;
+   }
+   .biz .list ul li a .txt span {
+      
+      font-size: 14px;
+      transition: 0.6s;/*글자크기 바뀔예정*/
+      /*display: none;/*부드럽게 나타나고싶으면 이거주면 안됨*/
+      opacity: 0;/*대신투명도*/
+   
+   }
+   .biz .list ul li a .txt p {
+      font-size: 22px;
+      font-weight: 700;
+      opacity: 50; /* display: block; */
+      transition: 0.5s;/*투명도 바뀔예정*/
+      display: none; 
+   }
+}
