@@ -185,7 +185,7 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                 }
                 /****************header가 고정됐을때***********************/
                 header.fixed, header.menu_pc {
-                    background-color: rgba(154, 154, 154 0.42);
+                    background-color: #fff;
                     background: linear-gradient, rgba(255, 255, 255, 0.2);
                     backdrop-filter: blur(20px);
                     -webkit-backdrop-filter: blur(20px);
@@ -202,7 +202,7 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                     height:var(--header-depth2-h);/*header의 높이*/;
                     z-index: -1;
                     
-                    background-color: rgba(154, 154, 154 0.42);
+                    background-color: #fff;
                     background: linear-gradient, rgba(255, 255, 255, 0.2);
                     backdrop-filter: blur(20px);
                     -webkit-backdrop-filter: blur(20px);
