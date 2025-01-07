@@ -458,7 +458,220 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
 
 
 
-
 footer {
-    margin-top: 3000px;
+    background-color: #0B3952;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 4em 0 13.8235em 0;
+    position: relative;/*top*/
+    margin-bottom: 100px;
 }
+footer .top {
+    position: absolute;/*footer*/
+    right: 20px;
+    top: 0;
+    transform: translateY(-50%);
+    /*나자신의 높이의 절반을 상단으로*/
+}
+footer .top button { /*제이쿼리 작동을 위한 버튼*/
+    width: 3.8em;
+    height: 3.8em;
+    background-color: var(--main-color);
+    color: transparent;
+}
+footer .top button::before {
+    content: "";
+    position: absolute;/*footer*/
+    left: 1.8824em;
+    top: 3em;
+    transform: translate(-50%, -50px);
+    width: 3.7059em;
+    height:3.7059em;
+    background-image: url("data:image/svg+xml,%3Csvg width='63' height='63' viewBox='0 0 63 63' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.2251 14.1752V12.0752H47.7751V14.1752H15.2251ZM30.4501 50.9252V24.8268L22.247 33.0299L20.7173 31.5002L31.5001 20.7174L42.2829 31.5002L40.7532 33.0299L32.5501 24.8268V50.9252H30.4501Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+footer .family_site {
+    position: relative;
+}
+footer .family_site button {
+    color: #0B3952;
+    background-color: #fff;
+    padding: 0.5294em 2.7em 0.5294em 1.3529em;
+    position: relative;/*button::after*/
+}
+footer .family_site button::after {
+    content: "";
+    position: absolute;/*button*/
+    right: 9px;
+    top: 9px;
+    width: 1.2941em;
+    height: 1.2941em;
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5418 4.5835V15.6557L5.23227 10.3461L4.5835 11.0002L11.0002 17.4168L17.4168 11.0002L16.7681 10.3461L11.4585 15.6557V4.5835H10.5418Z' fill='%230B3952'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+footer .family_site .list {
+    display: none;/*오픈전에 닫아두기*/
+    position: absolute;/*button*/
+    left: 0;
+    top: 41px;
+    color: #0B3952;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1.3333em 1.6667em;
+
+}
+footer .family_site .list ul li a {
+    display: block;
+    line-height: 2;
+}
+/******************fmaily_site가 열렸을때*******************/
+footer .family_site.open button::after {
+    transform: rotate( 180deg );
+}
+footer .f_nav {
+    padding: 1em 2em 7.7059em 2em;
+}
+footer .f_nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.9em;
+}
+footer .f_nav ul li {
+    position: relative;/*li::afet*/
+}
+footer .f_nav ul li::after {
+    content: "";
+    position: absolute;/*li*/
+    right: -1.4118em;
+    top: 0.5882em;
+    width: 0.1765em;
+    height: 0.1765em;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.5);  
+}
+footer .f_nav ul li:last-child::after {
+    display: none;
+}
+footer .f_nav ul li.privacy {
+    color: #fff;
+    font-weight: 500;
+}
+footer .copyright {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width:768px) {
+    footer {
+        background-color: #0B3952;
+        color: rgba(255, 255, 255, 0.5);
+        padding: 4em 0 13.8235em 0;
+        position: relative;/*top*/
+        margin-bottom: 100px;
+    }
+    footer .top {
+        position: absolute;/*footer*/
+        right: 10px;
+        top: 0;
+        transform: translateY(-30%);
+        /*나자신의 높이의 절반을 상단으로*/
+    }
+    footer .top button { /*제이쿼리 작동을 위한 버튼*/
+        width: 3.3em;
+        height: 3.3em;
+        background-color: var(--main-color);
+        color: transparent;
+    }
+    footer .top button::before {
+        content: "";
+        position: absolute;/*footer*/
+        left: 1.68em;
+        top: 3.5em;
+        width: 3.2059em;
+        height:3.2059em;
+        background-image: url("data:image/svg+xml,%3Csvg width='63' height='63' viewBox='0 0 63 63' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.2251 14.1752V12.0752H47.7751V14.1752H15.2251ZM30.4501 50.9252V24.8268L22.247 33.0299L20.7173 31.5002L31.5001 20.7174L42.2829 31.5002L40.7532 33.0299L32.5501 24.8268V50.9252H30.4501Z' fill='white'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    footer .wrapper {
+        align-items: center;
+    }
+    footer .family_site {
+        max-width: 450px;
+        margin: 0 auto 3.2em auto;
+        position: relative;
+    }
+    footer .family_site button {
+        color: #0B3952;
+        background-color: #fff;
+        padding: 0.5294em 2.7em 0.5294em 1.3529em;
+        position: relative;/*button::after*/
+    }
+    footer .family_site button::after {
+        content: "";
+        position: absolute;/*button*/
+        right: 9px;
+        top: 9px;
+        width: 1.2941em;
+        height: 1.2941em;
+        background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.5418 4.5835V15.6557L5.23227 10.3461L4.5835 11.0002L11.0002 17.4168L17.4168 11.0002L16.7681 10.3461L11.4585 15.6557V4.5835H10.5418Z' fill='%230B3952'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    footer .family_site .list {
+        display: none;/*오픈전에 닫아두기*/
+        position: absolute;/*button*/
+        left: 0;
+        top: 41px;
+        color: #0B3952;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 1.3333em 1.6667em;
+    
+    }
+    footer .family_site .list ul li a {
+        display: block;
+        line-height: 2;
+    }
+    /******************fmaily_site가 열렸을때*******************/
+    footer .family_site.open button::after {
+        transform: rotate( 180deg );
+    }
+    footer .f_nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em 9.412em;
+    }
+    footer .f_nav ul li {
+        position: relative;/*li::afet*/
+    }
+    footer .f_nav ul li::after {
+        content: "";
+        position: absolute;/*li*/
+        right: -1.4118em;
+        top: 0.5882em;
+        width: 0.1765em;
+        height: 0.1765em;
+        border-radius: 50px;
+        background-color: rgba(255, 255, 255, 0.5);  
+    }
+    footer .f_nav ul li:last-child::after {
+        display: none;
+    }
+    footer .f_nav ul li.privacy {
+        color: #fff;
+        font-weight: 500;
+    }
+    footer .copyright {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+}/*@media**/
