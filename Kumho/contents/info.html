@@ -30,8 +30,9 @@
                 <div class="gnb_wrap">
                     <ul class="depth1">
                         <!--pc버전에서 마우스를 오버하면 over 클래스추가,
-                            모바일 버전에서 클릭하면 open 클래스 추가 -->
-                        <li>
+                            모바일 버전에서 클릭하면 open 클래스 추가
+                            서브페이지에서 현재 열려있는 선택된 메뉴 active -->
+                        <li class="active">
                             <a href="contentsinfo.html"><span>회사소개</span></a>
                             <ul class="depth2">
                                 <li><a href="info.html"><span>기업정보</span></a></li>
@@ -45,7 +46,7 @@
                         <li>
                             <a href="info.html"><span>ESG</span></a>
                             <ul class="depth2">
-                                <li><a href="esg01.html"><span>윤리경영</span></a></li>
+                                <li class="on"><a href="esg01.html"><span>윤리경영</span></a></li>
                                 <li><a href="esg02.html"><span>품질경영</span></a></li>
                                 <li><a href="esg03.html"><span>안전경영</span></a></li>
                                 <li><a href="esg04.html"><span>환경경영</span></a></li>
@@ -106,7 +107,70 @@
             </div><!--global-->
         </header>
         <main class="container">
-            
+                <div class="sub_visual bg2">
+                    <!--1차메뉴명 & 설명(bg1,bg2....)-->
+                    <div class="sub_txt">
+                        <div class="wrapper">
+                            <!-------1차 메뉴명&설명--------->
+                            <strong>회사소개</strong>
+                            <span>THINK OF THE PEOPLE AND ANTURE</span>
+                        </div>
+                    </div><!--sub_txt-->
+                    <nav class="snb"><!--sub navigation bar-->
+                        <ul>
+                            <!-- 현재선택된 메뉴 : active -->
+                            <li class="active"><a href="info.html"><span>기업정보</span></a></li>
+                            <li><a href="ceo.html"><span>CEO인사말</span></a></li>
+                            <li><a href="history.html"><span>연혁</span></a></li>
+                            <li><a href="org.html"><span>조직도</span></a></li>
+                            <li><a href="tech.html"><span>기술혁신</span></a></li>
+                            <li><a href="map.html"><span>찾아오시는길</span></a></li>
+                        </ul>
+                    </nav>
+                </div><!--sub_visual-->
+                <div class="contents" id="skip_content"><!--skip 에서 본문 바로가기 클릭하면 이동-->
+                    <div class="sub_tit">
+                        <div class="breadcrumb">
+                            <ol>
+                                <li class="home">home</li>
+                                <li><a href="info.html">회사소개</a></li>
+                                <li class="curr"><span>기업정보</span></li>
+                            </ol>
+                        </div>
+                    </div><!--sub_tit-->
+                </div>
+                <!--각 페이지별 콘텐츠 시작 각각 이름이 중복되면 안됨
+                클래스명을 'cnt_파일명'으로 함-->
+                <div class="cnt_info">
+                    <div class="wrapper">
+                        <p>세 계 속의 한국,
+                            한국 속의 세계를 건설하기위해
+                            새 천년의 초일류기업으로
+                            거듭 태어나겠습니다.
+                            금호건설은 1967년 창립한 이후 도심공항터미널,
+                            아셈 컴벤션 센터, 인천국제공항, 천안-논산간 고속도로, 인천 LNG 생산기지 저장탱크 등을 건설하면서 국가 기반시설 설립을 주도해 왔으며, 2022년 3월 국내 하수처리시설 건설 기술인 KIDEA 공법으로 첫 장영실 상을 수상하였습니다. 또한 제1회 대한민국 리모델링 대상의 특별상을 수상, 2004년 한국건축문화대상 수상, 2007년 한국의 경영대상 생산성 대상 수상 등 국내 건설업계 최고의 기술력을 자랑하고 있는 기업입니다.
+                            
+                            금호건설은 2003년 5월부터 이웃과 인간과의 어울림, 자연과의 어울림, 첨단 생활과의 어울림을 의미하는 아파트 브랜드 '어울림'으로 많은 사랑을 받았습니다. 그동안 축적한 경영 및 건설 노하우를 바탕으로 지난 2024년 5월 금호건설의 새로운 얼굴이 될 주거
+                            브랜드인 '아테라'(ARTERA)를 론칭했습니다.
+                            '아테라'는 예술(ART)과 대지(TERRA)
+                            그리고 시대(ERA)를 조합한 이름으로
+                            삶의 공간인 집을 '대지 위의 예술'로
+                            만들겠다는, 아름다움에 대한 금호의
+                            남다른 철학을 반영했습니다. 아테라
+                            는 오늘날의 시대정신, 앞선 문화를
+                            반영한 주거 공간으로 고객에게
+                            아름다운 집을 선사할 것입니다.
+                            
+                            금호건설은 2004년 전경련 주관 윤리경영 TOP10 선정, 2005년 한국 윤리경영대상 수상, 2007년 한국사회공헌 대상 수상 등 윤리경영과 관련한 각종 대외수상 실적을 지닌 모범 기업이기도 합니다.
+                            
+                            금호건설은 사회봉사활동영역에서부터 문화예술 지원 활동, 환경 정화 운동 등 세분야로 나눠 매년 700여건 이상의 봉사활동을 펼치며 소외 지역·계층에 힘이 되고자 하는 노력을 지속하고 있습니다.
+                            
+                            금호건설은 안정적 수익모델의 다각화를 통한 수익성 극대화, 안정적 재무구조 정착, 인재 발굴 및 업무 프로세스 개선 등 내실을 강화하는 전략을 통한 '건설업계 영업이익률 최고 기업' 그리고 지속적인 사회 공헌활동을 통해 사회에 기여하는 기업이 되기 위한 노력을 기울이며 끊임없이 정진해
+                            나갈 것입니다.</p>
+                    </div>
+                </div>
+                <!--각 페이지별 콘텐츠 종료-->
+            </div>
         </main>
         <footer>
             <aside class="top"><button>위로가기</button></aside>
@@ -115,7 +179,7 @@
                 <div class="family_site">
                     <button title="열기버튼">그룹사 바로가기</button>
                     <div class="list">
-                        <ul>
+                        <ul><!--현재 선택된 메뉴 : active-->
                             <li><a href="#n">금호문화재단</a></li>
                             <li><a href="#n">아시아나항공</a></li>
                             <li><a href="#n">아시아나IDT</a></li>
