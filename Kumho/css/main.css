@@ -301,7 +301,7 @@
 .biz .list ul li a .txt p {
    font-size: 22px;
    font-weight: 700;
-   opacity: 50; /* display: block; */
+   
    transition: 0.5s;/*투명도 바뀔예정*/
 }
 
@@ -322,14 +322,14 @@
                opacity: 1.0;
             }
             .biz .list.over li.active a::after {
-               opacity: 100;
+               opacity: 100%;
             }
             .biz .list.over ul li.active a .txt p {
                font-size: 2.4706rem;
                font-weight: 700;  
             }
             .biz .list.over ul li.active a .txt span {
-               opacity: 100;
+               opacity: 100%;
             }
             .biz .list.over ul li.active a .txt {
                bottom: 1.5em; /*부드럽게하기위해 span이없다고 생각하고 바텀주기*/
@@ -407,7 +407,7 @@
             .biz .list ul li a .txt p {
                font-size: 22px;
                font-weight: 700;
-               opacity: 50; /* display: block; */
+               opacity: 50%; /* display: block; */
                transition: 0.5s;/*투명도 바뀔예정*/
                display: none; 
             }
@@ -731,10 +731,10 @@
    }
    .service .list ul li a::before {
       transform: translateX(-50%);
-      left: 20%;
+      left: 30%;
       top: 1.1176em;
-      width: 3.1176em;
-      height: 3.7059em;
+      width: 2.5em;
+      height: 2.5em;
      
       background-repeat: no-repeat;
       background-size: contain;/*아이콘*/
