@@ -7,15 +7,105 @@
     <script src="js/swiper-bundle.min.js"></script>
 
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/main.js"></script>
-    <link rel="stylesheet" href="css/main.css">
+    <script src="js/common.js?v=2501071217"></script>
+    <script src="js/main.js?v=2501071217"></script>
+    <link rel="stylesheet" href="css/main.css?v=2501071217">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <title>금호건설</title>
 </head>
 <body>
+    <div class="skipnav">
+        <a class="cnt" href="#skip_content">본문바로가기</a>
+        <a class="menu" href="#skip_nav">주메뉴바로가기</a>
+        <!-- 내부링크 href="#skip_nav" 라고 주면 id="skip_nav"로 되어있는 요소로 이동 (클릭했을때) -->
+    </div>
     <div id="wrap">
-        <header></header>
+        <!-- 상단에 고정될때 fixed - 아래로 스크롤 해서 사라질때 scroll_down 클래스 추가  
+             pc버전에서 메뉴에 마우스를 올리면 menu_pc 클래스 추가 
+             모바일버전에서 메뉴를 열면 menu_mo 클래스 추가 -->
+        <header>
+            <h1 class="logo"><a href="index.html">금호건설</a></h1>
+            <nav class="gnb" id="skip_nav">
+                <button class="gnb_open">메뉴열기</button>
+                <div class="gnb_wrap">
+                    <ul class="depth1">
+                        <!-- pc버전에서 마우스를 오버하면 over 클래스 추가
+                             모바일 버전에서 클릭하면 open 클래스 추가 -->
+                        <li>
+                            <a href="contents/info.html"><span>회사소개</span></a>
+                            <ul class="depth2">
+                                <li><a href="contents/info.html"><span>기업정보</span></a></li>
+                                <li><a href="contents/ceo.html"><span>CEO인사말</span></a></li>
+                                <li><a href="contents/history.html"><span>연혁</span></a></li>
+                                <li><a href="contents/org.html"><span>조직도</span></a></li>
+                                <li><a href="contents/tech.html"><span>기술혁신</span></a></li>
+                                <li><a href="contents/map.html"><span>찾아오시는길</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contents/esg01.html"><span>ESG</span></a>
+                            <ul class="depth2">
+                                <li><a href="contents/esg01.html"><span>윤리경영</span></a></li>
+                                <li><a href="contents/esg02.html"><span>품질경영</span></a></li>
+                                <li><a href="contents/esg03.html"><span>안전경영</span></a></li>
+                                <li><a href="contents/esg04.html"><span>환경경영</span></a></li>
+                                <li><a href="contents/esg05.html"><span>상생경영</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contents/biz01.html"><span>사업분야</span></a>
+                            <ul class="depth2">
+                                <li><a href="contents/biz01.html"><span>건축사업</span></a></li>
+                                <li><a href="contents/biz02.html"><span>토목사업</span></a></li>
+                                <li><a href="contents/biz03.html"><span>주택사업</span></a></li>
+                                <li><a href="contents/biz04.html"><span>플랜트/환경사업</span></a></li>
+                                <li><a href="contents/biz05.html"><span>사업실적검색</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contents/ir01.html"><span>IR</span></a>
+                            <ul class="depth2">
+                                <li><a href="contents/ir01.html"><span>기업지배구조</span></a></li>
+                                <li><a href="contents/ir02.html"><span>경영정보</span></a></li>
+                                <li><a href="contents/ir03.html"><span>재무정보</span></a></li>
+                                <li><a href="contents/ir04.html"><span>주가정보</span></a></li>
+                                <li><a href="contents/ir05.html"><span>IR Contact</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contents/recruit02.html"><span>인재채용</span></a>
+                            <ul class="depth2">
+                                <li><a href="https://kumhoenc.recruiter.co.kr/appsite/company/index" target="_blank" title="새창열기"><span>금호채용</span></a></li>
+                                <li><a href="contents/recruit02.html"><span>직무가이드</span></a></li>
+                                <li><a href="contents/recruit03.html"><span>채용/면접 Tip</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contents/pr01.html"><span>홍보센터</span></a>
+                            <ul class="depth2">
+                                <li><a href="contents/pr01.html"><span>금호뉴스</span></a></li>
+                                <li><a href="contents/pr02.html"><span>분양뉴스</span></a></li>
+                                <li><a href="contents/pr03.html"><span>CI/BI</span></a></li>
+                                <li><a href="contents/pr04.html"><span>PR갤러리</span></a></li>
+                                <li><a href="contents/pr05.html"><span>금호역사관</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="gnb_close">메뉴닫기</button>
+            </nav>
+            <!-- global을 클릭하면 open클래스 추가 -->
+            <div class="global">
+                <button title="언어선택 열기 버튼">KOR</button>
+                <!-- 하나의 버튼이 열기/닫기 기능 -->
+                <div class="list">
+                    <ul>
+                        <li class="active"><a href="#n">KOR</a></li>
+                        <li><a href="#n">ENG</a></li>
+                    </ul>
+                </div>
+            </div><!--global-->
+        </header>
         <main class="container">
             <section class="visual">
                 <h2>팝업</h2>
@@ -49,10 +139,196 @@
                             </div><!--visual_txt-->
                         </li>
                     </ul>
+                </div><!--swiper-->
+                <div class="ctrl_wrap">
+                    <div class="paging"></div><!--현재팝업번호/전체팝업수-->
+                    <button class="stop">일시정지</button>
+                    <button class="play">다시시작</button>
                 </div>
             </section><!--visual-->
+            <section class="biz" id="skip_content">
+                <div class="tit">
+                    <div class="wrapper">
+                        <h2><span>BUSINESS</span></h2>
+                        <p>세계로 뻗어가는 <br>건설 한류의 중심에 금호건설이 있습니다.</p>
+                    </div><!--wrapper-->
+                </div><!--tit-->
+                <!-- li에 마우스를 오버하면 list에 over 클래스를 추가 -->
+                <div class="list ">
+                    <ul>
+                        <!-- 마우스를 오버한 li에는 active 클래스를 추가 -->
+                        <li class="bg1 ">
+                            <a href="#n">
+                                <div class="txt">
+                                    <h3>건축사업</h3>
+                                    <strong>ARCHITECTURE</strong>
+                                    <p>빌딩 개발에서 도시개발로 이어지는 금호건설의 건축사업</p>
+                                </div><!--txt-->
+                            </a>
+                        </li>
+                        <li class="bg2 ">
+                            <a href="#n">
+                                <div class="txt">
+                                    <h3>토목사업</h3>
+                                    <strong>CIVIL</strong>
+                                    <p>도시와 국토를 잇는 공간 예술, 금호건설의 토목사업</p>
+                                </div><!--txt-->
+                            </a>
+                        </li>
+                        <li class="bg3">
+                            <a href="#n">
+                                <div class="txt">
+                                    <h3>주택사업</h3>
+                                    <strong>HOUSING</strong>
+                                    <p>전국 곳곳에서 신주거단지 조성으로 고객의 높은 신뢰를 얻어온 금호</p>
+                                </div><!--txt-->
+                            </a>
+                        </li>
+                        <li class="bg4">
+                            <a href="#n">
+                                <div class="txt">
+                                    <h3>플랜트/환경산업</h3>
+                                    <strong>PLANT <br>ENVIRONMENT</strong>
+                                    <p>산업발전의 기틀을 다지는 환경경영을 실천하는 환경/플랜트산업</p>
+                                </div><!--txt-->
+                            </a>
+                        </li>
+                    </ul>
+                </div><!--list-->
+            </section>
+            <section class="news">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2><span>NEWS</span></h2>
+                        <p>고객과 함께 아름다운 <br>
+                            미래로 비상하는 금호건설입니다.</p>
+                    </div><!--tit-->
+                    <div class="list">
+                        <div class="swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024.12.19</span>
+                                        <h3>금호건설, 광명시에 3천148억원 규모 공공주택 건설</h3>
+                                        <p>금호건설이 경기도 광명시 '광명학온 공공주택지구'에 통합공공임대주택 1천313가구를 공급한다. 금호건설은 19일 경기주택공사(GH)가 발주한 '광명학온 S2 S3블록 민간 참여 공공주택사업'의 우선협상대상자로 선정됐다며 이같이 밝혔다.</p>
+                                        <div class="photo"><img src="images/main/news01.jpg" alt=""></div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024.12.16</span>
+                                        <h3>금호건설, 종로구청·청암지역아동센터에 사랑의 쌀 기부</h3>
+                                        <p>금호건설(002990)은 지역사회의 어려운 이웃들에게 따뜻한 마음을 전하고자 사랑의 쌀 기부행사를 진행했다고 16일 밝혔다. 이번 기부 행사는 정문헌 종로구청장, 조완석 금호건설 대표이사 등이 참석한 가운데 진행됐다. 기부된 쌀은 종로구청과 청암지역아동센터를 통해 지역 내 도움이 필요한 기초수급 가구와 저소득층 아동 가구에 전달될 예정이다.</p>
+                                        <div class="photo"><img src="images/main/news02.jpg" alt=""></div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024.12.02</span>
+                                        <h3>금호건설, 506억원 규모 '공주 천연가스 공급시설 공사' 수주</h3>
+                                        <p>금호건설은 506억원 규모의 '공주 복합발전소 천연가스 공급시설 건설공사'를 수주했다고 2일 밝혔다.  이는 한국가스공사에서 발주한 것으로 충남 공주시와 부여군 일대에 총 길이 27.61㎞에 달하는 액화천연가스(LNG) 공급 배관과 공급관리소를 건설하는 공사다. 총 공사금액은 632억원이며, 이 중 금호건설이 수주한 금액은 약 505억6천만원이다. 공사는 이달 말 착공해 천연가스발전소의 시운전이 시작되는 2026년 7월 완료될 예정이다.</p>
+                                        <div class="photo"><img src="images/main/news03.jpg" alt=""></div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024.11.18</span>
+                                        <h3>금호건설, 수처리 기술로 하수처리장 개량 공사 진행</h3>
+                                        <p>금호건설은 자체 개발한 수(水) 처리 기술로 기존 제주공공하수처리장을 중단하지 않고 시설용량까지 증대하는 고난도 공사가 전국 지방자치단체의 관심을 모으고 있다고 18일 밝혔다. 제주공공하수처리장은 제주도 하수처리장 8곳 중 최대 규모로 전체 하수처리량의 절반 이상인 53%를 차지하고 있다.</p>
+                                        <div class="photo"><img src="images/main/news04.jpg" alt=""></div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024.11.17</span>
+                                        <h3>금호건설, 'GK-SBR공법' 녹색기술 인증 획득</h3>
+                                        <p>금호건설이 자체 개발한 하수고도처리기술 'GK-SBR공법'이 환경부의 인·검증에 이어 녹색기술 인증까지 획득했다. 금호건설은 경상북도 경주시와 공동으로 개발한 'GK-SBR공법(연속 회분식 하수고도처리기술)'이 환경부로부터 녹색기술 인증(제GT-24-02070호)을 받았다고 17일 밝혔다. 녹색기술 인증은 국가가 온실가스와 오염물질 배출을 줄이는 친환경 기술을 공식적으로 인정하는 제도다. 앞서 'GK-SBR공법'은 환경부로부터 환경신기술 인증(제615호)과 검증(제269호)을 받은 바 있다.</p>
+                                        <div class="photo"><img src="images/main/news05.jpg" alt=""></div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <span class="date">2024.11.07</span>
+                                        <h3>금호건설, 임직원·협력사 수험생 자녀에 격려 선물 전달</h3>
+                                        <p>금호건설은 일주일 앞으로 다가온 대학수학능력시험을 맞아 임직원 및 협력사 직원 수험생 자녀 155명에게 수능 격려 편지와 응원 선물 상자를 전달했다고 7일 밝혔다. 조완석 금호건설 사장은 편지를 통해 “긴 시간 최선을 다해온 여러분을 진심으로 응원한다” 며 ”마지막까지 최상의 컨디션으로 원하는 바 모두 이룰 수 있기를 기원한다”고 응원의 메시지를 보냈다.</p>
+                                        <div class="photo"><img src="images/main/news06.jpg" alt=""></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!--swiper-->
+                        <div class="ctrl_wrap">
+                            <div class="scroll"></div>
+                            <div class="more"><a href="#n"><span>VIEW</span> MORE</a></div>
+                        </div>
+                    </div><!--list-->
+                </div>
+            </section>
+            <section class="service">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>서비스 바로가기</h2>
+                        <p>새로운 미래를 향한<br>
+                            꿈을 이뤄나가는 금호건설입니다.</p>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li class="service01">
+                                <a href="#n">
+                                    <h3>지속가능경영</h3>
+                                    <p>윤리경영으로 아름다운 세상 건설</p>
+                                </a>
+                            </li>
+                            <li class="service02">
+                                <a href="https://www.artera.co.kr/main" target="_blank" title="새창열기">
+                                    <h3>ARTERA</h3>
+                                    <p>당신의 삶을 비추는 아름다움</p>
+                                </a>
+                            </li>
+                            <li class="service03">
+                                <a href="https://www.youtube.com/@kumhoenc" target="_blank" title="새창열기">
+                                    <h3>금호건설TV</h3>
+                                    <p>금호건설 공식 유튜브 채널</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer></footer>
+        <footer>
+            <aside class="top"><button>위로가기</button></aside>
+            <div class="wrapper">
+                <!-- family_site가 열리면 open 클래스가 추가 -->
+                <div class="family_site ">
+                    <button title="열기버튼">그룹사 바로가기</button>
+                    <div class="list">
+                        <ul>
+                            <li><a href="#n">금호고속</a></li>
+                            <li><a href="#n">U·square</a></li>
+                            <li><a href="#n">금호문화재단</a></li>
+                            <li><a href="#n">아시아나항공</a></li>
+                            <li><a href="#n">아시아나IDT</a></li>
+                            <li><a href="#n">에어부산</a></li>
+                            <li><a href="#n">아시아나에어포트</a></li>
+                            <li><a href="#n">아시아나세이버</a></li>
+                            <li><a href="#n">에어서울</a></li>
+                        </ul>
+                    </div>
+                </div><!--family_site-->
+                <div class="inner">
+                    <div class="f_nav">
+                        <ul>
+                            <li><a href="#n">제보실</a></li>
+                            <li><a href="#n">고객센터</a></li>
+                            <li><a href="#n">OB사랑방</a></li>
+                            <li><a href="#n">Contact us</a></li>
+                            <li class="privacy"><a href="#n">개인정보처리방침</a></li>
+                        </ul>
+                    </div><!--f_nav-->
+                    <div class="copyright">ⓒ KUMHO E&C, All Rights Reserved.</div>
+                </div><!--inner-->
+            </div><!--wrapper-->
+        </footer>
     </div>
 </body>
 </html>

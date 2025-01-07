@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <script src="js/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- AOS를 작동시키기 위한 css와 js파일 -->
 
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
@@ -144,15 +146,15 @@
                     <button class="play">다시시작</button>
                 </div>
             </section><!--visual-->
-            <section class="biz" id="skip_content"><!--skip_nav 따라내려옴-->
+            <section class="biz" id="skip_content" data-aos="fade-up"><!--skip_nav 따라내려옴-->
                 <div class="tit">
                     <div class="wrapper">
-                        <h2><span>BUSINESS</span></h2>
-                        <p>세계로 뻗어가는<br>건설 한류의 중심에 금호건설이 있습니다. </p>
+                        <h2 data-aos="fade-up"><span>BUSINESS</span></h2>
+                        <p data-aos="fade-up">세계로 뻗어가는<br>건설 한류의 중심에 금호건설이 있습니다. </p>
                     </div><!--wrapper-->
                 </div><!--tit-->
                 <!--li에 마우스를 오버하면 list애 over클래스를 추가-->
-                <div class="list over">
+                <div class="list">
                     <ul>
                         <!--마우스를 오버한 li에는 active 클래스를 추가-->
                         <li class="bg1 active">
@@ -196,11 +198,11 @@
             </section>
             <section class="news">
                 <div class="wrapper">
-                    <div class="tit">
-                        <h2><span>NEWS</span></h2>
-                        <p>고객과 함께 아름다운 미래로<br>비상하는 아름다운 기업이 되겠습니다.</p>
+                    <div class="tit" data-aos="fade-up">
+                        <h2 data-aos="fade-up"><span>NEWS</span></h2>
+                        <p data-aos="fade-up">고객과 함께 아름다운 미래로<br>비상하는 아름다운 기업이 되겠습니다.</p>
                     </div><!--.news .tit-->
-                    <div class="list">
+                    <div class="list" data-aos="fade-up">
                         <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
                             <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
                                 <li class="swiper-slide">
@@ -279,32 +281,66 @@
                         한국속의 세계를 건설하기 위해<br> 
                         새천년 초일류 기업으로 거듭 태어나겠습니다.</p>
                     </div>
+                    <div class="list">
+                        <ul>
+                            <li class="service01" data-aos="fade-up">
+                                <a href="#n">
+                                    <h3>지속가능 경영 보고서</h3>
+                                    <p>Download</p>
+                                </a>
+                            </li>
+                            <li class="service02" data-aos="fade-up" data-aos-delay="300">
+                                <a href="https://www.artera.co.kr/" target="_blank" title="새창열기">
+                                    <h3>ATREA</h3>
+                                    <p>More</p>
+                                </a>
+                            </li>
+                            <li class="service03" data-aos="fade-up" data-aos-delay="600">
+                                <a href="https://www.youtube.com/@kumhoenc" target="_blank" title="새창열기">
+                                    <h3>금호건설 YouTube</h3>
+                                    <p>YouTube</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--list-->
                 </div><!--wrapper-->
-                <div class="list">
-                    <ul>
-                        <li class="service01">
-                            <a href="#n">
-                                <h3>지속가능 경영 보고서</h3>
-                                <p>Download</p>
-                            </a>
-                        </li>
-                        <li class="service02">
-                            <a href="https://www.artera.co.kr/" target="_blank" title="새창열기">
-                                <h3>ATREA</h3>
-                                <p>More</p>
-                            </a>
-                        </li>
-                        <li class="service03">
-                            <a href="https://www.youtube.com/@kumhoenc" target="_blank" title="새창열기">
-                                <h3>금호건설 YouTube</h3>
-                                <p>YouTube</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </section>
         </main>
-        <footer></footer>
+        <footer>
+            <aside class="top"><button>위로가기</button></aside>
+            <div class="wrapper">
+                <!--family_site가 열리면 open클래스 추가-->
+                <div class="family_site">
+                    <button title="열기버튼">그룹사 바로가기</button>
+                    <div class="list">
+                        <ul>
+                            <li><a href="#n">금호문화재단</a></li>
+                            <li><a href="#n">아시아나항공</a></li>
+                            <li><a href="#n">아시아나IDT</a></li>
+                            <li><a href="#n">아시아나에어포트</a></li>
+                            <li><a href="#n">아시아나세이버</a></li>
+                            <li><a href="#n">에어서울</a></li>
+                            <li><a href="#n">U-sqare</a></li>
+                            <li><a href="#n">에어부산</a></li>
+                            <li><a href="#n">금호고속</a></li>
+                        </ul>
+                    </div><!--list-->
+                    <div class="inner">
+                        <div class="f_nav">
+                            <ul>
+                                <li><a href="#n">제보실</a></li>
+                                <li><a href="#n">고객센터</a></li>
+                                <li><a href="#n">OB사랑방</a></li>
+                                <li><a href="#n">Contact us</a></li>
+                                <li class="privacy"><a href="#N">개인정보처리방침</a></li>
+                            </ul>
+                        </div><!--f_nav-->
+                        <div class="logo_footer">금호건설로고</div>
+                        <div class="copyright">ⓒ COPYRIGHT KUMHOENC</div>
+                    </div><!--inner-->
+                </div><!--family_site-->
+            </div><!--wrapper-->
+        </footer>
     </div>
 </body>
 </html>

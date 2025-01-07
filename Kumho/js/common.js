@@ -127,6 +127,7 @@ $(document).ready(function(){
         }
     })
      /******************* 모바일 2차메뉴 열고닫기 (시작) ********************/
+     
      /******************* 모바일 메뉴 열고닫기 (시작) ********************/
      //1. header .gnb .gnb_open >> 클릭하면 열리고 header에 meun_mo를 줌
      //2. header .gnbgnb_close >> 클릭하면 닫힘 header에 meun_mo 삭제
@@ -138,6 +139,36 @@ $(document).ready(function(){
      })
 
      /******************* 모바일 메뉴 열고닫기 (종료) ********************/
+     /******************* 위로가기 버튼을 누르면 상단으로 스크롤 (시작) ********************/
+     //1. footer .top button 를 클릭했을떄
+     $('footer .top button').on('click', function(){
+         $('html, body').animate({
+            scrollTop: 0,
+         }, 500)
+
+     })            
+     /******************* 위로가기 버튼을 누르면 상단으로 스크롤 (종료) ********************/
+     /************************** family_site클릭해서 오픈 (시작) ************************/
+     //footer .family_site button 클릭했을때
+     //footer .family_site 에 open 클래스추가
+     //button .family_site .list 열고 닫기 slideUp slodDown
+     //현재 버튼이 열려있는지 닫혀있는지 구분 >> open클래스 존재의 유무로 판단
+
+     $('footer .family_site button').on('click', function(){
+        if($(this).parent().hasClass('open') == true){ //open클래스가 존재할때
+           // console.log('open 있음')
+           $(this).parent().removeClass('open')
+           $(this).next().slideUp()
+           $(this).attr('title', '열기버튼')
+        }else{//자이제 닫아볼까 open을 없앨때(여는기능)
+           // console.log('open 없음')
+           $(this).parent().addClass('open')
+           $(this).next().slideDown()
+           $(this).attr('title', '닫기버튼')
+        }
+     })
+
+     /************************* family_site클릭해서 오픈 (종료) *************************/
 
     
     

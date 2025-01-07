@@ -6,7 +6,7 @@
     font-family: "Montserrat","NanumSquareNeo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* sans-serif 고딕서체 */
     /*******먼저 선언한 폰트를 사용, 먼저 선언한 폰트가 한글이 지원X - 그럼 자동으로 두번째 폰트로 표시******/
     font-size: var(--base-font-size); /********************css 변수************************/
-    font-weight: 400;
+    font-weight: 300;
     color: #555;
     line-height: 1.4; /* 배수 - 글자크기에 몇배 */
     word-break: keep-all; /* 단어별로(여백기준) 줄바꿈 */
