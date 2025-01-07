@@ -4,7 +4,48 @@
 @import url(font.css);
 @import url(common.css);
 @import url(layout.css); 
-@import url(contents.css);/**/
+@import url(contents.css);
+
+/*상단 메뉴가 미리 선택되어있는 스타일 */
+@media screen and (min-width:1001px) {
+    header .gnb_wrap ul.depth1 > li.active > a {
+        position: relative;/*after*/
+    }
+    header.menu_pc .gnb .gnb_wrap ul.depth1 > li.active > a {
+        color: var(--main-color);
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.active > a::after {
+        content: "";
+        position: absolute;/**/
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 5px;
+        background-color: var(--main-color);
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.active > a > span {
+        color: var(--main-color);
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.active.over > ul.depth2 > li.active > a > span::after {
+        content: "";
+        position: absolute;
+        right: 0.36em;
+        top: 1.7em;
+        height:0.4em;
+        width: 0.4em;
+        background-color: var(--main-color);
+        border-radius: 50%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    header .gnb .gnb_wrap ul.depth2 > li.active.over > ul.depth2 > li.active > a {
+        font-weight: 700;
+        text-decoration: underline;
+        color: var(--main-color);
+    }
+}   
 
 .sub_visual {
     position: relative;/*.sub_visual .snb*/
@@ -232,3 +273,4 @@
 .sub_contents {
     min-height: 300px;
 }
+
