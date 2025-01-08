@@ -167,7 +167,7 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
 
                 }
                 header .global .list ul li.active a {
-                   
+                   display: none;
                 }
                 /***************언어선택열렸을때******************/
                 /*header .global.open button::after,*/ 
@@ -402,6 +402,11 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                     font-weight: 700;
                    
                 }
+                header .global .list ul li a {
+                    display: block;
+
+                }
+       
                 header .global .list ul li.active a::after {
                     content: "";
                     position: absolute;
