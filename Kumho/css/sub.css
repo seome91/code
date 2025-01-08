@@ -6,17 +6,20 @@
 @import url(layout.css); 
 @import url(contents.css);
 
-/*상단 메뉴가 미리 선택되어있는 스타일 */
-@media screen and (min-width:1001px) {
-    header .gnb_wrap ul.depth1 > li.active > a {
-        position: relative;/*after*/
+
+
+
+/* 상단 메뉴가 미리 선택되어 있는 스타일 */
+@media screen and (min-width:1001px){ /* 1001px 이상일때만  */
+    header .gnb .gnb_wrap ul.depth1 > li.active > a {
+        position: relative; /* after 정렬의 기준 */
     }
     header.menu_pc .gnb .gnb_wrap ul.depth1 > li.active > a {
         color: var(--main-color);
     }
     header .gnb .gnb_wrap ul.depth1 > li.active > a::after {
         content: "";
-        position: absolute;/**/
+        position: absolute;
         left: 0;
         bottom: -2px;
         width: 100%;
@@ -24,40 +27,43 @@
         background-color: var(--main-color);
     }
     header .gnb .gnb_wrap ul.depth1 > li.active > a > span {
-        color: var(--main-color);
+        position: relative; /* after 정렬의 기준 */
     }
-    header .gnb .gnb_wrap ul.depth1 > li.over > ul.depth2 > li.active > a > span::after {
+    header .gnb .gnb_wrap ul.depth1 > li.active > a > span::after {
         content: "";
         position: absolute;
-        right: 0.36em;
-        top: 1.7em;
-        height:0.4em;
-        width: 0.4em;
-        background-color: var(--main-color);
+        right: -0.25em;
+        top: -0.25em;
+        width: 0.2em;
+        height: 0.2em;
         border-radius: 50%;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-
-    header .gnb .gnb_wrap ul.depth1 > li.over > ul.depth2 > li.active > a {
-        font-weight: 700;
-        text-decoration: underline;
-        color: var(--main-color);
-    }
-    header .gnb .gnb_wrap ul.depth1 > li.active > a::after {
-        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 13.5461L7.927 9.47286C7.7885 9.33452 7.61441 9.26369 7.40475 9.26036C7.19525 9.25719 7.018 9.32802 6.873 9.47286C6.72816 9.61786 6.65575 9.79352 6.65575 9.99986C6.65575 10.2062 6.72816 10.3819 6.873 10.5269L11.3672 15.0211C11.4609 15.1146 11.5597 15.1806 11.6635 15.2191C11.7673 15.2576 11.8795 15.2769 12 15.2769C12.1205 15.2769 12.2327 15.2576 12.3365 15.2191C12.4403 15.1806 12.5391 15.1146 12.6327 15.0211L17.127 10.5269C17.2653 10.3884 17.3362 10.2143 17.3395 10.0046C17.3427 9.79511 17.2718 9.61786 17.127 9.47286C16.982 9.32802 16.8063 9.25561 16.6 9.25561C16.3937 9.25561 16.218 9.32802 16.073 9.47286L12 13.5461Z' fill='%23ED1C24'/%3E%3C/svg%3E%0A");
-        transform: rotate(180deg);
-    }
-    header .gnb .gnb_wrap ul.depth1 > li.active > ul.depth2 {
-        display: block;
+        background-color: var(--main-color);
     }
     header .gnb .gnb_wrap ul.depth1 > li.active > ul.depth2 > li.active > a {
         font-weight: 700;
         text-decoration: underline;
+        color: var(--main-color);
     }
-}   
-
+    header .gnb .gnb_wrap ul.depth1 > li.active.over > ul.depth2 > li.active > a {
+        color: #fff;
+    }
+}/* media */
+@media screen and (max-width:1000px){ /* 1000px 이하일때만 */
+header .gnb .gnb_wrap ul.depth1 > li.active > a {
+    color: var(--main-color);
+    font-weight: 700;
+}
+header .gnb .gnb_wrap ul.depth1 > li.active > a::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 13.5461L16.073 9.47286C16.2115 9.33452 16.3856 9.26369 16.5953 9.26036C16.8048 9.25719 16.982 9.32802 17.127 9.47286C17.2718 9.61786 17.3443 9.79352 17.3443 9.99986C17.3443 10.2062 17.2718 10.3819 17.127 10.5269L12.6328 15.0211C12.5391 15.1146 12.4403 15.1806 12.3365 15.2191C12.2327 15.2576 12.1205 15.2769 12 15.2769C11.8795 15.2769 11.7673 15.2576 11.6635 15.2191C11.5597 15.1806 11.4609 15.1146 11.3673 15.0211L6.873 10.5269C6.73467 10.3884 6.66384 10.2143 6.6605 10.0046C6.65734 9.79511 6.72817 9.61786 6.873 9.47286C7.018 9.32802 7.19367 9.25561 7.4 9.25561C7.60634 9.25561 7.782 9.32802 7.927 9.47286L12 13.5461Z' fill='%23ED1C24'/%3E%3C/svg%3E%0A");
+}
+header .gnb .gnb_wrap ul.depth1 > li.active ul.depth2 {
+    display: block;
+}
+header .gnb .gnb_wrap ul.depth1 > li.active > ul.depth2 > li.active > a {
+    font-weight: 700;
+    text-decoration: underline;
+}
+}/* media */
 .sub_visual {
     position: relative;/*.sub_visual .snb*/
     height: 29.4118em;

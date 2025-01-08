@@ -90,7 +90,7 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                     line-height: var(--header-h);/*header높이*/
                 }
                 header .gnb_wrap ul.depth1:hover > li > a {
-                    color: #1d1d1d;
+                    color:#1d1d1d;
                 }
                 header .gnb_wrap ul.depth1 > li > ul.depth2 {
                     position: absolute;

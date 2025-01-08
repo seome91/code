@@ -32,7 +32,7 @@
                         <!-- pc버전에서 마우스를 오버하면 over 클래스 추가
                              모바일 버전에서 클릭하면 open 클래스 추가 
                              서브페이지에서 현재 선택된 메뉴 active 클래스 추가 -->
-                        <li class="active">
+                        <li class="active open">
                             <a href="info.html"><span>회사소개</span></a>
                             <ul class="depth2">
                                 <li class="active"><a href="info.html"><span>기업정보</span></a></li>
@@ -131,8 +131,26 @@
                 </nav>
             </div><!--sub_visual-->
             <div class="contents" id="skip_content"><!--skip 에서 본문 바로가기 클릭하면 이동-->
-                <div class="sub_tit"></div><!--sub_tit-->
-                
+                <div class="sub_tit">
+                    <div class="wrapper">
+                        <h1>기업정보</h1><!--현재 페이지명-->
+                        <nav class="breadcrumb">
+                            <ol>
+                                <li class="home"><a href="../index.html">HOME</a></li>
+                                <li><a href="info.html">회사소개</a></li><!--1차메뉴명 : 링크는 첫번째 하위메뉴-->
+                                <li class="curr"><span>기업정보</span></li><!--현재메뉴명 링크X-->
+                            </ol>
+                        </nav>
+                    </div><!--wrapper-->
+                </div><!--sub_tit-->
+                <!--각 페이지별 콘텐츠 시작, 절대 이름이 중복되면 안됨 
+                    cnt_파일명 으로 함-->
+                <div class="sub_contents cnt_info">
+                    <div class="wrapper">
+                        
+                    </div>
+                </div>
+                <!--각 페이지별 콘텐츠 종료-->
             </div>
         </main>
         <footer>
