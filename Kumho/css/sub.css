@@ -164,33 +164,33 @@ header .gnb .gnb_wrap ul.depth1 > li.active > ul.depth2 > li.active > a {
     }
 
 }/*@media*/
-.sub_tit {
+.page_tit {
     margin: 5em 0 0 0;
 }
-.sub_tit .wrapper {
+.page_tit .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.sub_tit h1 {
+.page_tit h1 {
     margin: 2em 0 2em 0;
     font-size: 45px;
     font-weight: 700;
     color: #1d1d1d;
 }
-.sub_tit .breadcrumb ol {
+.page_tit .breadcrumb ol {
     display: flex;
     flex-wrap: wrap;
     /*gap: 2em;*/
 }
-.sub_tit .breadcrumb ol li {
+.page_tit .breadcrumb ol li {
     font-size: 0.8824rem;
     position: relative;/*before*/
 }
-.sub_tit .breadcrumb ol li + li {
+.page_tit .breadcrumb ol li + li {
     margin-left: 2em;
 }
-.sub_tit .breadcrumb ol li + li:before { /**/
+.page_tit .breadcrumb ol li + li:before { /**/
     content: "";
     position: absolute;/**/
     left: -1.6875em;
@@ -202,14 +202,14 @@ header .gnb .gnb_wrap ul.depth1 > li.active > ul.depth2 > li.active > a {
     background-repeat: no-repeat;
     background-size: contain;
 }
-.sub_tit .breadcrumb ol li.home a {
+.page_tit .breadcrumb ol li.home a {
     display: block;
     color: transparent;
     width: 1.4em;
     height: 1.4em;
     position: relative;
 }
-.sub_tit .breadcrumb ol li.home a::after {
+.page_tit .breadcrumb ol li.home a::after {
     content: "";
     position: absolute;/**/
     left: 0.4em;
@@ -221,38 +221,38 @@ header .gnb .gnb_wrap ul.depth1 > li.active > ul.depth2 > li.active > a {
     background-repeat: no-repeat;
     background-size: contain;
 }
-.sub_tit .breadcrumb ol li.curr {
+.page_tit .breadcrumb ol li.curr {
     color: #8E8E8E;
 }
-.sub_tit .breadcrumb ol li.home a:hover {
+.page_tit .breadcrumb ol li.home a:hover {
     text-decoration: underline;
 }
 
 @media screen and (max-width:1000px) {
-    .sub_tit {
+    .page_tit {
         margin: 3em 0 0 0;
     }
-    .sub_tit .wrapper {
+    .page_tit .wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .sub_tit h1 {
+    .page_tit h1 {
         
         font-size: 45px;
         font-weight: 700;
         color: #1d1d1d;
     }
-    .sub_tit .breadcrumb ol{
+    .page_tit .breadcrumb ol{
         display: flex;
         gap: 2em;
         margin: 9.5em 0 2em 0;
     }
-    .sub_tit .breadcrumb ol li {
+    .page_tit .breadcrumb ol li {
         font-size: 0.8824rem;
         position: relative;/*before*/
     }
-    .sub_tit .breadcrumb ol li + li:before { /**/
+    .page_tit .breadcrumb ol li + li:before { /**/
         content: "";
         position: absolute;/**/
         left: -1.6875em;
@@ -264,14 +264,14 @@ header .gnb .gnb_wrap ul.depth1 > li.active > ul.depth2 > li.active > a {
         background-repeat: no-repeat;
         background-size: contain;
     }
-    .sub_tit .breadcrumb ol li.home a {
+    .page_tit .breadcrumb ol li.home a {
         display: block;
         color: transparent;
         width: 1.4em;
         height: 1.4em;
         position: relative;
     }
-    .sub_tit .breadcrumb ol li.home a::after {
+    .page_tit .breadcrumb ol li.home a::after {
         content: "";
         position: absolute;/**/
         left: 0.4em;
@@ -283,7 +283,7 @@ header .gnb .gnb_wrap ul.depth1 > li.active > ul.depth2 > li.active > a {
         background-repeat: no-repeat;
         background-size: contain;
     }
-    .sub_tit .breadcrumb ol li.curr {
+    .page_tit .breadcrumb ol li.curr {
         color: #3d3d3d;
     }
 }
