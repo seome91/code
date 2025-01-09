@@ -164,32 +164,32 @@
         padding: 0 1em; /* 최소여백 */
     }
 }
-.sub_tit {
+.page_tit {
     margin: 5.1176em 0 3.4118em 0;
 }
-.sub_tit .wrapper {
+.page_tit .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.sub_tit h1 {
+.page_tit h1 {
     font-size: 2.6471rem;
     font-weight: 700;
     color: #1d1d1d;
 }
-.sub_tit .breadcrumb ol {
+.page_tit .breadcrumb ol {
     display: flex;
     flex-wrap: wrap;
 }
-.sub_tit .breadcrumb ol li {
+.page_tit .breadcrumb ol li {
     font-size: 0.8824rem;
     position: relative; /* before 정렬기준 */
 }
 /* 앞에 li 태그가 있는 li만 선택, 즉 두번째 li부터 */
-.sub_tit .breadcrumb ol li + li {
+.page_tit .breadcrumb ol li + li {
     margin-left: 2em;
 }
-.sub_tit .breadcrumb ol li + li::before {
+.page_tit .breadcrumb ol li + li::before {
     content: "";
     position: absolute; /* li를 기준으로 정리 */
     left: -1.9em;
@@ -201,14 +201,14 @@
     background-position: center center;
     background-size: contain;
 }
-.sub_tit .breadcrumb ol li.home a {
+.page_tit .breadcrumb ol li.home a {
     display: block;
     color: transparent; /* 투명 */
     width: 1.4667em;
     height: 1.4667em;
     position: relative; /* before 정렬의 기준 */
 }
-.sub_tit .breadcrumb ol li.home a::before {
+.page_tit .breadcrumb ol li.home a::before {
     content: "";
     position: absolute; /* a를 기준으로 정렬 */
     left: 0;
@@ -220,21 +220,21 @@
     background-position: center center;
     background-size: contain;
 }
-.sub_tit .breadcrumb ol li.curr {
+.page_tit .breadcrumb ol li.curr {
     color: #8E8E8E;
 }
-.sub_tit .breadcrumb ol li a:hover {
+.page_tit .breadcrumb ol li a:hover {
     text-decoration: underline;
 }
 
 @media screen and (max-width:1000px){
-    .sub_tit {
+    .page_tit {
         margin: 4.5714em 0 3.1429em 0;
     }
-    .sub_tit .wrapper {
+    .page_tit .wrapper {
         display: block;
     }
-    .sub_tit h1 {
+    .page_tit h1 {
         font-size: 2.1429rem;
         margin: 0 0 0.1667em 0;
     }
