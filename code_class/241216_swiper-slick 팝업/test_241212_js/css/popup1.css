@@ -1,0 +1,38 @@
+@import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
+@import url(font.css);
+@import url(common.css);
+
+.popup {
+    margin: 100px 0;
+}
+.popup .inner {
+    width: 618px;
+    margin: 0 auto;
+}
+.popup .swiper ul li a .photo {
+    overflow: hidden;
+    height: 431px;
+}
+.popup .swiper ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup .btn_wrap {
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+.popup .btn_wrap button {
+    display: block;
+    padding: 8px 15px;
+    border: 1px solid #555;
+    border-left-width: 0;
+}
+.popup .btn_wrap button:first-child {
+    border-left-width: 1px;
+}
+.popup .btn_wrap .play {
+    display: none; /* 일시정지 버튼을 클릭하면 보임 */
+}

@@ -1,0 +1,44 @@
+/* 브라우저가 태그에 주는 기본스타일을 모두 초기화 */
+* { /* 모든 태그의 여백 삭제, *(모든 태그를 지칭) */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit; /* 브라우저가 주는 속성 무시 */
+    font-size: inherit;
+}
+strong {
+    font-weight: inherit;
+}
+ul, li, ol {
+    list-style: none; /* 앞에 동그라미 삭제 */
+}
+a {
+    color: inherit; /* 파란색을 body에서 선언한 색상으로 */
+    text-decoration: none; /* 밑줄삭제 */
+}
+em, address {
+    font-style: normal; /* 글자의 이탤릭 스타일을 삭제 */
+}
+button {
+    border: 0;
+    background-color: transparent; /* 투명 */
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+    cursor: pointer; /* 마우스를 오버했을때 손바닥 모양 */
+}
+fieldset {
+    border: 0;
+}
+legend {
+    display: none; /* 숨김 */
+}
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+}

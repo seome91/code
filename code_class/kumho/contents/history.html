@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/sub.js"></script>
+    <script src="../js/contents.js"></script>
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <title>연혁 > 회사소개 - 금호건설</title>
+    <!-- 서브페이지의 타이틀에는 현재메뉴명 > 상위메뉴명 - 사이트명 -->
+</head>
+<body>
+    <div class="skipnav">
+        <a class="cnt" href="#skip_content">본문바로가기</a>
+        <a class="menu" href="#skip_nav">주메뉴바로가기</a>
+        <!-- 내부링크 href="#skip_nav" 라고 주면 id="skip_nav"로 되어있는 요소로 이동 (클릭했을때) -->
+    </div>
+    <div id="wrap">
+        <!-- 상단에 고정될때 fixed - 아래로 스크롤 해서 사라질때 scroll_down 클래스 추가  
+             pc버전에서 메뉴에 마우스를 올리면 menu_pc 클래스 추가 
+             모바일버전에서 메뉴를 열면 menu_mo 클래스 추가 -->
+        <header>
+            <h1 class="logo"><a href="../index.html">금호건설</a></h1>
+            <nav class="gnb" id="skip_nav">
+                <button class="gnb_open">메뉴열기</button>
+                <div class="gnb_wrap">
+                    <ul class="depth1">
+                        <!-- pc버전에서 마우스를 오버하면 over 클래스 추가
+                             모바일 버전에서 클릭하면 open 클래스 추가 
+                             서브페이지에서 현재 선택된 메뉴 active 클래스 추가 -->
+                        <li class="active open">
+                            <a href="info.html"><span>회사소개</span></a>
+                            <ul class="depth2">
+                                <li><a href="info.html"><span>기업정보</span></a></li>
+                                <li><a href="ceo.html"><span>CEO인사말</span></a></li>
+                                <li class="active"><a href="history.html"><span>연혁</span></a></li>
+                                <li><a href="history.html"><span>조직도</span></a></li>
+                                <li><a href="map.html"><span>기술혁신</span></a></li>
+                                <li><a href="map.html"><span>찾아오시는길</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="esg01.html"><span>ESG</span></a>
+                            <ul class="depth2">
+                                <li><a href="esg01.html"><span>윤리경영</span></a></li>
+                                <li><a href="esg01.html"><span>품질경영</span></a></li>
+                                <li><a href="esg01.html"><span>안전경영</span></a></li>
+                                <li><a href="esg01.html"><span>환경경영</span></a></li>
+                                <li><a href="esg01.html"><span>상생경영</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="biz01.html"><span>사업분야</span></a>
+                            <ul class="depth2">
+                                <li><a href="biz01.html"><span>건축사업</span></a></li>
+                                <li><a href="biz01.html"><span>토목사업</span></a></li>
+                                <li><a href="biz01.html"><span>주택사업</span></a></li>
+                                <li><a href="biz01.html"><span>플랜트/환경사업</span></a></li>
+                                <li><a href="biz01.html"><span>사업실적검색</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ir01.html"><span>IR</span></a>
+                            <ul class="depth2">
+                                <li><a href="ir01.html"><span>기업지배구조</span></a></li>
+                                <li><a href="ir03.html"><span>경영정보</span></a></li>
+                                <li><a href="ir03.html"><span>재무정보</span></a></li>
+                                <li><a href="ir03.html"><span>주가정보</span></a></li>
+                                <li><a href="ir03.html"><span>IR Contact</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="recruit02.html"><span>인재채용</span></a>
+                            <ul class="depth2">
+                                <li><a href="https://kumhoenc.recruiter.co.kr/appsite/company/index" target="_blank" title="새창열기"><span>금호채용</span></a></li>
+                                <li><a href="recruit02.html"><span>직무가이드</span></a></li>
+                                <li><a href="recruit02.html"><span>채용/면접 Tip</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="pr01.html"><span>홍보센터</span></a>
+                            <ul class="depth2">
+                                <li><a href="pr01.html"><span>금호뉴스</span></a></li>
+                                <li><a href="pr04.html"><span>분양뉴스</span></a></li>
+                                <li><a href="pr04.html"><span>CI/BI</span></a></li>
+                                <li><a href="pr04.html"><span>PR갤러리</span></a></li>
+                                <li><a href="pr04.html"><span>금호역사관</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="gnb_close">메뉴닫기</button>
+            </nav>
+            <!-- global을 클릭하면 open클래스 추가 -->
+            <div class="global">
+                <button title="언어선택 열기 버튼">KOR</button>
+                <!-- 하나의 버튼이 열기/닫기 기능 -->
+                <div class="list">
+                    <ul>
+                        <li class="active"><a href="#n">KOR</a></li>
+                        <li><a href="#n">ENG</a></li>
+                    </ul>
+                </div>
+            </div><!--global-->
+        </header>
+        <main class="container">
+            <div class="sub_visual bg1">
+                <!-- 1차메뉴 마다 배경이미지가 다름 bg1 bg2 bg3 -->
+                <div class="sub_txt">
+                    <div class="wrapper">
+                        <!--1차메뉴명 & 설명-->
+                        <strong>회사소개</strong>
+                        <span>A Beautiful Company<br>
+                            Make a Beautiful World</span>
+                    </div>
+                </div><!--sub_txt-->
+                <nav class="snb"><!--sub navigation bar-->
+                    <ul>
+                        <!-- 현재선택된 메뉴 : active -->
+                        <li><a href="info.html"><span>기업정보</span></a></li>
+                        <li><a href="ceo.html"><span>CEO인사말</span></a></li>
+                        <li class="active"><a href="history.html"><span>연혁</span></a></li>
+                        <li><a href="history.html"><span>조직도</span></a></li>
+                        <li><a href="map.html"><span>기술혁신</span></a></li>
+                        <li><a href="map.html"><span>찾아오시는길</span></a></li>
+                    </ul>
+                </nav>
+            </div><!--sub_visual-->
+            <div class="contents" id="skip_content"><!--skip 에서 본문 바로가기 클릭하면 이동-->
+                <div class="page_tit">
+                    <div class="wrapper">
+                        <h1>연혁</h1><!--현재 페이지명-->
+                        <nav class="breadcrumb">
+                            <ol>
+                                <li class="home"><a href="../index.html">HOME</a></li>
+                                <li><a href="info.html">회사소개</a></li><!--1차메뉴명 : 링크는 첫번째 하위메뉴-->
+                                <li class="curr"><span>연혁</span></li><!--현재메뉴명 링크X-->
+                            </ol>
+                        </nav>
+                    </div><!--wrapper-->
+                </div><!--sub_tit-->
+                <!--각 페이지별 콘텐츠 시작, 절대 이름이 중복되면 안됨 
+                    cnt_파일명 으로 함-->
+                <div class="sub_contents cnt_history">
+                    
+                    <div class="wrapper">
+                        <!-- 보일때는 active 클래스 추가 -->
+                        <div class="history_tab">
+                            <ul>
+                                <!-- a는 내부링크나 다른페이지로 이동하는 링크를 a로 코딩
+                                     클릭해서 jquery를 작동시킴 - button 태그로 코딩 -->
+                                <li class="active" data-anchor="history_2010"><button title="선택됨">현재 ~ 2011년</button></li>
+                                <li data-anchor="history_2000"><button>2010년 ~ 2001년</button></li>
+                                <li data-anchor="history_1990"><button>2000 ~ 1991년</button></li>
+                                <li data-anchor="history_1980"><button>1990년 ~ 1960년</button></li>
+                            </ul>
+                        </div>
+                        <div class="history_wrap">
+                            <div class="year_wrap photo_left" id="history_2010">
+                                <div class="his_tit">
+                                    <h2>현재 ~ 2011년</h2>
+                                    <p>세계 속의 한국, 한국 속의 세계를 건설</p>
+                                    <div class="photo"><img src="../images/contents/history_img01.jpg" alt=""></div>
+                                </div><!--year_tit-->
+                                <div class="his_cont">
+                                    <div class="his_row">
+                                        <h3>2024 ~ 2021</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>2024.06</strong>
+                                                <span>조경특화 브랜드 '아트시스' 출시</span>
+                                            </li>
+                                            <li>
+                                                <strong>2024.05</strong>
+                                                <span>금호건설 주거 브랜드 아테라 런칭</span>
+                                            </li>
+                                            <li>
+                                                <strong>2023.12</strong>
+                                                <span>조완석 사장 체제로 조직 개편</span>
+                                            </li>
+                                            <li>
+                                                <strong>2023.09</strong>
+                                                <span>임직원 기부활동 "DOVE's (Do Love, Sustainable)" 전개</span>
+                                            </li>
+                                            <li>
+                                                <strong>2021.03</strong>
+                                                <span>금호건설(주)로 상호변경</span>
+                                            </li>
+                                        </ul>
+                                    </div><!--his_row-->
+                                    <div class="his_row">
+                                        <h3>2020 ~ 2013</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>2018.10</strong>
+                                                <span>건설업계 최초 자회사형 장애인 표준사업장 설립 협약 체결</span>
+                                            </li>
+                                            <li>
+                                                <strong>2016.07</strong>
+                                                <span>서재환 사장 체제로 조직 개편</span>
+                                            </li>
+                                            <li>
+                                                <strong>2014.07</strong>
+                                                <span>충북 증평군 사곡리마을과 1社1村 자매결연</span>
+                                            </li>
+                                            <li>
+                                                <strong>2013.01</strong>
+                                                <span>원일우 사장 체제로 조직 개편</span>
+                                            </li>
+                                        </ul>
+                                    </div><!--his_row-->
+                                    <div class="his_row">
+                                        <h3>2012 ~ 2011</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>2012.03</strong>
+                                                <span>다기능 스마트 스위치, 레드닷 디자인 어워드 수상</span>
+                                            </li>
+                                            <li>
+                                                <strong>2011.10</strong>
+                                                <span>베트남 21개 현지 협력사와 ‘우수 협력사 Partnership 강화’ MOU 체결</span>
+                                            </li>
+                                            <li>
+                                                <strong>2011.04</strong>
+                                                <span>UAE 아부다비 공항 관제탑 그랜드 오픈(Grand Open)</span>
+                                                <span>경기도 화성시 신천마을과 1社1村 자매결연식</span>
+                                            </li>
+                                        </ul>
+                                    </div><!--his_row-->
+                                </div><!--his_cont-->
+                            </div><!--year_wrap-->
+                            <div class="year_wrap photo_right" id="history_2000">
+                                <div class="his_tit">
+                                    <h2>2010년 ~ 2001년</h2>
+                                    <p>새 천년의 초일류기업으로 거듭 태어나겠습니다.</p>
+                                    <div class="photo"><img src="../images/contents/history_img02.jpg" alt=""></div>
+                                </div><!--year_tit-->
+                                <div class="his_cont">
+                                    <div class="his_row">
+                                        <h3>2010 ~ 2009</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>2010.11</strong>
+                                                <span>도심 최대규모 오피스빌딩 센터원(CENTER1) 준공</span>
+                                            </li>
+                                            <li>
+                                                <strong>2010.10</strong>
+                                                <span>UAE 아부다비 공합 관제탑 준공</span>
+                                            </li>
+                                            <li>
+                                                <strong>2009.09</strong>
+                                                <span>베트남 금호아시아나플라자 준공</span>
+                                            </li>
+                                            <li>
+                                                <strong>2009.08</strong>
+                                                <span>빛그린어울림마을 1호 조성(홍제동 개미마을)</span>
+                                            </li>
+                                            <li>
+                                                <strong>2009.06</strong>
+                                                <span>상반기 공공부문 수주실적 1조원 돌파, 업계 최다 실적</span>
+                                            </li>
+                                            <li>
+                                                <strong>2009.04</strong>
+                                                <span>전남 고흥군과 5,000억 규모 풍력발전사업 MOU 체결</span>
+                                            </li>
+                                            <li>
+                                                <strong>2009.03</strong>
+                                                <span>아로마 향기 도어폰, 레드닷 디자인 어워드 수상</span>
+                                                <span>전력산업기술기준(KEPIC:Korea Electric Power Industry Code) 자격 인증서 취득</span>
+                                            </li>
+                                        </ul>
+                                    </div><!--his_row-->
+                                    <div class="his_row">
+                                        <h3>2008 ~ 2005</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>2008.10</strong>
+                                                <span>여수시 신재생에너지 사업 참여 MOU 체결</span>
+                                            </li>
+                                            <li>
+                                                <strong>2008.07</strong>
+                                                <span>건설업계 최저 재해율 1위 달성</span>
+                                            </li>
+                                            <li>
+                                                <strong>2008.06</strong>
+                                                <span>2008년 상반기 건설업계 최다 GD마크 획득</span>
+                                                <span>베트남 사랑의 집 9호</span>
+                                            </li>
+                                            <li>
+                                                <strong>2007.03</strong>
+                                                <span>두바이 지사 설립</span>
+                                            </li>
+                                            <li>
+                                                <strong>2005.09</strong>
+                                                <span>베트남 금호아시아나플라자 착공, 해외사업 재개</span>
+                                            </li>
+                                        </ul>
+                                    </div><!--his_row-->
+                                    <div class="his_row">
+                                        <h3>2004 ~ 2001</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>2004.12</strong>
+                                                <span>질소,인을 활용한 하수고도처리시스템 K-MBR 日 도레이사, KIST와 공동 개발 완료</span>
+                                            </li>
+                                            <li>
+                                                <strong>2004.</strong>
+                                                <span>'사랑의 집 어울림家' 1호 준공</span>
+                                            </li>
+                                            <li>
+                                                <strong>2003.06</strong>
+                                                <span>아파트 브랜드 '어울림' 도입 _ 남양주 평내 어울림 첫 적용</span>
+                                            </li>
+                                            <li>
+                                                <strong>2003.05</strong>
+                                                <span>아파트 브랜드 "어울림" 런칭</span>
+                                            </li>
+                                            <li>
+                                                <strong>2003.</strong>
+                                                <span>'1산ㆍ1하천ㆍ1거리 가꾸기' 환경정화활동 시행</span>
+                                            </li>
+                                            <li>
+                                                <strong>2001.11</strong>
+                                                <span>광화문 "용비어천가"로 오피스텔 브랜드 첫 선</span>
+                                            </li>
+                                            <li>
+                                                <strong>2001.05</strong>
+                                                <span>주상복합 브랜드 "리첸시아" 런칭 _ 여의도 리첸시아 첫 적용</span>
+                                            </li>
+                                        </ul>
+                                    </div><!--his_row-->
+                                </div><!--his_cont-->
+                            </div><!--year_wrap-->
+                            <div class="year_wrap photo_left" id="history_1990">
+                                <div class="his_tit">
+                                    <h2>2000 ~ 1991년</h2>
+                                    <p>건실하고 강한 금호건설</p>
+                                    <div class="photo"><img src="../images/contents/history_img03.jpg" alt=""></div>
+                                </div><!--year_tit-->
+                                <div class="his_cont">
+                                    <div class="his_row">
+                                        <h3>2000 ~ 1998</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>1999.07</strong>
+                                                <span>플랜트사업 본격화, T-5 비축생산기지 완공으로 대통령 표창 수상</span>
+                                            </li>
+                                            <li>
+                                                <strong>1999.07</strong>
+                                                <span>T-5 비축생산기지 완공으로 대통령 표창 수상</span>
+                                            </li>
+                                            <li>
+                                                <strong>1999.03</strong>
+                                                <span>금호베스티빌 브랜드 도입 _ 용인 수지 금호베스트빌 1ㆍ2차</span>
+                                            </li>
+                                            <li>
+                                                <strong>1999.02</strong>
+                                                <span>금호산업(주)로 상호변경</span>
+                                            </li>
+                                            <li>
+                                                <strong>1998.11</strong>
+                                                <span>금호타운 브랜드 도입 _ 여수 여서동 금호아파트 첫 적용</span>
+                                            </li>
+                                            <li>
+                                                <strong>1998.07</strong>
+                                                <span>고도하수처리 신공법 건교부 신기술 지정 제 111호</span>
+                                            </li>
+                                            <li>
+                                                <strong>1998.06</strong>
+                                                <span>‘금호베스트빌 APT‘ 매일경제 살기좋은 아파트 선정</span>
+                                            </li>
+                                        </ul>
+                                    </div><!--his_row-->
+                                    <div class="his_row">
+                                        <h3>1997 ~ 1996</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>1997.</strong>
+                                                <span>지식경영 캠페인 '1:10:100' 운동 전개</span>
+                                            </li>
+                                            <li>
+                                                <strong>1996.12</strong>
+                                                <span>‘96안전환경상 우수상 수상’</span>
+                                            </li>
+                                            <li>
+                                                <strong>1996.11</strong>
+                                                <span>제 22회 전국품질경영대회 품질경영상 대통령상 수상</span>
+                                            </li>
+                                            <li>
+                                                <strong>1996.04</strong>
+                                                <span>국내 1호 SOC 민자사업 "인천국제공항고속도로" 첫 삽</span>
+                                            </li>
+                                            <li>
+                                                <strong>1996.02</strong>
+                                                <span>수도권 신공항건설공단 우수시공업체 선정</span>
+                                            </li>
+                                        </ul>
+                                    </div><!--his_row-->
+                                    <div class="his_row">
+                                        <h3>1995 ~ 1991</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>1995.11</strong>
+                                                <span>전국품질경영대회 제안 기업부문 대통령상 수상</span>
+                                            </li>
+                                            <li>
+                                                <strong>1995.10</strong>
+                                                <span>하수고도처리 기술 KIDEA공법 KIST와 공동 추진</span>
+                                            </li>
+                                            <li>
+                                                <strong>1995.08</strong>
+                                                <span>ISO14001 인증획득, BS7750 인증획득</span>
+                                            </li>
+                                            <li>
+                                                <strong>1995.06</strong>
+                                                <span>호치민 지사 설립</span>
+                                            </li>
+                                            <li>
+                                                <strong>1995.02</strong>
+                                                <span>주거공간 고유 브랜드 "금호베스트홈" 도입</span>
+                                            </li>
+                                            <li>
+                                                <strong>1994.04</strong>
+                                                <span>국내 최초 PC부문 ISO 9001 인증획득</span>
+                                            </li>
+                                            <li>
+                                                <strong>1993.12</strong>
+                                                <span>(주) 금호건설로 상호변경</span>
+                                            </li>
+                                            <li>
+                                                <strong>1992.11</strong>
+                                                <span>인천국제공항 사업 참여 _ 활주로, 관제탑 등 전 공종 참여 국내 유일</span>
+                                            </li>
+                                            <li>
+                                                <strong>1992.07</strong>
+                                                <span>대한주택공사 우수업체 선정</span>
+                                            </li>
+                                        </ul>
+                                    </div><!--his_row-->
+                                </div><!--his_cont-->
+                            </div><!--year_wrap-->
+                            <div class="year_wrap photo_right" id="history_1980">
+                                <div class="his_tit">
+                                    <h2>1990년 ~ 1960년</h2>
+                                    <p>대한민국 건설역사를 함께 만들어 온 국내 대표 건설사</p>
+                                    <div class="photo"><img src="../images/contents/history_img04.jpg" alt=""></div>
+                                </div><!--year_tit-->
+                                <div class="his_cont">
+                                    <div class="his_row">
+                                        <h3>1980년대</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>1989.12</strong>
+                                                <span>건설기술연구소 설립</span>
+                                            </li>
+                                            <li>
+                                                <strong>1984.10</strong>
+                                                <span>(주)광주고속으로 상호변경</span>
+                                            </li>
+                                        </ul>
+                                    </div><!--his_row-->
+                                    <div class="his_row">
+                                        <h3>1970년대</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>1979.12</strong>
+                                                <span>요르단 퀸 알리아 공사 수주</span>
+                                            </li>
+                                            <li>
+                                                <strong>1979.09</strong>
+                                                <span>요르단 암만지사 설립</span>
+                                            </li>
+                                            <li>
+                                                <strong>1979.01</strong>
+                                                <span>필리핀 치코강 댐 건설공사 수주</span>
+                                            </li>
+                                            <li>
+                                                <strong>1978.11</strong>
+                                                <span>필리핀 마닐라지사 설립</span>
+                                            </li>
+                                            <li>
+                                                <strong>1978.09</strong>
+                                                <span>해외사업 첫 진출_사우디국방항공성으로부터 알슈레일 장교숙소,화약고 건설공사 수주</span>
+                                            </li>
+                                            <li>
+                                                <strong>1978.04</strong>
+                                                <span>사우디아라비아 리야드지사 설립</span>
+                                            </li>
+                                            <li>
+                                                <strong>1978.02</strong>
+                                                <span>금호건설(주)로 상호변경</span>
+                                            </li>
+                                            <li>
+                                                <strong>1973.05</strong>
+                                                <span>제일토건 주식회사로 상호변경</span>
+                                            </li>
+                                        </ul>
+                                    </div><!--his_row-->
+                                    <div class="his_row">
+                                        <h3>1960년대</h3>
+                                        <ul>
+                                            <li>
+                                                <strong>1967.02</strong>
+                                                <span>제일토목건축 주식회사 설립</span>
+                                            </li>
+                                        </ul>
+                                    </div><!--his_row-->
+                                </div><!--his_cont-->
+                            </div><!--year_wrap-->
+                        </div><!--history_wrap-->
+                    </div><!--wrapper-->
+                </div>
+                <!--각 페이지별 콘텐츠 종료-->
+            </div>
+        </main>
+        <footer>
+            <aside class="top"><button>위로가기</button></aside>
+            <div class="wrapper">
+                <!-- family_site가 열리면 open 클래스가 추가 -->
+                <div class="family_site ">
+                    <button title="열기버튼">그룹사 바로가기</button>
+                    <div class="list">
+                        <ul>
+                            <li><a href="#n">금호고속</a></li>
+                            <li><a href="#n">U·square</a></li>
+                            <li><a href="#n">금호문화재단</a></li>
+                            <li><a href="#n">아시아나항공</a></li>
+                            <li><a href="#n">아시아나IDT</a></li>
+                            <li><a href="#n">에어부산</a></li>
+                            <li><a href="#n">아시아나에어포트</a></li>
+                            <li><a href="#n">아시아나세이버</a></li>
+                            <li><a href="#n">에어서울</a></li>
+                        </ul>
+                    </div>
+                </div><!--family_site-->
+                <div class="inner">
+                    <div class="f_nav">
+                        <ul>
+                            <li><a href="#n">제보실</a></li>
+                            <li><a href="#n">고객센터</a></li>
+                            <li><a href="#n">OB사랑방</a></li>
+                            <li><a href="#n">Contact us</a></li>
+                            <li class="privacy"><a href="#n">개인정보처리방침</a></li>
+                        </ul>
+                    </div><!--f_nav-->
+                    <div class="copyright">ⓒ KUMHO E&C, All Rights Reserved.</div>
+                </div><!--inner-->
+            </div><!--wrapper-->
+        </footer>
+    </div>
+</body>
+</html>

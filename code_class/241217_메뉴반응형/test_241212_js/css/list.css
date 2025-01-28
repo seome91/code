@@ -1,0 +1,429 @@
+@import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
+@import url(font.css);
+@import url(common.css);
+
+.tour {
+    margin: 100px 0;
+}
+.tour .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tour .list ul li {
+    width: 15.07%;
+    /* li하나의 넓이 190 / ul의 넓이 1260 * 100 = 15.07%  
+       소수점 두자리까지 내림 (반올림X) */
+}
+.tour .list ul li.active {
+    width: 49.04%;
+    /* 618/1260*100 = 49.04% */ 
+}
+.tour .list ul li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 30px 54px 30px;
+    height: 431px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    border-radius: 10px;
+}
+.tour .list ul li.bg1 a {
+    background-image: url(../images/list_bg1.jpg);
+}
+.tour .list ul li.bg2 a {
+    background-image: url(../images/list_bg2.jpg);
+}
+.tour .list ul li.bg3 a {
+    background-image: url(../images/list_bg3.jpg);
+}
+.tour .list ul li.bg4 a {
+    background-image: url(../images/list_bg4.jpg);
+}
+.tour .list ul li a h3 {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.tour .list ul li a p {
+    margin: 6px 0 0 0;
+    display: none; /* 숨김 */
+}
+.tour .list ul li.active a h3 {
+    font-size: 35px;
+}
+.tour .list ul li.active a p {
+    display: block; /* 나타남 */
+}
+
+@media screen and (max-width:640px){
+    .tour .list ul {
+        display: block;
+    }
+    .tour .list ul li {
+        width: auto;
+    }
+    /* 위에 li태그가 있는 li, 즉 2~4번째 li에만 */
+    .tour .list ul li + li {
+        margin: 10px 0 0 0;
+    }
+    .tour .list ul li.active {
+        width: auto;
+    }
+    .tour .list ul li a {
+        padding: 69px 30px 27px 30px;
+        height: auto;
+        border-radius: 5px;
+    }
+    .tour .list ul li a h3 {
+        font-size: 20px;
+    }
+    .tour .list ul li.active a h3 {
+        font-size: 20px;
+    }
+    .tour .list ul li.active a p {
+        display: none; /* 숨김 */
+    }
+}
+
+.biz {
+    margin: 100px 0;
+}
+.biz .list ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+.biz .list ul li {
+    /* width: 15.07%; */
+    width: 25%;
+    transition: 0.5s;
+}
+.biz .list ul li.active {
+    /* width: 49.04%; */
+    width: 80%;
+}
+.biz .list ul li a {
+    display: block;
+    position: relative; /* h3,p 정렬의 기준 */
+    color: #fff;
+}
+.biz .list ul li a .photo {
+    overflow: hidden;
+    height: 431px;
+    border-radius: 10px;
+}
+.biz .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.biz .list ul li a h3 {
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 30px;
+    bottom: 54px;
+    width: calc(100% - 60px);
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+    transition: 0.5s;
+}
+.biz .list ul li a p {
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 30px;
+    bottom: 24px;
+    width: calc(100% - 60px);
+    /* 1줄 제한 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* display:none으로 숨겼다가 block으로 보이게 하는건
+       transtion을 줘도 자연스럽게 안나타남... 
+       opacity:0을 줬다가 1로 변경해야 자연스럽게 나타남
+       >>단 공간을 차지함 
+    */
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.biz .list ul li.active a h3 {
+    font-size: 35px;
+    bottom: 83px;
+}
+.biz .list ul li.active a p {
+    opacity: 1;
+    bottom: 54px;
+}
+
+@media screen and (max-width:640px){
+    .biz .list ul {
+        display: block;
+    }
+    .biz .list ul li {
+        width: auto;
+    }
+    .biz .list ul li + li {
+        margin: 10px 0 0 0;
+    }
+    .biz .list ul li.active {
+        width: auto;
+    }
+    .biz .list ul li a .photo {
+        height: 120px;
+        border-radius: 5px;
+    }
+    .biz .list ul li a h3 {
+        left: 18px;
+        bottom: 27px;
+        width: calc(100% - 36px);
+        font-size: 20px;
+    }
+    .biz .list ul li a p {
+        display: none; /* 숨김 */
+    }
+    .biz .list ul li.active a h3 {
+        font-size: 20px;
+        bottom: 27px;
+    }
+    .biz .list ul li.active a p {
+        display: none; /* 숨김 */
+    }
+}
+
+.banner {
+    margin: 100px 0;
+}
+.banner .list ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+.banner .list ul li {
+    width: calc(25% - 18px);
+    transition: 0.5s;
+}
+.banner .list ul li a {
+    display: block;
+    position: relative; /* h3,p 정렬의 기준 */
+    color: #fff;
+}
+.banner .list ul li a .photo {
+    overflow: hidden;
+    height: 431px;
+    border-radius: 10px;
+    position: relative; /* before 정렬의 기준 */
+}
+.banner .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .list ul li a h3 {
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 30px;
+    bottom: 54px;
+    width: calc(100% - 60px);
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+    transition: 0.5s;
+}
+.banner .list ul li a p {
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 30px;
+    bottom: 24px;
+    width: calc(100% - 60px);
+    /* 1줄 제한 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* display:none으로 숨겼다가 block으로 보이게 하는건
+       transtion을 줘도 자연스럽게 안나타남... 
+       opacity:0을 줬다가 1로 변경해야 자연스럽게 나타남
+       >>단 공간을 차지함 
+    */
+    opacity: 0;
+    transition: 0.5s;
+}
+@media screen and (min-width:641px){ /* 641이상에서만 적용 */
+        /***** li에 오버했을때 ******/
+        .banner .list ul li.on {
+            width: 49.04%;
+            /* 요소의 넓이 618 / 감싸고 있는 ul의 넓이 1260 * 100
+            618 / 1260 * 100  */
+        }
+        .banner .list ul li.off {
+            width: 15.07%;
+            /* 190 / 1260 * 100 =  */
+        }
+        .banner .list ul li.on a h3 {
+            bottom: 83px;
+            font-size: 35px;
+        }
+        .banner .list ul li.on a p {
+            bottom: 54px;
+            opacity: 1;
+        }
+        .banner .list ul li.off a .photo::before {
+            content: "";
+            position: absolute; /* photo를 기준으로 정렬 */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .banner .list ul li.off a h3 {
+            color: rgba(255, 255, 255, 0.8);
+        }
+}/* media */
+@media screen and (max-width:640px){
+    .banner .list {
+        overflow-x: auto; 
+        /* 브라우저 넓이에 하위요소 ul이 모두 나타나지
+           않으면 가로 스크롤바 생성 */
+    }
+    .banner .list ul {
+        gap: 16px;
+        width: 848px;
+        /* li넓이 200 * li갯수 4 = 800
+           li사이여백 16 * li갯수-1 = 48 */
+    }
+    .banner .list ul li {
+        width: 200px;
+    }
+    .banner .list ul li a .photo {
+        height: 300px;
+        border-radius: 5px;
+    }
+    .banner .list ul li a h3 {
+        left: 15px;
+        bottom: 38px;
+        width: calc(100% - 30px);
+        font-size: 20px;
+    }
+    .banner .list ul li a p {
+        display: none; /* 숨김 */
+    }
+}
+
+.slide {
+    margin: 100px 0;
+}
+.slide .list ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+.slide .list ul li {
+    width: calc(25% - 18px);
+    transition: 0.5s;
+}
+.slide .list ul li a {
+    display: block;
+    position: relative; /* h3,p 정렬의 기준 */
+    color: #fff;
+}
+.slide .list ul li a .photo {
+    overflow: hidden;
+    height: 431px;
+    border-radius: 10px;
+    position: relative; /* before 정렬의 기준 */
+}
+.slide .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide .list ul li a h3 {
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 30px;
+    bottom: 54px;
+    width: calc(100% - 60px);
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+    transition: 0.5s;
+}
+.slide .list ul li a p {
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 30px;
+    bottom: 24px;
+    width: calc(100% - 60px);
+    /* 1줄 제한 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* display:none으로 숨겼다가 block으로 보이게 하는건
+       transtion을 줘도 자연스럽게 안나타남... 
+       opacity:0을 줬다가 1로 변경해야 자연스럽게 나타남
+       >>단 공간을 차지함 
+    */
+    opacity: 0;
+    transition: 0.5s;
+}
+@media screen and (min-width:641px){/* 641이상일때만 */
+            /***** li에 오버했을때 ******/
+            .slide .list ul li[data-status="on"] {
+                width: 49.04%;
+                /* 요소의 넓이 618 / 감싸고 있는 ul의 넓이 1260 * 100
+                618 / 1260 * 100  */
+            }
+            .slide .list ul li[data-status="off"] {
+                width: 15.07%;
+                /* 190 / 1260 * 100 =  */
+            }
+            .slide .list ul li[data-status="on"] a h3 {
+                bottom: 83px;
+                font-size: 35px;
+            }
+            .slide .list ul li[data-status="on"] a p {
+                bottom: 54px;
+                opacity: 1;
+            }
+            .slide .list ul li[data-status="off"] a .photo::before {
+                content: "";
+                position: absolute; /* photo를 기준으로 정렬 */
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+            .slide .list ul li[data-status="off"] a h3 {
+                color: rgba(255, 255, 255, 0.8);
+            }
+            
+}/* media */
+
+@media screen and (max-width:640px){
+    .slide .list {
+        overflow-x: auto; 
+        /* 브라우저 넓이에 하위요소 ul이 모두 나타나지
+           않으면 가로 스크롤바 생성 */
+    }
+    .slide .list ul {
+        gap: 16px;
+        width: 848px;
+        /* li넓이 200 * li갯수 4 = 800
+           li사이여백 16 * li갯수-1 = 48 */
+    }
+    .slide .list ul li {
+        width: 200px;
+    }
+    .slide .list ul li a .photo {
+        height: 300px;
+        border-radius: 5px;
+    }
+    .slide .list ul li a h3 {
+        left: 15px;
+        bottom: 38px;
+        width: calc(100% - 30px);
+        font-size: 20px;
+    }
+    .slide .list ul li a p {
+        display: none; /* 숨김 */
+    }
+}

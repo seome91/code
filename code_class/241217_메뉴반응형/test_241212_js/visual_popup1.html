@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--swiper 라이브러리-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/visual_popup1.js"></script>
+    <link rel="stylesheet" href="css/visual_popup1.css">
+    <title>비주얼 팝업</title>
+</head>
+<body>
+    <div id="wrap">
+        <main class="container">
+            <section class="visual">
+                <h2>팝업</h2>
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                        <li class="swiper-slide">
+                            <!-- 팝업은 대부분 관리자 기능이 있음
+                                이미지는 background로 처리가 안됨. 대부분 img태그로 코딩 -->
+                            <div class="photo"><img src="images/visual_bg1.jpg" alt=""></div>
+                            <div class="visual_txt">
+                                <div class="wrapper">
+                                    <h3>POPUP01</h3>
+                                    <p>광복의 감격과 의의를 기리며 ‘출판은 곧 건국 사업’이라는 사명감으로 첫발을 내디딘을 <br>유문화사는 한국 현대사와 궤를 같이하며 한국 출판의 기틀을 다져 왔습니다.</p>
+                                </div><!--wrapper-->
+                            </div><!--visual_txt-->
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/visual_bg2.jpg" alt=""></div>
+                            <div class="visual_txt">
+                                <div class="wrapper">
+                                    <h3>POPUP02</h3>
+                                    <p>광복의 감격과 의의를 기리며 ‘출판은 곧 건국 사업’이라는 사명감으로 첫발을 내디딘을 <br>유문화사는 한국 현대사와 궤를 같이하며 한국 출판의 기틀을 다져 왔습니다.</p>
+                                </div><!--wrapper-->
+                            </div><!--visual_txt-->
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/visual_bg3.jpg" alt=""></div>
+                            <div class="visual_txt">
+                                <div class="wrapper">
+                                    <h3>POPUP03</h3>
+                                    <p>광복의 감격과 의의를 기리며 ‘출판은 곧 건국 사업’이라는 사명감으로 첫발을 내디딘을 <br>유문화사는 한국 현대사와 궤를 같이하며 한국 출판의 기틀을 다져 왔습니다.</p>
+                                </div><!--wrapper-->
+                            </div><!--visual_txt-->
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/visual_bg4.jpg" alt=""></div>
+                            <div class="visual_txt">
+                                <div class="wrapper">
+                                    <h3>POPUP04</h3>
+                                    <p>광복의 감격과 의의를 기리며 ‘출판은 곧 건국 사업’이라는 사명감으로 첫발을 내디딘을 <br>유문화사는 한국 현대사와 궤를 같이하며 한국 출판의 기틀을 다져 왔습니다.</p>
+                                </div><!--wrapper-->
+                            </div><!--visual_txt-->
+                        </li>
+                    </ul>
+                </div><!--swiper-->
+                <button class="prev">이전팝업보기</button>
+	            <button class="next">다음팝업보기</button>
+                <div class="btn_wrap">
+                    <div class="paging"></div><!--전체 팝업 수 / 현재 팝업 표시-->
+                    <button class="stop">일시정지</button>
+                    <button class="play">다시시작</button>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

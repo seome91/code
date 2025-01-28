@@ -1,0 +1,51 @@
+@import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
+@import url(font.css);
+@import url(common.css);
+
+.list {
+    margin: 100px 0;
+}
+.list .swiper ul li a {
+    display: block;
+}
+.list .swiper ul li a .photo {
+    height: 284px;
+    overflow: hidden;
+}
+.list .swiper ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.list .swiper ul li a h3 {
+    color: #1d1d1d;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 10px 0;
+
+    /* 1줄제한  */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.list .swiper ul li a p {
+    line-height: 1.4;
+    height: 2.8em; /* 행간 * 줄수 = 단위는 em */
+    overflow: hidden;
+}
+
+.story .swiper ul li {
+    width: 350px;
+}
+@media screen and (max-width:640px){ 
+    .story .swiper ul li {
+        width: 190px;
+    }
+}/*media*/
+@media screen and (max-width:640px){ 
+    .news .swiper ul li {
+        width: 190px;
+    }
+}
+

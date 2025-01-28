@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.svg">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/fullpage.css"> <!-- fullpage 라이브러리 -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"> <!-- swiper 라이브러리 -->
+    <script src="js/jquery-3.7.1.min.js"></script> <!-- jquery 라이브러리 -->
+    <script src="js/fullpage.min.js"></script> <!-- fullpage 라이브러리 -->
+    <script src="js/swiper-bundle.min.js"></script> <!-- swiper 라이브러리 -->
+    <script src="js/count.js"></script> <!-- counting 애니메이션 -->
+    <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
+    <title>생명의숲</title>
+</head>
+<body>
+    <div class="skipnav">
+        <a class="cnt" href="#skip_content">본문바로가기</a>
+        <a class="menu" href="#skip_nav">주메뉴바로가기</a>
+        <!-- 내부링크 href="#skip_nav" 라고 주면 id="skip_nav"로 되어있는 요소로 이동 (클릭했을때) -->
+    </div>
+    <div id="wrap">
+        <!-- pc버전에서 메뉴에 마우스를 올리면 : menu_pc
+             모바일에서 메뉴를 클릭해서 열면 : menu_mo
+             배경이 흰색이라 header의 글씨가 검은색으로 바뀌어야 할때 : dark 
+             모바일에서 조금이라도 스크롤되면 header에 fixed 클래스 추가
+            -->
+        <header>
+            <h1 class="logo"><a href="index.html">생명의숲 forest for life</a></h1>
+            <nav class="gnb" id="skip_nav">
+                <button class="gnb_open">메뉴열기</button>
+                <div class="gnb_wrap">
+                    <ul class="depth1">
+                        <!-- pc버전에서 메뉴에 마우스를 오버하면 : over
+                             모바일 버전에서 메뉴를 클릭해서 열면 : open -->
+                        <li>
+                            <a href="#"><span>소개</span></a>
+                            <ul class="depth2">
+                                <li><a href="#"><span>생명의숲은!</span></a></li>
+                                <li><a href="#"><span>함께하는이들</span></a></li>
+                                <li><a href="#"><span>재정공개</span></a></li>
+                                <li><a href="#"><span>공지사항</span></a></li>
+                                <li><a href="#"><span>찾아오시는길</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><span>활동</span></a>
+                            <ul class="depth2">
+                                <li><a href="#"><span>활동소개</span></a></li>
+                                <li><a href="#"><span>활동이야기</span></a></li>
+                                <li><a href="#"><span>그린짐 이야기</span></a></li>
+                                <li><a href="#"><span>아름다운 숲</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><span>참여와후원</span></a>
+                            <ul class="depth2">
+                                <li><a href="#"><span>후원이야기</span></a></li>
+                                <li><a href="#"><span>후원안내</span></a></li>
+                                <li><a href="#"><span>기업후원</span></a></li>
+                                <li><a href="#"><span>참여프로그램</span></a></li>
+                                <li><a href="#"><span>자원활동안내</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><span>자료실</span></a>
+                            <ul class="depth2">
+                                <li><a href="#"><span>정기간행물</span></a></li>
+                                <li><a href="#"><span>문서자료실</span></a></li>
+                                <li><a href="#"><span>미디어자료실</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><span>나의후원</span></a></li>
+                    </ul><!--depth1-->
+                    <!-- 모바일에서 gnb_wrap이 전체적으로 이동 
+                         그래서 모바일 메뉴에 같이 나오는 요소를 gnb_wrap안에 둠 -->
+                    <div class="m_lang"><button>한국어</button></div>
+                    <button class="gnb_close">메뉴닫기</button>
+                </div><!--gnb_wrap-->
+            </nav>
+            <div class="tnb">
+                <div class="search"><button>검색</button></div>
+                <div class="lang"><button>언어선택</button></div>
+            </div>
+        </header>
+        <div id="fullpage">
+            <section class="visual section fp-auto-height-responsive">
+                <h2 id="skip_content">팝업</h2>
+                <!-- fp-auto-height-responsive 모바일에서 콘텐츠의 높이를 브라우저 높이대로 셋팅X, 디자인한 만큼만 -->
+                <div class="swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide video">
+                            <div class="photo">
+                                <video muted autoplay playsinline loop>
+                                    <source src="images/main/visual.mp4" type="video/mp4">
+                                </video>
+                            </div><!--photo-->
+                            <div class="visual_txt">
+                                <h3>시민의 힘으로 나무를 심고 <br>
+                                    숲을 가꾸고 보전하는 시민단체입니다</h3>
+                                <p>모두가 누리는 5분 거리의 숲</p>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/main/visual01.jpg" alt=""></div><!--photo-->
+                            <div class="visual_txt">
+                                <h3>누구나 일상에서 건강한 숲을 누리도록<br>
+                                    도시 속 나무심기를 위한</h3>
+                                <p>#같이가치 #매달기부</p>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/main/visual02.jpg" alt=""></div><!--photo-->
+                            <div class="visual_txt">
+                                <h3>기념하고 싶은날! 서울 곳곳에<br>
+                                    나무 한 그루 심어보는 건 어떠세요?</h3>
+                                <p>서울 마이트리 내 나무 갖기</p>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/main/visual03.jpg" alt=""></div><!--photo-->
+                            <div class="visual_txt">
+                                <h3>생명의숲과 <br>
+                                    나무 할아버지 박상진교수의</h3>
+                                <p>우리가 지켜야 할 고목나무 이야기</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="paging"></div>
+                </div><!--swiper-->
+            </section>
+            <section class="tree section fp-auto-height-responsive">
+                <div class="wrapper">
+                    <div class="numbering">
+                        <div class="number">
+                            <span class="counter" data-start="0" data-end="89">89</span>
+                            <span>,</span>
+                            <span class="counter" data-start="100" data-end="272">272</span>
+                        </div>
+                        <div class="sub_txt">그루</div>
+                    </div>
+                    <h2>2023 심은 나무</h2>
+                    <p>2023년 생명의숲 활동으로 전국에 심은 나무의 수는<br>총 89,272그루입니다. </p>
+                </div>
+            </section>
+            <section class="introduce section fp-auto-height-responsive">
+                <div class="wrapper">
+                    <div class="tit fade_left">
+                        <h2>숲을 통한<br>
+                            사회문제 해결,<br>
+                            모두가 누리는 5분 거리 숲</h2>
+                        <p>시민의 힘으로 나무를 심고 숲을 가꾸고 보전하며,<br>숲의 공공성을 높여 누구나 숲의 가치를 누리는<br>건강한 사회를 만들어가는 시민단체입니다.</p>
+                    </div><!--tit-->
+                    <div class="list fade_right">
+                        <ul>
+                            <li class="intro01"><a href="#n"><span>도시숲</span></a></li>
+                            <li class="intro02"><a href="#n"><span>학교숲</span></a></li>
+                            <li class="intro03"><a href="#n"><span>사회복지숲</span></a></li>
+                            <li class="intro04"><a href="#n"><span>숲환경교육</span></a></li>
+                            <li class="intro05"><a href="#n"><span>숲길</span></a></li>
+                            <li class="intro06"><a href="#n"><span>공존숲</span></a></li>
+                        </ul>
+                    </div><!--list-->
+                </div>
+            </section>
+            <section class="story section fp-auto-height-responsive">
+                <div class="wrapper">
+                    <div class="tit fade_top">
+                        <h2>생명의숲 활동이야기</h2>
+                    </div><!--tit-->
+                    <div class="list fade_bottom">
+                        <div class="swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <h3>나의 나무, 나의 공원 이야기 #월드컵공원 #여섯번째</h3>
+                                        <p>서울마이트리캠페인은 서울 곳곳의 공원, 우리 일상 가까이에 나무를 기부하는 캠페인입니다. 나무 한 그루로부터 시작하는 작은 관심이 지구에, 도시에, 우리 일상에 미치는 긍정적인 역할을 알리는 것이 목표입니다.</p>
+                                        <span class="date">2025.01.22 </span>
+                                        <div class="photo">
+                                            <span class="cate">도시숲</span>
+                                            <img src="images/main/story01.jpg" alt="">
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <h3>새까맣게 변해버린 숲이 아닌, 다시 새벽마다 이슬을 머금을 수 있는 건강한 숲을 만들기 위해 노력할게.</h3>
+                                        <p>생명의숲 산림정책팀은 숲의 생태적 기능을 되살리기 위해 더 건강한 숲을 조성하고 산불 등으로 인한 훼손지를 복구하며 우리 모두가 공존할 수 있는 숲을 가꾸고 있습니다. 강원특별자치도 동해시 초구동에 위치한 국민의 숲은 2022년 강원경북 대형산불 피해를 입은 곳입니다.</p>
+                                        <span class="date"> 2025.01.14</span>
+                                        <div class="photo">
+                                            <span class="cate">정책활동</span>
+                                            <img src="images/main/story02.jpg" alt="">
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <h3>서로배움학교 숲문화쌀롱 다섯번째 이야기</h3>
+                                        <p>서로배움학교는 생명의숲 활동가 역량강화의 일환으로 진행되는 스터디 그룹 프로그램입니다. ‘일 기반 학습, 일을 통한 성장' 범위 내에서 주최자가 주제를 선정하고, 공감하는 활동가(3~5인)가 참여하여, 모든 구성원이 서로 배움의 주체가 되어 경계없이 생각을 나눕니다.</p>
+                                        <span class="date">2024.12.29</span>
+                                        <div class="photo">
+                                            <span class="cate">사무처이야기</span>
+                                            <img src="images/main/story03.jpg" alt="">
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <h3>1년차 활동가의 돋보기, 울진 산불 2년 후의 현장에서</h3>
+                                        <p>생명의숲 산림정책팀은 숲의 생태적 기능을 되살리기 위해 더 건강한 숲을 조성하고 산불 등으로 인한 훼손지를 복구하며 우리 모두가 공존할 수 있는 숲을 가꾸고 있습니다. 경상북도 울진군은 2022년에 역대급 산불로 큰 피해를 입은 지역입니다. </p>
+                                        <span class="date">2024.12.27</span>
+                                        <div class="photo">
+                                            <span class="cate">정책활동</span>
+                                            <img src="images/main/story04.jpg" alt="">
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!--swiper-->
+                    </div><!--list-->
+                    <div class="more fade_right"><a href="#n">더보기</a></div><!--more-->
+                </div>
+            </section>
+            <footer class="section fp-auto-height">
+                <!--fp-auto-height 높이를 브라우저 높이와 동일하게 셋팅 X (자유롭게 높이 조절)-->
+                footer
+            </footer>
+        </div><!--fullpage-->
+        <!-- 다른 배경색에서 색상 변경 시  color2 클래스 추가 -->
+        <div class="quick_link ">
+            <ul>
+                <li class="link1"><a href="#n"><span>마이트리</span></a></li>
+                <li class="link2"><a href="#n"><span>해피빈</span></a></li>
+                <li class="link3"><a href="#n"><span>같이가치</span></a></li>
+            </ul>
+            <button class="top"><span>TOP</span></button>
+        </div>
+        <!-- 배경이 흰색이라 글자가 검은색으로 들어갈때 dark 클래스를 추가 -->
+        <nav class="quick_nav dark">
+            <ul>
+                <li><a href="#main"><span>Main</span></a></li>
+                <li><a href="#tree"><span>나무심기</span></a></li>
+                <li><a href="#introduce"><span>숲 활동</span></a></li>
+                <li class="active"><a href="#story"><span>활동이야기</span></a></li>
+            </ul>
+        </nav>
+    </div><!--wrap-->
+</body>
+</html>

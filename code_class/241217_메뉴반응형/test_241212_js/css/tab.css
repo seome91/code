@@ -1,0 +1,244 @@
+@import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
+@import url(font.css);
+@import url(common.css);
+
+.news {
+    margin: 100px 0;
+}
+.news .wrapper {
+    position: relative; /* more 정렬의 기준 */
+}
+.news .tab_list ul {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+.news .tab_list ul li button {
+    padding: 15px 37px;
+    font-size: 25px;
+    position: relative; /* after 정렬의 기준 */
+}
+.news .tab_list ul li.active button {
+    color: #075E9D;
+    font-weight: 800;
+}
+.news .tab_list ul li.active button::before {
+    content: "";
+    position: absolute;/* button을 기준으로 정렬 */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #075E9D;
+}
+
+.news .tab_contents {
+    padding: 49px 37px;
+    margin: 19px 0 0 0;
+    background-color: #f4f4f4;
+}
+.news .tab_contents .tab_pannel {
+    display: none; /* 숨김 */
+}
+/* .news .tab_contents .tab_pannel[data-panel="news1"] {
+    color: red;
+} */
+.news .tab_contents .tab_pannel.active {
+    display: block; /* 나타남 */
+}
+.news .tab_contents .tab_pannel h3 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #1d1d1d;
+    margin: 0 0 10px 0;
+}
+.news .tab_contents .tab_pannel .more {
+    position: absolute;
+    right: 0;
+    top: 19px;
+}
+.news .tab_contents .tab_pannel .more a {
+    background-color: #f4f4f4;
+    padding: 12px 42px 10px 19px;
+    display: block;
+}
+.news .tab_contents .tab_pannel .more a::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 11px;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 13H5V11H11V5H13V11H19V13H13V19H11V13Z' fill='%23555555'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (max-width:640px){
+            .news .tab_list ul li button {
+                padding: 14px 20px;
+                font-size: 17px;
+            }
+            .news .tab_contents {
+                padding: 20px 15px;
+            }
+            .news .tab_contents .tab_pannel h3 {
+                font-size: 20px;
+            }
+            .news .tab_contents .tab_pannel .more {
+                top: 15px;
+            }
+            .news .tab_contents .tab_pannel .more a {
+                padding: 0;
+                width: 24px; /* 아이콘 사이즈 */
+                height: 24px;
+                font-size: 0; /* 글자숨김 */
+                line-height: 0;
+                background-color: transparent; /* 배경 투명 */
+            }
+            .news .tab_contents .tab_pannel .more a::after {
+                right: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+}/* media */
+
+
+.notice {
+    margin: 100px 0;
+}
+.notice .list ul {
+    display: flex;
+    position: relative; /* tab_contents 정렬의 기준 */
+    height: 560px;
+    /* tab_content가 absolute라서 공간을 차지하지 않음 */
+}
+.notice .list ul li {
+    width: calc(33.33% - 64px);
+    /* 옆에 더보기 192px 
+       100% 에서 192px 빼서 3등분 
+       100% / li갯수 = 33.33% 
+       192 / li갯수 = 64px */
+}
+.notice .list ul li button {
+    display: block; /* button은 block요소로 바꿔도 넓이 100%가 안됨 */
+    width: 100%;
+    height: 70px;
+    font-size: 25px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-left-width: 0;
+}
+.notice .list ul li:first-child button {
+    border-left-width: 1px;
+    border-top-left-radius: 20px;
+}
+.notice .list ul li.active button {
+    background-color: #fff;
+    color: #1d1d1d;
+    font-weight: 800;
+    border-bottom-width: 0;
+}
+.notice .list ul li .tab_contents {
+    display: none; /* 숨김 */
+    position: absolute;
+    left: 0;
+    top: 70px;/* tab 높이 */
+    border: 1px solid #ccc;
+    border-top-width: 0;
+    border-radius: 0 0 20px 20px;
+}
+.notice .list ul li .tab_contents .inner {
+    padding: 40px 25px;
+}
+.notice .list ul li .tab_contents h3 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #1d1d1d;
+    margin: 0 0 10px 0;
+}
+.notice .list ul li .tab_contents .more {
+    position: absolute; /* tab_contents를 기준으로 정렬 */
+    right: 0;
+    top: -70px;
+}
+.notice .list ul li .tab_contents .more a {
+    display: block;
+    width: 192px;
+    height: 70px;
+    background-color: #1773B5;
+    color: #fff;
+    border-top-right-radius: 20px;
+    padding: 28px 0 0 34px;
+}
+.notice .list ul li .tab_contents .more a::after {
+    content: "";
+    position: absolute;
+    right: 27px;
+    top: 30px;
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.25 9.75H3.75V8.25H8.25V3.75H9.75V8.25H14.25V9.75H9.75V14.25H8.25V9.75Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.notice .list ul li.active .tab_contents {
+    display: block; /* 나타남 */
+}
+
+@media screen and (max-width:640px){ 
+            .notice .list ul {
+                height: 560px;
+                /* tab_content가 absolute라서 공간을 차지하지 않음 */
+            }
+            .notice .list ul li {
+                width: calc(33.33% - 14px);
+                /* 옆에 더보기 42px 
+                100% 에서 42px 빼서 3등분 
+                100% / li갯수 = 33.33% 
+                42px / li갯수 = 14px */
+            }
+            .notice .list ul li button {
+                height: 43px;
+                font-size: 15px;
+            }
+            .notice .list ul li:first-child button {
+                border-top-left-radius: 10px;
+            }
+            .notice .list ul li .tab_contents {
+                top: 43px;/* tab 높이 */
+                border-radius: 0 0 10px 10px;
+               
+            }
+            .notice .list ul li .tab_contents .inner {
+                padding: 20px 15px;
+            }
+            .notice .list ul li .tab_contents h3 {
+                font-size: 20px;
+            }
+            .notice .list ul li .tab_contents .more {
+                top: -43px;
+            }
+            .notice .list ul li .tab_contents .more a {
+                display: block;
+                width: 42px;
+                height: 43px;
+                border-top-right-radius: 10px;
+                padding: 0;
+                font-size: 0; /* 글자 숨김 */
+                line-height: 0;
+            }
+            .notice .list ul li .tab_contents .more a::after {
+                right: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-size: 18px;
+            }
+}/* media */
+
+.etc {
+    margin: 100px 0;
+}

@@ -1,0 +1,138 @@
+@import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
+@import url(font.css);
+@import url(common.css);
+
+header {
+    position: absolute; /* wrap을 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo a {
+    display: block;
+    font-size: 0; /* 글자 안보이게 */
+    line-height: 0;
+    width: 186px; /* 로고사이즈 */
+    height: 30px;
+    position: relative; /* before 정렬의 기준 */
+}
+header .logo a::before {
+    content: "";
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/logo_w.svg) no-repeat center center / contain;
+}
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none; /* 모바일에서만 보임 */
+}
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex;
+}
+/*
+    자식선택자
+    <ul class="depth1">
+        <li>                     ------ 이것만 선택 ul.depth1 > li 
+            <ul class="depth2">
+                <li></li>
+            </ul>
+        </li>
+    </ul>
+    >> > 기호가 들어간 이후부터 하나의 html요소도 빠뜨리면 안됨
+*/
+header .gnb .gnb_wrap ul.depth1 > li {
+    width: 130px;
+    text-align: center;
+    position: relative; /* ul.depth2 정렬의 기준 */
+}
+header .gnb .gnb_wrap ul.depth1 > li > a {
+    display: block;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 100px; /* header 높이 */
+}
+header .gnb .gnb_wrap ul.depth1 > li > a span {
+    position: relative; /* after 정렬의 기준 */
+}
+/** 2차메뉴 (absolute로 코딩) **/
+header .gnb .gnb_wrap ul.depth2 {
+    position: absolute; /* 1차메뉴 li를 기준으로 정렬 */
+    left: 0;
+    top: 100px; /* 1차메뉴 a의 높이만큼 */
+    width: 100%; /* li의 넓이와 2차메뉴의 넓이를 동일 */
+    padding-top: 22px;
+    /* 1차메뉴 a와 2차 메뉴 사이의 여백은 반드시 padding-top으로 줌 */
+    display: none; /* 숨김 */
+}
+header .gnb .gnb_wrap ul.depth2 > li > a {
+    display: block;
+    line-height: 50px;
+}
+header .gnb .gnb_wrap ul.depth2 > li > a:hover {
+    font-weight: 800;
+    color: #2264DC;
+}
+/****** 메뉴가 오버됐을때 ********/
+header.menu_pc {
+    color: #555;
+}
+header.menu_pc::before {
+    content: "";
+    position: absolute; /* header를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    z-index: -1; /* 바닥으로 내리기 */
+    width: 100%;
+    height: 403px;
+    background-color: #fff;
+}
+header.menu_pc::after {
+    content: "";
+    position: absolute; /* header를 기준으로 정렬 */
+    left: 0;
+    top: 100px; /* header 높이만큼 */
+    width: 100%;
+    height: 1px;
+    background-color: #ededed;
+}
+header.menu_pc .logo a::before {
+    background-image: url(../images/logo.svg);
+}
+header.menu_pc .gnb .gnb_wrap ul.depth1 > li > a {
+    color: #1d1d1d;
+}
+header.menu_pc .gnb .gnb_wrap ul.depth1 > li.active > a {
+    color: #2264DC;
+}
+header.menu_pc .gnb .gnb_wrap ul.depth1 > li.active > a span::after {
+    content: "";
+    position: absolute;
+    /* 글자보다 좌우에 10px씩 더줌 */
+    left: -10px;
+    bottom: -38px;
+    z-index: 10; /* header에 z-index:100;을 줘도 내부는 다시 계산 */
+    width: calc(100% + 20px);
+    height: 3px;
+    background-color: #2264DC;
+}
+header .gnb .gnb_wrap ul.depth1 > li:last-child > ul.depth2 > li:last-child {
+
+}
+header.menu_pc .gnb .gnb_wrap ul.depth2 {
+    display: block;
+}
+.visual {
+    height: 800px;
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
+}

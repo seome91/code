@@ -1,0 +1,136 @@
+/*
+ * main.css
+ * 메인페이지에만 적용되는 스타일 입력,
+ * 다른 css import 
+ */
+ @import url(default.css);
+ @import url(font.css);
+ @import url(common.css);
+ @import url(layout.css); 
+
+.txt_ani {
+    margin: 200px 0 500px;
+}
+.txt_ani .txt_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.txt_ani .txt_wrap .row {
+    font-size: 3.5vw;
+    font-weight: 700;
+    color: #EDEDED;
+    white-space: nowrap;
+    position: relative; /* span */
+}
+.txt_ani .txt_wrap .row span {
+    color: #1d1d1d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    animation-name: txt_ani;
+    animation-duration: 1s;
+    animation-iteration-count: 1; /* 1번만 실행 */
+    animation-fill-mode: forwards; /* 종료 후 100% 유지 */
+}
+.txt_ani .txt_wrap .row:nth-child(1) span {
+    animation-delay: 0.5s;
+}
+.txt_ani .txt_wrap .row:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+@keyframes txt_ani {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+.txt_slide .txt_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.txt_slide .txt_wrap .row {
+    font-size: 3.5vw;
+    font-weight: 700;
+    color: #EDEDED;
+    position: relative; /* span */
+    white-space: nowrap;
+}
+.txt_slide .txt_wrap .row span {
+    color: #1d1d1d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.2s;
+}
+@media screen and (max-width:1300px){
+    .txt_slide .txt_wrap .row {
+        font-size: 5vw;
+    }
+}
+
+.photo_resize {
+    margin: 150px 0 0 0;
+}
+.photo_resize .photo {
+    overflow: hidden;
+    height: 334px;
+    width: 50%;
+    margin: 0 auto;
+}
+.photo_resize .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bg_fixed {
+    margin: 500px 0 0 0;
+    background: url(../images/bg_fixed.jpg) no-repeat center center / cover;
+    background-attachment: fixed;
+    /* 이미지를 저장할때 높이를 브라우저의 높이만큼 엄청 크게 잡고 저장해야함 
+       높이를 디자인한 높이만큼 작게 저장하면 이미지가 과도하게 늘어남 */
+    height: 640px;
+}
+.bg_fixed h2 {
+    padding: 127px 0 0 0;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.bg_change {
+    margin: 300px 0 0 0;
+}
+.bg_change.black {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+.bg_change .video_fit .tit {
+    padding: 130px 0 120px 0;
+}
+.bg_change .video_fit .tit h2 {
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 24px 0;
+}
+.bg_change .video_fit .video_wrap {
+    width: 80%;
+    max-width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.bg_change .video_fit .video_wrap video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+body {
+    margin: 0 0 100vh 0;
+}

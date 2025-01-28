@@ -1,0 +1,73 @@
+/*
+ * common.css
+ * 글자의 기본 스타일 및 wrapper/wrap 설정
+ */
+body, html {
+    font-family: "Paperlogy", "맑은고딕", "Malgun Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* sans-serif 고딕서체 */
+    /* 먼저 선언한 폰트를 사용, 먼저 선언한 폰트가 한글이 지원X - 그럼 자동으로 두번째 폰트로 표시됨 */
+    font-size: var(--base-font-size);
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.4; /* 배수 - 글자크기에 몇배 */
+    word-break: keep-all; /* 단어별로(여백기준) 줄바꿈 */
+    word-wrap: break-word; /* 단어가 너무 길면 그걸 강제로 줄바꿈 하는 명령 */
+}
+.wrapper {
+    /* 디자인파일에 레이아웃 그리드 처럼 홈페이지 영역 제한하고 
+       브라우저에 가운데 정렬 */
+    width: 1260px;
+    margin: 0 auto;
+}
+#wrap {
+    width: 100%;
+    overflow: hidden; 
+    /* wrap 영역 밖으로 나간 요소는 숨김처리  absolute가 대부분 나감. */
+    position: relative; /* header 정렬의 기준값 */
+}
+@media screen and (max-width:1520px){
+    /* 1520 - 1260 = 260 / 2 = 130 */
+    .wrapper {
+        width: auto; 
+        margin: 0 130px;
+    }
+}
+@media screen and (max-width:1024px){
+                        .wrapper {
+                            margin: 0 20px;
+                        }
+}/*media*/
+
+::selection {
+    background-color: var(--main-color);
+    color: #50E4CC;
+}
+::-moz-selection {
+    background-color: var(--main-color);
+    color: #50E4CC;
+}
+
+:root {
+    --base-font-size: 17px;
+    --header-h: 100px;
+    --main-color: #003483;
+    --sub-color: #00A287;
+    --title-txt-color: #1d1d1d;
+    --section-min-height: 700px;
+}
+@media screen and (max-width:1300px){
+    :root {
+        --base-font-size: 16px;
+    }
+}/* media */
+@media screen and (max-width:1024px){
+    :root {
+        --base-font-size: 15px;
+        --section-min-height: 0; /* 나중에 0으로 바꿔!! */
+    }
+}/* media */
+@media screen and (max-width:768px){ 
+    :root {
+        --base-font-size: 14px;
+        --header-h: 50px;
+    }
+}/* media */

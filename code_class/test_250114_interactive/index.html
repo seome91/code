@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>인터렉티브 테스트</title>
+</head>
+<body>
+<div id="wrap">
+    <section class="txt_ani">
+        <div class="wrapper">
+            <div class="txt_wrap">
+                <div class="row">
+                    세계로 뻗어가는
+                    <span>세계로 뻗어가는</span>
+                </div>
+                <div class="row">
+                    건설 한류의 중심에 금호건설이 있습니다.
+                    <span>건설 한류의 중심에 금호건설이 있습니다.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="txt_slide">
+        <div class="wrapper">
+            <div class="txt_wrap">
+                <div class="row">
+                    GLOBAL STANDARD
+                    <span>GLOBAL STANDARD</span>
+                </div><!--row-->
+                <div class="row">
+                    THINK OF THE PEOPLE AND NATURE
+                    <span>THINK OF THE PEOPLE AND NATURE</span>
+                </div><!--row-->
+            </div><!--txt_wrap-->
+        </div>
+    </section><!--txt_slide-->
+    <section class="photo_resize">
+        <div class="wrapper">
+            <div class="photo"><img src="images/photo_resize.jpg" alt=""></div>
+        </div>
+    </section><!--photo_resize-->
+    <section class="bg_fixed">
+        <div class="wrapper">
+            <h2>GLOBAL STANDARD<br>
+                IN CONSTRUCTION INDUSTRY</h2>
+        </div>
+    </section><!--bg_fixed-->
+    <!-- 스크롤을 내리면 black 추가 -->
+    <div class="bg_change ">
+        <section class="video_fit">
+            <div class="tit">
+                <div class="wrapper">
+                    <h2>No.1 Lifestyle<br> Creation Company</h2>
+                    <p>우리는 안정과 지속성장을 추구하는 기업, 형지엘리트입니다.<br>
+                        고객에게 행복과 기쁨을 주는 혁신적인 제품과 서비스를 창출하며,<br>
+                        보다 편리하고 세련된 라이프스타일을 만들어 나갑니다.<br>
+                        영상 속에 담긴 형지엘리트의 브랜드 가치와 비전을 경험해보세요.</p>
+                </div><!--wrapper-->
+            </div><!--tit-->
+            <div class="video_area" data-status="before"> 
+                <!-- 비디오가 스크롤될 영역의 높이를 줌 
+                    계속 상태를 업데이트 해야 해서 class로 주기보다 data로 주는게 나음
+                    처음에 고정되기 이전   before
+                    고정되었을때          fixed
+                    고정 이후             after
+                -->
+                <div class="video_wrap">
+                    <div class="video_inner">
+                        <video autoplay muted loop playsinline>
+                            <source src="images/movie.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div><!--video_wrap-->
+            </div><!--video_area-->
+        </section><!--video_fit-->
+        <section class="scroll_event">
+            <div class="wrapper">
+                <div class="event_wrap">
+                    <h2>Cosmetics<br>with Nature</h2>
+                    <div class="photo"><img src="images/scroll_event.jpg" alt=""></div>
+                </div>
+            </div>
+        </section><!--scroll_event-->
+    </div><!--bg_change-->
+    <section class="book">
+        <!-- 이렇게 중간에 삽입하면 html오류/웹호환성 오류 -->
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/slick-theme.css">
+        <script src="js/slick.min.js"></script>
+        <div class="list">
+            <div class="popup">
+                <div class="popup_wrap"> <!-- slick에서 호출하는 이름 -->
+                    <div class="popup_item">
+                        <a href="#n">
+                            <div class="photo"><img src="images/book1.jpg" alt=""></div>
+                            <div class="txt">
+                                <h2>형지엘리트 윌비플레이, LG 트윈스 문보경 선수와 후원 계약 체결</h2>
+                                <span>2025.01.14</span>
+                            </div>
+                        </a>
+                    </div><!--popup_item-->
+                    <div class="popup_item">
+                        <a href="#n">
+                            <div class="photo"><img src="images/book2.jpg" alt=""></div>
+                            <div class="txt">
+                                <h2>모든 시험에 적용되는 33가지 진짜 공부법</h2>
+                                <span>2025.01.14</span>
+                            </div>
+                        </a>
+                    </div><!--popup_item-->
+                    <div class="popup_item">
+                        <a href="#n">
+                            <div class="photo"><img src="images/book3.jpg" alt=""></div>
+                            <div class="txt">
+                                <h2>작은 땅의 야수들(리커버 무선판)</h2>
+                                <span>2025.01.14</span>
+                            </div>
+                        </a>
+                    </div><!--popup_item-->
+                    <div class="popup_item">
+                        <a href="#n">
+                            <div class="photo"><img src="images/book4.jpg" alt=""></div>
+                            <div class="txt">
+                                <h2>찬란한 멸종</h2>
+                                <span>2025.01.14</span>
+                            </div>
+                        </a>
+                    </div><!--popup_item-->
+                    <div class="popup_item">
+                        <a href="#n">
+                            <div class="photo"><img src="images/book5.jpg" alt=""></div>
+                            <div class="txt">
+                                <h2>이처럼 사소한 것들</h2>
+                                <span>2025.01.14</span>
+                            </div>
+                        </a>
+                    </div><!--popup_item-->
+                    <div class="popup_item">
+                        <a href="#n">
+                            <div class="photo"><img src="images/book6.jpg" alt=""></div>
+                            <div class="txt">
+                                <h2>성적을 부탁해 티처스</h2>
+                                <span>2025.01.14</span>
+                            </div>
+                        </a>
+                    </div><!--popup_item-->
+                </div><!--popup_wrap-->
+            </div><!--popup-->
+        </div><!--list-->
+    </section><!--book-->
+    <section class="best">
+        <!-- html중간에 집어 넣으면 웹표준, 접근성, 호환성 모두 에러 -->
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+        <script src="js/swiper-bundle.min.js"></script>
+        <div class="list">
+            <div class="swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="#n">
+                            <div class="photo"><img src="images/book1.jpg" alt=""></div>
+                            <div class="txt">
+                                <h2>형지엘리트 윌비플레이, LG 트윈스 문보경 선수와 후원 계약 체결</h2>
+                                <span>2025.01.14</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#n">
+                            <div class="photo"><img src="images/book2.jpg" alt=""></div>
+                            <div class="txt">
+                                <h2>모든 시험에 적용되는 33가지 진짜 공부법</h2>
+                                <span>2025.01.14</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#n">
+                            <div class="photo"><img src="images/book3.jpg" alt=""></div>
+                            <div class="txt">
+                                <h2>작은 땅의 야수들(리커버 무선판)</h2>
+                                <span>2025.01.14</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#n">
+                            <div class="photo"><img src="images/book4.jpg" alt=""></div>
+                            <div class="txt">
+                                <h2>찬란한 멸종</h2>
+                                <span>2025.01.14</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#n">
+                            <div class="photo"><img src="images/book5.jpg" alt=""></div>
+                            <div class="txt">
+                                <h2>이처럼 사소한 것들</h2>
+                                <span>2025.01.14</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#n">
+                            <div class="photo"><img src="images/book6.jpg" alt=""></div>
+                            <div class="txt">
+                                <h2>성적을 부탁해 티처스</h2>
+                                <span>2025.01.14</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div><!--list-->
+    </section><!--best-->
+</div>
+</body>
+</html>

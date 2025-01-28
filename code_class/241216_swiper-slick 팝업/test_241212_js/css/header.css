@@ -1,0 +1,112 @@
+@import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
+@import url(font.css);
+@import url(common.css);
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 100px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo a {
+    display: block;
+    width: 186px; /* 로고 크기 */
+    height: 30px;
+    font-size: 0; /* 글자 숨김 */
+    line-height: 0;
+    background: url(../images/logo_w.svg) no-repeat center center / contain;
+}
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none; /* 모바일에서만 나타남 */
+}
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex;
+}
+header .gnb .gnb_wrap ul.depth1 li a {
+    display: block;
+    line-height: 100px; /* header 높이와 동일 */
+    padding: 0 22px;
+    font-size: 22px;
+    font-weight: 800;
+}
+/*********마우스를 오버했을때 & 고정 했을때 **********/
+header.on {
+    background-color: #fff;
+    color: #1d1d1d;
+    border-bottom: 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+header.on .logo a {
+    background-image: url(../images/logo.svg); /* 이미지만 교체 */
+}
+
+@media screen and (max-width:640px){ 
+                header {
+                    height: 56px;
+                }
+                header .wrapper {
+                    margin-right: 0;
+                    /* margin: 0 20px; - 원래 이 값인데 오른쪽 여백만 0으로 변경 */
+                }
+                header .logo a {
+                    width: 133px; /* 로고 크기 */
+                    height: 21px;
+                }
+                header .gnb .gnb_open {
+                    display: block; /* 모바일에서만 나타남 */
+                    width: 60px;
+                    height: 56px;
+                    font-size: 0; /* 글자 숨김 */
+                    line-height: 0;
+                    position: relative; /* before 정렬의 기준 */
+                }
+                header .gnb .gnb_open::before {
+                    content: "";
+                    position: absolute; /* gnb_open을 기준으로 정렬 */
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.75 22.5V20H26.25V22.5H3.75ZM3.75 16.25V13.75H26.25V16.25H3.75ZM3.75 10V7.5H26.25V10H3.75Z' fill='white'/%3E%3C/svg%3E%0A");
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 30px; /* 아이콘 사이즈 */
+                }
+                header .gnb .gnb_wrap {
+                    display: none; /* 메뉴를 클릭해야 나타남 */
+                }
+                /* header 고정 또는 오버 */
+                header.on .gnb .gnb_open::before {
+                    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.75 22.5V20H26.25V22.5H3.75ZM3.75 16.25V13.75H26.25V16.25H3.75ZM3.75 10V7.5H26.25V10H3.75Z' fill='%231d1d1d'/%3E%3C/svg%3E%0A");
+                }
+}/* media 종료 */
+
+.visual {
+    height: 800px;
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
+}
+
+aside {
+    margin: 1000px 20px 200px 0;
+    text-align: right;
+}
+aside .top {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    background-color: #1C6FDB;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+}

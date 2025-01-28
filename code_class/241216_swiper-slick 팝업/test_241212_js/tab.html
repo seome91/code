@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tab.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/tab.js"></script>
+    <title>tab 구현</title>
+</head>
+<body>
+    <div id="wrap">
+        <main class="container">
+            <section class="news">
+                <div class="wrapper">
+                    <div class="tab_list">
+                        <ul>
+                            <!-- 제목과 리스트가 분리되어 있음
+                                 제목을 클릭하면 내용이 선택되려면 연결고리.. 
+                                 제목과 내용에 data-panel이라는 속성을 만들어서 동일한 값을 줌 -->
+                            <li class="active" data-panel="news1"><button title="선택됨">공지사항 <span>선택됨</span></button></li>
+                            <li data-panel="news2"><button>고시공고</button></li>
+                            <li data-panel="news3"><button>문화행사</button></li>
+                        </ul>
+                    </div><!--tab_list-->
+                    <div class="tab_contents">
+                        <div class="tab_pannel" data-panel="news1" class="active">공지사항</div>
+                        <div class="tab_pannel" data-panel="news2">고시공고</div>
+                        <div class="tab_pannel" data-panel="news3">문화행사</div>
+                    </div><!--tab_contents-->
+                </div><!--wrapper-->
+            </section>
+        </main>
+    </div>
+</body>
+</html>
