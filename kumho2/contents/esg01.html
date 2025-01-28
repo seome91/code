@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/sub.js"></script>
     <script src="../js/contents.js"></script>
     <link rel="stylesheet" href="../css/sub.css">
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
-    <title>기업정보 > 회사소개 > - 금호건설 서유정</title>
+    <title>윤리경영 > ESG - 금호건설</title>
     <!-- 서브페이지의 타이틀에는 현재메뉴명 > 상위메뉴명 - 사이트명 -->
 </head>
 <body>
     <div class="skipnav">
         <a class="cnt" href="#skip_content">본문바로가기</a>
-        <a class="menu" href="#skip_nav">주메뉴바로가기</a> <!--내부링크 -->
+        <a class="menu" href="#skip_nav">주메뉴바로가기</a>
+        <!-- 내부링크 href="#skip_nav" 라고 주면 id="skip_nav"로 되어있는 요소로 이동 (클릭했을때) -->
     </div>
     <div id="wrap">
-        <!--상단에 고정될때 fixed,아래로 스크롤해서 사라질때 scroll_down class 추가 
-        pc버전에서 메뉴에 마우스를 올리면 menu_pc 클래스 추가
-        모바일 버전에서 메뉴를 열면 menu_mo 클래스 추가-->
+        <!-- 상단에 고정될때 fixed - 아래로 스크롤 해서 사라질때 scroll_down 클래스 추가  
+             pc버전에서 메뉴에 마우스를 올리면 menu_pc 클래스 추가 
+             모바일버전에서 메뉴를 열면 menu_mo 클래스 추가 -->
         <header>
-            <h1 class="logo"><a href="index.html">금호건설</a></h1>
+            <h1 class="logo"><a href="../index.html">금호건설</a></h1>
             <nav class="gnb" id="skip_nav">
                 <button class="gnb_open">메뉴열기</button>
                 <div class="gnb_wrap">
                     <ul class="depth1">
-                        <!--pc버전에서 마우스를 오버하면 over 클래스추가,
-                            모바일 버전에서 클릭하면 open 클래스 추가
-                            서브페이지에서 현재 열려있는 선택된 메뉴 active -->
-                        <li class="active open">
+                        <!-- pc버전에서 마우스를 오버하면 over 클래스 추가
+                             모바일 버전에서 클릭하면 open 클래스 추가 
+                             서브페이지에서 현재 선택된 메뉴 active 클래스 추가 -->
+                        <li>
                             <a href="info.html"><span>회사소개</span></a>
                             <ul class="depth2">
-                                <li class="active"><a href="info.html"><span>기업정보</span></a></li>
+                                <li><a href="info.html"><span>기업정보</span></a></li>
                                 <li><a href="ceo.html"><span>CEO인사말</span></a></li>
                                 <li><a href="history.html"><span>연혁</span></a></li>
                                 <li><a href="org.html"><span>조직도</span></a></li>
@@ -42,10 +43,10 @@
                                 <li><a href="map.html"><span>찾아오시는길</span></a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="info.html"><span>ESG</span></a>
+                        <li class="active open">
+                            <a href="esg01.html"><span>ESG</span></a>
                             <ul class="depth2">
-                                <li class="on"><a href="esg01.html"><span>윤리경영</span></a></li>
+                                <li class="active"><a href="esg01.html"><span>윤리경영</span></a></li>
                                 <li><a href="esg02.html"><span>품질경영</span></a></li>
                                 <li><a href="esg03.html"><span>안전경영</span></a></li>
                                 <li><a href="esg04.html"><span>환경경영</span></a></li>
@@ -53,7 +54,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="info.html"><span>사업분야</span></a>
+                            <a href="biz01.html"><span>사업분야</span></a>
                             <ul class="depth2">
                                 <li><a href="biz01.html"><span>건축사업</span></a></li>
                                 <li><a href="biz02.html"><span>토목사업</span></a></li>
@@ -63,25 +64,25 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="info.html"><span>IR</span></a>
+                            <a href="ir01.html"><span>IR</span></a>
                             <ul class="depth2">
                                 <li><a href="ir01.html"><span>기업지배구조</span></a></li>
                                 <li><a href="ir02.html"><span>경영정보</span></a></li>
                                 <li><a href="ir03.html"><span>재무정보</span></a></li>
-                                <li><a href="ir04.htmll"><span>주가정보</span></a></li>
-                                <li><a href="ir05.htmll"><span>IR Contact</span></a></li>
+                                <li><a href="ir04.html"><span>주가정보</span></a></li>
+                                <li><a href="ir05.html"><span>IR Contact</span></a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="info.html"><span>인재채용</span></a>
+                            <a href="recruit02.html"><span>인재채용</span></a>
                             <ul class="depth2">
                                 <li><a href="https://kumhoenc.recruiter.co.kr/appsite/company/index" target="_blank" title="새창열기"><span>금호채용</span></a></li>
-                                <li><a href="recruit02.htm"><span>직무가이드</span></a></li>
-                                <li><a href="recruit03.htm"><span>채용/면접 Tip</span></a></li>
+                                <li><a href="recruit02.html"><span>직무가이드</span></a></li>
+                                <li><a href="recruit03.html"><span>채용/면접 Tip</span></a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="info.html"><span>홍보센터</span></a>
+                            <a href="pr01.html"><span>홍보센터</span></a>
                             <ul class="depth2">
                                 <li><a href="pr01.html"><span>금호뉴스</span></a></li>
                                 <li><a href="pr02.html"><span>분양뉴스</span></a></li>
@@ -94,56 +95,55 @@
                 </div>
                 <button class="gnb_close">메뉴닫기</button>
             </nav>
-            <!--global을 클릭하면 open클래스 추가-->
+            <!-- global을 클릭하면 open클래스 추가 -->
             <div class="global">
                 <button title="언어선택 열기 버튼">KOR</button>
+                <!-- 하나의 버튼이 열기/닫기 기능 -->
                 <div class="list">
                     <ul>
-                        <li><a href="index.html">KOR</a></li>
-                        <li class="active"><a href="#n">ENG</a></li>
+                        <li class="active"><a href="#n">KOR</a></li>
+                        <li><a href="#n">ENG</a></li>
                     </ul>
                 </div>
             </div><!--global-->
         </header>
         <main class="container">
-                <div class="sub_visual bg2">
-                    <!--1차메뉴명 & 설명(bg1,bg2....)-->
-                    <div class="sub_txt">
-                        <div class="wrapper">
-                            <!-------1차 메뉴명&설명--------->
-                            <strong>회사소개</strong>
-                            <span>THINK OF THE PEOPLE AND ANTURE</span>
-                        </div>
-                    </div><!--sub_txt-->
-                    <nav class="snb"><!--sub navigation bar-->
-                        <ul>
-                            <!-- 현재선택된 메뉴 : active -->
-                            <li class="active"><a href="info.html"><span>기업정보</span></a></li>
-                            <li><a href="ceo.html"><span>CEO인사말</span></a></li>
-                            <li><a href="history.html"><span>연혁</span></a></li>
-                            <li><a href="org.html"><span>조직도</span></a></li>
-                            <li><a href="tech.html"><span>기술혁신</span></a></li>
-                            <li><a href="map.html"><span>찾아오시는길</span></a></li>
-                        </ul>
-                    </nav>
-                </div><!--sub_visual-->
-                <div class="contents" id="skip_content"><!--skip 에서 본문 바로가기 클릭하면 이동-->
-                    <div class="page_tit">
-                        <div class="wrapper">
-                            <h1>기업정보</h1>
-                            <nav class="breadcrumb">
-                                <ol>
-                                    <li class="home"><a href="#n">home</a></li>
-                                    <li><a href="info.html">회사소개</a></li>
-                                    <li class="curr"><span>기업정보</span></li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div><!--sub_tit-->
-                </div>
-                <!--각 페이지별 콘텐츠 시작 각각 이름이 중복되면 안됨
-                클래스명을 'cnt_파일명'으로 함-->
-                <div class="sub_contents cnt_info">
+            <div class="sub_visual bg2">
+                <!-- 1차메뉴 마다 배경이미지가 다름 bg1 bg2 bg3 -->
+                <div class="sub_txt">
+                    <div class="wrapper">
+                        <!--1차메뉴명 & 설명-->
+                        <strong>ESG</strong>
+                        <span>Beautiful Corporate Culture of<br>Sharing and Participation</span>
+                    </div>
+                </div><!--sub_txt-->
+                <nav class="snb"><!--sub navigation bar-->
+                    <ul>
+                        <!-- 현재선택된 메뉴 : active -->
+                        <li class="active"><a href="esg01.html"><span>윤리경영</span></a></li>
+                        <li><a href="esg02.html"><span>품질경영</span></a></li>
+                        <li><a href="esg03.html"><span>안전경영</span></a></li>
+                        <li><a href="esg04.html"><span>환경경영</span></a></li>
+                        <li><a href="esg05.html"><span>상생경영</span></a></li>
+                    </ul>
+                </nav>
+            </div><!--sub_visual-->
+            <div class="contents" id="skip_content"><!--skip 에서 본문 바로가기 클릭하면 이동-->
+                <div class="page_tit">
+                    <div class="wrapper">
+                        <h1>윤리경영</h1><!--현재 페이지명-->
+                        <nav class="breadcrumb">
+                            <ol>
+                                <li class="home"><a href="../index.html">HOME</a></li>
+                                <li><a href="esg01.html">ESG</a></li><!--1차메뉴명 : 링크는 첫번째 하위메뉴-->
+                                <li class="curr"><span>윤리경영</span></li><!--현재메뉴명 링크X-->
+                            </ol>
+                        </nav>
+                    </div><!--wrapper-->
+                </div><!--sub_tit-->
+                <!--각 페이지별 콘텐츠 시작, 절대 이름이 중복되면 안됨 
+                    cnt_파일명 으로 함-->
+                <div class="sub_contents cnt_esg01">
                     <div class="wrapper">
                         
                     </div>
@@ -154,36 +154,35 @@
         <footer>
             <aside class="top"><button>위로가기</button></aside>
             <div class="wrapper">
-                <!--family_site가 열리면 open클래스 추가-->
-                <div class="family_site">
+                <!-- family_site가 열리면 open 클래스가 추가 -->
+                <div class="family_site ">
                     <button title="열기버튼">그룹사 바로가기</button>
                     <div class="list">
-                        <ul><!--현재 선택된 메뉴 : active-->
+                        <ul>
+                            <li><a href="#n">금호고속</a></li>
+                            <li><a href="#n">U·square</a></li>
                             <li><a href="#n">금호문화재단</a></li>
                             <li><a href="#n">아시아나항공</a></li>
                             <li><a href="#n">아시아나IDT</a></li>
+                            <li><a href="#n">에어부산</a></li>
                             <li><a href="#n">아시아나에어포트</a></li>
                             <li><a href="#n">아시아나세이버</a></li>
                             <li><a href="#n">에어서울</a></li>
-                            <li><a href="#n">U-sqare</a></li>
-                            <li><a href="#n">에어부산</a></li>
-                            <li><a href="#n">금호고속</a></li>
                         </ul>
-                    </div><!--list-->
-                    <div class="inner">
-                        <div class="f_nav">
-                            <ul>
-                                <li><a href="#n">제보실</a></li>
-                                <li><a href="#n">고객센터</a></li>
-                                <li><a href="#n">OB사랑방</a></li>
-                                <li><a href="#n">Contact us</a></li>
-                                <li class="privacy"><a href="#N">개인정보처리방침</a></li>
-                            </ul>
-                        </div><!--f_nav-->
-                        <div class="logo_footer">금호건설로고</div>
-                        <div class="copyright">ⓒ COPYRIGHT KUMHOENC</div>
-                    </div><!--inner-->
+                    </div>
                 </div><!--family_site-->
+                <div class="inner">
+                    <div class="f_nav">
+                        <ul>
+                            <li><a href="#n">제보실</a></li>
+                            <li><a href="#n">고객센터</a></li>
+                            <li><a href="#n">OB사랑방</a></li>
+                            <li><a href="#n">Contact us</a></li>
+                            <li class="privacy"><a href="#n">개인정보처리방침</a></li>
+                        </ul>
+                    </div><!--f_nav-->
+                    <div class="copyright">ⓒ KUMHO E&C, All Rights Reserved.</div>
+                </div><!--inner-->
             </div><!--wrapper-->
         </footer>
     </div>

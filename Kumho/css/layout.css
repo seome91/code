@@ -90,7 +90,7 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                     line-height: var(--header-h);/*header높이*/
                 }
                 header .gnb_wrap ul.depth1:hover > li > a {
-                    color: #1d1d1d;
+                    color:#1d1d1d;
                 }
                 header .gnb_wrap ul.depth1 > li > ul.depth2 {
                     position: absolute;
@@ -167,7 +167,7 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
 
                 }
                 header .global .list ul li.active a {
-                   
+                   display: none;
                 }
                 /***************언어선택열렸을때******************/
                 /*header .global.open button::after,*/ 
@@ -402,6 +402,11 @@ header.fixed.scroll_down, header.menu_pc.scroll_down {
                     font-weight: 700;
                    
                 }
+                header .global .list ul li a {
+                    display: block;
+
+                }
+       
                 header .global .list ul li.active a::after {
                     content: "";
                     position: absolute;
@@ -591,7 +596,7 @@ footer .copyright {
         background-size: contain;
     }
     footer .wrapper {
-        align-items: center;
+        display: block;
     }
     footer .family_site {
         max-width: 450px;

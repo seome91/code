@@ -1,4 +1,155 @@
 /*
  * contents.css
  * 콘텐츠 페이지 (인사말, 연혁, 찾아오시는길) 스타일 저장
- */
+*/
+
+/* 회사소개 > CEO인사말 */
+.cnt_ceo .photo_wrap {
+    position: relative;
+    color: #fff;
+}
+.cnt_ceo .photo_wrap::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 32em;
+    max-height: 100%;
+    background: url(../images/contents/ceo_img2.jpg) no-repeat center center / cover;
+}
+.cnt_ceo .photo_wrap .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.cnt_ceo .photo_wrap .inner {
+    padding: 2em 0 4.4706em 0;
+}
+.cnt_ceo .photo_wrap h2 {
+   font-size: 2.0588rem;
+   font-weight: 700;
+}
+.cnt_ceo .photo_wrap p {
+    font-size: 1.7647rem;
+    margin: 0.8em 0 1.1333em 0;
+}
+.cnt_ceo .photo_wrap .photo {
+    font-size: 0;
+    line-height: 0;
+}
+.cnt_ceo .photo_wrap .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.cnt_ceo .txt_wrap {
+    margin: 4.4706em 0;
+}
+.cnt_ceo .photo_wrap .inner {
+    /* 글자 */
+    width: 560px;
+}
+.cnt_ceo .photo_wrap .photo {
+    /* 오른쪽 */
+    width: calc(100% - 580px);
+}
+@media screen and (max-width:1000px){
+    .cnt_ceo .photo_wrap .inner {
+        padding: 3em 0 0 0;
+    }
+    .cnt_ceo .photo_wrap::before {
+        height: 100%;
+    }
+    .cnt_ceo .photo_wrap h2 br, .cnt_ceo .photo_wrap p br {
+        display: none;
+    }
+    .cnt_ceo .photo_wrap h2 {
+        font-size: 1.7857rem;
+    }
+    .cnt_ceo .photo_wrap p {
+        font-size: 1.4286rem;
+    }
+    .cnt_ceo .photo_wrap .sign img {
+        width: 8.4286em;
+    }
+    .cnt_ceo .photo_wrap .wrapper {
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    .cnt_ceo .photo_wrap .inner {
+        /* 글자 */
+        width: auto;
+    }
+    .cnt_ceo .photo_wrap .photo {
+        /* 오른쪽 */
+        width: 50%;
+        max-width: 400px;
+        min-width: 200px;
+    }
+}
+
+.cnt_ceo3 .photo_wrap .photo {
+    position: relative;
+    left: calc(50% - 630px);
+    width: calc(50% + 630px);
+    height: 712px;
+}
+.cnt_ceo3 .photo_wrap .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cnt_ceo3 h2, .cnt_ceo4 h2 {
+    color: #1d1d1d;
+    font-size: 1.7647rem;
+    font-weight: 700;
+    margin: 2.7667em 0 1.2em 0;
+ }
+ .cnt_ceo3 .sign, .cnt_ceo4 .sign {
+    display: flex;
+    gap: 1em;
+    font-size: 1.1765rem;
+    color: #1d1d1d;
+    margin: 3.8em 0;
+}
+.cnt_ceo4 .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.cnt_ceo4 .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.cnt_ceo4 .photo {
+    /* 사진 */
+    width: 46%;
+}
+.cnt_ceo4 .inner {
+    /* 글자 */
+    width: 51%;
+}
+@media screen and (max-width:1000px){
+    .cnt_ceo4 .wrapper {
+        display: block;
+    }
+    .cnt_ceo4 .photo {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .cnt_ceo4 .inner {
+        width: auto;
+    }
+    .cnt_ceo4 h2 {
+        font-size: 1.4286rem;
+    }
+    .cnt_ceo4 h2 br {
+        display: none;
+    }
+    .cnt_ceo4 .sign img {
+        width: 8.4286em;
+    }
+}/* media */
