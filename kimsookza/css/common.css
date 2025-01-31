@@ -1,7 +1,7 @@
 body, html {
     font-family: "NanumSquareNeo","dosis", "serif"; /* sans-serif 고딕서체 */
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 200;
     color: #555;
     line-height: 1.4; /* 배수 - 글자크기에 몇배 */
     word-break: keep-all; /* 단어별로(여백기준) 줄바꿈 */
