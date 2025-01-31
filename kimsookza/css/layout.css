@@ -99,3 +99,7 @@ header .logo a::before {
                 display: none;
             }
 }
+
+footer {
+    margin-bottom: 500px;
+}

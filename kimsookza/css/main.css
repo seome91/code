@@ -4,4 +4,38 @@
 @import url(layout.css);
 
 
-
+.visual {
+    display: flex; /* Flexbox 활성화 */
+    justify-content: center; /* 가로 중앙 */
+    align-items: center; /* 세로 중앙 */
+    position: relative;
+ }
+ .visual .wrapper {
+    position: relative;
+ }
+ .visual .visual_txt h2 {
+    position: absolute;
+    display: block;
+    color: #fff;
+    font-size: 56px;
+ }
+ .visual .visual_bg {
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #242959;
+    height: 100%;
+    width: 100%;
+    margin-top: 6.964em;
+    padding: 5px 25px 680px 25px;
+    border-radius: 40px 40px 40px 40px;
+ }
+ .visual .visual_bg h2 {
+    position: absolute;
+    font-family: 'dosis';
+    font-weight: 600;
+    font-size: 110px;
+    color: #4F598B;
+    left: 95px;
+    top: 15px;
+ }
