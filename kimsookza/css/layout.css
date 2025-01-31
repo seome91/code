@@ -1,0 +1,101 @@
+/*
+ * layout.css
+ * header/footer 모든 페이지의 공통 스타일 적용
+*/
+.skipnav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.skipnav a {
+    position: absolute; /* skipnav를 기준으로 정렬 */
+    left: 0;
+    top: -100px;
+    width: 100%;
+    display: block;
+    background-color: #0063AF;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+.skipnav a.menu {
+    background-color: #00AF00;
+}
+.skipnav a:focus {
+    top: 0;
+}
+
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;/* 좌우여백 */
+    background-color: #242959;   
+}
+header .logo {
+    margin-bottom: 0.8em;
+}
+header .logo a {
+    display: block;
+    color: transparent; /* 글자색 투명 */
+    width: 51.9412em;
+    height: 3.1176em;
+    position: relative; /* before 정렬의 기준 */
+}
+header .logo a::before {
+    content: "";
+    position: absolute;
+    left: -10.2353em;
+    top: 1.3529em;
+    width: 100%;
+    height: 100%;
+    background: url(../images/logo_w.png) no-repeat center center / contain;
+}
+@media screen and (min-width:1001px){/*이상일때*/
+            header .gnb .gnb_open,
+            header .gnb .gnb_close {
+                display: none; /* 숨김 */
+            }
+            header .gnb .gnb_wrap ul.depth1 {
+                display: flex;
+            }
+            header .gnb {
+                position: absolute;
+                left: 54.4706em;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+            header .gnb .gnb_wrap ul.depth1 > li {
+                text-align: center;
+                width: 7.3529em;
+                position: relative; /* depth2 정렬의 기준 */
+            }
+            header .gnb .gnb_wrap ul.depth1 > li > a {
+                display: block;
+                font-size: 1rem;
+                line-height: 100px;/*행간으로 메뉴가운데 맞춤*/
+            }
+            header .gnb .gnb_wrap ul.depth1 > li.over > a > span {
+                font-weight: 500;
+                position: relative; /* after 정렬의 기준 */
+            }
+            header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+                position: absolute;
+                left: 0;
+                top: 100px;/*header높이*/
+                width: 100%;
+                height: 100px;
+                padding-top: 1em;
+                display: none;
+            }
+}

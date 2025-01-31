@@ -1,0 +1,40 @@
+/* 웹폰트 파일을 이용해서 웹폰트의 이름과 두께 등을 선언 */
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	font-weight: 900;
+	font-display: swap;
+	src: local('NanumSquareNeoHeavy'), url(../fonts/NanumSquareNeoTTF-eHv.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-eHv.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	font-weight: 700;
+	font-display: swap;
+	src: local('NanumSquareNeoExtraBold'), url(../fonts/NanumSquareNeoTTF-dEb.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-dEb.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	font-weight: 500;
+	font-display: swap;
+	src: local('NanumSquareNeoBold'), url(../fonts/NanumSquareNeoTTF-cBd.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-cBd.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	font-weight: 300;
+	font-display: swap;
+	src: local('NanumSquareNeo'), url(../fonts/NanumSquareNeoTTF-bRg.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-bRg.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	font-weight: 100;
+	font-display: swap;
+	src: local('NanumSquareNeoLight'), url(../fonts/NanumSquareNeoTTF-aLt.woff2) format('woff2'), url(../fonts/NanumSquareNeoTTF-aLt.woff) format('woff');
+}
+
+
