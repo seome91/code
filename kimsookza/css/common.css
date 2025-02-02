@@ -23,7 +23,7 @@ body, html {
 }
 @media screen and (max-width:1300px){
                     .wrapper {
-                        width: auto; 
+                        width: 100%; 
                         /* 원래 너 하던대로해 - block요소 
                         - 감싸는 요소의 넓이의 100% 
                         - 100%로 주면 margin과 충돌 그래서 auto */
