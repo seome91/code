@@ -17,6 +17,7 @@ body, html {
     min-width: 1300px;
     /* 콘텐츠영역이 1260px 좌우여백 20px씩 
        1260 + 20 + 20 = 1300 */
+       /*1678 + 120 + 120 = 1918 */
     overflow: hidden; 
     /* wrap 영역 밖으로 나간 요소는 숨김처리  absolute가 대부분 나감. */
     position: relative; /* header 정렬의 기준값 */
@@ -34,10 +35,10 @@ body, html {
                     }
 }/*media*/
 
-@media screen and (max-width:640px){ 
+@media screen and (max-width:680px){ 
                     /* 브라우저 넓이 640px에서만 실행 */
-                    body, html {
+                    /* body, html {
                         font-size: 14px;
-                    }
+                    } */
         
 }/*media*/
