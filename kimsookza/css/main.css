@@ -81,9 +81,35 @@
    top: 124px;
    right: 2px;
 }
-.visual .swiper button {
+/* .visual .swiper button {
    display: none;
+}  */
+.visual .swiper ul li {
+   position: relative;
 }
+.visual .swiper ul li .photo{
+   overflow: hidden;
+   height: 680px;
+}
+.visual .swiper ul li .photo img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.visual .swiper ul li.swiper-slide-active .photo img {
+   animation-name: visual_photo;
+   animation-duration: 5s;
+   animation-timing-function: linear; /* 가속도X */
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards; /* 마지막 유지 */
+   transform: scale3d(1.1, 1.1, 1);
+}
+@keyframes visual_photo {
+   0% { transform: scale3d(1.1, 1.1, 1); }
+   100% { transform: scale3d(1, 1, 1); }
+}
+
+
  .visual .visual_bg .title {
     position: absolute;
     font-family: 'dosis';
@@ -100,7 +126,6 @@
    bottom: 15px;
    left: 90px;
  }
-
 
  .info {
    position: relative;
@@ -185,20 +210,18 @@
 
 
 
-
 .depart {
    position: relative;
-   align-items: center; /* 세로 중앙 */
-   display: block;
+   
    width: 100%;
-   height: 100%;
+   height: auto;
 }
 .depart .wrapper {
    position: relative;
    display: flex ; /* Flexbox 활성화 */
    justify-content: center; /* 가로 중앙 */
    align-items: center; /* 세로 중앙 */
-   margin: 200px 0 0 0;
+   margin: 200px auto 0 auto ;
    background: #F2F2F2;
 }
 .depart .wrapper .tit {
@@ -214,7 +237,7 @@
 }
 .depart .wrapper .tit a {
    position: relative;
-   margin: 26px 0 0 0;
+   margin: 20px 0 0 0;
    font-weight: 600;
    color: #fff;
    background-color: #242959;
@@ -236,13 +259,18 @@
 }
 
 .depart .list_wrap {
+   margin: 0 0 0 189px;
    width: 970px;
-   height: 536px;
+   height: 1536px;
+}
+.depart .wrapper .list {
+   text-align: center ;
 }
 .depart .wrapper .list ul {
    position: relative;
    color: #242959;
    font-size: 26px;
+   margin: 286px 0 0 0;
    font-weight: 300;
    border-radius: 40px;
    padding: 0;
@@ -251,9 +279,11 @@
    gap: 46px;
 }
 .depart .wrapper .list ul li {
+   position: relative;
    border-radius: 30px;
    height: 256px;
    width: 256px;
+   
 }
 .depart .wrapper .list .green {
    background-color: #E1F3CB;
@@ -265,10 +295,76 @@
    background-color: #B3C8FF;
 }
 .depart .wrapper .list ul li a {
+   white-space: nowrap;
+   position: absolute;
    display: block;
    padding: 56px 56px;
    height: 200px;
-   width: 280px;
-
+   width: 200px;
+   text-align: center;
 }
+.depart .wrapper .list ul li a:hover span {
+   font-weight: 500;
+}
+.depart .wrapper .list ul li a .photo  {
+   height: 150px;
+   width: 150px;
+} 
  
+
+.doctors {
+   position: relative;  
+}
+.doctors .wrapper {
+   padding: 200px 0 0 0;
+   display: flex ; /* Flexbox 활성화 */
+   justify-content: center; /* 가로 중앙 */
+   align-items: center; /* 세로 중앙 */
+   background: #F2F2F2;
+}
+.doctors .wrapper .tit {
+   font-family: "dosis";
+   color: #fff;
+}
+.doctors .wrapper .tit h2 {
+   font-size: 56px;
+   font-weight: 700;
+}
+.doctors .wrapper .tit p {
+   font-size: 26px;
+}
+.doctors .wrapper .tit .photo {
+   height: 235px;
+   width: 250px;
+}
+
+
+
+
+
+
+
+/* 
+.doctors .wrapper .tit img {
+   display: block;
+   width: 250px;
+   height: 320px;
+}
+.doctors .list_doc li {
+   border-color: #242959;
+   border-radius: 40px;
+}
+.doctors .list_doc li ul {
+   position: absolute;
+   color: #fff;
+   font-size: 17px;
+   margin: 0 0 0 0;
+   font-weight: 300;
+   border-radius: 40px;
+   padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 46px;
+   
+} */
+
