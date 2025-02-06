@@ -298,15 +298,12 @@ padding: 16px 36px 1px 36px;
 }
 .doctors .wrapper {
    display: flex ; /* Flexbox 활성화 */
-}
-.doctors .wrapper .tit {
-   position: relative;
-   text-align: end;
-   display: block;
-   top: 0;
-   left: 50px;
    background-color: #242959;
    border-radius: 40px 0 0 40px;
+}
+.doctors .wrapper .tit {
+   text-align: end;
+   display: block;
    padding: 222px 1322px 299px 216px;
    font-family: "dosis";
    color: #fff;
