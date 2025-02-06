@@ -294,14 +294,12 @@ padding: 16px 36px 1px 36px;
 
 .doctors {
    position: relative;  
-}
-.doctors .wrapper {
-   
-   display: flex ; /* Flexbox 활성화 */
    justify-content: center; /* 가로 중앙 */
    align-items: center; /* 세로 중앙 */
    background: #F2F2F2;
-   
+}
+.doctors .wrapper {
+   display: flex ; /* Flexbox 활성화 */
 }
 .doctors .wrapper .tit {
    position: relative;
