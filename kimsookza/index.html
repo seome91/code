@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
     <title>김숙자소아 청소년병원</title>
 </head>
 <body>
@@ -88,37 +91,36 @@
         </header>
         <main class="container">
             <section class="visual">
-                <div class="wrapper">
                     <div class="visual_txt">
                         <h2>응급실 <strong>365일 24시간 가동</strong><br>
                             신생아집중치료실 운영</h2>
-                            <a href="#n"><span>도움이필요하세요?</span></a>
+                            <a href="#n"><span>도움이필요하세요?</span><strong>하트</strong></a>
                     </div><!--visual txt-->
-                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
-                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
-                            <li class="swiper-slide">
-                                <img src="images/visualpic_1.png" alt="울고있는 아이">
-                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
-                            <li class="swiper-slide">
-                                <img src="images/visualpic_2.png" alt="청진기와 알약">
-                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
-                            <li class="swiper-slide">
-                                <img src="images/visualpic_3.png" alt="의료용 장갑을 낀손이 하트모양을 만들고있다">
-                            </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
-                        </ul>
-                        <div class="swiper-pagination"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
-                        <button class="swiper-button-prev"></button>
-                        <button class="swiper-button-next"></button>
-                    </div>
+                    <div class="popup">
+                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                            <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                                <li class="swiper-slide">
+                                    <img src="images/visualpic_1.png" alt="울고있는 아이">
+                                </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                                <li class="swiper-slide">
+                                    <img src="images/visualpic_2.png" alt="청진기와 알약">
+                                </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                                <li class="swiper-slide">
+                                    <img src="images/visualpic_3.png" alt="의료용 장갑을 낀손이 하트모양을 만들고있다">
+                                </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
+                            </ul>
+                            <div class="swiper-pagination"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
+                            <button class="swiper-button-prev"></button>
+                            <button class="swiper-button-next"></button>
+                        </div><!--swiper-->
+                    </div><!--popup-->
                     <div class="visual_bg">
                         <div class="title">
                             <h3>KIMSOOKZA CHILDREN’S HOSPITAL</h3>
                         </div>
                     </div>
-                </div><!--wrapper-->
             </section><!--visual-->
             <section class="info">
-                <div class="wrapper">
                     <div class="list">
                         <ul>
                             <li class="box1">
@@ -144,7 +146,6 @@
                             </li>
                         </ul>
                     </div><!--list-->
-                </div><!--wrapper-->
             </section><!--info-->
             <section class="depart">
                 <div class="wrapper">
@@ -153,48 +154,46 @@
                         <p>Departments</p>
                         <a href="#n">more</a>
                     </div><!--tit-->
-                    <div class="list_wrap">
-                        <div class="list">
-                            <ul>
-                                <li class="green">
-                                    <a href="#n">
-                                        <div class="photo"><img src="images/depart1.png" alt="마스크심볼"></div>
-                                        <span>알레르기질환</span>
-                                    </a>
-                                </li>
-                                <li class="pink">
-                                    <a href="#n">
-                                        <div class="photo"><img src="images/depart2.png" alt="마스크심볼"></div>
-                                        <span>면역질환</span>
-                                    </a>
-                                </li>
-                                <li class="blue">
-                                    <a href="#n">
-                                        <div class="photo"><img src="images/depart3.png" alt="마스크심볼"></div>
-                                        <span>성장클리닉</span>
-                                    </a>
-                                </li>
-                                <li class="blue">
-                                    <a href="#n">
-                                        <div class="photo"><img src="images/depart5.png" alt="마스크심볼"></div>
-                                        <span>소아신경</span>
-                                    </a>
-                                </li>
-                                <li class="green">
-                                    <a href="#n">
+                    <div class="list">
+                        <ul>
+                            <li class="green">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/depart1.png" alt="마스크심볼"></div>
+                                    <span>알레르기질환</span>
+                                </a>
+                            </li>
+                            <li class="pink">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/depart2.png" alt="마스크심볼"></div>
+                                    <span>면역질환</span>
+                                </a>
+                            </li>
+                            <li class="blue">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/depart3.png" alt="마스크심볼"></div>
+                                    <span>성장클리닉</span>
+                                </a>
+                            </li>
+                            <li class="blue">
+                                <a href="#n">
                                     <div class="photo"><img src="images/depart4.png" alt="마스크심볼"></div>
-                                    <span>소화기 질환</span>
-                                    </a>
-                                </li>
-                                <li class="pink">
-                                    <a href="#n">   
-                                    <div class="photo"><img src="images/depart6.png" alt="마스크심볼"></div>
-                                    <span>심장클리닉</span>
-                                    </a>
-                                </li>   
-                            </ul>
-                        </div>
-                    </div><!--list_wrap-->
+                                    <span>소아신경</span>
+                                </a>
+                            </li>
+                            <li class="green">
+                                <a href="#n">
+                                <div class="photo"><img src="images/depart5.png" alt="마스크심볼"></div>
+                                <span>소화기 질환</span>
+                                </a>
+                            </li>
+                            <li class="pink">
+                                <a href="#n">   
+                                <div class="photo"><img src="images/depart6.png" alt="마스크심볼"></div>
+                                <span>심장클리닉</span>
+                                </a>
+                            </li>   
+                        </ul>
+                    </div>
                 </div><!--wrapper-->
             </section><!--depart-->
             <section class="doctors">

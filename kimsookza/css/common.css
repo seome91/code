@@ -10,7 +10,7 @@ body, html {
 .wrapper {
     /* 디자인파일에 레이아웃 그리드 처럼 홈페이지 영역 제한하고 
        브라우저에 가운데 정렬 */
-    width: 1680px;/*변경*/
+    width: 1260px;/*변경*/
     margin: 0 auto;
 }
 #wrap {
