@@ -164,7 +164,7 @@ header .logo a::before {
 @media screen and (max-width:500px){
     header {
         height: 60px;
-        padding: 0 2.25% 0 3.25%;/* 좌우여백 */
+        padding: 0 2.25% 0 2.25%;/* 좌우여백 */
     }
     header .gnb .gnb_open::before {
         width: 27px;
