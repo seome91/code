@@ -61,7 +61,8 @@ header .logo a::before {
     height: 100%;
     background: url(../images/logo_w.png) no-repeat center center / contain;
 }
-@media screen and (min-width:1001px){/*이상일때*/
+
+@media screen and (min-width:1501px){/*이상일때*/
             header .gnb .gnb_open,
             header .gnb .gnb_close {
                 display: none; /* 숨김 */
@@ -69,11 +70,11 @@ header .logo a::before {
             header .gnb .gnb_wrap ul.depth1 {
                 display: flex;  
             }
-            /* header .gnb .gnb_wrap {
+            header .gnb .gnb_wrap {
                 gap: 170px;
                 width: 100%;
                 height: 100%;
-            } */
+            }
             header .gnb .gnb_wrap ul.depth1 > li {
                 text-align: center;
                 width: 135px;
@@ -98,6 +99,89 @@ header .logo a::before {
                 display: none;
             }
 }
+@media screen and (max-width:1500px){
+        header {
+            padding: 0 3.25% 0 6.25%;/* 좌우여백 */
+        }
+        header .gnb .gnb_open {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            color: transparent; 
+        }
+        header .gnb .gnb_open::before {
+            content: "";
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 56px;
+            height: 56px;
+            background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox='0 0 56 56' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.17956 42.6837C8.43483 42.6837 7.8062 42.4275 7.29364 41.9149C6.78147 41.4027 6.52539 40.7743 6.52539 40.0296C6.52539 39.2848 6.78147 38.6562 7.29364 38.1437C7.8062 37.6315 8.43483 37.3754 9.17956 37.3754H46.8197C47.5644 37.3754 48.1931 37.6315 48.7056 38.1437C49.2178 38.6562 49.4739 39.2848 49.4739 40.0296C49.4739 40.7743 49.2178 41.4027 48.7056 41.9149C48.1931 42.4275 47.5644 42.6837 46.8197 42.6837H9.17956ZM9.17956 30.6542C8.43483 30.6542 7.8062 30.3982 7.29364 29.886C6.78147 29.3734 6.52539 28.7448 6.52539 28.0001C6.52539 27.2553 6.78147 26.6267 7.29364 26.1142C7.8062 25.602 8.43483 25.3459 9.17956 25.3459H46.8197C47.5644 25.3459 48.1931 25.602 48.7056 26.1142C49.2178 26.6267 49.4739 27.2553 49.4739 28.0001C49.4739 28.7448 49.2178 29.3734 48.7056 29.886C48.1931 30.3982 47.5644 30.6542 46.8197 30.6542H9.17956ZM9.17956 18.6247C8.43483 18.6247 7.8062 18.3687 7.29364 17.8565C6.78147 17.3439 6.52539 16.7153 6.52539 15.9706C6.52539 15.2259 6.78147 14.5974 7.29364 14.0852C7.8062 13.5727 8.43483 13.3164 9.17956 13.3164H46.8197C47.5644 13.3164 48.1931 13.5727 48.7056 14.0852C49.2178 14.5974 49.4739 15.2259 49.4739 15.9706C49.4739 16.7153 49.2178 17.3439 48.7056 17.8565C48.1931 18.3687 47.5644 18.6247 46.8197 18.6247H9.17956Z' fill='%23E8EAED'/%3E%3C/svg%3E%0A");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        header .gnb .gnb_wrap {
+            display: none;
+        }
+        header .gnb .gnb_close {
+          display: none; /* 숨김 */
+        }
+        header .gnb .gnb_close::before {
+            content: "";
+            position: absolute;
+            right: 153px;
+            top: 21px;
+            width: 56px;
+            height: 56px;
+            background-image: url("data:image/svg+xml,%3Csvg width='56' height='56' viewBox='0 0 56 56' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28 32.0266L17.8391 42.187C17.2975 42.729 16.6264 43 15.8261 43C15.0257 43 14.3547 42.729 13.813 42.187C13.271 41.6453 13 40.9743 13 40.1739C13 39.3735 13.271 38.7025 13.813 38.1609L23.9734 28L13.813 17.8391C13.271 17.2975 13 16.6264 13 15.8261C13 15.0257 13.271 14.3547 13.813 13.813C14.3547 13.271 15.0257 13 15.8261 13C16.6264 13 17.2975 13.271 17.8391 13.813L28 23.9734L38.1609 13.813C38.7025 13.271 39.3735 13 40.1739 13C40.9743 13 41.6453 13.271 42.187 13.813C42.729 14.3547 43 15.0257 43 15.8261C43 16.6264 42.729 17.2975 42.187 17.8391L32.0266 28L42.187 38.1609C42.729 38.7025 43 39.3735 43 40.1739C43 40.9743 42.729 41.6453 42.187 42.187C41.6453 42.729 40.9743 43 40.1739 43C39.3735 43 38.7025 42.729 38.1609 42.187L28 32.0266Z' fill='white'/%3E%3C/svg%3E%0A");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            
+        }
+}
+@media screen and (max-width:800px){
+    header {
+        height: 82px;
+        padding: 0 3.25% 0 5.25%;/* 좌우여백 */
+    }
+    header .gnb .gnb_open::before {
+        width: 40px;
+        height: 40px;
+    }
+    header .logo a {
+        width: 298px;
+        height: 46px;
+    }
+    header .logo a::before {
+        right: 0;       
+        top: 23px;
+        width: 100%;
+        height: 100%;
+    }
+}
+@media screen and (max-width:500px){
+    header {
+        height: 60px;
+        padding: 0 2.25% 0 3.25%;/* 좌우여백 */
+    }
+    header .gnb .gnb_open::before {
+        width: 27px;
+        height: 27px;
+    }
+    header .logo a {
+        width: 138px;
+        height: 22px;
+    }
+    header .logo a::before {
+        right: 0;       
+        top: 23px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 
 footer {
     margin-bottom: 1000px;

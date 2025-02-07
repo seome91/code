@@ -27,7 +27,7 @@
  .visual .visual_txt {
    display: flex;
    position: absolute;
-   bottom: 15px;
+   bottom: 36px;
    left: 0;
    width: 100%;
    z-index: 2;
@@ -50,7 +50,7 @@
    display: flex;
    gap: 11px;
 }
-.visual .visual_txt a span {
+.visual .visual_txt a p {
    color: #242959;
    text-align: center;
    font-size: 26px;
@@ -61,7 +61,7 @@
    line-height: 62px; 
    padding: 0 30px; 
 }
-.visual .visual_txt a strong {
+.visual .visual_txt a span {
    font-size: 0;
    line-height: 0;
    border-radius: 50%;
@@ -73,8 +73,6 @@
    background-repeat: no-repeat;
 
 }
-
-
 
 
 
@@ -96,16 +94,17 @@
    height: 100%;
 }
 .visual .popup .swiper ul li {
-   
+   overflow: hidden;
+   position: relative;
 }
 
 .visual .popup .swiper ul li img {
-   height: 100%;
-   width: 100%;
-   object-fit: contain;
-   object-position: center bottom ; 
+   position: absolute;
+   left: 50%;
+   bottom: 0;
+   transform: translateX(-50%);
+   height: 580px;
 }
-
 
 .visual .popup .swiper ul li.swiper-slide-active .photo img {
    animation-name: visual_photo;
@@ -120,6 +119,105 @@
    100% { transform: scale3d(1, 1, 1); }
 }
 
+@media screen and (max-width:1500px){
+         .visual .visual_bg .title {
+            font-size: 80px;
+         }
+         .visual .visual_txt {
+            bottom: 36px;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            padding: 0 3.1716%;
+         }
+         .visual .visual_txt h2 {
+            font-size: 45px;
+         }
+         .visual .visual_txt a {
+            gap: 6px;
+         }
+         .visual .visual_txt a p {
+            font-size: 24px;
+            font-weight: 700;
+            padding: 0 20px; 
+         }
+         .visual .visual_txt a span {
+            width: 60px;
+            height: 60px;
+         }
+
+}
+@media screen and (max-width:800px){
+   .visual { 
+      margin: 110px 4.25% 0 4.25%;
+    }
+    .visual .visual_txt {
+      z-index: 15;
+      bottom: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      width: 100%;
+      padding:10px 4.1716%;
+   }
+   .visual .visual_txt::after {
+      content: "";
+      position: absolute;
+      z-index: -10;
+      height: 120%;
+      width: 100%;
+      border-radius: 0 0 35px 35px;
+      background-color: #4F598B;
+   }
+   .visual .visual_txt h2 {
+      margin: 10px 0 0 0;
+      line-height: 120%;
+      display: block;
+      color: #fff;
+      font-size: 40px;
+   }
+   .visual .visual_txt a {
+      margin: 30px 0 0 0;
+   }
+   .visual .visual_txt a p {
+      background-color: #FDD4C0;
+      height: 50px;
+      line-height: 50px; 
+      padding: 0 30px; 
+   }
+   .visual .visual_txt a span {
+      width: 50px;
+      height: 50px;
+      background-image: url("data:image/svg+xml,%3Csvg width='28' height='26' viewBox='0 0 28 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.9927 25.0316C13.5512 25.0316 13.1254 24.9524 12.7152 24.7938C12.305 24.6353 11.931 24.4004 11.5933 24.0891L9.02051 21.7354C6.91134 19.7979 4.94655 17.8033 3.12613 15.7516C1.30572 13.7 0.395508 11.3517 0.395508 8.70695C0.395508 6.46466 1.15436 4.58997 2.67207 3.08289C4.18978 1.57581 6.06488 0.822266 8.29738 0.822266C9.51176 0.822266 10.6061 1.05987 11.5805 1.53508C12.5547 2.01008 13.3587 2.52591 13.9927 3.08258C14.6269 2.52591 15.431 2.01008 16.4052 1.53508C17.3794 1.05987 18.4736 0.822266 19.688 0.822266C21.9224 0.822266 23.8017 1.57581 25.3258 3.08289C26.8502 4.58997 27.6124 6.46466 27.6124 8.70695C27.6124 11.3517 26.6984 13.7012 24.8705 15.7554C23.0426 17.8096 21.0795 19.7975 18.9811 21.7191L16.4011 24.0954C16.0628 24.4079 15.6872 24.6421 15.2743 24.7979C14.8616 24.9537 14.4344 25.0316 13.9927 25.0316ZM12.4302 6.83664C12.071 6.22247 11.5345 5.65601 10.8205 5.13726C10.1068 4.61851 9.27228 4.35914 8.31707 4.35914C7.06186 4.35914 6.01728 4.76831 5.18332 5.58664C4.34936 6.40497 3.93238 7.44747 3.93238 8.71414C3.93238 9.81976 4.31822 10.9804 5.08988 12.196C5.86176 13.4116 6.78801 14.6017 7.86863 15.7663C8.94926 16.9307 10.0608 18.0126 11.2033 19.012C12.3456 20.0113 13.2754 20.8389 13.9927 21.4948C14.7119 20.8331 15.6438 20.0017 16.7886 19.0007C17.9334 17.9995 19.046 16.9193 20.1264 15.7604C21.2067 14.6014 22.1349 13.4136 22.9111 12.197C23.6874 10.9803 24.0755 9.81799 24.0755 8.71008C24.0755 7.44612 23.6557 6.40497 22.8161 5.58664C21.9763 4.76831 20.9298 4.35914 19.6764 4.35914C18.7169 4.35914 17.8759 4.61851 17.1536 5.13726C16.4313 5.65601 15.901 6.22247 15.5627 6.83664C15.3896 7.12831 15.1644 7.35226 14.8871 7.50851C14.6096 7.66476 14.3159 7.74289 14.0061 7.74289C13.6997 7.74289 13.4086 7.66476 13.133 7.50851C12.8572 7.35226 12.6229 7.12831 12.4302 6.83664Z' fill='%23242959'/%3E%3C/svg%3E%0A");
+      background-position: center center;
+      background-repeat: no-repeat;
+   
+   }
+
+   .visual .popup {
+      position: absolute;
+      /* width: 1678px; */
+      width: 100%;
+      height: 100%;
+      top: 1px;
+      right: 0;
+      overflow: hidden;
+      border-radius: 40px;
+   }
+
+   .visual .popup .swiper ul li img {
+      position: absolute;
+      left: 50%;
+      bottom: 50PX;
+      transform: translateX(-50%);
+      height: 580px;
+   }
+
+}
+@media screen and (max-width:500px){
+
+}
 
  .info {
    position: relative;
@@ -127,7 +225,6 @@
 }
 .info .list {
    padding: 0 0 0 0;
-
 }
 .info .list ul {
    display: flex;
@@ -200,12 +297,15 @@
 .info .list ul p {
    font-size: 17px;
    font-weight: 500;
+   margin: 23px 0 0 0;
 } 
 .info .list ul p strong {
    border-bottom: 1.8px solid #242959;
 }
 
-
+@media screen and (max-width:1500px){}
+@media screen and (max-width:800px){}
+@media screen and (max-width:500px){}
 
 .depart {
    background: #F2F2F2;
@@ -289,80 +389,107 @@ padding: 16px 36px 1px 36px;
    background-color: #B3C8FF;
 }
  
-
+@media screen and (max-width:1500px){}
+@media screen and (max-width:800px){}
+@media screen and (max-width:500px){}
 .doctors {
    position: relative;  
-   justify-content: center; /* 가로 중앙 */
-   align-items: center; /* 세로 중앙 */
    background: #F2F2F2;
+}
+.doctors::before {
+   content: "";
+   position: absolute;
+   left: 9.8%;
+   top: 55%;
+   transform: translateY(-50%);
+   width: 90.2%;
+   height: 893px;
+   border-radius: 60px 0 0 60px;
+   background-color: #242959;
 }
 .doctors .wrapper {
    display: flex ; /* Flexbox 활성화 */
-   background-color: #242959;
-   border-radius: 40px 0 0 40px;
+   justify-content: space-between;
+   align-items: center;
+   position: relative; /* before보다 위에 있으려고 */
+   z-index: 1;
 }
-.doctors .wrapper .tit {
-   text-align: end;
-   display: block;
-   padding: 222px 1322px 299px 216px;
+.doctors .tit {
+   padding: 220px 0 0 0;
+
+   position: relative;
    font-family: "dosis";
    color: #fff;
 }
-.doctors .wrapper .tit h2 {
+.doctors .tit::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 250px;
+   height: 235px;
+   background: url(../images/logo_big.png) no-repeat center center / contain;   
+}
+.doctors .tit h2 {
    white-space:nowrap;
    font-size: 56px;
    font-weight: 700;
    margin: 28px 0 8px 0;
 }
-.doctors .wrapper .tit p {
+.doctors .tit p {
    color: rgba(225, 225, 225, 0.8);
    font-size: 26px;
 }
-.doctors .wrapper .tit .photo {
+.doctors .tit .photo {
    align-items: center;
    height: 235px;
    width: 250px;
    /*왼쪽병원로고*/
 }
 
-
 .doctors .list_doc {
    display: flex;
-   margin: 0 0 0 15%;
-   position: absolute;
-   width: 933px;
+   width: 930px;
 }
 .doctors .list_doc ul {
    display: flex;
    flex-wrap: wrap;/*여러줄허용*/
-   gap: 24px;
+   gap: 58px 51px;
 }
 .doctors .list_doc ul li {
-   width: 436px;
+   width: calc(50% - 29px);
 }
 .doctors .list_doc ul li:nth-child(odd) {
-   transform: translateY(180px);
+   transform: translateY(140px);
 }
 .doctors .list_doc ul li a {
-   margin: 0 0 0 5.25%;
    height: 600px;
-   display: flex;
-   align-items: flex-start;
    color: #242959;
    text-align: center;
    background-color: #fff;
    border-radius: 20px;
-   padding: 33px 26px 278px 26px;
-   display: block; 
+   padding: 33px 26px 0 26px;
+   display: block;
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .doctors .list_doc ul li a .photo {
-   text-align: center;
-   width: 381px;
+   font-size: 0;
+   line-height: 0;
+   overflow: hidden;
+   box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.doctors .list_doc ul li a .photo img {
+   width: 100%;/*항상 100%*/
+   height: 100%;
+   object-fit: cover;
 }
 .doctors .list_doc ul li a h3 {
-   margin: 10px 0 10px 0;
+   margin: 36px 0 10px 0;
    font-size: 26px;
-   font-weight: 500;
+   font-weight: 700;
+}
+.doctors .list_doc ul li a p {
+   font-weight: 300;
 }
 
 

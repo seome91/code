@@ -92,6 +92,7 @@ header.fixed .logo a::before, header.menu_pc .logo a::before {
                     font-size: 1.1765rem;
                     font-weight: 700;
                     line-height: var(--header-h); /* header의 높이 */
+                    
                 }
                 header .gnb .gnb_wrap ul.depth1 > li.over > a > span {
                     color: var(--main-color);
