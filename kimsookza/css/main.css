@@ -148,9 +148,13 @@
 
 }
 @media screen and (max-width:800px){
+   
          .visual { 
-            margin: 110px 4.25% 0 4.25%;
+            margin: 110px 5% 0 5%;
+         
+            
          }
+       
          .visual .visual_txt {
             z-index: 15;
             bottom: 50px;
@@ -167,18 +171,19 @@
             z-index: -10;
             height: 120%;
             width: 100%;
-            border-radius: 0 0 35px 35px;
+            border-radius: 0 0 10px 10px;
             background-color: #4F598B;
          }
          .visual .visual_txt h2 {
             padding: 32px 0 0 0;
-            font-size: 40px;
+            font-size: 38px;
             white-space: nowrap;
          }
          .visual .visual_txt a {
             margin: 15px 0 0 0;
          }
          .visual .visual_bg {
+         border-radius: 20px;
          height: 650px;
          }
          .visual .visual_txt a p {
@@ -201,7 +206,6 @@
             top: 1px;
             right: 0;
             overflow: hidden;
-            border-radius: 40px;
          }
 
          .visual .popup .swiper ul li img {
@@ -211,7 +215,7 @@
             transform: translateX(-60%);
          }
          .visual .popup .swiper-slide.popup3 img {
-            transform: translate(-50%, -35%);/*혼자만 위치바꿔주기*/
+            transform: translate(-50%, -23%);/*혼자만 위치바꿔주기*/
          }
 
 }/*media*/
@@ -221,7 +225,7 @@
 
 @media screen and (max-width:500px){
          .visual { 
-            margin: 90px 3.25% 0 3.25%;
+            margin: 90px 5% 0 5%;
          }
          .visual .visual_bg {
             height: 590px;
@@ -240,7 +244,7 @@
             text-align: center;
             justify-content: center;
             width: 100%;
-            padding:10px 4.1716%;
+            padding:10px 3%;
          }
          .visual .visual_txt::after {
          content: "";
@@ -248,14 +252,13 @@
          z-index: -10;
          height: 125%;
          width: 100%;
-         border-radius: 0 0 35px 35px;
+         
          background-color: #4F598B;
       }
          .visual .visual_txt h2 {
             font-size: 25px;
          }
          .visual .visual_txt a {
-         
             gap: 9px;
          }
          .visual .visual_txt a p {
@@ -330,13 +333,13 @@
 .info .list li a {
    display: block;
    height: 565px;
+   padding: 62px 11% 0 11%;
 }
 
 .info .list ul h3 {
-   padding: 11% 11% 5% 11%;
+   margin-bottom: 17px;
 }
 .info .list ul p {
-   padding: 0 0 0 11%;
    font-size: 17px;
    font-weight: 500;
 } 
@@ -420,7 +423,7 @@
 
    @media screen and (max-width:1380px){
       .info .list ul li h3 {
-         font-size: 32px;
+         font-size: 36px;
       }
       .info .list ul li p {
       font-size: 13px;
@@ -430,7 +433,7 @@
 
    @media screen and (max-width:1080px){
       .info {
-         margin: 24px 4.25% 0 4.25%;
+         margin: 24px 5.5% 0 5.5%;
       }
       .info .list ul {
          display: flex;
@@ -440,9 +443,11 @@
       }  
       .info .list ul li {
          width: 100%;
+         /*height: 334px;  li한테 높이 금지 */
       }
       .info .list li a {
          height: auto;
+         padding: 0 0 ;
       }
       .info .list ul li p {
          padding: 2% 5% 20% 5%;  
@@ -458,8 +463,14 @@
          margin: 23px 0 0 0;
       } 
       
-
+      
    }/*info media 800*/
+   
+   @media screen and (max-width:800px){
+      .info .list ul li {
+         border-radius: 15px;
+      }
+   }
 
    @media screen and (max-width:550px){
       .info .list ul li {
@@ -513,7 +524,10 @@
          bottom: 14px;
          left: 19px;
          transform: scale(0.7)translate(-20%, 20%);
-      }      
+      }    
+      .info .list ul li h3 {
+         font-size: 30px;
+      }  
       .info .list ul li .photo img {
          margin: 0 0 0 118px;
          padding: 0 6% 0 33.2%;
@@ -601,6 +615,7 @@
    top: 125px;
 }
 .depart .more a {
+   font-family: "dosis";
    display: block;
    font-weight: 600;
    color: #fff;
@@ -629,6 +644,7 @@
       padding: 60px 0 100px 0;
    }
    .depart .wrapper {
+      margin: 60px 5% 0 5%;
       display: block ; /* Flexbox 활성화 */
    }
 
@@ -652,12 +668,12 @@
    }
    .depart .list ul li a {
       height: auto;
-      padding-bottom: 25px;
-      font-size: 13px;
+      padding-bottom: 30px;
+      font-size: 20px;
    }
    .depart .list ul li a .photo  {
       margin: 12px 0 0 0;
-      height: 91px;
+      height: 165px;
    }
    .depart .more {
       left: auto;
@@ -672,7 +688,7 @@
    }
 
 }
-@media screen and (max-width:900px){
+@media screen and (max-width:600px){
 
 }
 
