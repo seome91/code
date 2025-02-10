@@ -357,6 +357,7 @@
    display: block;
    right: 20px;
    bottom: 50px;
+   width: 50%;
 }
 .info .list ul li .photo img {
    object-fit: contain;
@@ -391,29 +392,34 @@
 
 /*******/
 
-   @media screen and (max-width:1200px){
+   @media screen and (max-width:1380px){
+      .info .list li a {
+         height: 490px;
+      }
+      .info .list ul li h3 {
+         font-size: 36px;
+      }
+      .info .list ul li p {
+         font-size: 13px;
+      }
 
+   }/*info media*/
+
+   @media screen and (max-width:1200px){
       .info .list ul li {
          width: calc(33.333% - 16px);/*여기계산*/
       }
       .info .list li a {
-         height: 510px;
+         height: 400px;
       }
       .info .list ul li h3 {
             font-size: 30px;
-         }
-         .info .list ul li p {
+      }
+      .info .list ul li p {
          font-size: 15px;
       }
       .info .list ul li .photo {
-         right: 20px;
          bottom: 20px;
-      }
-      .info .list ul li .photo img {
-         object-fit: contain;
-         padding: 0 5.2% 0 10.2%;
-         height: 90%;
-         width: 90%;
       }
       .info .list li a::after {
          bottom: 29px;
@@ -421,39 +427,22 @@
       }
    }/*info media 1500*/
 
-   @media screen and (max-width:1380px){
-      .info .list ul li h3 {
-         font-size: 36px;
-      }
-      .info .list ul li p {
-      font-size: 13px;
-   }
-
-   }/*info media*/
-
+   
    @media screen and (max-width:1080px){
       .info {
          margin: 24px 5.5% 0 5.5%;
       }
       .info .list ul {
-         display: flex;
          flex-direction: column;
          gap: 24px;
-         padding: 0;
       }  
       .info .list ul li {
-         width: 100%;
+         width: auto;
          /*height: 334px;  li한테 높이 금지 */
       }
       .info .list li a {
          height: auto;
-         padding: 0 0 ;
-      }
-      .info .list ul li p {
-         padding: 2% 5% 20% 5%;  
-      }
-      .info .list ul h3 {
-         padding: 5% 5% 3% 5%;
+         padding: 45px 11% 152px 11%;
       }
       .info .list li .photo {
          right: 20px;
@@ -461,7 +450,15 @@
       }
       .info .list ul p {
          margin: 23px 0 0 0;
-      } 
+      }
+      .info .list li a::after {
+         left: 11%;
+      }
+      .info .list ul li .photo {
+         right: 5%;
+         width: auto;
+         height: 70%;
+      }
       
       
    }/*info media 800*/
@@ -473,48 +470,28 @@
    }
 
    @media screen and (max-width:550px){
-      .info .list ul li {
-         width: 100%;
-      }
-         .info .list ul li p {
-         padding: 2% 8% 20% 8%;  
-      }
+      
+      
       .info .list ul h3 {
          font-size: 20px;
-         padding: 8% 8% 3% 8%;
       }
-      .info .list ul li .photo img {
-         margin: 0 0 0 100px;
-         padding: 0 3% 0 29.2%;
-         height: 75%;
-         width: 75%;
+      .info .list li a {
+         padding: 45px 5% 152px 11%;
       }
       .info .list li a::after {
          bottom: 14px;
          left: 19px;
+      }
+      .info .list ul li .photo {
+         height: 40%;
       }
    }/*info media*/
 
    @media screen and (max-width:420px){
-      .info .list ul li {
-         width: 100%;
-      }
-         .info .list ul li p {
-         padding: 2% 8% 20% 8%;  
-      }
-      .info .list ul h3 {
-         font-size: 20px;
-         padding: 8% 8% 3% 8%;
-      }
+   
       .info .list li a::after {
          bottom: 14px;
          left: 19px;
-      }
-      .info .list ul li .photo img {
-         margin: 0 0 0 118px;
-         padding: 0 6% 0 33.2%;
-         height: 75%;
-         width: 75%;
       }
    
    }
@@ -528,12 +505,6 @@
       .info .list ul li h3 {
          font-size: 30px;
       }  
-      .info .list ul li .photo img {
-         margin: 0 0 0 118px;
-         padding: 0 6% 0 33.2%;
-         height: 70%;
-         width: 70%;
-      }
    }/*info @media done*/
 
 
