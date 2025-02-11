@@ -612,10 +612,9 @@
 @media screen and (max-width:1000px){
    .depart {
       margin: 60px 0 0 0;
-      padding: 60px 0 100px 0;
+      padding: 120px 0 120px 0;
    }
    .depart .wrapper {
-      margin: 60px 5% 0 5%;
       display: block ; /* Flexbox 활성화 */
    }
 
@@ -660,21 +659,27 @@
 
 }
 @media screen and (max-width:600px){
-
+   .depart .list ul li {
+      width: calc(50% - 15px);/*한줄에 배치되는 li갯수  3개한줄 중간여백의 합 92px*/
+   }
+   .depart .list ul li a .photo {
+      height: 120px;
+  }
 }
 
 .doctors {
    position: relative;  
    background: #F2F2F2;
+   padding-bottom: 150px;
 }
 .doctors::before {
    content: "";
    position: absolute;
-   left: 9.8%;
+   right: 0;
    top: 55%;
    transform: translateY(-50%);
-   width: 90.2%;
-   height: 893px;
+   width: calc(57% + 630px);
+   height: 840px;
    border-radius: 60px 0 0 60px;
    background-color: #242959;
 }
@@ -684,43 +689,42 @@
    align-items: center;
    position: relative; /* before보다 위에 있으려고 */
    z-index: 1;
+   /*gap: 69px;*/
 }
 .doctors .tit {
-   padding: 220px 0 0 0;
-
-   position: relative;
    font-family: "dosis";
    color: #fff;
+   width: 22%;
+   padding-top: 263px;
+   position: relative;
 }
+
 .doctors .tit::before {
    content: "";
    position: absolute;
-   left: 0;
+   display: block;
+   left: 5%;
    top: 0;
-   width: 250px;
+   width: 238px;
    height: 235px;
    background: url(../images/logo_big.png) no-repeat center center / contain;   
 }
 .doctors .tit h2 {
-   white-space:nowrap;
    font-size: 56px;
    font-weight: 700;
-   margin: 28px 0 8px 0;
 }
 .doctors .tit p {
    color: rgba(225, 225, 225, 0.8);
    font-size: 26px;
 }
-.doctors .tit .photo {
+.doctors .tit .photo {/*왼쪽병원로고*/
+   object-fit: contain;/*??????*/
    align-items: center;
    height: 235px;
    width: 250px;
-   /*왼쪽병원로고*/
 }
-
 .doctors .list_doc {
-   display: flex;
-   width: 930px;
+   width: 73%;
 }
 .doctors .list_doc ul {
    display: flex;
@@ -728,24 +732,25 @@
    gap: 58px 51px;
 }
 .doctors .list_doc ul li {
-   width: calc(50% - 29px);
+   width: calc(50% - 26px);
 }
 .doctors .list_doc ul li:nth-child(odd) {
-   transform: translateY(140px);
+   transform: translateY(120px);
+}
+.doctors .list_doc ul li:nth-child(even){
+   transform: translateY(-100px);
 }
 .doctors .list_doc ul li a {
-   height: 600px;
    color: #242959;
    text-align: center;
    background-color: #fff;
    border-radius: 20px;
-   padding: 33px 26px 0 26px;
+   padding: 33px 26px 49px 26px;
    display: block;
    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .doctors .list_doc ul li a .photo {
-   font-size: 0;
-   line-height: 0;
+   height: 389px;
    overflow: hidden;
    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
@@ -764,32 +769,143 @@
 }
 
 
-
-
-
-
-
-/* 
-.doctors .wrapper .tit img {
-   display: block;
-   width: 250px;
-   height: 320px;
-}
-.doctors .list_doc li {
-   border-color: #242959;
-   border-radius: 40px;
-}
-.doctors .list_doc li ul {
-   position: absolute;
-   color: #fff;
-   font-size: 17px;
-   margin: 0 0 0 0;
-   font-weight: 300;
-   border-radius: 40px;
-   padding: 0;
-   display: flex;
-   flex-wrap: wrap;
-   gap: 46px;
+@media screen and (max-width:1320px){
+         .doctors::before {
+            border-radius: 0px;
+         }
+         .doctors .wrapper {
+            padding: 0 1% 0 3%;
+         }
+         .doctors .tit {
+            padding-top: 210px;
+         }
+         .doctors .tit::before {
+            width: 200px;
+            height: 200px;
+         }
+         .doctors .tit h2 {
+            font-size: 38px;
+         }
+         .doctors .tit p {
+            font-size: 20px;
+         }
+         
+}/*@media*/
+@media screen and (max-width:1200px){
    
-} */
+   .doctors { 
+      background: #242959;
+      padding: 36px 0 250px 0;
+   }
+   .doctors::before {
+      border-radius: 0px;
+   }
+   .doctors .wrapper {
+      display: block;
+      z-index: 1;
+      padding: 0 1% 0 3%;
+      /*gap: 69px;*/
+   }
+   .doctors::before {
+    display: none;
+   }
+   .doctors .tit {
+      width: auto;
+      padding-top: 130px;
+   }
+   .doctors .tit::before {
+      left: 10px;
+      width: 120px;
+      height: 120px;
+   }
+   
+   .doctors .tit h2 {
+      font-size: 25px;
+      font-weight: 500;
+   }
+   .doctors .tit p {
+      font-size: 17px;
+   }   
+   
+   .doctors .list_doc {
+      width: auto;
+   }
+   .doctors .list_doc ul li a {
+      border-radius: 15px;
+      padding: 33px 26px 49px 26px;
+   }
+
+   .doctors .list_doc ul li a .photo {
+      height: 280px;
+   }
+   .doctors .list_doc ul li a h3 {
+      font-size: 23px;
+   }
+}/*@media*/
+
+@media screen and (max-width:780px){
+   
+   .doctors::before {
+      top: 55%;
+      height: 1831px;
+  }
+
+}/*@media*/
+@media screen and (max-width:670px){
+   
+  .doctors .tit h2 {
+      font-size: 25px;
+   }
+   .doctors .tit p {
+      font-size: 17px;
+      
+   }  
+   .doctors .list_doc ul li a .photo {
+      height: 250px;
+   }
+   .doctors .list_doc ul li a .photo img {
+      width: 100%;/*항상 100%*/
+      height: 100%;
+      object-fit: cover;
+   }  
+   .doctors .list_doc ul li a {
+      border-radius: 5px;
+      padding: 17px 15px 28px 15px;
+      display: block;
+   }
+   .doctors .list_doc ul li a h3 {
+      font-size: 20px;
+      margin: 14px 0 2px 0;
+   }
+
+}/*@media*/
+@media screen and (max-width:600px){
+   .doctors {
+      padding-bottom: 80px;
+   }
+   .doctors .list_doc ul {
+      display: block;
+      max-width: 450px;
+      width: 100%;
+      margin: 0 auto;
+   }
+   .doctors .list_doc ul li {
+      width: auto;
+      margin: 30px 0 0 0;
+   }
+   .doctors .list_doc ul li:nth-child(odd) {
+      transform: none;
+   }
+   .doctors .list_doc ul li:nth-child(even) {
+      transform: none;
+   }
+}
+
+
+.plan {
+   padding: 500px 0 0 0;
+}
+
+
+
 
