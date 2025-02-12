@@ -314,6 +314,7 @@
 }
 .info .list {
 
+
 }
 .info .list ul {
    display: flex;
@@ -793,119 +794,390 @@
 }/*@media*/
 @media screen and (max-width:1200px){
    
-   .doctors { 
-      background: #242959;
-      padding: 36px 0 250px 0;
-   }
-   .doctors::before {
-      border-radius: 0px;
-   }
-   .doctors .wrapper {
-      display: block;
-      z-index: 1;
-      padding: 0 1% 0 3%;
-      /*gap: 69px;*/
-   }
-   .doctors::before {
-    display: none;
-   }
-   .doctors .tit {
-      width: auto;
-      padding-top: 130px;
-   }
-   .doctors .tit::before {
-      left: 10px;
-      width: 120px;
-      height: 120px;
-   }
-   
-   .doctors .tit h2 {
-      font-size: 25px;
-      font-weight: 500;
-   }
-   .doctors .tit p {
-      font-size: 17px;
-   }   
-   
-   .doctors .list_doc {
-      width: auto;
-   }
-   .doctors .list_doc ul li a {
-      border-radius: 15px;
-      padding: 33px 26px 49px 26px;
-   }
+         .doctors { 
+            background: #242959;
+            padding: 36px 0 400px 0;
+         }
+         .doctors::before {
+            border-radius: 0px;
+         }
+         .doctors .wrapper {
+            display: block;
+            z-index: 1;
+            padding: 0 1% 0 3%;
+            /*gap: 69px;*/
+         }
+         .doctors::before {
+         display: none;
+         }
+         .doctors .tit {
+            width: auto;
+            padding-top: 130px;
+         }
+         .doctors .tit::before {
+            left: 10px;
+            width: 120px;
+            height: 120px;
+         }
+         
+         .doctors .tit h2 {
+            font-size: 25px;
+            font-weight: 500;
+         }
+         .doctors .tit p {
+            font-size: 17px;
+         }   
+         
+         .doctors .list_doc {
+            width: auto;
+         }
+         .doctors .list_doc ul li a {
+            border-radius: 15px;
+            padding: 33px 26px 49px 26px;
+         }
 
-   .doctors .list_doc ul li a .photo {
-      height: 280px;
-   }
-   .doctors .list_doc ul li a h3 {
-      font-size: 23px;
-   }
-}/*@media*/
+         .doctors .list_doc ul li a .photo {
+            height: 280px;
+         }
+         .doctors .list_doc ul li a h3 {
+            font-size: 23px;
+         }
+      }/*@media*/
 
-@media screen and (max-width:780px){
-   
-   .doctors::before {
-      top: 55%;
-      height: 1831px;
-  }
+      @media screen and (max-width:780px){
+         
+         .doctors::before {
+            top: 55%;
+            height: 1831px;
+      }
 
 }/*@media*/
 @media screen and (max-width:670px){
    
-  .doctors .tit h2 {
-      font-size: 25px;
-   }
-   .doctors .tit p {
-      font-size: 17px;
-      
-   }  
-   .doctors .list_doc ul li a .photo {
-      height: 250px;
-   }
-   .doctors .list_doc ul li a .photo img {
-      width: 100%;/*항상 100%*/
-      height: 100%;
-      object-fit: cover;
-   }  
-   .doctors .list_doc ul li a {
-      border-radius: 5px;
-      padding: 17px 15px 28px 15px;
-      display: block;
-   }
-   .doctors .list_doc ul li a h3 {
-      font-size: 20px;
-      margin: 14px 0 2px 0;
-   }
+      .doctors .tit h2 {
+            font-size: 25px;
+         }
+         .doctors .tit p {
+            font-size: 17px;
+            
+         }  
+         .doctors .list_doc ul li a .photo {
+            height: 250px;
+         }
+         .doctors .list_doc ul li a .photo img {
+            width: 100%;/*항상 100%*/
+            height: 100%;
+            object-fit: cover;
+         }  
+         .doctors .list_doc ul li a {
+            border-radius: 5px;
+            padding: 17px 15px 28px 15px;
+            display: block;
+         }
+         .doctors .list_doc ul li a h3 {
+            font-size: 20px;
+            margin: 14px 0 2px 0;
+         }
 
 }/*@media*/
 @media screen and (max-width:600px){
-   .doctors {
-      padding-bottom: 80px;
-   }
-   .doctors .list_doc ul {
-      display: block;
-      max-width: 450px;
-      width: 100%;
-      margin: 0 auto;
-   }
-   .doctors .list_doc ul li {
-      width: auto;
-      margin: 30px 0 0 0;
-   }
-   .doctors .list_doc ul li:nth-child(odd) {
-      transform: none;
-   }
-   .doctors .list_doc ul li:nth-child(even) {
-      transform: none;
-   }
-}
+         .doctors {
+            padding-bottom: 150px;
+         }
+         .doctors .list_doc ul {
+            display: block;
+            max-width: 450px;
+            width: 100%;
+            margin: 0 auto;
+         }
+         .doctors .list_doc ul li {
+            width: auto;
+            margin: 30px 0 0 0;
+         }
+         .doctors .list_doc ul li:nth-child(odd) {
+            transform: none;
+         }
+         .doctors .list_doc ul li:nth-child(even) {
+            transform: none;
+         }
+}/*@media*/
 
 
 .plan {
-   padding: 500px 0 0 0;
+  margin: 200px 0 200px 0;
+}
+
+.plan h2 {
+   font-size: 0;
+}
+.plan::before {
+   content: "";
+   position: absolute;
+   height: 45.98%;;
+   width: 100%;
+   right: 0;
+   top: 0;
+   z-index: -10;
+   background-color: #F2F2F2;
+}
+.plan .list {
+   position: relative; /* next, prev, paging 정렬의 기준 */
+}
+.plan .list .swiper {
+   border-radius: 60px;
+   overflow: hidden;
+}
+.plan .list .swiper ul li {
+   height: 849px;
+   background-position: center center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+.plan .list .swiper ul li.bg1 {
+   background-image: url(../images/plan_over1.jpg);
+}
+.plan .list .swiper ul li.bg2 {
+   background-image: url(../images/plan_over2.jpg);
+}
+.plan .list .swiper ul li.bg3 {
+   background-image: url(../images/plan_over3.jpg);
+}
+
+.plan .list .swiper ul li .tit {
+   padding: 127px 0 0 141px;
+   color: #fff;
+}
+.plan .list .swiper ul li .tit h3 {
+   font-size: 56px;
+   font-weight: 600;
+}
+.plan .list .swiper ul li .tit strong {
+   display: block;
+   color: rgba(225, 225, 225, 0.7);
+   font-size: 26px;
+}
+.plan .list .swiper ul li .tit .more {
+   margin-top: 25px;
+}
+.plan .list .swiper ul li .tit .more a {
+   position: relative;
+   display: inline-block;
+   color: #242959;
+   font-weight: 800;
+   background-color: #fff;
+   border-radius: 50px;
+   padding: 0 95px 0 17px;
+}
+.plan .list .swiper ul li .tit .more a::after {
+   content: "";
+   position: absolute;
+   right: 5px;
+   top: 5px;
+   height: 15px;
+   width: 15px;
+   
+   background-position: center center;
+   background-repeat: no-repeat; 
+   background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.7398 8.79273H1.23512C0.890711 8.79273 0.598755 8.6688 0.359253 8.42093C0.119751 8.17306 0 7.8709 0 7.51446C0 7.16163 0.119751 6.86037 0.359253 6.6107C0.598755 6.36102 0.890711 6.23618 1.23512 6.23618H10.7398L6.85243 2.2132C6.60565 1.9578 6.48139 1.65271 6.47964 1.29792C6.4779 0.943287 6.60216 0.63827 6.85243 0.382871C7.09921 0.127623 7.39393 0 7.73659 0C8.07926 0 8.37398 0.129431 8.62076 0.388293L14.6466 6.61928C14.7665 6.74698 14.8554 6.88492 14.9131 7.0331C14.971 7.18113 15 7.34158 15 7.51446C15 7.69095 14.971 7.85328 14.9131 8.00146C14.8554 8.14949 14.7665 8.28735 14.6466 8.41505L8.65393 14.6117C8.4073 14.8706 8.11345 15 7.77239 15C7.43147 15 7.13762 14.8706 6.89084 14.6117C6.64057 14.3563 6.51544 14.0513 6.51544 13.6967C6.51544 13.3419 6.64057 13.0368 6.89084 12.7814L10.7398 8.79273Z' fill='%23242959'/%3E%3C/svg%3E%0A");
+
+   background-size: contain;
+}
+
+/*버튼에 스타일주기+위치주기*/
+.plan .list .btn_prev {
+   position: absolute;
+   right: calc(50% + 690px);
+   top: 50%;
+   color: transparent;
+   height: 56.72px;
+   width: 56.72px;
+   z-index: 10;
+   background-image: url("data:image/svg+xml,%3Csvg width='57' height='57' viewBox='0 0 57 57' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='28.3618' cy='28.3618' r='28.3618' transform='matrix(-1 0 0 1 56.7236 0)' fill='%23242959'/%3E%3Cpath d='M23.3347 30.4714H39.3452C39.9254 30.4714 40.4172 30.2697 40.8206 29.8662C41.2241 29.4628 41.4258 28.971 41.4258 28.3909C41.4258 27.8166 41.2241 27.3263 40.8206 26.9199C40.4172 26.5135 39.9254 26.3103 39.3452 26.3103H23.3347L29.883 19.7624C30.2987 19.3467 30.508 18.8501 30.5109 18.2727C30.5139 17.6955 30.3045 17.199 29.883 16.7833C29.4673 16.3679 28.9708 16.1602 28.3936 16.1602C27.8164 16.1602 27.3199 16.3708 26.9042 16.7922L16.7537 26.9338C16.5518 27.1417 16.4021 27.3662 16.3048 27.6074C16.2073 27.8483 16.1585 28.1095 16.1585 28.3909C16.1585 28.6781 16.2073 28.9423 16.3048 29.1835C16.4021 29.4245 16.5518 29.6488 16.7537 29.8567L26.8484 39.9425C27.2638 40.3638 27.7588 40.5745 28.3333 40.5745C28.9076 40.5745 29.4026 40.3638 29.8183 39.9425C30.2398 39.5268 30.4506 39.0304 30.4506 38.4531C30.4506 37.8757 30.2398 37.3791 29.8183 36.9634L23.3347 30.4714Z' fill='white'/%3E%3C/svg%3E%0A");
+   background-position: center center;
+   background-repeat: no-repeat; 
+}
+.plan .list .btn_next {
+   position: absolute;
+   left: calc(50% + 690px);
+   top: 50%;
+   color: transparent;/**/
+   height: 56.72px;
+   width: 56.72px;
+   z-index: 10;
+   background-image: url("data:image/svg+xml,%3Csvg width='57' height='57' viewBox='0 0 57 57' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='28.3618' cy='28.3618' r='28.3618' fill='%23242959'/%3E%3Cpath d='M33.3889 30.4714H17.3784C16.7982 30.4714 16.3064 30.2697 15.903 29.8662C15.4996 29.4628 15.2979 28.971 15.2979 28.3909C15.2979 27.8166 15.4996 27.3263 15.903 26.9199C16.3064 26.5135 16.7982 26.3103 17.3784 26.3103H33.3889L26.8407 19.7624C26.425 19.3467 26.2157 18.8501 26.2127 18.2727C26.2098 17.6955 26.4191 17.199 26.8407 16.7833C27.2564 16.3679 27.7528 16.1602 28.33 16.1602C28.9073 16.1602 29.4037 16.3708 29.8194 16.7922L39.9699 26.9338C40.1719 27.1417 40.3215 27.3662 40.4188 27.6074C40.5164 27.8483 40.5651 28.1095 40.5651 28.3909C40.5651 28.6781 40.5164 28.9423 40.4188 29.1835C40.3215 29.4245 40.1719 29.6488 39.9699 29.8567L29.8753 39.9425C29.4598 40.3638 28.9648 40.5745 28.3903 40.5745C27.8161 40.5745 27.3211 40.3638 26.9054 39.9425C26.4838 39.5268 26.273 39.0304 26.273 38.4531C26.273 37.8757 26.4838 37.3791 26.9054 36.9634L33.3889 30.4714Z' fill='white'/%3E%3C/svg%3E%0A");
+   background-position: center center;
+   background-repeat: no-repeat;
+}
+.plan .list .paging {
+   position: absolute;
+   left: 0;
+   bottom: 26px;
+   z-index: 11;
+   display: flex;
+   justify-content: center;
+}
+.plan .list .paging .swiper-pagination-bullet-active {
+   background: #fff;
+   
+}
+.plan .list .paging  .swiper-pagination-bullet {
+   width: 15px;
+   height: 15px;
+   background: var(--swiper-pagination-bullet-inactive-color, rgba(225, 225, 225, 0.7));
+
+}
+
+@media screen and (max-width:1500px){
+   /***************swiper 버튼 중간을 모으기*************/
+   .plan .list .btn_prev {
+      right: calc(50% + 659px);
+   }
+   .plan .list .btn_next {
+      left: calc(50% + 659px);
+   }
+
+
+}/*@media*/
+@media screen and (max-width:1340px){
+   .plan .list .swiper {
+      border-radius: 40px;
+   }
+   .plan .list .btn_prev {
+      right: calc(50% + 600px);
+   }
+   .plan .list .btn_next {
+      left: calc(50% + 600px);
+   }
+
+
+}/*@media*/
+
+@media screen and (max-width:1300px){
+   .plan .list .btn_prev {
+      display: none;
+   }
+   .plan .list .btn_next {
+      display: none;
+   }
+}
+@media screen and (max-width:1200px) {
+   .plan {
+      margin: 0;
+   }
+   .plan .wrapper {
+      margin: 0;
+   }
+   .plan .list .swiper {
+      border-radius: 0;
+   }
+}
+@media screen and (max-width:900px){
+   /*li 높이한번 줄여주기*/
+   .plan .list .swiper ul li {
+      height: 600px;
+   }
+   .plan .list .swiper ul li .tit {
+      padding: 101px 0 0 99px;
+   }
+   .plan .list .swiper ul li .tit h3 {
+      font-size: 35px;
+   }
+   .plan .list .swiper ul li .tit strong {
+      color: rgba(225, 225, 225, 0.7);
+      font-size: 20px;
+      /*패딩그대로*/
+   }
+   .plan .list .swiper ul li .tit p {
+      font-size: 15px;
+      line-height: 1.3;
+   }
+   
+   .plan .list .swiper ul li .tit .more {
+      margin-top: 20px;
+   }
+   .plan .list .paging .swiper-pagination-bullet {
+      width: 13px;
+      height: 13px;
+   }
+}/*@media*/
+
+@media screen and (max-width:800px){
+
+   /*li 높이한번 줄여주기*/
+   .plan .list .swiper ul li {
+      height: 530px;
+   }
+   .plan .list .paging .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+   }
+}/*@media*/
+
+@media screen and (max-width:670px){
+   
+   /*li 높이한번 줄여주기*/
+   .plan .list .swiper ul li {
+      height: 370px;
+   }
+   .plan .list .swiper ul li .tit {
+      text-align: center;
+      padding: 100px 0 0 0;
+   }
+   .plan .list .swiper ul li .tit strong {
+      margin-bottom: 0;
+   }
+   .plan .list .swiper ul li .tit p {
+      display: none;
+   }
+   .plan .list .paging .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+   }
+
+}/*@media*/
+.gallery {
+   background-color: #F2F2F2;
+   margin: 0 0 -1061px 0;/*마지막에 다시 조정요망*/
+}
+.gallery .tit .wrapper {
+   padding: 250px 0 45px 0;
+}
+.gallery .tit h2 {
+   font-size: 56px;
+   color: #242959;
+   font-weight: 700;
+}
+.gallery .tit p { 
+   font-size: 26px;
+   margin-top: 26px;
+}
+
+
+.gallery .list .swiper ul {
+   display: flex;
+   gap: 65px;
+   
+}
+.gallery .list .swiper ul li a {
+   display: block;
+   background-color: #fff;
+   border-radius: 30px;
+   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1); ;
+
 }
 
 
 
 
+
+
+@media screen and (max-width:600px){}/*@media*/
+@media screen and (max-width:600px){}/*@media*/
+@media screen and (max-width:600px){}/*@media*/
+
+
+
+
+@media screen and (max-width:1000px){}/*@media*/
+@media screen and (max-width:800px){}/*@media*/
+@media screen and (max-width:600px){}/*@media*/
