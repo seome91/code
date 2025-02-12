@@ -1162,8 +1162,20 @@
    display: block;
    background-color: #fff;
    border-radius: 30px;
-   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1); ;
-
+   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.gallery .list .swiper ul li a .photo {
+   overflow: hidden;
+   border-radius: 30px 30px 0 0;
+   height: 462px;
+}
+.gallery .list .swiper ul li a .photo img {
+   object-fit: cover;/*이미지왜곡없이 주기*/
+   width: 100%;
+   height: 100%;
+}
+.gallery .list .swiper .inner {
+   padding: 30px 25px 30px 25px;
 }
 
 
