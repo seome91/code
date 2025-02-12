@@ -1138,6 +1138,7 @@
 .gallery {
    background-color: #F2F2F2;
    margin: 0 0 -1061px 0;/*마지막에 다시 조정요망*/
+   padding-bottom: 160px;
 }
 .gallery .tit .wrapper {
    padding: 250px 0 45px 0;
@@ -1152,11 +1153,9 @@
    margin-top: 26px;
 }
 
-
 .gallery .list .swiper ul {
    display: flex;
    gap: 65px;
-   
 }
 .gallery .list .swiper ul li a {
    display: block;
