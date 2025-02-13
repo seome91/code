@@ -96,6 +96,7 @@
 .visual .popup .swiper ul li {
    overflow: hidden;
    position: relative;
+   
 }
 
 .visual .popup .swiper ul li img {
@@ -669,7 +670,7 @@
 }
 
 .doctors {
-   position: relative;  
+   position: relative;  /*************수정요망*****************/
    background: #F2F2F2;
    padding-bottom: 150px;
 }
@@ -1135,10 +1136,13 @@
    }
 
 }/*@media*/
+
+
 .gallery {
    background-color: #F2F2F2;
-   margin: 0 0 -1061px 0;/*마지막에 다시 조정요망*/
-   padding-bottom: 160px;
+   margin: 0 0 20px 0;/*마지막에 다시 조정요망*/
+   padding: 0 0 160px 0;
+
 }
 .gallery .tit .wrapper {
    padding: 250px 0 45px 0;
@@ -1153,9 +1157,9 @@
    margin-top: 26px;
 }
 
-.gallery .list .swiper ul {
-   display: flex;
-   gap: 65px;
+.gallery .list .swiper ul li {
+   width: 355px;
+   padding: 0 0 20px 0;
 }
 .gallery .list .swiper ul li a {
    display: block;
@@ -1178,11 +1182,7 @@
 }
 
 
-
-
-
-
-@media screen and (max-width:600px){}/*@media*/
+@media screen and (max-width:1300px){}/*@media*/
 @media screen and (max-width:600px){}/*@media*/
 @media screen and (max-width:600px){}/*@media*/
 
