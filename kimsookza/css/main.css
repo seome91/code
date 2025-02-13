@@ -7,24 +7,24 @@
 .visual { 
    position: relative;
    margin: 150px 6.25% 0 6.25%;
- }
- .visual .visual_bg {
+}
+.visual .visual_bg {
    background-color: #242959;
    height: 680px;
    border-radius: 40px;
- }
- .visual .visual_bg .title {
-    font-family: 'dosis';
-    padding-top: 10px;
-    font-weight: 600;
-    font-size: 110px;
-    color: #4F598B;
-    line-height: 110%;
+}
+.visual .visual_bg .title {
+   font-family: 'dosis';
+   padding-top: 10px;
+   font-weight: 600;
+   font-size: 110px;
+   color: #4F598B;
+   line-height: 110%;
  }
 .visual .visual_bg .title h3{
    text-align: center;
- }
- .visual .visual_txt {
+}
+.visual .visual_txt {
    display: flex;
    position: absolute;
    bottom: 36px;
@@ -33,8 +33,9 @@
    z-index: 2;
    padding: 0 4.1716%;
    justify-content: space-between;
- }
+}
 .visual .visual_txt h2 {
+   font-family: 'NanumSquareNeo';
    line-height: 120%;
    display: block;
    color: #fff;
@@ -1140,7 +1141,7 @@
 
 .gallery {
    background-color: #F2F2F2;
-   margin: 0 0 20px 0;/*마지막에 다시 조정요망*/
+   margin: 0 0 0 0;/*마지막에 다시 조정요망*/
    padding: 0 0 160px 0;
 
 }
@@ -1177,14 +1178,36 @@
    width: 100%;
    height: 100%;
 }
+.gallery .list h3 {
+   font-size: 26px;
+   color: #242959;
+   font-weight: 500;
+
+}
 .gallery .list .swiper .inner {
    padding: 30px 25px 30px 25px;
 }
 
 
-@media screen and (max-width:1300px){}/*@media*/
-@media screen and (max-width:600px){}/*@media*/
-@media screen and (max-width:600px){}/*@media*/
+@media screen and (max-width:1300px){
+   .gallery .tit h2 {
+      font-size: 38px;
+   }
+   .gallery .tit p { 
+      font-size: 20px;
+      margin-top: 20px;
+   }
+}/*@media*/
+@media screen and (max-width:3600px){
+   .gallery .tit h2 {
+      font-size: 25px;
+   }
+   .gallery .tit p { 
+      font-size: 17px;
+      margin-top: 17px;
+   }
+}/*@media*/
+
 
 
 

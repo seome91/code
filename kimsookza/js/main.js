@@ -62,7 +62,7 @@ $(document).ready(function(){
         spaceBetween: 20, /* 팝업과 팝업 사이 여백 */
         breakpoints: {
             640: {    /* 640px 이상일때 적용 */
-                spaceBetween: 65,
+                spaceBetween: 60,
             },
         },
         // centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
