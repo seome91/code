@@ -238,10 +238,12 @@ footer .f_top .top button span {
 footer .f_conts {
     color: #fff;
     display: flex;
-    padding: 81px 0;
+    padding: 91px 0;
     background: url(../images/f_bg.jpg) no-repeat center top / cover;/************/
 }
 footer .f_conts .tel {
+    display: flex;
+    justify-content: center;
     font-weight: 500;
     width: 33.33%;
     border-right: solid 2px rgb(255, 255, 255, 0.2); 
@@ -265,16 +267,12 @@ footer .f_conts .tel ul li span {
 }
 
 footer .map {
+    display: flex;
+    justify-content: center;
     width: 33.33%;
     border-right: solid 2px rgb(255, 255, 255, 0.2); 
 }
 
-footer .f_conts_wrap{
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    flex-wrap: wrap;
-}
 footer .map h2 {
     font-size: 22px;
     font-weight: 500;
@@ -306,6 +304,8 @@ footer .map .google iframe {
     border: 0;
 }
 footer .f_info {
+    display: flex;
+    justify-content: center;
     position: relative;
     width: 33.33%;
     font-weight: 500;
@@ -374,32 +374,29 @@ footer .copyright p {
 
 
 @media screen and (max-width:1440px){
-            footer {
-                margin: 10px 0 0 0 ;
-            }
             footer .f_conts {
+                flex-wrap: wrap;
                 padding: 81px 8%;
-                display: flex;
                 gap: 89px;
-                flex-direction: column;
                 background: #242959 url(../images/f_bg2.png) no-repeat center top / 160%;/************/
             }
             footer .f_conts .tel {
-                width: 50%;
+                display: block;
+                width: 100%;
                 border-right: none; 
             }
             footer .map {
-                width: 46%;/*???????????*/
+                display: block;
+                width: 100%;/*???????????*/
                 border-right: none; 
             }
-            footer .f_conts_wrap{
-                display: flex;
-                flex-direction: column;
-                align-content: space-around;
-                flex-wrap: wrap;
+            footer .map .google {
+                width: 100%;
+                max-width: 428px;
             }
             footer .f_info {
-                width: 50%;
+                display: block;
+                width: 100%;
             }
             footer .f_info .sns {
                 justify-content: flex-start;
@@ -407,229 +404,159 @@ footer .copyright p {
 }/*@media*/
 
 @media screen and (max-width:1300px){
-    footer .f_top .top {
-        right: 3%;
-    }
-    footer .f_top .top button {
-        padding: 14px 39px 0 0;
-    }
-    footer .f_top .top button i {
-        width: 70px;
-        height: 70px;
-        background-image: url("data:image/svg+xml,%3Csvg width='32' height='36' viewBox='0 0 32 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.58366 4.58333C2.0406 4.58333 1.58539 4.39965 1.21803 4.03229C0.850673 3.66493 0.666992 3.20972 0.666992 2.66667C0.666992 2.12361 0.850673 1.6684 1.21803 1.30104C1.58539 0.933681 2.0406 0.75 2.58366 0.75H29.417C29.96 0.75 30.4153 0.933681 30.7826 1.30104C31.15 1.6684 31.3337 2.12361 31.3337 2.66667C31.3337 3.20972 31.15 3.66493 30.7826 4.03229C30.4153 4.39965 29.96 4.58333 29.417 4.58333H2.58366ZM16.0003 35.25C15.4573 35.25 15.0021 35.0663 14.6347 34.699C14.2673 34.3316 14.0837 33.8764 14.0837 33.3333V15.7L10.442 19.3417C10.0906 19.6931 9.64338 19.8687 9.10033 19.8687C8.55727 19.8687 8.11005 19.6931 7.75866 19.3417C7.40727 18.9903 7.23158 18.5431 7.23158 18C7.23158 17.4569 7.40727 17.0097 7.75866 16.6583L14.6587 9.75833C14.8503 9.56667 15.058 9.4309 15.2816 9.35104C15.5052 9.27118 15.7448 9.23125 16.0003 9.23125C16.2559 9.23125 16.4955 9.27118 16.7191 9.35104C16.9427 9.4309 17.1503 9.56667 17.342 9.75833L24.242 16.6583C24.5934 17.0097 24.7691 17.4569 24.7691 18C24.7691 18.5431 24.5934 18.9903 24.242 19.3417C23.8906 19.6931 23.4434 19.8687 22.9003 19.8687C22.3573 19.8687 21.91 19.6931 21.5587 19.3417L17.917 15.7V33.3333C17.917 33.8764 17.7333 34.3316 17.366 34.699C16.9986 35.0663 16.5434 35.25 16.0003 35.25Z' fill='%23242959'/%3E%3C/svg%3E%0A");
-    }
-    footer .f_top .top button span {
-        width: 100px;
-        height: 100px;
-        line-height: 100px;
-    }
+            footer .f_top .top {
+                right: 3%;
+            }
+            footer .f_top .top button {
+                padding: 14px 39px 0 0;
+            }
+            footer .f_top .top button i {
+                width: 70px;
+                height: 70px;
+                background-image: url("data:image/svg+xml,%3Csvg width='32' height='36' viewBox='0 0 32 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.58366 4.58333C2.0406 4.58333 1.58539 4.39965 1.21803 4.03229C0.850673 3.66493 0.666992 3.20972 0.666992 2.66667C0.666992 2.12361 0.850673 1.6684 1.21803 1.30104C1.58539 0.933681 2.0406 0.75 2.58366 0.75H29.417C29.96 0.75 30.4153 0.933681 30.7826 1.30104C31.15 1.6684 31.3337 2.12361 31.3337 2.66667C31.3337 3.20972 31.15 3.66493 30.7826 4.03229C30.4153 4.39965 29.96 4.58333 29.417 4.58333H2.58366ZM16.0003 35.25C15.4573 35.25 15.0021 35.0663 14.6347 34.699C14.2673 34.3316 14.0837 33.8764 14.0837 33.3333V15.7L10.442 19.3417C10.0906 19.6931 9.64338 19.8687 9.10033 19.8687C8.55727 19.8687 8.11005 19.6931 7.75866 19.3417C7.40727 18.9903 7.23158 18.5431 7.23158 18C7.23158 17.4569 7.40727 17.0097 7.75866 16.6583L14.6587 9.75833C14.8503 9.56667 15.058 9.4309 15.2816 9.35104C15.5052 9.27118 15.7448 9.23125 16.0003 9.23125C16.2559 9.23125 16.4955 9.27118 16.7191 9.35104C16.9427 9.4309 17.1503 9.56667 17.342 9.75833L24.242 16.6583C24.5934 17.0097 24.7691 17.4569 24.7691 18C24.7691 18.5431 24.5934 18.9903 24.242 19.3417C23.8906 19.6931 23.4434 19.8687 22.9003 19.8687C22.3573 19.8687 21.91 19.6931 21.5587 19.3417L17.917 15.7V33.3333C17.917 33.8764 17.7333 34.3316 17.366 34.699C16.9986 35.0663 16.5434 35.25 16.0003 35.25Z' fill='%23242959'/%3E%3C/svg%3E%0A");
+            }
+            footer .f_top .top button span {
+                width: 100px;
+                height: 100px;
+                line-height: 100px;
+            }
 }/*@media*/
 @media screen and (max-width:1100px){
-    footer .f_top ul {
-        font-size: 14px;
-        gap: 30px;
-    }
-    footer .f_conts .tel p {
-        font-size: 48px;
-    }
+            footer .f_top ul {
+                font-size: 14px;
+                gap: 30px;
+            }
+            footer .f_conts .tel p {
+                font-size: 48px;
+            }
 
 }/*@media*/
 @media screen and (max-width:920px){
-    footer .f_top ul {
-        gap: 25px;
-    }
-    footer .f_top {
-        font-size: 15px;
-        font-weight: 500;
-    }
+            footer .f_top ul {
+                gap: 25px;
+            }
+            footer .f_top {
+                font-size: 15px;
+                font-weight: 500;
+            }
+            
+            footer .f_top .top {
+                bottom: -56px;
+                right: 2%;
+            }
+            
+            footer .f_top .top button {
+                padding: 20px 14px 0 0;
+            }
+            footer .f_top .top button i {
+                width: 50px;
+                height: 50px;
+                background-image: url("data:image/svg+xml,%3Csvg width='21' height='24' viewBox='0 0 21 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.3125 2.66667C0.940625 2.66667 0.628906 2.53889 0.377344 2.28333C0.125781 2.02778 0 1.71111 0 1.33333C0 0.955556 0.125781 0.638889 0.377344 0.383333C0.628906 0.127778 0.940625 0 1.3125 0H19.6875C20.0594 0 20.3711 0.127778 20.6227 0.383333C20.8742 0.638889 21 0.955556 21 1.33333C21 1.71111 20.8742 2.02778 20.6227 2.28333C20.3711 2.53889 20.0594 2.66667 19.6875 2.66667H1.3125ZM10.5 24C10.1281 24 9.81641 23.8722 9.56484 23.6167C9.31328 23.3611 9.1875 23.0444 9.1875 22.6667V10.4L6.69375 12.9333C6.45312 13.1778 6.14688 13.3 5.775 13.3C5.40313 13.3 5.09688 13.1778 4.85625 12.9333C4.61563 12.6889 4.49531 12.3778 4.49531 12C4.49531 11.6222 4.61563 11.3111 4.85625 11.0667L9.58125 6.26667C9.7125 6.13333 9.85469 6.03889 10.0078 5.98333C10.1609 5.92778 10.325 5.9 10.5 5.9C10.675 5.9 10.8391 5.92778 10.9922 5.98333C11.1453 6.03889 11.2875 6.13333 11.4188 6.26667L16.1438 11.0667C16.3844 11.3111 16.5047 11.6222 16.5047 12C16.5047 12.3778 16.3844 12.6889 16.1438 12.9333C15.9031 13.1778 15.5969 13.3 15.225 13.3C14.8531 13.3 14.5469 13.1778 14.3063 12.9333L11.8125 10.4V22.6667C11.8125 23.0444 11.6867 23.3611 11.4352 23.6167C11.1836 23.8722 10.8719 24 10.5 24Z' fill='%23242959'/%3E%3C/svg%3E%0A");
+            }
+            footer .f_top .top button span {
+                width: 80px;
+                height: 80px;
+                line-height: 80px;
+                font-size: 20px;
+            }
 
-    footer .f_top .top {
-        bottom: -56px;
-        right: 2%;
-    }
-
-    footer .f_top .top button {
-        padding: 20px 14px 0 0;
-    }
-    footer .f_top .top button i {
-        width: 50px;
-        height: 50px;
-        background-image: url("data:image/svg+xml,%3Csvg width='21' height='24' viewBox='0 0 21 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.3125 2.66667C0.940625 2.66667 0.628906 2.53889 0.377344 2.28333C0.125781 2.02778 0 1.71111 0 1.33333C0 0.955556 0.125781 0.638889 0.377344 0.383333C0.628906 0.127778 0.940625 0 1.3125 0H19.6875C20.0594 0 20.3711 0.127778 20.6227 0.383333C20.8742 0.638889 21 0.955556 21 1.33333C21 1.71111 20.8742 2.02778 20.6227 2.28333C20.3711 2.53889 20.0594 2.66667 19.6875 2.66667H1.3125ZM10.5 24C10.1281 24 9.81641 23.8722 9.56484 23.6167C9.31328 23.3611 9.1875 23.0444 9.1875 22.6667V10.4L6.69375 12.9333C6.45312 13.1778 6.14688 13.3 5.775 13.3C5.40313 13.3 5.09688 13.1778 4.85625 12.9333C4.61563 12.6889 4.49531 12.3778 4.49531 12C4.49531 11.6222 4.61563 11.3111 4.85625 11.0667L9.58125 6.26667C9.7125 6.13333 9.85469 6.03889 10.0078 5.98333C10.1609 5.92778 10.325 5.9 10.5 5.9C10.675 5.9 10.8391 5.92778 10.9922 5.98333C11.1453 6.03889 11.2875 6.13333 11.4188 6.26667L16.1438 11.0667C16.3844 11.3111 16.5047 11.6222 16.5047 12C16.5047 12.3778 16.3844 12.6889 16.1438 12.9333C15.9031 13.1778 15.5969 13.3 15.225 13.3C14.8531 13.3 14.5469 13.1778 14.3063 12.9333L11.8125 10.4V22.6667C11.8125 23.0444 11.6867 23.3611 11.4352 23.6167C11.1836 23.8722 10.8719 24 10.5 24Z' fill='%23242959'/%3E%3C/svg%3E%0A");
-    }
-    footer .f_top .top button span {
-        width: 80px;
-        height: 80px;
-        line-height: 80px;
-        font-size: 20px;
-    }
-    footer .f_conts .tel p {
-        font-size: 48px;
-    }
+            footer .f_conts .tel p {
+                font-size: 42px;
+            }
+        
 
 }/*@media*/
 @media screen and (max-width:840px){
-    footer .f_top .top {
-        bottom: -79px;
-        right: 2%;
-    }
-    footer .f_top .top button {
-        padding: 20px 14px 0 0;
-    }
-    footer .f_top .top button span {
-        color: transparent;
-        background-color: transparent;
-    }
 
+            footer .f_top ul {
+                font-size: 0;
+                padding: 0;
+                line-height: 0;/*???????*/
+            }
+            footer .f_top .top {
+                bottom: -79px;
+                right: 2%;
+            }
+            footer .f_top .top button span {
+                color: transparent;
+                background-color: transparent;
+            }
 
-    footer .f_conts {
-        font-size: 15px;
-        padding: 81px 8%;
-    }
-    footer .f_conts .tel {
-        width: 80%;
-         border-right:none; 
-    }
-    footer .f_conts .tel h2 {
-        display: none;
-    }
-    footer .f_conts .tel h3 {
-        font-size: 20px;
-    }
-    footer .f_conts .tel p {
-        font-size: 40px;
-        font-weight: 500;
-    }
-    footer .f_conts .tel ul li {
-        margin-top: 10px;
-    }
-    footer .f_conts .tel ul li span {
-        font-weight: 100;
-    }
-    
-    footer .map {
-        border-right:none; 
-    }
-    
-    footer .f_conts_wrap{
-        display: flex;
-        flex-direction: column;
-        align-content: space-around;
-        flex-wrap: wrap;
-    }
-    footer .map h2 {
-        font-size: 22px;
-        font-weight: 500;
-    }
-    footer .map address {
-        margin: 23px 0 32px 0;
-    }
-    footer .map .btn_wrap {
-        display: flex;
-        gap: 23px;
-    }
-    footer .map .btn_wrap a {
-        padding: 6px 26px;
-    }
-    footer .map .google {
-        margin-top: 40px;
-    }
-    footer .f_info {
-        width: 50%;
-    }
-    footer .f_info .sns {
-        gap: 20px;
-        justify-content: flex-start
-    }
-    footer .company {
-        margin: 95px 0 0 0;
-    }
+            footer .f_conts {
+                font-size: 17px;
+            }
+            footer .f_conts .tel p {
+                font-size: 35px;
+                font-weight: 500;
+            }
+            footer .map h2 {
+                font-size: 22px;
+                font-weight: 500;
+            }
+            footer .map .btn_wrap a {
+                font-size: 13px;
+                font-weight: 100;
+                padding: 6px 26px;
+            }
+            footer .map address {
+                margin: 22px 0 20px 0;
+            }
 
 }/*@media*/
 @media screen and (max-width:620px){
-    footer .f_top {
-        color: transparent;
+   
+        
+            footer .f_top .top {
+                bottom: -56px;
+                right: 2%;
+            }
+            footer .f_top .top {
+                bottom: -79px;
+            }
+            footer .f_conts .tel p {
+                font-size: 27px;
+            }
+            footer .f_conts {
+                font-size: 13px;
+            }
+            footer .f_info .sns {
+                gap: 19px;
+            }
+            footer .company {
+                margin: 90px 0 0 0;
+            }
+
+
+}/*@media*/
+@media screen and (max-width:500px){
+
+    footer .f_conts .tel p {
+        font-size: 25px;
     }
-    footer .f_top ul {
-        padding: 0;
+    footer .f_conts .tel h3 {
+        margin: 12px 0 12px 0;
+        font-size: 15px;
     }
-    footer .f_top ul {
-        gap: 10px;
+    footer .map address {
+        margin: 9px 0 0px 0;
+    }   
+    footer .map .btn_wrap {
+        gap: 9px;
     }
-    footer .f_top {
+
+
+
+}/*@media*/
+@media screen and (max-width:360px){
+
+    footer .map .btn_wrap a {
         font-size: 13px;
-    }
-    footer .f_top .top {
-        bottom: -56px;
-        right: 2%;
-    }
-    footer .f_top .top {
-        bottom: -79px;
+        padding: 4px 24px;
     }
 
 
 }/*@media*/
 @media screen and (max-width:360px){
-    footer .f_conts {
-        font-size: 15px;
-        padding: 81px 8%;
-    }
-    footer .f_conts .tel {
-        width: 80%;
-        border-right:none; 
-    }
-    footer .f_conts .tel h2 {
-        display: none;
-    }
-    footer .f_conts .tel h3 {
-        font-size: 20px;
-    }
-    footer .f_conts .tel p {
-        font-size: 25px;
-        font-weight: 500;
-    }
-    footer .f_conts .tel ul li {
-        margin-top: 10px;
-    }
-    footer .f_conts .tel ul li span {
-        font-weight: 100;
-    }
-    /**************************************************/
-    footer .map {
-        border-right:none; 
-    }
-    
-    footer .f_conts_wrap{
-        display: flex;
-        flex-direction: column;
-        align-content: space-around;
-        flex-wrap: wrap;
-    }
-    footer .map h2 {
-        font-size: 22px;
-        font-weight: 500;
-    }
-    footer .map address {
-        margin: 23px 0 32px 0;
-    }
-    footer .map .btn_wrap {
-        display: flex;
-        gap: 23px;
-    }
-    footer .map .btn_wrap a {
-        padding: 6px 26px;
-    }
-    footer .map .google {
-        margin-top: 40px;
-    }
-    footer .f_info {
-        width: 50%;
-    }
-    footer .f_info .sns {
-        gap: 20px;
-        justify-content: flex-start
-    }
-    footer .company {
-        margin: 95px 0 0 0;
-    }
+
 
 }/*@media*/

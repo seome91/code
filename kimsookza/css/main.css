@@ -1184,6 +1184,10 @@
    font-weight: 500;
 
 }
+.gallery .list span {
+   font-family: 'NanumSquareNeo';
+   font-weight: 300;
+}
 .gallery .list .swiper .inner {
    padding: 30px 25px 30px 25px;
 }
@@ -1198,7 +1202,7 @@
       margin-top: 20px;
    }
 }/*@media*/
-@media screen and (max-width:3600px){
+@media screen and (max-width:900px){
    .gallery .tit h2 {
       font-size: 25px;
    }
@@ -1206,9 +1210,18 @@
       font-size: 17px;
       margin-top: 17px;
    }
+   .gallery .list h3 {
+      font-size: 20px;
+      color: #242959;
+   }
 }/*@media*/
 
+@media screen and (max-width:842px){
+   .gallery {
+      padding: 0 0 170px 0;
+  }
 
+   }/*@media*/
 
 
 
