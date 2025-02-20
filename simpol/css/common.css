@@ -1,0 +1,44 @@
+body, html {
+    font-family: "dosis" ,"NanumSquareNeo", "serif"; /* sans-serif 고딕서체 */
+    font-size: 17px;
+    font-weight: 200;
+    color: #555;
+    line-height: 1.4; /* 배수 - 글자크기에 몇배 */
+    word-break: keep-all; /* 단어별로(여백기준) 줄바꿈 */
+    word-wrap: break-word; /* 단어가 너무 길면 그걸 강제로 줄바꿈 하는 명령 */
+}
+.wrapper {
+    /* 디자인파일에 레이아웃 그리드 처럼 홈페이지 영역 제한하고 
+       브라우저에 가운데 정렬 */
+    width: 1260px;/*변경*/
+    margin: 0 auto;
+}
+#wrap {
+    min-width: 1300px;
+    /* 콘텐츠영역이 1260px 좌우여백 20px씩 
+       1260 + 20 + 20 = 1300 */
+       /*1678 + 120 + 120 = 1918 */
+    overflow: hidden; 
+    /* wrap 영역 밖으로 나간 요소는 숨김처리  absolute가 대부분 나감. */
+    position: relative; /* header 정렬의 기준값 */
+}
+@media screen and (max-width:1300px){
+                    .wrapper {
+                        width: auto; 
+                        /* 원래 너 하던대로해 - block요소 
+                        - 감싸는 요소의 넓이의 100% 
+                        - 100%로 주면 margin과 충돌 그래서 auto */
+                        margin: 0 20px;
+                    }
+                    #wrap {
+                        min-width: 0;
+                    }
+}/*media*/
+
+@media screen and (max-width:680px){ 
+                    /* 브라우저 넓이 640px에서만 실행 */
+                    /* body, html {
+                        font-size: 14px;
+                    } */
+        
+}/*media*/
