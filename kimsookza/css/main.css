@@ -386,7 +386,7 @@
    transition: all 0.4s linear;
  }
  .info .list li a:hover .photo {
-   transform: scale(1.1);
+   transform: scale(1.5);
  }
 .info .list ul p strong {
    border-bottom: 1.8px solid #242959;
