@@ -26,3 +26,19 @@
 .skipnav a:focus {
     top: 0;
 }
+
+
+header {
+   position: fixed;
+   left: 0;
+   top: 0;
+   z-index: 100;/*header는 맨위*/
+   height: var(--header-h);
+   color: var(--main-color);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+header .logo {
+    
+}
