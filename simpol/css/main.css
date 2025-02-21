@@ -9,7 +9,7 @@
 .visual::before  {
    content: "";
    position: absolute;
-   width: 478px;/*em later*/
+   width:25.1579em;/*em later*/
    height: calc(100% + var(--header-h));/*em later*/
    left: 50%;
    bottom: 0;
@@ -81,7 +81,19 @@
       display: none;
    }
 }/*@mieda*/
-@media screen and (max-width:768px){}/*@mieda*/
+@media screen and (max-width:768px){
+   .visual::before  {
+      content: "";
+      position: absolute;
+      width: 40.4211em;/*em later*/
+      height: calc(100% + var(--header-h));/*em later*/
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      background: url(../images/visual_bg2.png) center center no-repeat;
+   }
+ 
+}/*@mieda*/
 @media screen and (max-width:360px){}/*@mieda*/
 
 
