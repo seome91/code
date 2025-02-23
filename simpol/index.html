@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="js/swiper-bundle.min.js"></script><!--swiper-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><!--aos-->
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js?v=2501071217"></script>
+    <script src="js/main.js?v=2501071217"></script>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="">
     <title>simpol</title>
 </head>
 <body>
@@ -82,8 +91,105 @@
             </div>
         </header>
         <main class="container">
-            <section class="visual"></section>
-            <section class="newitem"></section>
+            <section class="visual">
+                <h2>팝업</h2>
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                        <li class="swiper-slide st01">
+                            <div class="inner">
+                                <h3>Discover<br> Fresh</h3>
+                                <div class="photo"><img src="images/visual_1.png" alt="손에들려있는식물"></div>
+                                <p>원예전문 쇼핑 포털 심폴을 방문해 주셔서 감사드립니다.<br>심폴은 다육식물,화초,관엽식물,야생화,기자재관련 모든 품목을 편리하게<br>쇼핑하실 수 있도록 모든 서비스를 제공해 드리고 있습니다.</p>
+                            </div>
+                        </li>
+                        <li class="swiper-slide st01">
+                            <div class="inner">
+                                <h3>Explore<br> Green</h3>
+                                <div class="photo"><img src="images/visual_2.png" alt="손에들려있는식물"></div>
+                                <p>원예전문 쇼핑 포털 심폴을 방문해 주셔서 감사드립니다.<br>심폴은 다육식물,화초,관엽식물,야생화,기자재관련 모든 품목을 편리하게<br>쇼핑하실 수 있도록 모든 서비스를 제공해 드리고 있습니다.</p>
+                            </div>
+                        </li>
+                        <li class="swiper-slide st02">
+                            <div class="inner">
+                                <h3>Embrace<br> Nature</h3>
+                                <div class="photo"><img src="images/visual_3.png" alt="손에들려있는식물"></div>
+                                <p>원예전문 쇼핑 포털 심폴을 방문해 주셔서 감사드립니다.<br>심폴은 다육식물,화초,관엽식물,야생화,기자재관련 모든 품목을 편리하게<br>쇼핑하실 수 있도록 모든 서비스를 제공해 드리고 있습니다.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div><!-- swiper-->
+            </section>
+            <section class="newitem">
+                <div class="tiem_tit">
+                    <h2>심폴 신상품</h2>
+                    <h3>What’s New?</h3>
+                    <p>심폴에 새로 들어온 상품을 확인하세요!</p>
+                </div><!-- tiem_tit-->
+                <div class="content_wrap">
+                    <div class="sidebar">
+                        <div class="category">
+                            <h3>카테고리</h3>
+                            <ul>
+                                <li>다육식물/선인장</li>
+                                <li>동ㆍ서양란</li>
+                                <li>관엽식물</li>
+                                <li>야생화/허브/수생/채소</li>
+                                <li>분재/절화/식</li>
+                                <li>묘목/조경/인테리어</li>
+                                <li>화분/자재류</li>
+                            </ul>
+                        </div>
+                        <div class="filter">
+                            <h3>필터</h3>
+                            <div class="price">
+                                <h3>가격</h3>
+                                <input type="range" min="1,000" max="100,000" step="1,000">
+                            </div>
+                            <div class="color">
+                                <label>컬러</label>
+                                <div class="colors">
+                                    <span class="color" style="background-color: #D97C5F;"></span>
+                                    <span class="color" style="background-color: #F0C24C;"></span>
+                                    <span class="color" style="background-color: #87A96B;"></span>
+                                    <span class="color" style="background-color: #B83B3B;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_list">
+                        <div class="product">
+                            <img src="images/cate_1.jpg" alt="매드 아이비">
+                            <h4>매드 아이비</h4>
+                            <p><strong>₩28,000</strong></p>
+                        </div>
+                        <div class="product">
+                            <img src="images/cate_2.jpg" alt="자라늄">
+                            <h4>제라늄</h4>
+                            <p><strong>₩9,000</strong></p>
+                        </div>
+                        <div class="product">
+                            <img src="images/cate_3.jpg" alt="필로덴드론">
+                            <h4>필로덴드론</h4>
+                            <p><strong>₩12,000</strong></p>
+                        </div>
+                        <div class="product">
+                            <img src="images/cate_4.jpg" alt="하트닥">
+                            <h4>하트다육</h4>
+                            <p><strong>₩5,200</strong></p>
+                        </div>
+                        <div class="product">
+                            <img src="images/cate_5.jpg" alt="알로카시아">
+                            <h4>알로카시아</h4>
+                            <p><strong>₩2,7900</strong></p>
+                        </div>
+                        <div class="product">
+                            <img src="images/cate_6.jpg" alt="한스리움">
+                            <h4>안스리움</h4>
+                            <p><strong>₩41,000</strong></p>
+                        </div>
+                    </div>
+                </div><!-- content_wrap-->
+            </section>
             <section class="luxury"></section>
             <section class="theme"></section>
             <section class="ship"></section>
