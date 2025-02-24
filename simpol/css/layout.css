@@ -152,17 +152,40 @@ header .tnb .global a {/*일단 닫아두기*/
 
 @media screen and (min-width:1024px){
     header {
-        padding: 0 2.1053em;
+        padding: 0 1.1053em;
     }
     header .logo a {
         width: 7.3684em;
         height: 1.9474em;
     }
+  
 
 
 }/*media*/
 
-@media screen and (max-width:852px){/**/
+@media screen and (max-width:768px){/**/
+    header {
+        padding: 2em 1.6316em;
+    }
+    header .logo a {
+        display: block;
+        color: transparent;
+        align-items: center;
+        width: 9.4737em;/*em으로변환*/
+        height: 2.5789em;
+        position: relative;
+    }
+    header .logo a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -4px;
+        width: 100%;
+        height: 100%;
+        background: url(..//images/logo_simpol.svg) no-repeat center center / contain;
+    }
+
+
 
     header .gnb .gnb_open,
     header .gnb .gnb_close{

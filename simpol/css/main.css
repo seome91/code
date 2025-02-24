@@ -11,20 +11,26 @@
     content: "";
     position: absolute;
     width:25.1579em;/*em later*/
-    height: calc(100% + var(--header-h));/*em later*/
+    height: 150%;/*em later*/
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    background: url(../images/visual_bg.png) center center no-repeat;
+    background-color: #F3F3F3;
  }
  .visual h2 {
-    color: transparent;
+    display: none;
  }
  .visual .swiper ul li .inner {
     position: relative;
     display: flex;
     justify-content: center;
     height: 1000px;
+    overflow: hidden;
+ }
+ .visual .swiper ul li .inner .photo {
+   font-size: 0;
+   line-height: 0;
+
  }
  .visual .swiper ul li.st01 .inner {
     align-items: flex-end;
@@ -33,18 +39,16 @@
     align-items: center;
  }
  .visual .swiper ul li.st02 .inner .photo {
-    position: absolute;
-    bottom: 18px;
+   margin-bottom: 110px;
  }
+
  .visual .swiper ul li .inner h3 {
     position: absolute;
-    line-height: 110%;
+    line-height: 1.1;
     font-size: 100px;
     font-family: "Meow Script", serif;
     right: calc(50% + 166px);
-    top: 52%;
-    display: flex;
-    justify-content: flex-end;
+    top: 56%;
  }
  .visual .swiper ul li .inner br {
     display: none;
@@ -59,43 +63,71 @@
  
  
  @media screen and (max-width:1204px){
-    .visual .swiper ul li .inner {
-       position: relative;
-       display: flex;
-       justify-content: center;
-       height: 1000px;
-    }
-    .visual .swiper ul li.st01 .inner {
-       align-items: flex-end;
-    }
-    .visual .swiper ul li.st02 .inner {
-       align-items: center;
-    }
-    .visual .swiper ul li .inner h3 {
-       right: calc(50% + 181px);
-       top: 55%;
-    }
-    .visual .swiper ul li .inner h3 br {
-       display: block;
-    }
-    .visual .swiper ul li .inner p {
-       display: none;
-    }
+
  }/*@mieda*/
+
+ @media screen and (max-width:970px){
+   /*h3만 가운데 위로 올리기*/
+   .visual .swiper ul li .inner {
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-between;
+   }
+   .visual .swiper ul li.st01 .inner {
+      align-items: center;
+   }
+   .visual .swiper ul li .inner h3 {
+      position: relative;
+      right: auto;
+      top: auto;
+   }
+   .visual .swiper ul li .inner br {
+      display: block;
+   }
+   .visual .swiper ul li .inner p {
+      display: none;
+  }
+}/*@mieda*/
  @media screen and (max-width:768px){
-    .visual::before  {
-       content: "";
-       position: absolute;
-       width: 40.4211em;/*em later*/
-       height: calc(100% + var(--header-h));/*em later*/
-       left: 50%;
-       bottom: 0;
-       transform: translateX(-50%);
-       background: url(../images/visual_bg2.png) center center no-repeat;
-    }
-  
+   .visual .swiper ul li .inner h3 {
+      font-size: 90px;
+      margin: 66px 0 10px 0;
+   }
+   .visual::before  {
+      width: 100%;/*em later*/
+      left: 0;
+      transform: translateX(0);
+   }
+   .visual .swiper ul li .inner {
+      height: 920px;
+   }
+   .visual .swiper ul li.st01 .inner .photo img {
+      width: 544px;
+   }
+   .visual .swiper ul li.st02 .inner .photo img {
+      width: 544px;
+   }
  }/*@mieda*/
- @media screen and (max-width:360px){}/*@mieda*/
+
+
+
+ @media screen and (max-width:360px){
+
+   .visual .swiper ul li .inner {
+      height: 813px;
+   }
+
+   .visual .swiper ul li .inner h3 {
+      font-size: 90px;
+   }
+   .visual .swiper ul li.st01 .inner .photo img {
+      width: 435px;
+   }
+   .visual .swiper ul li.st02 .inner .photo img {
+      width: 445px;
+   }
+
+ }/*@mieda*/
  
 
 
@@ -190,23 +222,18 @@
    padding: 5px 0 0 0;
    justify-content: space-between;
 } 
-.product_list .product img {
+.product_list .product .photo img {
    width: 294px;
    height: 367px;
    object-fit: cover;
    border-radius: 10px;
 }
-.product_list .shop{
+.product_list .btn_shop{
    font-size: 0;
    width: 100px;
    height: 28px;
 }
-.product_list .shop a.cart,
-.product_list .shop a.buy,
-.product_list .shop a.fav {
-   width: 32px;/*em later*/
-   height: 27px;
-}
+
 
 
  @media screen and (max-width:1204px){}/*@mieda*/
