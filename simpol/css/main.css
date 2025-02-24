@@ -138,7 +138,8 @@
     font-weight: 500;
 }
 .category li:hover{
-    text-decoration: underline;
+    font-weight: 500;
+    color: var(--main-color);
 
 }
 
