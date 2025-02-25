@@ -448,9 +448,7 @@
    white-space: nowrap;
    transform: rotate(-13.28deg);
 }
-
  @media screen and (max-width:1204px){}/*@mieda*/
-
  @media screen and (max-width:768px){
    .luxury .lux_txt{
       width: 300px;
@@ -462,10 +460,11 @@
       width: 370px;
    }
    .luxury .wrapper a .photo img {
-      width: 420px;
+      width: 397px;
    }
+
  }/*@mieda*/
- 
+
  @media screen and (max-width:360px){
    .luxury .wrapper a {
       display: flex;
