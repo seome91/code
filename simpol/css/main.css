@@ -451,7 +451,21 @@
 
  @media screen and (max-width:1204px){}/*@mieda*/
 
- @media screen and (max-width:768px){}/*@mieda*/
+ @media screen and (max-width:768px){
+   .luxury .lux_txt{
+      width: 300px;
+   }
+   .luxury .wrapper a .photo {
+      height: 470px;
+      display: flex;
+      align-items: flex-end;
+      width: 370px;
+   }
+   .luxury .wrapper a .photo img {
+      width: 420px;
+   }
+ }/*@mieda*/
+ 
  @media screen and (max-width:360px){
    .luxury .wrapper a {
       display: flex;
