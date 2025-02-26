@@ -294,7 +294,7 @@
 
  @media screen and (max-width:768px){/**/
          .newitem {
-            margin-top: 180px;
+            margin: 90px 0 50px 0;
          }
          .newitem .tiem_tit {
             padding-bottom: 80px;
@@ -362,7 +362,7 @@
  }/*@mieda*/
  @media screen and (max-width:360px){
             .newitem {
-               margin-top: 90px;
+               margin: 90px 0 20px 0;
             }
             .newitem .tiem_tit h3 {
                top: -96px;
@@ -398,7 +398,7 @@
 
 .luxury {
    position: relative;
-   margin-bottom: 300px;
+   margin-bottom: 180px;
    background-color: var(--main-color);
 }
 .luxury .wrapper a {/*높이를 a한테주고....  */
@@ -446,52 +446,102 @@
    transform: rotate(-13.28deg);
 }
  @media screen and (max-width:768px){
-   .luxury .lux_txt{
-      width: 300px;
-   }
-   .luxury .lux_txt span {
-      font-size: 13px;
-      padding: 5px 10px;
-   }
-   .luxury .lux_txt h3 {
-      font-size: 24px;
-      margin: 13px 0 4px 0;
-   }
-   .luxury .lux_txt p {
-      font-size: 13px;
-   }
- 
-   .luxury .wrapper a .photo {
-      height: 470px;
-      display: flex;
-      align-items: flex-end;
-   }
-   .luxury .wrapper a .photo img {
-      width: calc(100% + 105px);
-   }
-   .luxury .slogan {
-      bottom: 189px;
-      right: calc(50% - 440px);
-
-   }
+            .luxury .lux_txt{
+               width: 300px;
+            }
+            .luxury .lux_txt span {
+               font-size: 13px;
+               padding: 5px 10px;
+            }
+            .luxury .lux_txt h2 {
+               font-size: 24px;
+               margin: 13px 0 4px 0;
+            }
+            .luxury .lux_txt p {
+               font-size: 13px;
+            }
+            .luxury .wrapper a .photo {
+               height: 470px;
+               display: flex;
+               align-items: flex-end;
+               justify-content: center;
+            }
+            .luxury .wrapper a .photo img {
+               width: calc(100% + 105px);
+            }
+            .luxury .slogan {
+               bottom: 189px;
+               right: calc(50% - 440px);
+            }
 
  }/*@mieda*/
 
  @media screen and (max-width:460px){
-   .luxury .wrapper a {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      gap: 0;
-   }
-    
-   .luxury .lux_txt {
-      width: 300px;
-      padding: 52px 0 0 0;
-  }
-}
+
+            .luxury .lux_txt {
+               padding: 52px 0 20px 0;
+            } 
+            .luxury .wrapper a .photo {
+               height: 80%;
+            }
+            .luxury .wrapper a .photo img {
+               width: calc(63% + 100px);
+            }
+            .luxury .wrapper a {
+               display: flex;
+               flex-direction: column;
+               text-align: center;
+               gap: 0;
+            }
+
  }/*@mieda*/
- 
+
+ @media screen and (max-width:360px){
+
+         .luxury .lux_txt {
+            padding: 45px 0 20px 0;
+         } 
+         .luxury .wrapper a .photo img {
+            width: calc(50% + 100px);
+         }
+
+ }/*@mieda*/
+
+/* .theme
+.theme .wrapper */
+.theme .wrapper .theme_tit h2 {
+   font-size: 48px;
+   font-weight: 500;
+   color: var(--main-color);
+   padding: 0 0 15px 0;
+}
+.theme .wrapper .theme_tit p {
+   color: #1d1d1d;
+   font-weight: 300;
+}
+.theme .wrapper .theme_list ul {
+   display: flex;
+   justify-content: space-between;
+   padding: 59px 0 100px 0;
+}
+.theme .wrapper .theme_list ul li a .photo {
+   overflow: hidden;
+   height: 455px;
+   border-radius: 10px;
+}
+.theme .wrapper .theme_list ul li a .photo img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.theme .wrapper .theme_list ul li a strong {
+   line-height: 4;/**********/
+   color: var(--main-color);
+   font-weight: 500;
+}
+
+
+
 
  @media screen and (max-width:1204px){}/*@mieda*/
  @media screen and (max-width:768px){}/*@mieda*/
