@@ -622,8 +622,8 @@
 
 
 
- .ship {
-   margin: 330px 0 330px 0;
+.ship {
+   margin: 200px 0 330px 0;
 }
 .ship .wrapper {
    display: flex;
@@ -633,7 +633,7 @@
 .ship .wrapper .photo {/*높이*/
    overflow: hidden;
    border-radius: 10px;
-   height: 466px;/*xxxxxxx*/
+   width: calc(100% + 700px);
 }
 .ship .wrapper .photo img {
    width: 100%;
@@ -642,7 +642,6 @@
 }
 .ship .wrapper .tit {
     position: relative;
-    width: 393px;/*???*/
 }
  .ship .wrapper .tit h2 {
    font-size: 48px;
@@ -653,14 +652,14 @@
    position: absolute;
    white-space: nowrap;
    top: -48px;
-   right: calc(50% - 280px);
+   right: calc(50% - 275px);
    font-size: 84px;
    font-family: "Meow Script", serif;
    color: rgba(74, 112, 113, 0.07);
  }
  .ship .wrapper .tit h3 {
    color: #1d1d1d;
-   
+   margin-top: 9px;
  }
  .ship .wrapper .tit p {
    margin: 23px 0 28px 0;
@@ -669,19 +668,89 @@
    display: inline-block;
  }
  .ship .wrapper .tit .more a span {
-   
    font-size: 17px;
    color: #fff;
    font-weight: 300;
    border-radius: 50px;
    padding: 8px 16px;
    background-color: #4A7071;
+
  }
 
- 
- @media screen and (max-width:1204px){}/*@mieda*/
- @media screen and (max-width:768px){}/*@mieda*/
- @media screen and (max-width:360px){}/*@mieda*/
+ @media screen and (max-width:768px){
+            .ship {
+               margin: 180px 0 180px 0;
+            }
+            .ship .wrapper {
+               gap:14px;
+            }
+            .ship .wrapper .photo {/*높이*/
+               border-radius: 0;
+            }
+            .ship .wrapper .tit h2 {
+               font-size: 24px;
+            }
+            .ship .wrapper .tit strong {
+               right: calc(50% - 245px);
+               font-size: 70px;
+            }
+            .ship .wrapper .tit h3 {
+               font-size: 17px;
+               margin-top: 9px;
+            }
+            .ship .wrapper .tit p {
+               font-size: 17px;
+               margin: 10px 0 13px 0;
+            }
+            .ship .wrapper .tit .more a span {
+               font-size: 13px;
+               padding: 5px 13px;
+            }
+   
+ }/*@mieda*/
+ @media screen and (max-width:360px){
+   .ship {
+      margin: 90px 0 180px 0;
+   }
+   .ship .wrapper {
+      display: flex;
+      flex-direction: column;
+      gap:32px;
+   }
+   .ship .wrapper .photo {/*높이*/
+      height: 300px;
+      width: calc(100% + 2px);
+   }
+   .ship .wrapper .tit {
+      text-align: center;
+   }
+    .ship .wrapper .tit h2 {
+      font-size: 24px;
+    }
+    .ship .wrapper .tit strong {
+      top: -42px;
+      right: calc(50% - 197px);
+
+    }
+    .ship .wrapper .tit h3 {
+      color: #1d1d1d;
+      margin-top: 9px;
+      font-size: 13px;
+    }
+    .ship .wrapper .tit p {
+      font-size: 13px;
+      margin: 23px 0 14px 0;
+    }
+    .ship .wrapper .tit .more a span {
+      font-size: 11px;
+      color: #fff;
+      font-weight: 300;
+      border-radius: 50px;
+      padding: 8px 16px;
+      background-color: #4A7071;
+   
+    }
+ }/*@mieda*/
 
  
  @media screen and (max-width:1204px){}/*@mieda*/
