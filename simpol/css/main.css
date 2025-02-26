@@ -505,8 +505,6 @@
 
  }/*@mieda*/
 
-/* .theme
-.theme .wrapper */
 .theme .wrapper .tit h2 {
    font-size: 48px;
    font-weight: 500;
@@ -623,6 +621,26 @@
  }/*@mieda*/
 
 
+
+ .ship {
+   margin: 180px 0 180px 0;
+ }
+ .ship .wrapper {
+   display: flex;
+   justify-content: center;
+   gap:35px;
+ }
+ .ship .wrapper .photo {/*높이*/
+   overflow: hidden;
+   border-radius: 10px;
+   height: 466px;/*xxxxxxx*/
+ }
+ .ship .wrapper .photo img {
+   
+ }
+ .ship .wrapper a {
+
+ }
 
  
  @media screen and (max-width:1204px){}/*@mieda*/
