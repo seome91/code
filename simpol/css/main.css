@@ -580,7 +580,7 @@
          }
          .theme .wrapper .list ul {
             gap: 15px;
-            padding: 59px 0 100px 0;
+            padding: 59px 0 0 0;
          }
          .theme .wrapper .list ul li a .photo {
             height: 400px;
@@ -627,8 +627,8 @@
 }
 .ship .wrapper {
    display: flex;
-   justify-content: center;
-   gap:35px;
+   justify-content: space-between;
+   gap:32px;
 }
 .ship .wrapper .photo {/*높이*/
    overflow: hidden;
@@ -636,12 +636,13 @@
    height: 466px;/*xxxxxxx*/
 }
 .ship .wrapper .photo img {
-   width: 832px;
+   width: 100%;
+   height: 100%;
    object-fit: cover;
 }
 .ship .wrapper .tit {
     position: relative;
-    width: 405px;
+    width: 393px;/*???*/
 }
  .ship .wrapper .tit h2 {
    font-size: 48px;
@@ -659,15 +660,16 @@
  }
  .ship .wrapper .tit h3 {
    color: #1d1d1d;
-   margin-top: 9px;
+   
  }
  .ship .wrapper .tit p {
-   margin: 23px 0 32px 0;
+   margin: 23px 0 28px 0;
  }
  .ship .wrapper .tit .more a {
-   display: block;
+   display: inline-block;
  }
  .ship .wrapper .tit .more a span {
+   
    font-size: 17px;
    color: #fff;
    font-weight: 300;
