@@ -762,8 +762,11 @@
    height: 100%;
    left: 0;
    bottom: 0;
-   background-color: #F3F3F3;
-   }
+   background-color: #F5F5F5;
+}
+.offer h2 {
+   display: none;
+}
 
  
  
