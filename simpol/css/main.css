@@ -952,23 +952,14 @@
  @media screen and (max-width:1204px){
    
    .commu .wrapper .tit {
-      text-align: center;
-      position: relative;
       padding: 80px 0 90px 0;
    }
    .commu .wrapper ul {
-      display: flex;
-      justify-content: space-between;
       gap: 16px; 
    }
 
    .commu .wrapper .tit strong {
       top: -65px;
-   }
-
-   .commu .wrapper ul {
-      display: flex;
-      justify-content: space-between;
    }
 
  }/*@mieda*/
@@ -986,6 +977,8 @@
          }
   
  }/*@mieda*/
+
+ 
  @media screen and (max-width:466px){
    
       .commu .wrapper ul {
@@ -1001,14 +994,11 @@
       height: 45px;
    }
    .commu .wrapper .tit {
-      text-align: center;
-      position: relative;
       padding: 70px 0 80px 0;
    }
    .commu .wrapper .tit h2 {
       font-size: 22px;
       font-weight: 500;
-      color: var(--main-color);
    }
    .commu .wrapper .tit strong {
       top: -6px;
@@ -1018,8 +1008,6 @@
    .commu {
       margin: 44px 20px 100px 20px;
   }
-   
-
 
  }/*@mieda*/
  
