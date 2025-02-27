@@ -58,12 +58,18 @@ header .logo a::before {
 
 /******메뉴열렸을때 추가 ******/
 
-
+header .gnb { 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    
+}
 header .gnb .gnb_open,
 header .gnb .gnb_close{
     display: none;
 }
-
+    
 header .gnb .gnb_wrap ul.depth1 {
     display: flex;
 }
