@@ -187,17 +187,15 @@
    width: 1.5789em;
    border-radius: 50%;
 }
-.newitem .color_pick .colors span::after{
+.newitem .color_pick .colors span::after{/*************************************************/
    content: "";
    position: absolute;
    left: 7.5px;
-   top: 8px;
+   bottom: 8px;
    width: 15px;
    height: 12px;
-   transition: 0.5s;/**/
 }
 .newitem .color_pick .colors span.color:hover::after {
-   transition-delay:1s;
    background-position: center center;
    background-repeat: no-repeat;
    background-size: contain;
@@ -708,7 +706,7 @@
 
          @media screen and (max-width:360px){
             .ship {
-               margin: 24px 0 143px 0;
+               margin: 24px 0 95px 0;
             }
             .ship .wrapper {
                display: flex;
@@ -769,7 +767,7 @@
 }
 .offer .list .swiper ul li a {/**/
    margin: 25px 50px;
-   padding: 100px 10%;
+   padding: 15% 10%;
    display: inline-block;
 }
 .offer .list .swiper ul li a .photo {
@@ -827,20 +825,39 @@
  @media screen and (max-width:1204px){
    .offer .list .swiper button.btn_prev{
       left: 6%;  
+      background-size: 70%;
    }
    .offer .list .swiper button.btn_next {
       right: 6%;
+      background-size: 70%;
    }
  }/*@mieda*/
+
+ @media screen and (max-width:460px){
+
+    .offer .list .swiper-pagination {
+      display: none;
+    }
+ }/*@mieda*/
+
  @media screen and (max-width:360px){
+   .offer .list .swiper ul li a {
+      margin: 10px 35px;
+      padding: 8% 10%;
+      display: inline-block;
+   }
+   .offer .list .swiper ul li a .photo {
+      box-shadow: 4px 5px 5px rgba(29 , 29 ,29 ,0.3);
+   }
    .offer .list .swiper button.btn_prev{
-      display: none ;
+      display: none;
    }
    .offer .list .swiper button.btn_next {
-      display: none;
+   display: none;
    }
  }/*@mieda*/
  
+
  @media screen and (max-width:1204px){}/*@mieda*/
  @media screen and (max-width:768px){}/*@mieda*/
  @media screen and (max-width:360px){}/*@mieda*/
