@@ -786,7 +786,10 @@
    height: 100%;
    object-fit: cover;
 }
-
+/*********************************************************************/
+.offer .list .swiper button {
+   
+}
 .offer .list .swiper button.btn_prev{
    color: transparent;
    content: "";
