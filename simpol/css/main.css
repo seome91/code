@@ -751,34 +751,29 @@
 
 .offer {
    position: relative;
-}
-.offer::before {
-   content: "";
-   position: absolute;
    width: 100%;
-   height: 150%;
-   left: 0;
-   bottom: -20%;
    background-color: #F5F5F5;
 }
+
 .offer h2 {
    display: none;
 }
 .offer .list {
    position: relative;
 }
+
+
 .offer .list .swiper ul li {
    display: flex;
    justify-content: center;
 }
 .offer .list .swiper ul li a {/**/
-   margin: 15px 50px;
-   padding: 0 10%;
+   margin: 25px 50px;
+   padding: 100px 10%;
    display: inline-block;
 }
 .offer .list .swiper ul li a .photo {
    font-size: 0;
-   border-radius: 10px;
    box-shadow: 4px 12px 12px rgba(29 , 29 ,29 ,0.3);
 }
 .offer .list .swiper ul li a .photo img {
@@ -787,20 +782,17 @@
    object-fit: cover;
 }
 /*********************************************************************/
-.offer .list .swiper button {
-   
-}
+
 .offer .list .swiper button.btn_prev{
    color: transparent;
    content: "";
    position: absolute;
-   left: 0;
-   top: 0;
+   left: 8%;
+   top: 50%;
    width: 44px;
    height: 32px;
    z-index:10;
-}
-.offer .list .swiper button.btn_prev::before{
+
    background-position: center center;
    background-repeat: no-repeat;
    background-size: contain;
@@ -810,21 +802,21 @@
    color: transparent;
    content: "";
    position: absolute;
-   right: 0;
-   top: 0;
+   right: 8%;
+   top: 50%;
    width: 44px;
    height: 32px;
    z-index:10;
-}
-.offer .list .swiper button .btn_next::after{
+
    background-position: center center;
    background-repeat: no-repeat;
    background-size: contain;
    background-image: url("data:image/svg+xml,%3Csvg width='44' height='32' viewBox='0 0 44 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M33.1319 19.1809H3.19752C2.30034 19.1809 1.54301 18.8736 0.925524 18.259C0.308508 17.6439 0 16.8895 0 15.9958C0 15.1021 0.308508 14.3476 0.925524 13.7326C1.54301 13.1179 2.30034 12.8106 3.19752 12.8106H33.1319L25.7053 5.34335C25.1117 4.75159 24.806 4.01772 24.7882 3.14175C24.7704 2.26577 25.0761 1.51417 25.7053 0.886941C26.2993 0.295646 27.0449 0 27.9421 0C28.8393 0 29.5847 0.295646 30.1783 0.886941L43.0927 13.7508C43.4071 14.0644 43.6369 14.4125 43.7821 14.7952C43.9274 15.1774 44 15.5776 44 15.9958C44 16.4139 43.9274 16.8141 43.7821 17.1963C43.6369 17.579 43.4071 17.9272 43.0927 18.2408L30.1783 31.1046C29.5847 31.6959 28.851 31.9943 27.9773 31.9999C27.1035 32.0055 26.3462 31.7127 25.7053 31.1214C25.0648 30.4829 24.7418 29.7257 24.7362 28.8498C24.7305 27.9738 25.048 27.2166 25.6884 26.5782L33.1319 19.1809Z' fill='%234A7071'/%3E%3C/svg%3E%0A");
-}
+   }
+
 .offer .list .swiper-pagination {
    position: absolute;
-   bottom: -7px;
+   bottom: 80px;
    left: 0;
 }
 .offer .list .swiper-pagination-bullet-active {
@@ -832,10 +824,22 @@
 }
 
  
- 
- @media screen and (max-width:1204px){}/*@mieda*/
- @media screen and (max-width:768px){}/*@mieda*/
- @media screen and (max-width:360px){}/*@mieda*/
+ @media screen and (max-width:1204px){
+   .offer .list .swiper button.btn_prev{
+      left: 6%;  
+   }
+   .offer .list .swiper button.btn_next {
+      right: 6%;
+   }
+ }/*@mieda*/
+ @media screen and (max-width:360px){
+   .offer .list .swiper button.btn_prev{
+      display: none ;
+   }
+   .offer .list .swiper button.btn_next {
+      display: none;
+   }
+ }/*@mieda*/
  
  @media screen and (max-width:1204px){}/*@mieda*/
  @media screen and (max-width:768px){}/*@mieda*/
