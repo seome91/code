@@ -310,16 +310,16 @@
          .newitem .wrapper .content_wrap .category h3  {
             margin-bottom: 17px;
             font-size: 20px;
-            position: relative;
          }
          .newitem .wrapper .content_wrap .category .more a span {
+            position: relative;
             display: block;
          }
          .newitem .wrapper .content_wrap .category .more a span::after {
             content: "";
             position: absolute;
-            left: 98px;
-            bottom: 7px;    
+            left: 77px;
+            bottom: 20px;    
             height: 21px;
             width: 12px;
             background-position: center center;
