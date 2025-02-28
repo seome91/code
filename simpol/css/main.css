@@ -861,7 +861,7 @@
 
 
  .commu {
-   margin: 100px 0 320px 0;
+   margin: 100px 0 380px 0;
  }
 
  .commu .wrapper .tit {
@@ -965,7 +965,7 @@
  }/*@mieda*/
  @media screen and (max-width:768px){
          .commu {
-               margin: 100px 20px 130px 20px;
+               margin: 100px 20px 300px 20px;
          }
          .commu .wrapper ul li {
             width: 48%;
@@ -981,7 +981,10 @@
  
  @media screen and (max-width:466px){
    
-      .commu .wrapper ul {
+   .commu {
+      margin: 44px 20px 260px 20px;/*????*/
+   }
+   .commu .wrapper ul {
          justify-content: center;
    }
 
@@ -1005,9 +1008,7 @@
       right: calc(50% - 240px);
       font-size: 100px;
    }
-   .commu {
-      margin: 44px 20px 100px 20px;
-  }
+
 
  }/*@mieda*/
  
