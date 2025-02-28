@@ -439,12 +439,10 @@ footer .f_wrap .f_conts02 span {
         top: -360px;
     }
     footer .p1 {
-        width: 50%;
-        left: -140px;
+        display: none;
     }
     footer .p2 { 
-        width: 50%;
-        right: -43px;
+        display: none;
     }
 
     footer .f_logo img {
@@ -486,15 +484,7 @@ footer .f_wrap .f_conts02 span {
     footer .wrapper {
         margin: 0 7% 0 7%;
     }
-    footer .f_photo  {
-        top: -360px;
-    }
-    footer .p1 {
-        display: none;
-    }
-    footer .p2 { 
-        display: none;
-    }
+  
     footer .f_logo img {
         width: 40%;
     }
