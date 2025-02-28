@@ -10,8 +10,8 @@
 .visual::before  {
    content: "";
    position: absolute;
-   width:480px;/*em later*/
-   height: 150%;/*em later*/
+   width:480px;
+   height: 150%;
    left: 50%;
    bottom: 0;
    transform: translateX(-50%);
