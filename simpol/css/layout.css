@@ -387,6 +387,9 @@ footer .f_wrap .f_conts02 span {
 }
 
 @media screen and (max-width:1600px){
+    footer .wrapper {
+        margin: 0 7% 0 7%;
+    }
     footer .f_photo  {
         top: -390px;
     }
@@ -439,6 +442,9 @@ footer .f_wrap .f_conts02 span {
     footer .f_wrap .f_conts01 .f_nav ul {
         font-size: 19px;
         gap: 12px;/*or margin right for li a*/
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
     }
     footer .f_wrap .f_info {
         margin: 65px 0 98px 0;
@@ -482,10 +488,7 @@ footer .f_wrap .f_conts02 span {
 
     footer .f_wrap .f_conts01 .f_nav ul {
         font-size: 15px;
-        font-weight: 300;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;/*or margin right for li a*/
+        gap: 7px;/*or margin right for li a*/
     }
 
     footer .f_wrap .f_info {
