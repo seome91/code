@@ -315,7 +315,8 @@ footer .f_logo {
     margin-bottom: 41px;
     
 }
-footer .f_logo img { /**/
+footer .f_logo img { 
+    max-width: 278px;
     width: 100%;
 }
 
