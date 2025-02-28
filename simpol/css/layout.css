@@ -298,16 +298,14 @@ footer {
 
 footer .f_photo  {
     position: absolute;
-    top: -440px;
+    top: -360px;
     z-index: -1;
 }
 footer .p1 {
-    width: 362;
     left: -23px;
 }
 footer .p2 { 
-    width: 478px;
-    right: 20px;
+    right:0px;
 }
 
 footer .f_logo {
@@ -315,6 +313,9 @@ footer .f_logo {
     color: transparent;
     padding: 80px 0 0 0 ;  
     margin-bottom: 41px;
+    
+}
+footer .f_logo img { /**/
     width: 100%;
 }
 
@@ -404,13 +405,16 @@ footer .f_wrap .f_conts02 span {
         display: block;
     }
     footer .f_photo  {
-        top: -370px;
+        top: -360px;
     }
     footer .p1 {
-        left: -8%;
+        left: -23px;
     }
-    footer .p2 {
-        right: -5%;
+    footer .p2 { 
+        right: 0px;
+    }
+    footer .f_logo img {
+        width: 70%;
     }
 
 }/*@mieda*/
@@ -433,8 +437,7 @@ footer .f_wrap .f_conts02 span {
     }
 
     footer .f_logo img {
-        width: 70%;
-
+        width: 60%;
     }
     
 
@@ -480,6 +483,9 @@ footer .f_wrap .f_conts02 span {
     footer .p2 {
         width: 80%;
         right: -35%;
+    }
+    footer .f_logo img {
+        width: 40%;
     }
 
     footer .f_wrap {
