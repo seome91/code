@@ -436,7 +436,6 @@ footer .f_wrap .f_conts02 span {
     
 
 
-
     footer .f_wrap .f_conts01 .f_nav ul {
         font-size: 19px;
         gap: 12px;/*or margin right for li a*/
@@ -485,7 +484,7 @@ footer .f_wrap .f_conts02 span {
         line-height: 1.7;
         margin: 43px 0 50px 0;
     }
-}
+
     footer .f_wrap .copyright {
         color: rgba(255, 255, 255, 0.5 );
     }
@@ -514,5 +513,6 @@ footer .f_wrap .f_conts02 span {
     footer .f_wrap .f_conts02 a::after {
         bottom: 2px;
     }
+
 
 }/*@mieda*/
