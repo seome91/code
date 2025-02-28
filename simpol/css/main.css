@@ -982,7 +982,7 @@
  @media screen and (max-width:466px){
    
    .commu {
-      margin: 44px 20px 320px 20px;/*????*/
+      margin: 44px 20px 250px 20px;/*????*/
    }
    .commu .wrapper ul {
          justify-content: center;
@@ -1012,7 +1012,12 @@
 
  }/*@mieda*/
  
- 
+ @media screen and (max-width:360px){
+   .commu {
+      margin: 44px 20px 200px 20px;/*????*/
+   }
+
+ }/*@mieda*/
 
  @media screen and (max-width:1204px){}/*@mieda*/
  @media screen and (max-width:768px){}/*@mieda*/

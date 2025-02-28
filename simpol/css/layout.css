@@ -302,9 +302,13 @@ footer .f_photo  {
     z-index: -1;
 }
 footer .p1 {
+    width: 100%;
+    max-width: 317px;
     left: -23px;
 }
 footer .p2 { 
+    width: 100%;
+    max-width: 317px;
     right:0px;
 }
 
@@ -409,13 +413,19 @@ footer .f_wrap .f_conts02 span {
         top: -360px;
     }
     footer .p1 {
+        width: 80%;
         left: -23px;
     }
     footer .p2 { 
-        right: 0px;
+        width: 80%;
+        right:0px;
     }
     footer .f_logo img {
         width: 70%;
+    }
+    footer .f_wrap .f_conts02 .company {
+        line-height: 1.15;
+        padding: 100px 0 100px 0;
     }
 
 }/*@mieda*/
@@ -429,12 +439,12 @@ footer .f_wrap .f_conts02 span {
         top: -360px;
     }
     footer .p1 {
-        width: 90%;
-        left: -25%;
+        width: 50%;
+        left: -140px;
     }
-    footer .p2 {
-        width: 90%;
-        right: -45%;
+    footer .p2 { 
+        width: 50%;
+        right: -43px;
     }
 
     footer .f_logo img {
@@ -453,6 +463,8 @@ footer .f_wrap .f_conts02 span {
     footer .f_wrap .f_info {
         margin: 65px 0 98px 0;
     }
+    
+   
 
     footer .f_wrap .f_conts02 h3 {
         font-size: 19px; 
@@ -478,12 +490,10 @@ footer .f_wrap .f_conts02 span {
         top: -360px;
     }
     footer .p1 {
-        width: 80%;
-        left: -72%;
+        display: none;
     }
-    footer .p2 {
-        width: 80%;
-        right: -35%;
+    footer .p2 { 
+        display: none;
     }
     footer .f_logo img {
         width: 40%;
