@@ -10,7 +10,7 @@ body, html {
 .wrapper {
     /* 디자인파일에 레이아웃 그리드 처럼 홈페이지 영역 제한하고 
        브라우저에 가운데 정렬 */
-    width: 1260px;/*변경*/
+    width: 1400px;/*변경*/
     margin: 0 auto;
 }
 #wrap {
@@ -20,10 +20,17 @@ body, html {
     position: relative; /* header 정렬의 기준값 */
 }
 
-
 :root {
     --base-font-size: 17px;
     --header-h: 100px;
     --header-depth2-h: 458px;
     --main-color: #3E63A7;
+}
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
 }
