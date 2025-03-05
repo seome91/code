@@ -229,6 +229,7 @@
   width: 50%;
 }
 .Projects .wrapper ul.list li {
+  align-items: center;
   display: flex;
   gap: 39px;
 }
