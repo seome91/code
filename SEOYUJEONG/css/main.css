@@ -239,10 +239,13 @@
 }
 
 .Projects .text strong {
+  margin: 0 0 15px 0;
   font-size: 18px;
   display: block;
 }
-.Projects .Projects .text p {
+.Projects .text p {
+  font-weight: 400;
+
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 10px;
