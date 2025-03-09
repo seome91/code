@@ -208,7 +208,7 @@
   padding: 50px 0;
 }
 .Projects .simpol_wrap,
-.kimsukja_wrap {
+.kimsukja_wrap, .manwha_wrap{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -223,6 +223,10 @@
 .Projects .kimsukja_wrap {
   background-color: #d6e7f4;
   color: #0e1029;
+}
+.Projects .kimsukja_wrap {
+  background-color: #F3EABA;
+  color: #373413;
 }
 
 .Projects .wrapper .text {
@@ -292,6 +296,10 @@
   display: block;
   border-radius: 10px;
 }
+
+
+
+
 
 .Thank_you {
   text-align: center;
