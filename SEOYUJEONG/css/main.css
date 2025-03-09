@@ -270,6 +270,9 @@
 .kimsukja_wrap a:hover {
   background-color: #0e1029;
 }
+.manwha_wrap:hover {
+  background-color: #373413;
+}
 
 .list {
   list-style: none;
