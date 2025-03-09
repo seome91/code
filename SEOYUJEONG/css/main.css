@@ -224,7 +224,7 @@
   background-color: #d6e7f4;
   color: #0e1029;
 }
-.Projects .kimsukja_wrap {
+.Projects .manwha_wrap {
   background-color: #F3EABA;
   color: #373413;
 }
@@ -270,7 +270,7 @@
 .kimsukja_wrap a:hover {
   background-color: #0e1029;
 }
-.manwha_wrap:hover {
+.manwha_wrap a:hover {
   background-color: #373413;
 }
 
