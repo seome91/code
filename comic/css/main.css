@@ -6,6 +6,7 @@
 
 
 
-.allpage .photo img {
-    width: 100%;
+.allpage .photo {
+   text-align: center;
+  
 }
