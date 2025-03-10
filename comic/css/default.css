@@ -44,3 +44,7 @@ input, textarea, select {
     color: inherit;
     line-height: inherit;
 }
+
+img {
+    max-width: 100%;
+}
